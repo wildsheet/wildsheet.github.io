@@ -3,87 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tissue Clearing Database - Test Build</title>
-    <style>
-        body { font-family: sans-serif; background: #121824; color: #e2e8f0; max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        .method-card { background: #1e293b; border: 1px solid #334155; padding: 20px; margin-bottom: 15px; border-radius: 8px; cursor: pointer; }
-        .method-card:hover { border-color: #3b82f6; }
-        .wiki-section { background: #0f172a; border: 1px solid #1e293b; padding: 20px; border-radius: 8px; margin-top: 40px; }
-        h1 { color: #3b82f6; }
-        button { background: #3b82f6; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; }
-        button:hover { background: #2563eb; }
-    </style>
+    <title>🔬 Open Tissue Clearing Registry & Wiki</title>
+    <script src="https://tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-900 text-slate-100 min-h-screen font-sans">
 
-    <h1>🔬 Tissue Clearing Database (Giscus Test Platform)</h1>
-    <p>Click a methodology card below to load its dedicated community wiki discussion thread instantly via GitHub.</p>
-
-    <!-- Mock Database Interface Layer -->
-    <div id="methods-list">
-        <div class="method-card" onclick="loadWikiForMethod('iDISCO-Plus')">
-            <h3>📌 iDISCO+</h3>
-            <p><strong>Class:</strong> Solvent-based (Hydrophobic) | <strong>RI:</strong> 1.56</p>
-            <button>💬 Load iDISCO+ Wiki Threads</button>
+    <!-- App Header Banner -->
+    <header class="border-b border-slate-800 bg-slate-950 p-6 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div>
+                <h1 class="text-2xl font-bold tracking-tight text-blue-400">🔬 WildSheet Tissue Clearing Registry</h1>
+                <p class="text-sm text-slate-400 mt-1">Community-validated strategies for volumetric light-sheet microscopy.</p>
+            </div>
+            <div id="stats-badge" class="bg-blue-950 text-blue-400 border border-blue-800 px-4 py-2 rounded-lg font-mono text-sm shadow-inner">
+                Loading index data matrix...
+            </div>
         </div>
+    </header>
 
-        <div class="method-card" onclick="loadWikiForMethod('CUBIC-Method')">
-            <h3>📌 CUBIC</h3>
-            <p><strong>Class:</strong> Aqueous (Hydrophilic) | <strong>RI:</strong> 1.38</p>
-            <button>💬 Load CUBIC Wiki Threads</button>
-        </div>
-    </div>
+    <!-- Interactive Workspace Split Layout -->
+    <main class="max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Left Side: Interactive Search and Filter Options -->
+        <section class="lg:col-span-1 bg-slate-950 p-6 rounded-xl border border-slate-800 h-fit space-y-6 shadow-lg">
+            <h2 class="text-lg font-bold text-slate-200 flex items-center gap-2">🔍 Specimen Matrix Filters</h2>
+            
+            <!-- Tissue Type Select Filter -->
+            <div>
+                <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Target Organ / Tissue</label>
+                <select id="tissue-filter" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-sm text-slate-100 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    <option value="all">📍 Show All Organs (Complete Pool)</option>
+                    <option value="brain">Brain (CNS / Micro-Architecture)</option>
+                    <option value="heart">Heart (Cardiovascular System)</option>
+                    <option value="lung">Lung (Pulmonary Architecture)</option>
+                    <option value="kidney">Kidney (Renal Filtration)</option>
+                </select>
+            </div>
 
-    <!-- Isolated Wiki Comment Frame Container -->
-    <div class="wiki-section">
-        <h2 id="wiki-title">💬 Community Wiki: Select a Method</h2>
-        <p style="color: #94a3b8; font-size: 0.9em; margin-bottom: 20px;">
-            Note: Giscus comments will render directly inside the frame below once deployed or tested over localhost.
-        </p>
-        <div id="giscus-frame-container">
-            <!-- Giscus framework injects its iframe nodes explicitly right here -->
-        </div>
-    </div>
+            <!-- Chemical Class Strategy Filter -->
+            <div>
+                <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Biochemical Family Strategy</label>
+                <div class="space-y-2 text-sm text-slate-300 bg-slate-900/50 p-3 rounded-lg border border-slate-800">
+                    <label class="flex items-center gap-3 cursor-pointer">
+                        <input type="checkbox" class="chem-class rounded bg-slate-800 border-slate-700 text-blue-500 focus:ring-0" value="Solvent-based (Hydrophobic)" checked> 
+                        <span>Solvent-based (Hydrophobic)</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer">
+                        <input type="checkbox" class="chem-class rounded bg-slate-800 border-slate-700 text-blue-500 focus:ring-0" value="Aqueous (Hydrophilic)" checked> 
+                        <span>Aqueous (Hydrophilic)</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer">
+                        <input type="checkbox" class="chem-class rounded bg-slate-800 border-slate-700 text-blue-500 focus:ring-0" value="Hydrogel-embedding" checked> 
+                        <span>Hydrogel-embedding</span>
+                    </label>
+                </div>
+            </div>
+        </section>
 
-    <!-- Giscus Asynchronous Script Swap Orchestrator -->
+        <!-- Right Side: Target Method Cards and Dynamic Wiki Module -->
+        <section class="lg:col-span-2 space-y-6">
+            
+            <!-- Cards Container -->
+            <div id="registry-cards-container" class="space-y-4 max-h-[500px] overflow-y-auto pr-2">
+                <!-- Dynamically generated card items render via memory loop -->
+            </div>
+
+            <!-- Dynamic Community Wiki Comment Section Container -->
+            <div class="bg-slate-950 p-6 rounded-xl border border-slate-800 shadow-lg">
+                <h3 id="wiki-title" class="text-lg font-bold text-slate-200 mb-1">💬 Community Method Wiki</h3>
+                <p class="text-xs text-slate-400 mb-6">Pasted microscopy artifacts or tested unique clearing times? Post your data to share with other labs.</p>
+                
+                <div id="giscus-frame-container" class="min-h-[300px]">
+                    <!-- Standardized native Giscus Script Tag Injection Node -->
+                    <script src="https://giscus.app"
+                            data-repo="wildsheet/wildsheet.github.io"
+                            data-repo-id="R_kgDOUOWJeg"
+                            data-category="General"
+                            data-category-id="DIC_kwDOUOWJes4DE315"
+                            data-mapping="specific"
+                            data-term="iDISCO-Plus"
+                            data-strict="0"
+                            data-reactions-enabled="1"
+                            data-emit-metadata="0"
+                            data-input-position="top"
+                            data-theme="dark"
+                            data-lang="en"
+                            crossorigin="anonymous"
+                            async>
+                    </script>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Production App Script Engine -->
     <script>
+        const tissueClearingRegistry = [
+            { 
+                "name": "iDISCO-Plus", 
+                "display_name": "iDISCO+",
+                "class": "Solvent-based (Hydrophobic)", 
+                "ri": 1.56, 
+                "tissues": ["brain", "kidney"], 
+                "details": "High clearing capacity across thick specimens. Endogenous GFP/tdTomato fluorescence decays rapidly over 48 hours unless strictly stored under basic pH (8.5+) conditions." 
+            },
+            { 
+                "name": "CUBIC-Method", 
+                "display_name": "CUBIC",
+                "class": "Aqueous (Hydrophilic)", 
+                "ri": 1.38, 
+                "tissues": ["brain", "lung", "heart"], 
+                "details": "Outstanding retention indices for endogenous fluorescent protein preservation. Incubation steps require longer processing cycles compared to harsh organic solvents." 
+            }
+        ];
+
+        function renderFilteredRegistry() {
+            const selectedTissue = document.getElementById('tissue-filter').value;
+            const activeClasses = Array.from(document.querySelectorAll('.chem-class:checked')).map(cb => cb.value);
+            const container = document.getElementById('registry-cards-container');
+            
+            let filtered = tissueClearingRegistry.filter(method => {
+                const matchesTissue = selectedTissue === 'all' || method.tissues.includes(selectedTissue);
+                const matchesClass = activeClasses.includes(method.class);
+                return matchesTissue && matchesClass;
+            });
+
+            document.getElementById('stats-badge').innerText = `🧬 Mapped Protocols: ${filtered.length}`;
+
+            if(filtered.length === 0) {
+                container.innerHTML = `<div class="p-8 text-center text-slate-500 bg-slate-950 rounded-xl border border-slate-800 text-sm">No protocols match your selected organ/chemistry criteria.</div>`;
+                return;
+            }
+
+            container.innerHTML = filtered.map(m => `
+                <div onclick="loadWikiForMethod('${m.name}', '${m.display_name}')" class="bg-slate-900 p-5 rounded-xl border border-slate-800 shadow-sm hover:border-blue-500 transition duration-150 cursor-pointer group">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-mono uppercase bg-slate-950 border border-slate-800 px-2 py-0.5 rounded text-blue-400 font-medium">${m.class}</span>
+                            <h3 class="text-xl font-bold text-slate-100 group-hover:text-blue-400 transition mt-2">${m.display_name}</h3>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs text-slate-500 block uppercase font-semibold">Refractive Index</span>
+                            <span class="font-mono text-lg font-bold text-emerald-400">${m.ri || 'N/A'}</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-300 mt-3 leading-relaxed">${m.details}</p>
+                    <div class="mt-4 flex flex-wrap gap-1.5 justify-between items-center">
+                        <div class="flex gap-1.5">
+                            ${m.tissues.map(t => `<span class="text-xs bg-slate-950 px-2.5 py-1 rounded-md text-slate-400 border border-slate-800">📍 ${t}</span>`).join('')}
+                        </div>
+                        <span class="text-xs text-blue-400 font-semibold group-hover:underline">View Wiki Comments →</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Bypasses browser security policies via safe client-to-iframe postMessages
         function loadWikiForMethod(methodId, displayTitle) {
             document.getElementById('wiki-title').innerText = `💬 Community Wiki for: ${displayTitle}`;
             
-            const container = document.getElementById('giscus-frame-container');
-            container.innerHTML = ''; 
+            const iframe = document.querySelector('iframe.giscus-frame');
+            if (!iframe) return;
             
-            const giscusTarget = document.createElement('div');
-            giscusTarget.className = 'giscus';
-            container.appendChild(giscusTarget);
-            
-            const giscusScript = document.createElement('script');
-            giscusScript.src = "https://giscus.app";
-            
-            giscusScript.setAttribute('data-repo', "wildsheet/wildsheet.github.io");
-            giscusScript.setAttribute('data-repo-id', "R_kgDOUOWJeg");
-            giscusScript.setAttribute('data-category', "General");
-            giscusScript.setAttribute('data-category-id', "DIC_kwDOUOWJes4DE315");
-            
-            // 🎯 CHANGED TO PATHNAME WITH AN EXPLICIT TERM TO FORCE AUTOMATIC CREATION
-            giscusScript.setAttribute('data-mapping', 'pathname');
-            giscusScript.setAttribute('data-strict', '0');
-            
-            giscusScript.setAttribute('data-reactions-enabled', '1');
-            giscusScript.setAttribute('data-emit-metadata', '0');
-            giscusScript.setAttribute('data-input-position', 'top');
-            giscusScript.setAttribute('data-theme', 'dark');
-            giscusScript.setAttribute('data-lang', 'en');
-            giscusScript.crossOrigin = "anonymous";
-            giscusScript.async = true;
-            
-            container.appendChild(giscusScript);
+            // Standard Giscus cross-window message interface pipeline
+            iframe.contentWindow.postMessage({
+                giscus: {
+                    setConfig: {
+                        term: methodId
+                    }
+                }
+            }, 'https://giscus.app');
         }
 
+        document.getElementById('tissue-filter').addEventListener('change', renderFilteredRegistry);
+        document.querySelectorAll('.chem-class').forEach(cb => cb.addEventListener('change', renderFilteredRegistry));
         
-        // Auto-load the first method's profile context immediately on page mount
-        loadWikiForMethod('iDISCO-Plus');
+        renderFilteredRegistry();
     </script>
-
 </body>
 </html>
