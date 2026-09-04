@@ -47,30 +47,28 @@
 
     <!-- Giscus Asynchronous Script Swap Orchestrator -->
     <script>
-        function loadWikiForMethod(methodName) {
-            // 1. Alert the interface to show which technique target is active
-            document.getElementById('wiki-title').innerText = `💬 Community Wiki for: ${methodName}`;
+        function loadWikiForMethod(methodId, displayTitle) {
+            document.getElementById('wiki-title').innerText = `💬 Community Wiki for: ${displayTitle}`;
             
-            // 2. Clear out the previous method's comment box iframe completely
             const container = document.getElementById('giscus-frame-container');
-            container.innerHTML = '';
+            container.innerHTML = ''; 
             
-            // 3. Programmatically build a new Giscus configuration script node
+            const giscusTarget = document.createElement('div');
+            giscusTarget.className = 'giscus';
+            container.appendChild(giscusTarget);
+            
             const giscusScript = document.createElement('script');
             giscusScript.src = "https://giscus.app";
             
-            // 🛑 CRITICAL STEP: Replace these placeholders with your real repository settings from giscus.app
             giscusScript.setAttribute('data-repo', "wildsheet/wildsheet.github.io");
             giscusScript.setAttribute('data-repo-id', "R_kgDOUOWJeg");
-            giscusScript.setAttribute('data-category', "Announcements");
+            giscusScript.setAttribute('data-category', "General");
             giscusScript.setAttribute('data-category-id', "DIC_kwDOUOWJes4DE315");
             
-            // 🎯 MAP TECHNIQUE BY TERM ONLY
-            giscusScript.setAttribute('data-mapping', 'specific-term');
-            giscusScript.setAttribute('data-term', methodName); 
-            
-            // Layout & Cosmetic variables
+            // 🎯 CHANGED TO PATHNAME WITH AN EXPLICIT TERM TO FORCE AUTOMATIC CREATION
+            giscusScript.setAttribute('data-mapping', 'pathname');
             giscusScript.setAttribute('data-strict', '0');
+            
             giscusScript.setAttribute('data-reactions-enabled', '1');
             giscusScript.setAttribute('data-emit-metadata', '0');
             giscusScript.setAttribute('data-input-position', 'top');
@@ -79,9 +77,9 @@
             giscusScript.crossOrigin = "anonymous";
             giscusScript.async = true;
             
-            // 4. Inject it into the container node to swap the discussion frame instantly
             container.appendChild(giscusScript);
         }
+
         
         // Auto-load the first method's profile context immediately on page mount
         loadWikiForMethod('iDISCO-Plus');
