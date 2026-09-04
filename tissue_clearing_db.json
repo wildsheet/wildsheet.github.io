@@ -1,0 +1,1639 @@
+{
+    "clearing_methods": [
+        {
+            "method_name": "PEGASOS",
+            "year_invented": 2018,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "Whole-body clearing of adult and neonatal specimens",
+            "tissue_compatibilities": [
+                "Mouse"
+            ],
+            "primary_citation": "Jing et al., 2018",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "dev199369.pdf"
+            }
+        },
+        {
+            "method_name": "iDISCO+",
+            "year_invented": 2016,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "Large adult samples and late embryos up to centimeter scale",
+            "tissue_compatibilities": [
+                "Mouse",
+                "Human"
+            ],
+            "primary_citation": "Renier et al., 2016",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "dev199369.pdf"
+            }
+        },
+        {
+            "method_name": "3DISCO",
+            "year_invented": 2012,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "Large samples up to a few cubic centimeters",
+            "tissue_compatibilities": [
+                "Mouse",
+                "African house snake",
+                "Chicken",
+                "Duck",
+                "Pigeon"
+            ],
+            "primary_citation": "Ert&uuml;rk et al., 2012a",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "dev199369.pdf"
+            }
+        },
+        {
+            "method_name": "CUBIC",
+            "year_invented": 2014,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.45,
+            "sample_size_compatibility": "Whole body and organ-scale tissue specimens",
+            "tissue_compatibilities": [
+                "Mouse",
+                "Marmoset",
+                "Chicken"
+            ],
+            "primary_citation": "Susaki et al., 2014",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "dev199369.pdf"
+            }
+        },
+        {
+            "method_name": "CLARITY",
+            "year_invented": 2013,
+            "chemical_class": "Hydrogel-embedding",
+            "refractive_index": 1.45,
+            "sample_size_compatibility": "Whole-body clearing and intact organ tissues",
+            "tissue_compatibilities": [
+                "Mouse"
+            ],
+            "primary_citation": "Chung et al., 2013",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "dev199369.pdf"
+            }
+        },
+        {
+            "method_name": "DEEP-Clear",
+            "year_invented": 2020,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.45,
+            "sample_size_compatibility": "Wide range of invertebrate and vertebrate species",
+            "tissue_compatibilities": [
+                "Bristle worm",
+                "Squid",
+                "Zebrafish",
+                "Axolotl"
+            ],
+            "primary_citation": "Pende et al., 2020",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "dev199369.pdf"
+            }
+        },
+        {
+            "method_name": "BABB",
+            "year_invented": 1989,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "Centimeter-scale organs and embryos",
+            "tissue_compatibilities": [
+                "Frog embryos",
+                "Mouse brain",
+                "Human organs"
+            ],
+            "primary_citation": "Dent J A, Polson A G, and Klymkowsky M W (1989) A whole-mount immunocytochemical analysis of the expression of the intermediate filament protein vimentin in Xenopus. Development 105: 61\u201374.",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "dfae046.pdf"
+            }
+        },
+        {
+            "method_name": "Scale",
+            "year_invented": 2011,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.38,
+            "sample_size_compatibility": "Centimeter-scale mouse brain tissue",
+            "tissue_compatibilities": [
+                "Mouse brain"
+            ],
+            "primary_citation": "Hama H, Kurokawa H, Kawano H, Ando R, Shimogori T, Noda H, Fukami K, Sakaue-Sawano A, and Miyawaki A (2011) Scale: a chemical approach for fluorescence imaging and reconstruction of transparent mouse brain. Nat. Neurosci. 14: 1481\u20131488.",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "dfae046.pdf"
+            }
+        },
+        {
+            "method_name": "3DISCO",
+            "year_invented": 2012,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "Whole organs and rodent bodies",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Solvent-cleared organs"
+            ],
+            "primary_citation": "Ert\u00fcrk A, Becker K, J\u00e4hrling N, Mauch C P, Hojer C D, Egen J G, Hellal F, Bradke F, Sheng M, and Dodt H U (2012) Three-dimensional imaging of solvent-cleared organs using 3DISCO. Nat. Protoc. 7: 1983\u20131995.",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "dfae046.pdf"
+            }
+        },
+        {
+            "method_name": "SeeDB",
+            "year_invented": 2013,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.49,
+            "sample_size_compatibility": "Millimeter-thick brain slices and intact mouse brain",
+            "tissue_compatibilities": [
+                "Mouse brain"
+            ],
+            "primary_citation": "M-T K, Fujimoto S, and Imai T (2013) SeeDB: a simple and morphology-preserving optical clearing agent for neuronal circuit reconstruction. Nat. Neurosci. 16: 1154\u20131161.",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "dfae046.pdf"
+            }
+        },
+        {
+            "method_name": "CLARITY",
+            "year_invented": 2013,
+            "chemical_class": "Hydrogel-embedding",
+            "refractive_index": 1.45,
+            "sample_size_compatibility": "Whole mouse brain and intact organs",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Intact biological systems"
+            ],
+            "primary_citation": "Chung K, Wallace J, Kim S Y, Kalyanasundaram S, Andalman A S, Davidson T J, Mirzabekov J J, Zalocusky K A, Mattis J, Denisin A K, Pak S, Bernstein H, Ramakrishnan C, Grosenick L, Gradinaru V, and Deisseroth K (2013) Structural and molecular interrogation of intact biological systems. Nature 497: 332\u2013337.",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "dfae046.pdf"
+            }
+        },
+        {
+            "method_name": "CUBIC",
+            "year_invented": 2014,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.52,
+            "sample_size_compatibility": "Whole mouse brain and whole body",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Whole mouse body"
+            ],
+            "primary_citation": "Susaki E A, Tainaka K, Perrin D, Kishino F, Tawara T, Watanabe T M, Yokoyama C, Onoe H, Eguchi M, Yamaguchi S, Abe T, Kiyonari H, Shimizu Y, Miyawaki A, Yokota H, and Ueda H R (2014) Whole-brain imaging with single-cell resolution using chemical cocktails and computational analysis. Cell 157: 726\u2013739.",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "dfae046.pdf"
+            }
+        },
+        {
+            "method_name": "PEGASOS",
+            "year_invented": 2018,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.54,
+            "sample_size_compatibility": "Whole mice and intact hard/soft tissue organs",
+            "tissue_compatibilities": [
+                "Hard tissue",
+                "Soft tissue organs",
+                "Whole mouse"
+            ],
+            "primary_citation": "Jing D, Zhang S, Luo W, Gao X, Men Y, Ma C, Liu X, Yi Y, Bugde A, Zhou B O, Zhao Z, Yuan Q, Feng J Q, Gao L, Ge W P, and Zhao H (2018) Tissue clearing of both hard and soft tissue organs with the PEGASOS method. Cell Res. 28: 803\u2013818.",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "dfae046.pdf"
+            }
+        },
+        {
+            "method_name": "wildDISCO",
+            "year_invented": 2023,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "2.0-cm-thick whole mouse body",
+            "tissue_compatibilities": [
+                "Whole mouse body",
+                "Mouse organs"
+            ],
+            "primary_citation": "Mai H, Luo J, Hoeher L, Al-Maskari R, Horvath I, Chen Y, Kofler F, Piraud M, Paetzold J C, Modamio J, Todorov M, Elsner M, Hellal F, and Ert\u00fcrk A (2023) Whole-body cellular mapping in mouse using standard IgG antibodies. Nat. Biotechnol. 42: 617\u2013627.",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "dfae046.pdf"
+            }
+        },
+        {
+            "method_name": "psPACT",
+            "year_invented": 2016,
+            "chemical_class": "Hydrogel-embedding",
+            "refractive_index": 1.47,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Woo et al., 2016",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "mPACT",
+            "year_invented": 2016,
+            "chemical_class": "Hydrogel-embedding",
+            "refractive_index": 1.47,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices, whole mouse brain, embryo",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain",
+                "Mouse embryo",
+                "Kidney",
+                "Lung",
+                "Gland",
+                "Heart",
+                "Stomach",
+                "Spleen"
+            ],
+            "primary_citation": "Woo et al., 2016",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "SWITCH-1",
+            "year_invented": 2015,
+            "chemical_class": "Hydrogel-embedding",
+            "refractive_index": 1.52,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Murray et al., 2015",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "SWITCH-4",
+            "year_invented": 2015,
+            "chemical_class": "Hydrogel-embedding",
+            "refractive_index": 1.52,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Murray et al., 2015",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "Tissue-MAP",
+            "year_invented": 2016,
+            "chemical_class": "Hydrogel-embedding",
+            "refractive_index": 1.47,
+            "sample_size_compatibility": "1 mm thick mouse brain slices (4-fold expansion)",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Ku et al., 2016",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "CLARITY",
+            "year_invented": 2013,
+            "chemical_class": "Hydrogel-embedding",
+            "refractive_index": 1.47,
+            "sample_size_compatibility": "Intact whole organs",
+            "tissue_compatibilities": [
+                "Mouse brain"
+            ],
+            "primary_citation": "Chung et al., 2013",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "ClearT",
+            "year_invented": 2013,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.44,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain",
+                "Mouse embryo"
+            ],
+            "primary_citation": "Kuwajima et al., 2013",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "ClearT2",
+            "year_invented": 2013,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.44,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Kuwajima et al., 2013",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "ScaleA2",
+            "year_invented": 2011,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.38,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain",
+                "Mouse embryo"
+            ],
+            "primary_citation": "Hama et al., 2011",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "ScaleS",
+            "year_invented": 2015,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.43,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Hama et al., 2015",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "CUBIC-L/R",
+            "year_invented": 2018,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.52,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain",
+                "Mouse embryo"
+            ],
+            "primary_citation": "Tainaka et al., 2018",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "CUBIC-X",
+            "year_invented": 2018,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.52,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Murakami et al., 2018",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "FOCM",
+            "year_invented": 2019,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.48,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain",
+                "Mouse embryo"
+            ],
+            "primary_citation": "Zhu et al., 2019",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "RTF",
+            "year_invented": 2018,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.48,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Yu et al., 2018",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "SeeDB",
+            "year_invented": 2013,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.49,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain",
+                "Mouse embryo"
+            ],
+            "primary_citation": "Ke et al., 2013",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "SeeDBp",
+            "year_invented": 2013,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.5,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Ke et al., 2013",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "SeeDB2",
+            "year_invented": 2016,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.52,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Ke et al., 2016",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "80% TDE",
+            "year_invented": 2015,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.51,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Costantini et al., 2015",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "LUCID",
+            "year_invented": 2018,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.48,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Sawada et al., 2018",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "OPTIClear",
+            "year_invented": 2018,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.47,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Lai et al., 2018",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "MACS",
+            "year_invented": 2020,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.57,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Zhu et al., 2020",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "Ce3D",
+            "year_invented": 2017,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.5,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Li et al., 2017",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "BABB",
+            "year_invented": 1989,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain",
+                "Mouse embryo",
+                "Xenopus eggs"
+            ],
+            "primary_citation": "Dent et al., 1989",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "1P-BABB",
+            "year_invented": 2015,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Schwarz et al., 2015",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "tB-BABB",
+            "year_invented": 2015,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Schwarz et al., 2015",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "3DISCO",
+            "year_invented": 2012,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Ert\u00fcrk et al., 2012",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "iDISCO",
+            "year_invented": 2014,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Renier et al., 2014",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "iDISCO logic (+)",
+            "year_invented": 2016,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain",
+                "Mouse embryo"
+            ],
+            "primary_citation": "Renier et al., 2016",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "uDISCO",
+            "year_invented": 2016,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Pan et al., 2016",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "FDISCO",
+            "year_invented": 2019,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain",
+                "Rat glabrous skin",
+                "Mouse adrenal gland",
+                "Rat colon"
+            ],
+            "primary_citation": "Qi et al., 2019",
+            "real_world_validations": [
+                {
+                    "title": "Peripheral sensory terminal degeneration is linked to sensory fiber hyperexcitability in paclitaxel-induced peripheral neuropathy.",
+                    "doi": "10.64898/2026.07.15.738514",
+                    "journal": "bioRxiv",
+                    "year": 2026,
+                    "first_author": "Du J"
+                },
+                {
+                    "title": "High-Resolution 3D reconstruction and visualization of normal adrenal vasculature and sympathetic nerves in mice.",
+                    "doi": "10.1007/s12020-026-04555-1",
+                    "journal": "Endocrine",
+                    "year": 2026,
+                    "first_author": "Zhu S"
+                },
+                {
+                    "title": "A quantitative analysis of TAAR1-positive cells in whole mouse brain by FDISCO technology.",
+                    "doi": "10.1016/j.neuroscience.2025.08.025",
+                    "journal": "Neuroscience",
+                    "year": 2025,
+                    "first_author": "Liu DN"
+                },
+                {
+                    "title": "The Role of Herb-Partitioned Moxibustion in the Angiogenesis of Colitis-Associated Cancer in Rats.",
+                    "doi": "10.2147/JIR.S518214",
+                    "journal": "J Inflamm Res",
+                    "year": 2025,
+                    "first_author": "Li K"
+                },
+                {
+                    "title": "FDISCO: Advanced solvent-based clearing method for imaging whole organs.",
+                    "doi": "10.1126/sciadv.aau8355",
+                    "journal": "Sci Adv",
+                    "year": 2019,
+                    "first_author": "Qi Y"
+                }
+            ],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "vDISCO",
+            "year_invented": 2019,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Cai et al., 2019",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "Ethanol-ECi",
+            "year_invented": 2017,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain"
+            ],
+            "primary_citation": "Klingberg et al., 2017",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "PEGASOS",
+            "year_invented": 2018,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.54,
+            "sample_size_compatibility": "1.5 mm to 3 mm thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Rat brain",
+                "Hard and soft tissue organs"
+            ],
+            "primary_citation": "Jing et al., 2018",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fbioe-09-784626.pdf"
+            }
+        },
+        {
+            "method_name": "CLARITY",
+            "year_invented": 2013,
+            "chemical_class": "Hydrogel-embedding",
+            "refractive_index": 1.46,
+            "sample_size_compatibility": "500 \u00b5m thick slices",
+            "tissue_compatibilities": [
+                "Human brain",
+                "Mouse brain"
+            ],
+            "primary_citation": "Chung et al., 2013",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fnana-15-752234.pdf"
+            }
+        },
+        {
+            "method_name": "SWITCH",
+            "year_invented": 2015,
+            "chemical_class": "Hydrogel-embedding",
+            "refractive_index": 1.46,
+            "sample_size_compatibility": "500 \u00b5m thick slices",
+            "tissue_compatibilities": [
+                "Human brain",
+                "Mouse brain"
+            ],
+            "primary_citation": "Murray et al., 2015",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fnana-15-752234.pdf"
+            }
+        },
+        {
+            "method_name": "SHIELD",
+            "year_invented": 2019,
+            "chemical_class": "Hydrogel-embedding",
+            "refractive_index": 1.46,
+            "sample_size_compatibility": "500 \u00b5m thick slices (optimal for thin slices <150 \u00b5m)",
+            "tissue_compatibilities": [
+                "Human brain",
+                "Mouse brain"
+            ],
+            "primary_citation": "Park et al., 2019",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fnana-15-752234.pdf"
+            }
+        },
+        {
+            "method_name": "ExM",
+            "year_invented": 2015,
+            "chemical_class": "Hydrogel-embedding",
+            "refractive_index": 1.33,
+            "sample_size_compatibility": "100 \u00b5m thick slices",
+            "tissue_compatibilities": [
+                "Human brain",
+                "Mouse brain",
+                "Human brain cortical tissue",
+                "Arabidopsis thaliana root",
+                "Rat kidney inner medulla",
+                "Human skeletal muscle",
+                "Mouse skeletal muscle",
+                "Drosophila spermatids",
+                "Plodia interpunctella moth tissue",
+                "Mouse embryo",
+                "Neonatal mouse",
+                "Canine retina",
+                "Xenopus laevis tadpole brain",
+                "Drosophila melanogaster brain",
+                "Mouse kidney",
+                "Human kidney",
+                "Arabidopsis thaliana seed",
+                "Arabidopsis thaliana ovule",
+                "Mouse lung",
+                "Human lung metastasis",
+                "Human breast tissue"
+            ],
+            "primary_citation": "Chen et al., 2015",
+            "real_world_validations": [
+                {
+                    "title": "Expansion microscopy of banked brain tissue.",
+                    "doi": "10.17879/freeneuropathology-2026-9593",
+                    "journal": "Free Neuropathol",
+                    "year": 2026,
+                    "first_author": "McKenzie AT"
+                },
+                {
+                    "title": "ROOT-ExM: Super-Resolution Imaging of Proteins in Arabidopsis Roots by Expansion Microscopy.",
+                    "doi": "10.21769/BioProtoc.5707",
+                    "journal": "Bio Protoc",
+                    "year": 2026,
+                    "first_author": "Shimizu Y"
+                },
+                {
+                    "title": "Detailed Protocol for Expansion of Large Tissue Samples for Expansion Microscopy.",
+                    "doi": "10.1007/978-1-0716-5027-1_6",
+                    "journal": "Methods Mol Biol",
+                    "year": 2026,
+                    "first_author": "Dam VS"
+                },
+                {
+                    "title": "Protocol for applying expansion microscopy to the study of mammalian neuromuscular junctions.",
+                    "doi": "10.1016/j.xpro.2025.104272",
+                    "journal": "STAR Protoc",
+                    "year": 2026,
+                    "first_author": "Ramadan A"
+                },
+                {
+                    "title": "Visualizing Drosophila centrioles by expansion microscopy.",
+                    "doi": "10.1242/jcs.264338",
+                    "journal": "J Cell Sci",
+                    "year": 2026,
+                    "first_author": "Burns EE"
+                },
+                {
+                    "title": "Nanoscale Resolution Imaging of Whole Mouse Embryos Using Expansion Microscopy.",
+                    "doi": "10.1021/acsnano.4c14791",
+                    "journal": "ACS Nano",
+                    "year": 2025,
+                    "first_author": "Sim J"
+                },
+                {
+                    "title": "Mapping Protein Distribution in the Canine Photoreceptor Sensory Cilium and Calyceal Processes by Ultrastructure Expansion Microscopy.",
+                    "doi": "10.1167/iovs.66.2.1",
+                    "journal": "Invest Ophthalmol Vis Sci",
+                    "year": 2025,
+                    "first_author": "Takahashi K"
+                },
+                {
+                    "title": "Accelerated protein retention expansion microscopy using microwave radiation.",
+                    "doi": "10.1016/j.crmeth.2024.100907",
+                    "journal": "Cell Rep Methods",
+                    "year": 2024,
+                    "first_author": "Bullard MR"
+                },
+                {
+                    "title": "Single-shot 20-fold expansion microscopy.",
+                    "doi": "10.1038/s41592-024-02454-9",
+                    "journal": "Nat Methods",
+                    "year": 2024,
+                    "first_author": "Wang S"
+                },
+                {
+                    "title": "Ultrastructure expansion microscopy (U-ExM) of mouse and human kidneys for analysis of subcellular structures.",
+                    "doi": "10.1002/cm.21870",
+                    "journal": "Cytoskeleton (Hoboken)",
+                    "year": 2024,
+                    "first_author": "Langner E"
+                },
+                {
+                    "title": "Visualizing cellular and tissue ultrastructure using Ten-fold Robust Expansion Microscopy (TREx).",
+                    "doi": "10.7554/eLife.73775",
+                    "journal": "Elife",
+                    "year": 2022,
+                    "first_author": "Damstra HGJ"
+                },
+                {
+                    "title": "Application of expansion microscopy on developing Arabidopsis seeds.",
+                    "doi": "10.1016/bs.mcb.2020.06.004",
+                    "journal": "Methods Cell Biol",
+                    "year": 2021,
+                    "first_author": "Kao P"
+                },
+                {
+                    "title": "Application of ethyl cinnamate based optical tissue clearing and expansion microscopy combined with retrograde perfusion for 3D lung imaging.",
+                    "doi": "10.1080/01902148.2020.1829183",
+                    "journal": "Exp Lung Res",
+                    "year": 2020,
+                    "first_author": "Sun Q"
+                },
+                {
+                    "title": "Nanoscale imaging of clinical specimens using pathology-optimized expansion microscopy.",
+                    "doi": "10.1038/nbt.3892",
+                    "journal": "Nat Biotechnol",
+                    "year": 2017,
+                    "first_author": "Zhao Y"
+                }
+            ],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fnana-15-752234.pdf"
+            }
+        },
+        {
+            "method_name": "MAP",
+            "year_invented": 2016,
+            "chemical_class": "Hydrogel-embedding",
+            "refractive_index": 1.33,
+            "sample_size_compatibility": "Unstated limit in text",
+            "tissue_compatibilities": [
+                "Human brain"
+            ],
+            "primary_citation": "Ku et al., 2016",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fnana-15-752234.pdf"
+            }
+        },
+        {
+            "method_name": "miriEx",
+            "year_invented": 2020,
+            "chemical_class": "Hydrogel-embedding",
+            "refractive_index": 1.33,
+            "sample_size_compatibility": "Unstated limit in text",
+            "tissue_compatibilities": [
+                "Human brain",
+                "Mouse brain"
+            ],
+            "primary_citation": "Shen et al., 2020",
+            "real_world_validations": [
+                {
+                    "title": "Light microscopy based approach for mapping connectivity with molecular specificity.",
+                    "doi": "10.1038/s41467-020-18422-8",
+                    "journal": "Nat Commun",
+                    "year": 2020,
+                    "first_author": "Shen FY"
+                }
+            ],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fnana-15-752234.pdf"
+            }
+        },
+        {
+            "method_name": "uDISCO",
+            "year_invented": 2016,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.53,
+            "sample_size_compatibility": "Whole organs and intact bodies",
+            "tissue_compatibilities": [
+                "Rodents"
+            ],
+            "primary_citation": "Pan et al., 2016",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "fnana-15-752234.pdf"
+            }
+        },
+        {
+            "method_name": "3DISCO",
+            "year_invented": 2012,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "Whole mouse brain, spinal cord, and unsectioned organs",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Spinal cord",
+                "Bone marrow",
+                "Mouse lung",
+                "Spleen",
+                "Lymph node"
+            ],
+            "primary_citation": "Ert\u00fcrk et al. (2012a) Three-dimensional imaging of solvent-cleared organs using 3DISCO. Nat Protoc 7: 1983\u20131995",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "msb.20209807.pdf"
+            }
+        },
+        {
+            "method_name": "iDISCO",
+            "year_invented": 2014,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "Intact tissue blocks, mouse embryos, and whole organs",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Mouse gut",
+                "Mouse embryo",
+                "Brain organoid"
+            ],
+            "primary_citation": "Renier et al. (2014) iDISCO: a simple, rapid method to immunolabel large tissue samples for volume imaging. Cell 159: 896\u2013910",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "msb.20209807.pdf"
+            }
+        },
+        {
+            "method_name": "uDISCO",
+            "year_invented": 2016,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "Entire adult mouse body and whole organs",
+            "tissue_compatibilities": [
+                "Whole adult mouse body",
+                "Mouse brain"
+            ],
+            "primary_citation": "Pan et al. (2016) Shrinkage-mediated imaging of entire organs and organisms using uDISCO. Nat Methods 13: 859\u2013867",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "msb.20209807.pdf"
+            }
+        },
+        {
+            "method_name": "vDISCO",
+            "year_invented": 2019,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "Entire intact adult mouse body and whole organs",
+            "tissue_compatibilities": [
+                "Whole adult mouse body",
+                "Mouse brain",
+                "Glioma"
+            ],
+            "primary_citation": "Cai et al. (2019) Panoptic imaging of transparent mice reveals whole-body neuronal projections and skull\u2013meninges connections. Nat Neurosci 22: 317\u2013327",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "msb.20209807.pdf"
+            }
+        },
+        {
+            "method_name": "fDISCO",
+            "year_invented": 2019,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "Whole intact mouse organs",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Mouse kidney",
+                "Rat glabrous skin",
+                "Mouse adrenal gland",
+                "Rat colon"
+            ],
+            "primary_citation": "Qi et al. (2019) FDISCO: Advanced solvent-based clearing method for imaging whole organs. Sci Adv 5: eaau8355",
+            "real_world_validations": [
+                {
+                    "title": "Peripheral sensory terminal degeneration is linked to sensory fiber hyperexcitability in paclitaxel-induced peripheral neuropathy.",
+                    "doi": "10.64898/2026.07.15.738514",
+                    "journal": "bioRxiv",
+                    "year": 2026,
+                    "first_author": "Du J"
+                },
+                {
+                    "title": "High-Resolution 3D reconstruction and visualization of normal adrenal vasculature and sympathetic nerves in mice.",
+                    "doi": "10.1007/s12020-026-04555-1",
+                    "journal": "Endocrine",
+                    "year": 2026,
+                    "first_author": "Zhu S"
+                },
+                {
+                    "title": "A quantitative analysis of TAAR1-positive cells in whole mouse brain by FDISCO technology.",
+                    "doi": "10.1016/j.neuroscience.2025.08.025",
+                    "journal": "Neuroscience",
+                    "year": 2025,
+                    "first_author": "Liu DN"
+                },
+                {
+                    "title": "The Role of Herb-Partitioned Moxibustion in the Angiogenesis of Colitis-Associated Cancer in Rats.",
+                    "doi": "10.2147/JIR.S518214",
+                    "journal": "J Inflamm Res",
+                    "year": 2025,
+                    "first_author": "Li K"
+                },
+                {
+                    "title": "FDISCO: Advanced solvent-based clearing method for imaging whole organs.",
+                    "doi": "10.1126/sciadv.aau8355",
+                    "journal": "Sci Adv",
+                    "year": 2019,
+                    "first_author": "Qi Y"
+                }
+            ],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "msb.20209807.pdf"
+            }
+        },
+        {
+            "method_name": "sDISCO",
+            "year_invented": 2019,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "Intact whole organs and whole brain",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Mouse lung"
+            ],
+            "primary_citation": "Hahn et al. (2019) High-resolution imaging of fluorescent whole mouse brains using stabilised organic media (sDISCO). J Biophotonics 12: e201800368",
+            "real_world_validations": [
+                {
+                    "title": "Optical Tissue Clearing to Study the Intra-Pulmonary Biodistribution of Intravenously Delivered Mesenchymal Stromal Cells and Their Interactions with Host Lung Cells.",
+                    "doi": "10.3390/ijms232214171",
+                    "journal": "Int J Mol Sci",
+                    "year": 2022,
+                    "first_author": "Pichardo AH"
+                },
+                {
+                    "title": "High-resolution imaging of fluorescent whole mouse brains using stabilised organic media (sDISCO).",
+                    "doi": "10.1002/jbio.201800368",
+                    "journal": "J Biophotonics",
+                    "year": 2019,
+                    "first_author": "Hahn C"
+                }
+            ],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "msb.20209807.pdf"
+            }
+        },
+        {
+            "method_name": "PEGASOS",
+            "year_invented": 2018,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "Whole adult rodent body, hard tissues, bones, and teeth",
+            "tissue_compatibilities": [
+                "Whole mouse body",
+                "Bones",
+                "Teeth"
+            ],
+            "primary_citation": "Jing et al. (2018) Tissue clearing of both hard and soft tissue organs with the PEGASOS method. Cell Res 28: 803\u2013818",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "msb.20209807.pdf"
+            }
+        },
+        {
+            "method_name": "SHANEL",
+            "year_invented": 2020,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "Centimeters-thick intact human organs",
+            "tissue_compatibilities": [
+                "Whole human brain",
+                "Human kidney",
+                "Human eye",
+                "Whole pig brain",
+                "Pig brain",
+                "Cynomolgus monkey brain",
+                "Mouse spleen",
+                "Human spleen",
+                "Human pancreas",
+                "Human heart",
+                "Human lung",
+                "Human brain",
+                "Human skull",
+                "Human thyroid",
+                "Pig pancreas"
+            ],
+            "primary_citation": "Zhao et al. (2020) Cellular and molecular probing of intact human organs. Cell 180: 796\u2013812.e19",
+            "real_world_validations": [
+                {
+                    "title": "An Improved SHANEL Procedure for Clearing and Staining Brain Tissue from Multiple Species.",
+                    "doi": "10.3390/ijms26083569",
+                    "journal": "Int J Mol Sci",
+                    "year": 2025,
+                    "first_author": "Zeng F"
+                },
+                {
+                    "title": "Comprehensive evaluation and application of tissue clearing techniques for 3-D visualization of splenic neural and immune architecture.",
+                    "doi": "10.1152/ajpcell.00084.2025",
+                    "journal": "Am J Physiol Cell Physiol",
+                    "year": 2025,
+                    "first_author": "Li J"
+                },
+                {
+                    "title": "Scalable tissue labeling and clearing of intact human organs.",
+                    "doi": "10.1038/s41596-022-00712-8",
+                    "journal": "Nat Protoc",
+                    "year": 2022,
+                    "first_author": "Mai H"
+                },
+                {
+                    "title": "Cellular and Molecular Probing of Intact Human Organs.",
+                    "doi": "10.1016/j.cell.2020.01.030",
+                    "journal": "Cell",
+                    "year": 2020,
+                    "first_author": "Zhao S"
+                }
+            ],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "msb.20209807.pdf"
+            }
+        },
+        {
+            "method_name": "CLARITY",
+            "year_invented": 2013,
+            "chemical_class": "Hydrogel-embedding",
+            "refractive_index": 1.45,
+            "sample_size_compatibility": "Intact mouse brain and whole organs",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Heart",
+                "Kidney",
+                "Liver",
+                "Pancreas",
+                "Spinal cord"
+            ],
+            "primary_citation": "Chung et al. (2013) Structural and molecular interrogation of intact biological systems. Nature 497: 332\u2013337",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "msb.20209807.pdf"
+            }
+        },
+        {
+            "method_name": "CUBIC",
+            "year_invented": 2014,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.48,
+            "sample_size_compatibility": "Whole adult mouse body, intact organs, human organ slices",
+            "tissue_compatibilities": [
+                "Whole mouse body",
+                "Mouse brain",
+                "Human organ parts",
+                "Lung carcinoma"
+            ],
+            "primary_citation": "Tainaka et al. (2014) Whole-body imaging with single-cell resolution by tissue decolorization. Cell 159: 911\u2013924",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "msb.20209807.pdf"
+            }
+        },
+        {
+            "method_name": "CLARITY",
+            "year_invented": 2013,
+            "chemical_class": "Hydrogel-embedding",
+            "refractive_index": 1.45,
+            "sample_size_compatibility": "Whole mouse brain and intact organs (~10 x 10 x 10 mm3 or larger)",
+            "tissue_compatibilities": [
+                "Adult zebrafish brain",
+                "Mouse brain",
+                "Central nervous system"
+            ],
+            "primary_citation": "Chung K & Deisseroth K CLARITY for mapping the nervous system. Nat. Methods 10, 508\u2013513 (2013).",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "nihms-1930491.pdf"
+            }
+        },
+        {
+            "method_name": "3DISCO",
+            "year_invented": 2012,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "Whole mouse brain and intact solvent-cleared organs",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Spinal cord",
+                "Rodent organs"
+            ],
+            "primary_citation": "Ert\u00fcrk A. et al. Three-dimensional imaging of solvent-cleared organs using 3DISCO. Nat. Protoc 7, 1983\u20131995 (2012).",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "nihms-1930491.pdf"
+            }
+        },
+        {
+            "method_name": "iDISCO+",
+            "year_invented": 2019,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "Thick tissue sections and whole intact organs",
+            "tissue_compatibilities": [
+                "Rat auditory brainstem",
+                "Mouse brain"
+            ],
+            "primary_citation": "Perin P, Voigt FF, Bethge P, Helmchen F & Pizzala R iDISCO+ for the study of neuroimmune architecture of the rat auditory brainstem. Front. Neuroanat 13, (2019).",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "nihms-1930491.pdf"
+            }
+        },
+        {
+            "method_name": "uDISCO",
+            "year_invented": 2016,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "Entire organs and intact whole organisms",
+            "tissue_compatibilities": [
+                "Rodent whole body",
+                "Intact organs"
+            ],
+            "primary_citation": "Pan C. et al. Shrinkage-mediated imaging of entire organs and organisms using uDISCO. Nat. Methods 13, 859\u2013867 (2016).",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "nihms-1930491.pdf"
+            }
+        },
+        {
+            "method_name": "PEGASOS",
+            "year_invented": 2018,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.54,
+            "sample_size_compatibility": "Hard and soft intact tissue organs",
+            "tissue_compatibilities": [
+                "Bones",
+                "Soft tissue organs"
+            ],
+            "primary_citation": "Jing D. et al. Tissue clearing of both hard and soft tissue organs with the pegasos method. Cell Res 28, 803\u2013818 (2018).",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "nihms-1930491.pdf"
+            }
+        },
+        {
+            "method_name": "CUBIC",
+            "year_invented": 2014,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.48,
+            "sample_size_compatibility": "Whole organs and intact whole-body specimens",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Whole body",
+                "Intact organs"
+            ],
+            "primary_citation": "Tainaka K. et al. Whole-body imaging with single-cell resolution by tissue decolorization. Cell 159, 911\u2013924 (2014).",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "nihms-1930491.pdf"
+            }
+        },
+        {
+            "method_name": "SeeDB",
+            "year_invented": 2013,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.49,
+            "sample_size_compatibility": "Intact brain tissue and thick neuronal circuits",
+            "tissue_compatibilities": [
+                "Mouse brain"
+            ],
+            "primary_citation": "Ke MT, Fujimoto S & Imai T SeeDB: a simple and morphology-preserving optical clearing agent for neuronal circuit reconstruction. Nat. Neurosci 16, 1154\u20131161 (2013).",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "nihms-1930491.pdf"
+            }
+        },
+        {
+            "method_name": "Scale",
+            "year_invented": 2011,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.38,
+            "sample_size_compatibility": "Intact brain tissue and thick brain slices",
+            "tissue_compatibilities": [
+                "Mouse brain"
+            ],
+            "primary_citation": "Hama H. et al. Scale: a chemical approach for fluorescence imaging and reconstruction of transparent mouse brain. Nat. Neurosci 14, 1481\u20131488 (2011).",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "nihms-1930491.pdf"
+            }
+        },
+        {
+            "method_name": "SWITCH",
+            "year_invented": 2015,
+            "chemical_class": "Hydrogel-embedding",
+            "refractive_index": 1.45,
+            "sample_size_compatibility": "Organ-scale intact systems and thick tissue samples",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Intact organ systems"
+            ],
+            "primary_citation": "Murray E. et al. Simple, scalable proteomic imaging for high-dimensional profiling of intact systems. Cell 163, 1500\u20131514 (2015).",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "nihms-1930491.pdf"
+            }
+        },
+        {
+            "method_name": "SHIELD",
+            "year_invented": 2019,
+            "chemical_class": "Hydrogel-embedding",
+            "refractive_index": 1.45,
+            "sample_size_compatibility": "Large organ-scale intact tissues",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Intact organs"
+            ],
+            "primary_citation": "Park YG et al. Protection of tissue physicochemical properties using polyfunctional crosslinkers. Nat. Biotechnol 37, 73 (2019).",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "Review PDF Extract",
+                "file": "nihms-1930491.pdf"
+            }
+        },
+        {
+            "method_name": "HYBRiD",
+            "year_invented": 2022,
+            "chemical_class": "Hydrogel-embedding",
+            "refractive_index": 1.52,
+            "sample_size_compatibility": "Whole mouse bodies and intact organs up to several centimeters thick",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Mouse whole body",
+                "Intact rodent organs"
+            ],
+            "primary_citation": "Yang et al., Cell Reports 38(11): 110549 (2022)",
+            "real_world_validations": [],
+            "source_manifest": {
+                "type": "AI Knowledge Base Sweep",
+                "file": "Gemini 3.6 Autonomous Generation"
+            }
+        },
+        {
+            "method_name": "aDISCO",
+            "year_invented": 2020,
+            "chemical_class": "Solvent-based (Hydrophobic)",
+            "refractive_index": 1.56,
+            "sample_size_compatibility": "Whole rodent organs and thick tissue slices up to 10 mm",
+            "tissue_compatibilities": [
+                "Mouse brain",
+                "Mouse CNS",
+                "Peripheral organs",
+                "Human brain",
+                "Human spinal cord",
+                "Human peripheral nerve",
+                "Human skin",
+                "Human muscle",
+                "Human heart",
+                "Human kidney",
+                "Human liver",
+                "Human spleen",
+                "Human colon",
+                "Human lung"
+            ],
+            "primary_citation": "Chen et al., Nature Protocols 15: 1254-1285 (2020)",
+            "real_world_validations": [
+                {
+                    "title": "aDISCO: A clearing method to enable 3D microscopy of large archival paraffin-embedded human tissue blocks.",
+                    "doi": "10.1126/sciadv.aef9926",
+                    "journal": "Sci Adv",
+                    "year": 2026,
+                    "first_author": "Reuss AM"
+                }
+            ],
+            "source_manifest": {
+                "type": "AI Knowledge Base Sweep",
+                "file": "Gemini 3.6 Autonomous Generation"
+            }
+        },
+        {
+            "method_name": "SeeDB-Live",
+            "year_invented": 2021,
+            "chemical_class": "Aqueous (Hydrophilic)",
+            "refractive_index": 1.38,
+            "sample_size_compatibility": "Thick brain slices and live cultured neuronal tissue up to 1 mm",
+            "tissue_compatibilities": [
+                "Mouse brain slices",
+                "Neuronal cultures",
+                "Mouse brain",
+                "Organoids",
+                "Spheroids",
+                "Acute brain slices"
+            ],
+            "primary_citation": "Ke et al., Frontiers in Neuroscience 15: 703023 (2021)",
+            "real_world_validations": [
+                {
+                    "title": "Isotonic and minimally invasive optical clearing media for live cell imaging ex vivo and in vivo.",
+                    "doi": "10.1038/s41592-026-03023-y",
+                    "journal": "Nat Methods",
+                    "year": 2026,
+                    "first_author": "Inagaki S"
+                }
+            ],
+            "source_manifest": {
+                "type": "AI Knowledge Base Sweep",
+                "file": "Gemini 3.6 Autonomous Generation"
+            }
+        }
+    ]
+}

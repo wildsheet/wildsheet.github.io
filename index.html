@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tissue Clearing Database - Test Build</title>
+    <style>
+        body { font-family: sans-serif; background: #121824; color: #e2e8f0; max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        .method-card { background: #1e293b; border: 1px solid #334155; padding: 20px; margin-bottom: 15px; border-radius: 8px; cursor: pointer; }
+        .method-card:hover { border-color: #3b82f6; }
+        .wiki-section { background: #0f172a; border: 1px solid #1e293b; padding: 20px; border-radius: 8px; margin-top: 40px; }
+        h1 { color: #3b82f6; }
+        button { background: #3b82f6; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #2563eb; }
+    </style>
+</head>
+<body>
+
+    <h1>🔬 Tissue Clearing Database (Giscus Test Platform)</h1>
+    <p>Click a methodology card below to load its dedicated community wiki discussion thread instantly via GitHub.</p>
+
+    <!-- Mock Database Interface Layer -->
+    <div id="methods-list">
+        <div class="method-card" onclick="loadWikiForMethod('iDISCO-Plus')">
+            <h3>📌 iDISCO+</h3>
+            <p><strong>Class:</strong> Solvent-based (Hydrophobic) | <strong>RI:</strong> 1.56</p>
+            <button>💬 Load iDISCO+ Wiki Threads</button>
+        </div>
+
+        <div class="method-card" onclick="loadWikiForMethod('CUBIC-Method')">
+            <h3>📌 CUBIC</h3>
+            <p><strong>Class:</strong> Aqueous (Hydrophilic) | <strong>RI:</strong> 1.38</p>
+            <button>💬 Load CUBIC Wiki Threads</button>
+        </div>
+    </div>
+
+    <!-- Isolated Wiki Comment Frame Container -->
+    <div class="wiki-section">
+        <h2 id="wiki-title">💬 Community Wiki: Select a Method</h2>
+        <p style="color: #94a3b8; font-size: 0.9em; margin-bottom: 20px;">
+            Note: Giscus comments will render directly inside the frame below once deployed or tested over localhost.
+        </p>
+        <div id="giscus-frame-container">
+            <!-- Giscus framework injects its iframe nodes explicitly right here -->
+        </div>
+    </div>
+
+    <!-- Giscus Asynchronous Script Swap Orchestrator -->
+    <script>
+        function loadWikiForMethod(methodName) {
+            // 1. Alert the interface to show which technique target is active
+            document.getElementById('wiki-title').innerText = `💬 Community Wiki for: ${methodName}`;
+            
+            // 2. Clear out the previous method's comment box iframe completely
+            const container = document.getElementById('giscus-frame-container');
+            container.innerHTML = '';
+            
+            // 3. Programmatically build a new Giscus configuration script node
+            const giscusScript = document.createElement('script');
+            giscusScript.src = "https://giscus.app";
+            
+            // 🛑 CRITICAL STEP: Replace these placeholders with your real repository settings from giscus.app
+            giscusScript.setAttribute('data-repo', "wildsheet/wildsheet.github.io");
+            giscusScript.setAttribute('data-repo-id', "R_kgDOUOWJeg");
+            giscusScript.setAttribute('data-category', "Announcements");
+            giscusScript.setAttribute('data-category-id', "DIC_kwDOUOWJes4DE315");
+            
+            // 🎯 MAP TECHNIQUE BY TERM ONLY
+            giscusScript.setAttribute('data-mapping', 'specific-term');
+            giscusScript.setAttribute('data-term', methodName); 
+            
+            // Layout & Cosmetic variables
+            giscusScript.setAttribute('data-strict', '0');
+            giscusScript.setAttribute('data-reactions-enabled', '1');
+            giscusScript.setAttribute('data-emit-metadata', '0');
+            giscusScript.setAttribute('data-input-position', 'top');
+            giscusScript.setAttribute('data-theme', 'dark');
+            giscusScript.setAttribute('data-lang', 'en');
+            giscusScript.crossOrigin = "anonymous";
+            giscusScript.async = true;
+            
+            // 4. Inject it into the container node to swap the discussion frame instantly
+            container.appendChild(giscusScript);
+        }
+        
+        // Auto-load the first method's profile context immediately on page mount
+        loadWikiForMethod('iDISCO-Plus');
+    </script>
+
+</body>
+</html>
