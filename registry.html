@@ -93,7 +93,7 @@
 
     <!-- Runtime Advanced Multi-Filter Client Engine -->
     <script>
-                let cachedMethodsRegistry = [];
+        let cachedMethodsRegistry = [];
         let activeMethodId = window.location.hash.replace('#', '') || '';
         let isFocusModeActive = false;
 
@@ -115,7 +115,6 @@
                 
                 populateDynamicDropdownFilters();
                 renderFilteredRegistry();
-                syncGiscusFrameContext();
             } catch (error) {
                 console.error("Pipeline Sync Error:", error);
                 document.getElementById('registry-cards-container').innerHTML = `
@@ -217,6 +216,7 @@
                         </div>
                         ${buildCardTemplateHtml(targetRecord, true)}
                     `;
+                    syncGiscusFrameContext();
                     return;
                 }
             }
@@ -227,6 +227,7 @@
             }
 
             container.innerHTML = filtered.map(m => buildCardTemplateHtml(m, false)).join('');
+            syncGiscusFrameContext();
         }
 
         function buildCardTemplateHtml(m, isFocused) {
@@ -254,14 +255,14 @@
 
         function syncGiscusFrameContext() {
             const targetMethod = cachedMethodsRegistry.find(m => m.method_name === activeMethodId);
-            if (!targetMethod) return;
+            const container = document.getElementById('giscus-frame-container');
+            if (!targetMethod || !container) return;
 
             document.getElementById('wiki-title').innerText = `💬 Wiki Discussion Room: ${targetMethod.method_name}`;
-            const container = document.getElementById('giscus-frame-container');
             container.innerHTML = ''; 
             
             const giscusScript = document.createElement('script');
-            giscusScript.src = "https://giscus.app";
+            giscusScript.src = "https://giscus.app/client.js";
             giscusScript.setAttribute('data-repo', "wildsheet/wildsheet.github.io");
             giscusScript.setAttribute('data-repo-id', "R_kgDOUOWJeg");
             giscusScript.setAttribute('data-category', "General");
@@ -280,13 +281,11 @@
             container.appendChild(giscusScript);
         }
 
-        // 🎯 Fixed: Resolved unescaped closing brace tracking syntax issue on the scroll call line
         function selectNewMethodWiki(methodId) {
             window.location.hash = methodId;
             activeMethodId = methodId;
             isFocusModeActive = true; 
             renderFilteredRegistry();
-            syncGiscusFrameContext();
             document.getElementById('wiki-title').scrollIntoView({ behavior: 'smooth' });
         }
 
