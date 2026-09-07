@@ -93,7 +93,7 @@
 
     <!-- Runtime Advanced Multi-Filter Client Engine -->
     <script>
-        let cachedMethodsRegistry = [];
+                let cachedMethodsRegistry = [];
         let activeMethodId = window.location.hash.replace('#', '') || '';
         let isFocusModeActive = false;
 
@@ -110,7 +110,7 @@
                     const validMethod = cachedMethodsRegistry.find(m => m.method_name === activeMethodId);
                     if (validMethod) isFocusModeActive = true;
                 } else if (cachedMethodsRegistry.length > 0) {
-                    activeMethodId = cachedMethodsRegistry[0].method_name;
+                    activeMethodId = cachedMethodsRegistry.method_name;
                 }
                 
                 populateDynamicDropdownFilters();
@@ -205,6 +205,7 @@
                 return matchesTissue && matchesClass && matchesRI && matchesYear && matchesText;
             });
 
+            // 🎯 Show Giscus only if Focus Mode is Active
             if (isFocusModeActive && activeMethodId) {
                 const targetRecord = cachedMethodsRegistry.find(m => m.method_name === activeMethodId);
                 if (targetRecord) {
@@ -216,10 +217,17 @@
                         </div>
                         ${buildCardTemplateHtml(targetRecord, true)}
                     `;
+                    // Make discussion element container area visible
+                    document.getElementById('wiki-title').style.display = 'block';
+                    document.getElementById('giscus-frame-container').style.display = 'block';
                     syncGiscusFrameContext();
                     return;
                 }
             }
+
+            // Hide the discussion panel when viewing the general scroll list
+            document.getElementById('wiki-title').style.display = 'none';
+            document.getElementById('giscus-frame-container').style.display = 'none';
 
             if (filtered.length === 0) {
                 container.innerHTML = `<div class="p-8 text-center text-slate-500 bg-slate-900/20 rounded-xl border border-slate-800 border-dashed text-sm">No protocols match selection.</div>`;
@@ -227,12 +235,11 @@
             }
 
             container.innerHTML = filtered.map(m => buildCardTemplateHtml(m, false)).join('');
-            syncGiscusFrameContext();
         }
 
         function buildCardTemplateHtml(m, isFocused) {
             return `
-                <div onclick="selectNewMethodWiki('${m.method_name}')" class="p-5 border rounded-xl transition-all duration-200 cursor-pointer shadow-md ${m.method_name === activeMethodId ? 'bg-slate-900 border-blue-500 ring-1 ring-blue-500/30' : 'bg-slate-900/40 border-slate-800/80 hover:border-slate-700 hover:bg-slate-900/60'}">
+                <div onclick="selectNewMethodWiki('${m.method_name}')" class="p-5 border rounded-xl transition-all duration-200 cursor-pointer shadow-md ${m.method_name === activeMethodId && isFocusModeActive ? 'bg-slate-900 border-blue-500 ring-1 ring-blue-500/30' : 'bg-slate-900/40 border-slate-800/80 hover:border-slate-700 hover:bg-slate-900/60'}">
                     <div class="space-y-2">
                         <div class="flex justify-between items-start gap-4">
                             <div>
@@ -262,7 +269,7 @@
             container.innerHTML = ''; 
             
             const giscusScript = document.createElement('script');
-            giscusScript.src = "https://giscus.app/client.js";
+            giscusScript.src = "https://giscus.app";
             giscusScript.setAttribute('data-repo', "wildsheet/wildsheet.github.io");
             giscusScript.setAttribute('data-repo-id', "R_kgDOUOWJeg");
             giscusScript.setAttribute('data-category', "General");
@@ -290,6 +297,7 @@
         }
 
         function exitFocusViewMode() {
+            window.location.hash = '';
             isFocusModeActive = false;
             renderFilteredRegistry();
             document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
