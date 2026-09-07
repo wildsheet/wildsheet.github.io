@@ -92,40 +92,105 @@
     </main>
 
     <script>
-        const tissueClearingRegistry = [
-            { "name": "iDISCO-Plus", "display_name": "iDISCO+", "ri": 1.56, "tissues": ["brain", "kidney"], "details": "High clearing capacity across thick organic architectures." },
-            { "name": "CUBIC-Method", "display_name": "CUBIC", "ri": 1.38, "tissues": ["brain", "lung", "heart"], "details": "Outstanding baseline index properties for endogenous fluorescent protein expression paths." }
-        ];
+        let cachedMethodsRegistry = [];
+        let activeMethodId = window.location.hash.replace('#', '') || '';
 
-        let activeMethodId = window.location.hash.replace('#', '') || 'iDISCO-Plus';
-        let matchedMethod = tissueClearingRegistry.find(m => m.name === activeMethodId) || tissueClearingRegistry;
-        
-        document.getElementById('wiki-title').innerText = `💬 Wiki Discussion Room: ${matchedMethod.display_name}`;
-        document.querySelector('script[src*="giscus.app/client.js"]').setAttribute('data-term', matchedMethod.name);
+        // 1. Asynchronously fetch the JSON file produced by your Python repo script
+        async function bootstrapRegistryData() {
+            try {
+                const response = await fetch('tissue_clearing_db.json');
+                if (!response.ok) throw new Error('Data pipeline network target offline.');
+                
+                const data = await response.json();
+                cachedMethodsRegistry = data.clearing_methods || [];
+                
+                // Set default initial view target if no URL hash room parameter exists
+                if (!activeMethodId && cachedMethodsRegistry.length > 0) {
+                    activeMethodId = cachedMethodsRegistry[0].method_name;
+                }
+                
+                renderFilteredRegistry();
+                syncGiscusFrameContext();
+            } catch (error) {
+                console.error("Pipeline Sync Error:", error);
+                document.getElementById('registry-cards-container').innerHTML = `
+                    <div class="p-8 text-center text-red-400 bg-red-950/20 rounded-xl border border-red-900 text-sm font-medium">
+                        ❌ Error loading tissue_clearing_db.json. Ensure the file is compiled in the same folder.
+                    </div>`;
+            }
+        }
 
+        // 2. High-contrast UI Card Generation Loop
         function renderFilteredRegistry() {
             const selectedTissue = document.getElementById('tissue-filter').value;
             const container = document.getElementById('registry-cards-container');
-            let filtered = tissueClearingRegistry.filter(m => selectedTissue === 'all' || m.tissues.includes(selectedTissue));
+            
+            // Map filtering options safely across cross-species arrays
+            let filtered = cachedMethodsRegistry.filter(m => {
+                if (selectedTissue === 'all') return true;
+                // Graceful fallback normalization for common variations
+                const normalTissue = selectedTissue.toLowerCase();
+                return m.tissue_compatibilities.some(t => t.toLowerCase().includes(normalTissue));
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = `<div class="p-8 text-center text-slate-500 bg-slate-900/20 rounded-xl border border-slate-800 border-dashed text-sm">No protocols match your selection criteria.</div>`;
+                return;
+            }
 
             container.innerHTML = filtered.map(m => `
-                <div onclick="selectNewMethodWiki('${m.name}')" class="p-4 border rounded-xl transition cursor-pointer flex justify-between items-center group shadow-md ${m.name === activeMethodId ? 'bg-slate-900 border-blue-500' : 'bg-slate-900/60 border-slate-800 hover:border-slate-600'}">
-                    <div>
-                        <h4 class="text-sm font-bold text-slate-100 group-hover:text-blue-400 transition">${m.display_name}</h4>
-                        <p class="text-xs text-slate-400 mt-1 line-clamp-1">${m.details}</p>
+                <div onclick="selectNewMethodWiki('${m.method_name}')" class="p-4 border rounded-xl transition-all duration-200 cursor-pointer flex justify-between items-center group shadow-md ${m.method_name === activeMethodId ? 'bg-slate-900 border-blue-500 ring-1 ring-blue-500/30' : 'bg-slate-900/40 border-slate-800/80 hover:border-slate-700 hover:bg-slate-900/60'}">
+                    <div class="space-y-1">
+                        <h4 class="text-sm font-bold text-slate-100 group-hover:text-blue-400 transition">${m.method_name} <span class="text-slate-500 text-xs font-normal">(${m.year_invented})</span></h4>
+                        <p class="text-xs text-slate-400 line-clamp-1 pr-4 leading-relaxed">${m.sample_size_compatibility}</p>
+                        <div class="flex gap-1.5 pt-1.5 flex-wrap">
+                            ${m.tissue_compatibilities.map(t => `<span class="text-[9px] font-medium bg-slate-950 px-2 py-0.5 rounded text-slate-400 border border-slate-800/60 shadow-sm">📍 ${t}</span>`).join('')}
+                        </div>
                     </div>
-                    <span class="text-[10px] font-mono text-emerald-400 font-bold bg-slate-950 px-2 py-0.5 rounded border border-slate-800 shrink-0 ml-4">RI ${m.ri}</span>
+                    <span class="text-[10px] font-mono text-emerald-400 font-bold bg-slate-950 px-2 py-0.5 rounded border border-slate-800 shrink-0 ml-4 tracking-wide shadow-sm">RI ${m.refractive_index}</span>
                 </div>
             `).join('');
         }
 
+        // 3. Dynamic Frame Context Swapping Integration
+        function syncGiscusFrameContext() {
+            const targetMethod = cachedMethodsRegistry.find(m => m.method_name === activeMethodId);
+            if (!targetMethod) return;
+
+            document.getElementById('wiki-title').innerText = `💬 Wiki Discussion Room: ${targetMethod.method_name}`;
+            const container = document.getElementById('giscus-frame-container');
+            container.innerHTML = ''; 
+            
+            const giscusScript = document.createElement('script');
+            giscusScript.src = "https://giscus.app";
+            giscusScript.setAttribute('data-repo', "wildsheet/wildsheet.github.io");
+            giscusScript.setAttribute('data-repo-id', "R_kgDOUOWJeg");
+            giscusScript.setAttribute('data-category', "General");
+            giscusScript.setAttribute('data-category-id', "DIC_kwDOUOWJes4DE315");
+            giscusScript.setAttribute('data-mapping', 'specific');
+            giscusScript.setAttribute('data-term', targetMethod.method_name); 
+            giscusScript.setAttribute('data-strict', '0');
+            giscusScript.setAttribute('data-reactions-enabled', '1');
+            giscusScript.setAttribute('data-emit-metadata', '0');
+            giscusScript.setAttribute('data-input-position', 'top');
+            giscusScript.setAttribute('data-theme', 'dark_dimmed');
+            giscusScript.setAttribute('data-lang', 'en');
+            giscusScript.crossOrigin = "anonymous";
+            giscusScript.async = true;
+            
+            container.appendChild(giscusScript);
+        }
+
         function selectNewMethodWiki(methodId) {
             window.location.hash = methodId;
-            window.location.reload();
+            activeMethodId = methodId;
+            renderFilteredRegistry();
+            syncGiscusFrameContext();
         }
 
         document.getElementById('tissue-filter').addEventListener('change', renderFilteredRegistry);
-        renderFilteredRegistry();
+        window.addEventListener('DOMContentLoaded', bootstrapRegistryData);
     </script>
+
 </body>
 </html>
