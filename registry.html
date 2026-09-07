@@ -93,7 +93,7 @@
 
     <!-- Runtime Advanced Multi-Filter Client Engine -->
     <script>
-                let cachedMethodsRegistry = [];
+        let cachedMethodsRegistry = [];
         let activeMethodId = window.location.hash.replace('#', '') || '';
         let isFocusModeActive = false;
 
@@ -192,6 +192,7 @@
             const selectedRI = document.getElementById('ri-filter').value;
             const selectedYear = document.getElementById('year-filter').value;
             const container = document.getElementById('registry-cards-container');
+            const discussionWrapper = document.getElementById('wiki-title').parentNode;
 
             let filtered = cachedMethodsRegistry.filter(m => {
                 const matchesTissue = selectedTissue === 'all' || (m.tissue_compatibilities && m.tissue_compatibilities.includes(selectedTissue));
@@ -205,7 +206,7 @@
                 return matchesTissue && matchesClass && matchesRI && matchesYear && matchesText;
             });
 
-            // 🎯 Show Giscus only if Focus Mode is Active
+            // Handle layout switches when Focus Mode is activated
             if (isFocusModeActive && activeMethodId) {
                 const targetRecord = cachedMethodsRegistry.find(m => m.method_name === activeMethodId);
                 if (targetRecord) {
@@ -217,17 +218,16 @@
                         </div>
                         ${buildCardTemplateHtml(targetRecord, true)}
                     `;
-                    // Make discussion element container area visible
-                    document.getElementById('wiki-title').style.display = 'block';
-                    document.getElementById('giscus-frame-container').style.display = 'block';
+                    
+                    // Reveal the discussion outer wrapper area
+                    if (discussionWrapper) discussionWrapper.classList.remove('hidden');
                     syncGiscusFrameContext();
                     return;
                 }
             }
 
-            // Hide the discussion panel when viewing the general scroll list
-            document.getElementById('wiki-title').style.display = 'none';
-            document.getElementById('giscus-frame-container').style.display = 'none';
+            // Hide the discussion wrapper completely when looking at the general menu list
+            if (discussionWrapper) discussionWrapper.classList.add('hidden');
 
             if (filtered.length === 0) {
                 container.innerHTML = `<div class="p-8 text-center text-slate-500 bg-slate-900/20 rounded-xl border border-slate-800 border-dashed text-sm">No protocols match selection.</div>`;
@@ -266,10 +266,10 @@
             if (!targetMethod || !container) return;
 
             document.getElementById('wiki-title').innerText = `💬 Wiki Discussion Room: ${targetMethod.method_name}`;
-            container.innerHTML = ''; 
+            container.innerHTML = '<div class="text-xs font-mono text-slate-500">Connecting to GitHub Discussion room...</div>'; 
             
             const giscusScript = document.createElement('script');
-            giscusScript.src = "https://giscus.app";
+            giscusScript.src = "https://giscus.app/client.js";
             giscusScript.setAttribute('data-repo', "wildsheet/wildsheet.github.io");
             giscusScript.setAttribute('data-repo-id', "R_kgDOUOWJeg");
             giscusScript.setAttribute('data-category', "General");
@@ -285,6 +285,8 @@
             giscusScript.crossOrigin = "anonymous";
             giscusScript.async = true;
             
+            // Inject cleanly into the placeholder
+            container.innerHTML = '';
             container.appendChild(giscusScript);
         }
 
