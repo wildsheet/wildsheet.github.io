@@ -91,9 +91,11 @@
         </section>
     </main>
 
+        <!-- Runtime Advanced Multi-Filter Client Engine -->
     <script>
         let cachedMethodsRegistry = [];
         let activeMethodId = window.location.hash.replace('#', '') || '';
+        let isFocusModeActive = false;
 
         // 1. Asynchronously fetch the JSON file produced by your Python repo script
         async function bootstrapRegistryData() {
@@ -104,55 +106,91 @@
                 const data = await response.json();
                 cachedMethodsRegistry = data.clearing_methods || [];
                 
-                // Set default initial view target if no URL hash room parameter exists
-                if (!activeMethodId && cachedMethodsRegistry.length > 0) {
+                // Set initial active ID from the hash or the first item
+                if (activeMethodId) {
+                    const validMethod = cachedMethodsRegistry.find(m => m.method_name === activeMethodId);
+                    if (validMethod) isFocusModeActive = true;
+                } else if (cachedMethodsRegistry.length > 0) {
                     activeMethodId = cachedMethodsRegistry[0].method_name;
                 }
                 
+                populateDynamicDropdownFilters();
                 renderFilteredRegistry();
                 syncGiscusFrameContext();
             } catch (error) {
-                console.error("Pipeline Sync Error:", error);
-                document.getElementById('registry-cards-container').innerHTML = `
-                    <div class="p-8 text-center text-red-400 bg-red-950/20 rounded-xl border border-red-900 text-sm font-medium">
-                        ❌ Error loading tissue_clearing_db.json. Ensure the file is compiled in the same folder.
-                    </div>`;
+                print("Pipeline Sync Error:", error);
             }
         }
 
-        // 2. High-contrast UI Card Generation Loop
+        // 2. Scan dataset records to programmatically populate multi-variable search criteria
+                // 3. Multi-Variable Multi-Filter Dynamic Layout Engine
         function renderFilteredRegistry() {
+            const query = document.getElementById('text-search').value.toLowerCase().trim();
             const selectedTissue = document.getElementById('tissue-filter').value;
+            const selectedClass = document.getElementById('class-filter').value;
+            const selectedRI = document.getElementById('ri-filter').value;
+            const selectedYear = document.getElementById('year-filter').value;
             const container = document.getElementById('registry-cards-container');
-            
-            // Map filtering options safely across cross-species arrays
+
             let filtered = cachedMethodsRegistry.filter(m => {
-                if (selectedTissue === 'all') return true;
-                // Graceful fallback normalization for common variations
-                const normalTissue = selectedTissue.toLowerCase();
-                return m.tissue_compatibilities.some(t => t.toLowerCase().includes(normalTissue));
+                const matchesTissue = selectedTissue === 'all' || (m.tissue_compatibilities && m.tissue_compatibilities.includes(selectedTissue));
+                const matchesClass = selectedClass === 'all' || m.chemical_class === selectedClass;
+                const matchesRI = selectedRI === 'all' || String(m.refractive_index) === selectedRI;
+                const matchesYear = selectedYear === 'all' || String(m.year_invented) === selectedYear;
+
+                const textHaystack = `${m.method_name} ${m.year_invented} ${m.chemical_class} ${m.refractive_index} ${m.sample_size_compatibility} ${(m.tissue_compatibilities || []).join(' ')}`.toLowerCase();
+                const matchesText = !query || textHaystack.includes(query);
+
+                return matchesTissue && matchesClass && matchesRI && matchesYear && matchesText;
             });
 
+            // Isolate layout grid view if an item has been selected for focus view
+            if (isFocusModeActive && activeMethodId) {
+                const targetRecord = cachedMethodsRegistry.find(m => m.method_name === activeMethodId);
+                if (targetRecord) {
+                    container.innerHTML = `
+                        <div class="mb-4">
+                            <button onclick="exitFocusViewMode()" class="mb-3 text-xs font-bold text-blue-400 hover:text-blue-300 transition flex items-center gap-1.5 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg shadow-sm">
+                                &larr; Return to Complete Protocol List
+                            </button>
+                        </div>
+                        ${buildCardTemplateHtml(targetRecord, true)}
+                    `;
+                    return;
+                }
+            }
+
             if (filtered.length === 0) {
-                container.innerHTML = `<div class="p-8 text-center text-slate-500 bg-slate-900/20 rounded-xl border border-slate-800 border-dashed text-sm">No protocols match your selection criteria.</div>`;
+                container.innerHTML = `<div class="p-8 text-center text-slate-500 bg-slate-900/20 rounded-xl border border-slate-800 border-dashed text-sm">No protocols match selection.</div>`;
                 return;
             }
 
-            container.innerHTML = filtered.map(m => `
-                <div onclick="selectNewMethodWiki('${m.method_name}')" class="p-4 border rounded-xl transition-all duration-200 cursor-pointer flex justify-between items-center group shadow-md ${m.method_name === activeMethodId ? 'bg-slate-900 border-blue-500 ring-1 ring-blue-500/30' : 'bg-slate-900/40 border-slate-800/80 hover:border-slate-700 hover:bg-slate-900/60'}">
-                    <div class="space-y-1">
-                        <h4 class="text-sm font-bold text-slate-100 group-hover:text-blue-400 transition">${m.method_name} <span class="text-slate-500 text-xs font-normal">(${m.year_invented})</span></h4>
-                        <p class="text-xs text-slate-400 line-clamp-1 pr-4 leading-relaxed">${m.sample_size_compatibility}</p>
-                        <div class="flex gap-1.5 pt-1.5 flex-wrap">
-                            ${m.tissue_compatibilities.map(t => `<span class="text-[9px] font-medium bg-slate-950 px-2 py-0.5 rounded text-slate-400 border border-slate-800/60 shadow-sm">📍 ${t}</span>`).join('')}
-                        </div>
-                    </div>
-                    <span class="text-[10px] font-mono text-emerald-400 font-bold bg-slate-950 px-2 py-0.5 rounded border border-slate-800 shrink-0 ml-4 tracking-wide shadow-sm">RI ${m.refractive_index}</span>
-                </div>
-            `).join('');
+            container.innerHTML = filtered.map(m => buildCardTemplateHtml(m, false)).join('');
         }
 
-        // 3. Dynamic Frame Context Swapping Integration
+        function buildCardTemplateHtml(m, isFocused) {
+            return `
+                <div onclick="selectNewMethodWiki('${m.method_name}')" class="p-5 border rounded-xl transition-all duration-200 cursor-pointer shadow-md ${m.method_name === activeMethodId ? 'bg-slate-900 border-blue-500 ring-1 ring-blue-500/30' : 'bg-slate-900/40 border-slate-800/80 hover:border-slate-700 hover:bg-slate-900/60'}">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <span class="text-[9px] font-mono font-bold uppercase bg-slate-950/80 border border-slate-800 px-2 py-0.5 rounded text-blue-400 tracking-wide">${m.chemical_class}</span>
+                                <h4 class="text-base font-bold text-slate-100 mt-1.5">${m.method_name} <span class="text-slate-500 text-xs font-normal">(${m.year_invented})</span></h4>
+                            </div>
+                            <span class="text-[10px] font-mono text-emerald-400 font-bold bg-slate-950 px-2 py-0.5 rounded border border-slate-800 tracking-wide shrink-0 shadow-sm">RI ${m.refractive_index}</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed ${isFocused ? '' : 'line-clamp-2'}">${m.sample_size_compatibility}</p>
+                        <div class="flex justify-between items-center pt-2 border-t border-slate-800/40">
+                            <div class="flex gap-1.5 flex-wrap">
+                                ${m.tissue_compatibilities.map(t => `<span class="text-[9px] font-medium bg-slate-950 px-2 py-0.5 rounded text-slate-400 border border-slate-800/60">📍 ${t}</span>`).join('')}
+                            </div>
+                            ${isFocused ? '' : '<span class="text-[11px] text-blue-400/90 font-bold group-hover:underline flex items-center gap-1 shrink-0">Open Focus Room &rarr;</span>'}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
         function syncGiscusFrameContext() {
             const targetMethod = cachedMethodsRegistry.find(m => m.method_name === activeMethodId);
             if (!targetMethod) return;
@@ -184,13 +222,19 @@
         function selectNewMethodWiki(methodId) {
             window.location.hash = methodId;
             activeMethodId = methodId;
+            isFocusModeActive = true; 
             renderFilteredRegistry();
             syncGiscusFrameContext();
+            document.getElementById('wiki-title').scrollIntoView({ behavior: 'smooth' });
         }
 
-        document.getElementById('tissue-filter').addEventListener('change', renderFilteredRegistry);
+        function exitFocusViewMode() {
+            isFocusModeActive = false;
+            renderFilteredRegistry();
+            document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
+        }
+
         window.addEventListener('DOMContentLoaded', bootstrapRegistryData);
     </script>
-
 </body>
 </html>
