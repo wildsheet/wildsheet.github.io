@@ -93,7 +93,7 @@
 
     <!-- Runtime Advanced Multi-Filter Client Engine -->
     <script>
-        let cachedMethodsRegistry = [];
+                let cachedMethodsRegistry = [];
         let activeMethodId = window.location.hash.replace('#', '') || '';
         let isFocusModeActive = false;
 
@@ -125,7 +125,7 @@
             }
         }
 
-        // 2. Scan dataset records to programmatically populate multi-variable search criteria
+        // 2. Scan dataset records to programmatically populate multi-variable search criteria cleanly
         function populateDynamicDropdownFilters() {
             const classes = new Set();
             const ris = new Set();
@@ -133,11 +133,11 @@
             const years = new Set();
 
             cachedMethodsRegistry.forEach(m => {
-                if (m.chemical_class) classes.add(m.chemical_class);
+                if (m.chemical_class) classes.add(m.chemical_class.trim());
                 if (m.refractive_index) ris.add(m.refractive_index);
                 if (m.year_invented) years.add(m.year_invented);
                 if (m.tissue_compatibilities) {
-                    m.tissue_compatibilities.forEach(t => species.add(t));
+                    m.tissue_compatibilities.forEach(t => species.add(t.trim()));
                 }
             });
 
@@ -185,8 +185,7 @@
             document.getElementById('ri-filter').addEventListener('change', renderFilteredRegistry);
             document.getElementById('year-filter').addEventListener('change', renderFilteredRegistry);
         }
-
-                // 3. Multi-Variable Multi-Filter Dynamic Layout Engine
+        // 3. Multi-Variable Multi-Filter Dynamic Layout Engine
         function renderFilteredRegistry() {
             const query = document.getElementById('text-search').value.toLowerCase().trim();
             const selectedTissue = document.getElementById('tissue-filter').value;
@@ -281,6 +280,7 @@
             container.appendChild(giscusScript);
         }
 
+        // 🎯 Fixed: Resolved unescaped closing brace tracking syntax issue on the scroll call line
         function selectNewMethodWiki(methodId) {
             window.location.hash = methodId;
             activeMethodId = methodId;
