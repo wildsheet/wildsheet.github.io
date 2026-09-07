@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildsheet Community — Events</title>
+    <script src="https://tailwindcss.com"></script>
+    <style>
+        html, body { background-color: #030712 !important; color: #f8fafc !important; font-family: sans-serif; }
+    </style>
+</head>
+<body class="min-h-screen antialiased selection:bg-blue-500/30 selection:text-blue-100">
+
+    <!-- Global Minimal Navigation Menu -->
+    <nav class="border-b border-slate-800 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50 px-6 py-4">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            
+            <!-- Brand Header Container with Group Logo -->
+            <div class="flex items-center gap-3 select-none">
+                <!-- 🎯 Group Logo Integration Node -->
+                <img src="Images/wildsheet_logo.png" 
+                    alt="WildSheet Logo" 
+                    class="h-7 w-auto object-contain brightness-110 tracking-tight"
+                    onerror="this.style.display='none';">
+                    
+                <!-- 🎯 This uses pure HTML inline styling to bypass Tailwind and force a 24px font size instantly -->
+                <span class="font-black tracking-wider text-slate-100 uppercase" style="font-size: 50px !important;">
+                    Wildsheet Light Sheet Community
+                </span>
+            </div>
+            
+            <!-- Navigation Tabs Link Tree -->
+            <div class="flex items-center gap-6 text-sm font-semibold tracking-tight">
+                <!-- Note: Apply the "text-blue-400 border-b-2 border-blue-500" classes to whichever page is currently active -->
+                <a href="index.html" class="text-slate-400 hover:text-slate-100 transition-all pb-1 border-b-2 border-transparent">Overview</a>
+                <a href="registry.html" class="text-slate-400 hover:text-slate-100 transition-all pb-1 border-b-2 border-transparent">Clearing Registry</a>
+                <a href="events.html" class="text-slate-400 hover:text-slate-100 transition-all pb-1 border-b-2 border-transparent">Events</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main Workspace Content -->
+    <main class="max-w-4xl mx-auto p-6 md:p-12">
+        <section class="space-y-8">
+            <header class="space-y-2">
+                <h2 class="text-3xl font-extrabold tracking-tight text-slate-100">Events from the Wildsheet Community</h2>
+                <p class="text-sm text-slate-400">Join our open community technical workshops, journal clubs, and software pipeline reviews.</p>
+            </header>
+
+            <div class="w-full aspect-[21/9] bg-slate-900/50 rounded-2xl border border-slate-800 flex items-center justify-center text-xs font-mono text-slate-500 tracking-wider uppercase text-center px-4">
+                📷 [Insert Event Calendar Graphic or Virtual Meetup Banner]
+            </div>
+
+            <!-- Events List Timeline -->
+            <div class="space-y-4 pt-2">
+                <div class="p-5 bg-slate-900/40 border border-slate-800 rounded-xl flex flex-col sm:flex-row justify-between items-start gap-4">
+                    <div class="space-y-1">
+                        <span class="text-xs font-mono font-bold uppercase text-blue-400">October 14, 2026</span>
+                        <h4 class="text-base font-bold text-slate-200">Tissue-Clearing Scaling Benchmarks</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">An open technical overview covering speed tradeoffs between solvent-based and hydrophilic workflows on deep specimens.</p>
+                    </div>
+                    <span class="text-xs font-mono bg-slate-950 px-2.5 py-1 rounded border border-slate-800 text-slate-400 shrink-0">📅 Zoom Workshop</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
