@@ -91,7 +91,7 @@
         </section>
     </main>
 
-        <!-- Runtime Advanced Multi-Filter Client Engine -->
+    <!-- Runtime Advanced Multi-Filter Client Engine -->
     <script>
         let cachedMethodsRegistry = [];
         let activeMethodId = window.location.hash.replace('#', '') || '';
@@ -106,7 +106,6 @@
                 const data = await response.json();
                 cachedMethodsRegistry = data.clearing_methods || [];
                 
-                // Set initial active ID from the hash or the first item
                 if (activeMethodId) {
                     const validMethod = cachedMethodsRegistry.find(m => m.method_name === activeMethodId);
                     if (validMethod) isFocusModeActive = true;
@@ -118,11 +117,75 @@
                 renderFilteredRegistry();
                 syncGiscusFrameContext();
             } catch (error) {
-                print("Pipeline Sync Error:", error);
+                console.error("Pipeline Sync Error:", error);
+                document.getElementById('registry-cards-container').innerHTML = `
+                    <div class="p-8 text-center text-red-400 bg-red-950/20 rounded-xl border border-red-900 text-sm font-medium">
+                        ❌ Error loading tissue_clearing_db.json. Ensure the file is named correctly and placed in the same folder.
+                    </div>`;
             }
         }
 
         // 2. Scan dataset records to programmatically populate multi-variable search criteria
+        function populateDynamicDropdownFilters() {
+            const classes = new Set();
+            const ris = new Set();
+            const species = new Set();
+            const years = new Set();
+
+            cachedMethodsRegistry.forEach(m => {
+                if (m.chemical_class) classes.add(m.chemical_class);
+                if (m.refractive_index) ris.add(m.refractive_index);
+                if (m.year_invented) years.add(m.year_invented);
+                if (m.tissue_compatibilities) {
+                    m.tissue_compatibilities.forEach(t => species.add(t));
+                }
+            });
+
+            const leftSidebar = document.getElementById('tissue-filter').parentNode.parentNode;
+            leftSidebar.innerHTML = `
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Live Parameter Search</label>
+                        <input id="text-search" type="text" placeholder="Search title, year, RI, tissue..." class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-500 placeholder-slate-600 shadow-inner">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Target Host Species</label>
+                        <select id="tissue-filter" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-inner">
+                            <option value="all">Show All Species</option>
+                            ${Array.from(species).sort().map(s => `<option value="${s}">${s}</option>`).join('')}
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Biochemical Strategy</label>
+                        <select id="class-filter" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-inner">
+                            <option value="all">Show All Classes</option>
+                            ${Array.from(classes).sort().map(c => `<option value="${c}">${c}</option>`).join('')}
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Refractive Index (RI)</label>
+                        <select id="ri-filter" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-inner">
+                            <option value="all">Show All RIs</option>
+                            ${Array.from(ris).sort((a,b) => b-a).map(r => `<option value="${r}">RI — ${r}</option>`).join('')}
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Invention Year</label>
+                        <select id="year-filter" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-inner">
+                            <option value="all">Show All Years</option>
+                            ${Array.from(years).sort((a,b) => b-a).map(y => `<option value="${y}">${y}</option>`).join('')}
+                        </select>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('text-search').addEventListener('input', renderFilteredRegistry);
+            document.getElementById('tissue-filter').addEventListener('change', renderFilteredRegistry);
+            document.getElementById('class-filter').addEventListener('change', renderFilteredRegistry);
+            document.getElementById('ri-filter').addEventListener('change', renderFilteredRegistry);
+            document.getElementById('year-filter').addEventListener('change', renderFilteredRegistry);
+        }
+
                 // 3. Multi-Variable Multi-Filter Dynamic Layout Engine
         function renderFilteredRegistry() {
             const query = document.getElementById('text-search').value.toLowerCase().trim();
@@ -144,7 +207,6 @@
                 return matchesTissue && matchesClass && matchesRI && matchesYear && matchesText;
             });
 
-            // Isolate layout grid view if an item has been selected for focus view
             if (isFocusModeActive && activeMethodId) {
                 const targetRecord = cachedMethodsRegistry.find(m => m.method_name === activeMethodId);
                 if (targetRecord) {
