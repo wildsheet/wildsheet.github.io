@@ -237,39 +237,39 @@
                 return;
             }
 
-            // 🎯 Fixed: Text layout placeholders removed. Clean separator bar applies purely at the base of intermediate elements.
+            // 🎯 Fixed: Clean dashed dividing line layout added purely underneath intermediate items
             container.innerHTML = filtered.map((m, index) => `
                 ${buildCardTemplateHtml(m, false)}
-                ${index < filtered.length - 1 ? '<div class="py-4 select-none"><div class="w-full border-b border-slate-800/80 border-dashed"></div></div>' : ''}
+                ${index < filtered.length - 1 ? '<div class="py-6 select-none"><div class="w-full border-b border-slate-800/80 border-dashed"></div></div>' : ''}
             `).join('');
         }
 
         function buildCardTemplateHtml(m, isFocused) {
             return `
-                <div onclick="selectNewMethodWiki('${m.method_name}')" class="p-6 border rounded-xl transition-all duration-200 cursor-pointer shadow-md bg-slate-900/40 border-slate-800/80 hover:border-slate-600 hover:bg-slate-900/60 flex flex-col justify-between gap-4 ${m.method_name === activeMethodId && isFocusModeActive ? 'border-cyan-400 ring-1 ring-cyan-400/30 bg-slate-900' : ''}">
+                <div onclick="selectNewMethodWiki('${m.method_name}')" class="p-6 border rounded-xl transition-all duration-200 cursor-pointer shadow-md bg-slate-900/40 border-slate-800/80 hover:border-slate-700 hover:bg-slate-900/60 flex flex-col justify-between gap-4 ${m.method_name === activeMethodId && isFocusModeActive ? 'border-cyan-400 ring-1 ring-cyan-400/30 bg-slate-900' : ''}">
                     <div class="space-y-4">
-                        <div class="flex justify-between items-start gap-4 flex-wrap">
+                        <div class="flex justify-between items-center gap-4 flex-wrap">
                             <div>
                                 <h4 class="text-xl font-black text-slate-100 tracking-tight">${m.method_name} (${m.year_invented})</h4>
                             </div>
                             
-                            <!-- 🎯 Fixed: Repositioned trigger badge rendered in high-contrast neon amber color format -->
+                            <!-- 🎯 Fixed: Added text-cyan-400 !important styling properties directly onto the target link wrapper tag -->
                             ${isFocused ? '' : `
                                 <div>
-                                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-500/10 border border-amber-500/30 text-amber-400 hover:bg-amber-500 hover:text-slate-950 hover:border-amber-400 transition shadow-sm select-none">
+                                    <span class="text-xs font-bold text-cyan-400 hover:text-cyan-300 hover:underline transition-all select-none style="color: #22d3ee !important;">
                                         💬 Open Discussion &rarr;
                                     </span>
                                 </div>
                             `}
                         </div>
 
-                        <!-- Card Parameters Data Fields Matrix -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 text-xs border-t border-b border-slate-800/60 py-4 font-medium text-slate-400">
-                            <div><span class="text-slate-500 font-bold tracking-tight">Chemical Category:</span> <span class="text-cyan-400 font-mono">${m.chemical_class}</span></div>
-                            <div><span class="text-slate-500 font-bold tracking-tight">RI:</span> <span class="text-emerald-400 font-mono font-bold">${m.refractive_index}</span></div>
-                            <div><span class="text-slate-500 font-bold tracking-tight">Tissue Compatibility:</span> <span class="text-slate-300">${m.tissue_compatibilities.join(', ')}</span></div>
-                            <div class="sm:col-span-2"><span class="text-slate-500 font-bold tracking-tight">Sample Size Compatibility:</span> <span class="text-slate-300 leading-relaxed">${m.sample_size_compatibility}</span></div>
-                            <div class="sm:col-span-2 border-t border-slate-800/40 pt-2.5 mt-1"><span class="text-slate-500 font-bold tracking-tight block mb-1">Primary Citation:</span> <span class="text-slate-300 italic font-normal tracking-wide block bg-slate-950 p-2.5 rounded-lg border border-slate-800/60 leading-relaxed">${m.primary_citation || 'N/A'}</span></div>
+                        <!-- 🎯 Fixed: Bold text styling variables separated away onto explicit label nodes -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 text-xs border-t border-b border-slate-800/60 py-4 text-slate-400">
+                            <div><strong class="text-slate-200 font-bold tracking-tight">Chemical Category:</strong> <span class="text-cyan-400 font-mono ml-1">${m.chemical_class}</span></div>
+                            <div><strong class="text-slate-200 font-bold tracking-tight">RI:</strong> <span class="text-emerald-400 font-mono font-bold ml-1">${m.refractive_index}</span></div>
+                            <div><strong class="text-slate-200 font-bold tracking-tight">Tissue Compatibility:</strong> <span class="text-slate-300 ml-1">${m.tissue_compatibilities.join(', ')}</span></div>
+                            <div class="sm:col-span-2"><strong class="text-slate-200 font-bold tracking-tight block mb-0.5">Sample Size Compatibility:</strong> <span class="text-slate-300 leading-relaxed">${m.sample_size_compatibility}</span></div>
+                            <div class="sm:col-span-2 border-t border-slate-800/40 pt-2.5 mt-1"><strong class="text-slate-200 font-bold tracking-tight block mb-1">Primary Citation:</strong> <span class="text-slate-300 italic font-normal tracking-wide block bg-slate-950 p-2.5 rounded-lg border border-slate-800/60 leading-relaxed">${m.primary_citation || 'N/A'}</span></div>
                         </div>
                     </div>
                 </div>
