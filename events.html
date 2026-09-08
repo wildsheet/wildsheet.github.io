@@ -4,76 +4,225 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildsheet Community — Events</title>
-    <script src="https://tailwindcss.com"></script>
     <style>
+        /* 🎯 Identical Global Base Settings & Spacing */
+        html, body { 
+            background-color: #030712 !important; 
+            color: #f8fafc !important; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 8px; /* Tighter border edge space */
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        nav {
+            border-bottom: 1px solid #1e293b; 
+            background-color: rgba(2, 6, 23, 0.8); 
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px); 
+            position: sticky; 
+            top: 0; 
+            z-index: 50; 
+            padding: 16px 24px;
+        }
+        .nav-container {
+            max-width: 1200px; 
+            margin: 0 auto; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            flex-wrap: wrap; 
+            gap: 16px;
+        }
+        .nav-brand {
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            user-select: none;
+        }
+        .nav-links {
+            display: flex; 
+            align-items: center; 
+            gap: 16px; 
+            font-size: 16px; 
+            font-weight: 700; 
+            user-select: none;
+        }
+
+        main { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 12px; /* Tighter layout container */
+            box-sizing: border-box; 
+        }
+
+        /* Typography & Custom Global Anchors */
+        h2 { font-size: 32px; font-weight: 900; color: #f8fafc; margin: 0; tracking-tight: -0.025em; }
+        h3 { font-size: 18px; font-weight: 700; color: #f8fafc; margin: 0; }
+        
         a, a:visited, a:active {
-            color: #22d3ee; /* Electric Cyan default for plain text links */
+            color: #22d3ee; 
             text-decoration: none !important;
             transition: all 0.2s ease-in-out;
         }
-        a:hover {
-            color: #dcf3f7; /* Lighter ice cyan on hover */
+        a:hover { color: #dcf3f7; }
+
+        /* Specific Matrix Grid Engine for Events Layout */
+        .event-card {
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 24px;
+            background-color: rgba(15, 23, 42, 0.4);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 16px;
         }
 
-        html, body { background-color: #030712 !important; color: #f8fafc !important; font-family: sans-serif; }
-        iframe.giscus-frame { background-color: #0f172a !important; border-radius: 12px; padding: 16px; border: 1px solid #1e293b !important; }
+        /* CSS: Automatically grab the href attribute value and inject it as text */
+        .auto-url::before {
+            content: attr(href);
+            color: #22d3ee;
+            text-decoration: underline;
+        }
+        
+        .auto-url:hover::before {
+            color: #dcf3f7;
+        }
+
+        .list-container {
+            color: #cbd5e1;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Styles the container box of the bullet structure */
+        ul.clean-bullets {
+            list-style-type: disc; /* Forces a solid round bullet point symbol */
+            margin: 12px 0 0 0;   /* Adds a clean margin gap only above the list */
+            padding-left: 24px;   /* Indents the bullets perfectly relative to the paragraph text above */
+        }
+
+        /* Sets specific spacing parameters for the separate bullet point items */
+        ul.clean-bullets li {
+            margin-bottom: 8px;   /* Spacing between individual bullet lines */
+            color: #94a3b8;       /* Changes the list color to clean gray */
+        }
     </style>
 </head>
-
-<body class="min-h-screen antialiased selection:bg-blue-500/30 selection:text-blue-100">
+<body>
 
     <!-- Global Minimal Navigation Menu -->
-    <nav class="border-b border-slate-800 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50 px-6 py-4">
-        <div class="max-w-4xl mx-auto flex justify-between items-center">
+    <nav style="border-bottom: 1px solid #1e293b; background-color: rgba(2, 6, 23, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 50; padding: 16px 24px; box-sizing: border-box;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; gap: 24px; width: 100%;">
             
             <!-- Brand Header Container with Group Logo -->
-            <div class="flex items-center gap-3 select-none">
-                <!-- 🎯 Group Logo Integration Node -->
+            <div style="display: flex; align-items: center; gap: 12px; user-select: none; flex-shrink: 0; min-height: 28px;">
                 <img src="images/wildsheet_logo.png" 
-                    alt="WildSheet Logo" 
-                    class="h-7 w-auto object-contain brightness-110 tracking-tight"
-                    onerror="this.style.display='none';">
-                    
-                <!-- 🎯 This uses pure HTML inline styling to bypass Tailwind and force a 24px font size instantly -->
-                <span class="font-black tracking-wider text-slate-100 uppercase" style="font-size: 50px !important;">
+                     alt="WildSheet Logo" 
+                     style="height: 28px; width: auto; object-fit: contain; filter: brightness(1.1); display: block;"
+                     onerror="this.style.display='none';">
+                <span style="font-weight: 800; color: #f8fafc; text-transform: uppercase; font-size: 24px; letter-spacing: 0px; white-space: nowrap; display: block; line-height: 1;">
                     Wildsheet Light Sheet Community
                 </span>
             </div>
             
             <!-- Navigation Tabs Link Tree -->
-            <div class="flex items-center gap-4 text-base font-bold select-none shrink-0">
-                <a href="index.html" class="text-slate-400 hover:text-cyan-400 transition-colors">Overview</a>
-                <span class="text-slate-700 font-normal">|</span>
-                <a href="registry.html" class="text-slate-400 hover:text-cyan-400 transition-colors">Tissue Clearing Database</a>
-                <span class="text-slate-700 font-normal">|</span>
-                <a href="events.html" class="text-cyan-400 font-black tracking-wide underline decoration-2 underline-offset-4">Events</a>
-            </div>
+            <div style="display: flex; align-items: center; gap: 16px; font-size: 14px; font-weight: 700; user-select: none; flex-shrink: 0; white-space: nowrap;">
+                <a href="index.html" style="color: #94a3b8; transition: color 0.2s; text-decoration: none !important;" onmouseover="this.style.color='#22d3ee'" onmouseout="this.style.color='#94a3b8'">Overview</a>
+                
+                <span style="color: #334155; font-weight: 400;">|</span>
+                
+                <a href="registry.html" style="color: #94a3b8; transition: color 0.2s; text-decoration: none !important;" onmouseover="this.style.color='#22d3ee'" onmouseout="this.style.color='#94a3b8'">Tissue Clearing Database</a>
+                
+                <span style="color: #334155; font-weight: 400;">|</span>
+                
+                <!-- Active Link style matching your design tracking specs -->
+                <a href="events.html" style="color: #22d3ee; font-weight: 900; text-decoration: underline !important; text-underline-offset: 4px; text-decoration-thickness: 2px;">Events</a>
             </div>
         </div>
     </nav>
 
 
     <!-- Main Workspace Content -->
-    <main class="max-w-4xl mx-auto p-6 md:p-12">
-        <section class="space-y-8">
-            <header class="space-y-2">
-                <h2 class="text-3xl font-extrabold tracking-tight text-slate-100">Events from the Wildsheet Community</h2>
-                <p class="text-sm text-slate-400">Join our open community technical workshops, journal clubs, and software pipeline reviews.</p>
+    <main>
+        <section style="display: flex; flex-direction: column; gap: 24px;">
+            <header>
+                <h2>Events from the Wildsheet Community</h2>
+                <p style="color: #cbd5e1; font-size: 16px; display: flex; flex-direction: column; gap: 0px; max-width: 44rem;">
+                    These are events organised by members of the Wildsheet community, there are many other great events organised annually or every few years, as well as sporadic events on tissue clearing or as part of larger conferences such as ELMI or FENS (in Europe).                 
+                </p>
+                <p style="color: #cbd5e1; font-size: 16px; display: flex; flex-direction: column; gap: 0px; max-width: 44rem;">
+                    If you are interested in elaborate light sheet courses, look for updated versions of these excellent opportunities:  
+                    <ul class="clean-bullets">
+                        <li>EMBO Light Sheet Microscopy: <a href=https://meetings.embo.org/event/25-lsm class="auto-url"></a></li>
+                        <li>Light Sheet Fluorescence Microscopy: <a href=https://mdibl.org/course/lsfm-2026/ class="auto-url"></a></li>
+                    </ul>
+                </p>
             </header>
-
-            <div class="w-full aspect-[21/9] bg-slate-900/50 rounded-2xl border border-slate-800 flex items-center justify-center text-xs font-mono text-slate-500 tracking-wider uppercase text-center px-4">
-                📷 [Insert Event Calendar Graphic or Virtual Meetup Banner]
-            </div>
-
-            <!-- Events List Timeline -->
-            <div class="space-y-4 pt-2">
-                <div class="p-5 bg-slate-900/40 border border-slate-800 rounded-xl flex flex-col sm:flex-row justify-between items-start gap-4">
-                    <div class="space-y-1">
-                        <span class="text-xs font-mono font-bold uppercase text-blue-400">October 14, 2026</span>
-                        <h4 class="text-base font-bold text-slate-200">Tissue-Clearing Scaling Benchmarks</h4>
-                        <p class="text-xs text-slate-400 leading-relaxed">An open technical overview covering speed tradeoffs between solvent-based and hydrophilic workflows on deep specimens.</p>
+                
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+                <!-- Event Content Cards Hook Node -->
+                <div class="event-card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                        <span style="font-size: 12px; font-weight: 700; color: #22d3ee; text-transform: uppercase; letter-spacing: 0.05em;">Regular Meeting</span>
+                        <span style="font-size: 15px; color: #94a3b8; font-family: monospace;">Every 2 months</span>
                     </div>
-                    <span class="text-xs font-mono bg-slate-950 px-2.5 py-1 rounded border border-slate-800 text-slate-400 shrink-0">📅 Zoom Workshop</span>
+                    <h3 style="margin: 0; font-size: 20px;">Wildsheet General Meetings - Slack</h3>
+                    <p style="margin: 0; font-size: 14px; color: #cbd5e1; max-width: 48rem;">
+                        Our regular meeting happens every 2 months, we usually discuss one or two original research articles or methods papers, new products, upcoming workshops and conferences.
+                    </p>
+                    <p style="margin: 0; font-size: 14px; color: #cbd5e1; max-width: 48rem;">
+                        The online meeting details are provided on the Slack, join us there to keep up-to-date with our General Meetings.
+                    </p>
+                </div>
+
+                <!-- Event Content Cards Hook Node -->
+                <div class="event-card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                        <span style="font-size: 12px; font-weight: 700; color: #22d3ee; text-transform: uppercase; letter-spacing: 0.05em;">Symopsium</span>
+                        <span style="font-size: 15px; color: #94a3b8; font-family: monospace;">Aiming for Q3 2027</span>
+                    </div>
+                    <h3 style="margin: 0; font-size: 20px;">Tissue Clearing</h3>
+                    <p style="margin: 0; font-size: 14px; color: #cbd5e1; max-width: 48rem;">
+                        Agenda TBC
+                    </p>
+                </div>
+
+                <!-- Event Content Cards Hook Node -->
+                <div class="event-card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                        <span style="font-size: 12px; font-weight: 700; color: #22d3ee; text-transform: uppercase; letter-spacing: 0.05em;">Workshop</span>
+                        <span style="font-size: 15px; color: #94a3b8; font-family: monospace;">30th September 2025</span>
+                    </div>
+                    <h3 style="margin: 0; font-size: 20px;">Tissue clearing workshop: Approaches to fundamentals - British Neuroscience Association</h3>
+                    <p style="margin: 0; font-size: 14px; color: #cbd5e1; max-width: 48rem;">
+                        This 1-day symposium aims to form new connections and collaborations between biologists, microscopists, image analysts and optical engineers, providing an opportunity to inform each other about current and advanced applications using light-sheet microscopy. The discussion will be focused on the benefits of this technology without ignoring its limits and exploring possible alternative or complementary imaging approaches.
+                    </p>
+                    <p style="margin: 0; font-size: 14px; color: #cbd5e1; max-width: 48rem;">
+                        For more details, visit: 
+                        <a href="https://www.bna.org.uk/events/ems-event-calendar/tissue-clearing-workshop-approaches-to-fundamentals.html" class="auto-url"></a>
+                    </p>
+                </div>
+
+                <!-- Event Content Cards Hook Node -->
+                <div class="event-card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                        <span style="font-size: 12px; font-weight: 700; color: #22d3ee; text-transform: uppercase; letter-spacing: 0.05em;">Symopsium</span>
+                        <span style="font-size: 15px; color: #94a3b8; font-family: monospace;">22nd April 2024</span>
+                    </div>
+                    <h3 style="margin: 0; font-size: 20px;">Light-sheet in Action - Francis Crick Institute</h3>
+                    <p style="margin: 0; font-size: 14px; color: #cbd5e1; max-width: 48rem;">
+                        This 1-day symposium aims to form new connections and collaborations between biologists, microscopists, image analysts and optical engineers, providing an opportunity to inform each other about current and advanced applications using light-sheet microscopy. The discussion will be focused on the benefits of this technology without ignoring its limits and exploring possible alternative or complementary imaging approaches.
+                    </p>
+                    <p style="margin: 0; font-size: 14px; color: #cbd5e1; max-width: 48rem;">
+                        The symposium is aimed at all prospective and existing scientists using light-sheet microscopy, from those thinking of using light-sheet microscopy for the first time to the established researchers using light-sheet routinely and actively developing methodology and technology.
+                    </p>
+                    <p style="margin: 0; font-size: 14px; color: #cbd5e1; max-width: 48rem;">
+                        For more details, visit: <a href="https://www.crick.ac.uk/whats-on/light-sheet-in-action-structural-and-dynamic-microscopy-from-cells-to-animals" class="auto-url"></a>
+                    </p>
                 </div>
             </div>
         </section>

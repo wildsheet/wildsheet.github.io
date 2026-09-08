@@ -4,90 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildsheet Community — Tissue Clearing Database</title>
-    <script src="https://tailwindcss.com"></script>
+    
     <style>
+        /* 🎯 Layout Architecture Base Rules */
+        html, body { 
+            background-color: #030712 !important; 
+            color: #f8fafc !important; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 8px;
+            line-height: 1.5;
+        }
+
+        main { 
+            max-w: 1200px; 
+            margin: 0 auto; 
+            padding: 12px; 
+            box-sizing: border-box; 
+        }
+
+        /* Typography & Custom Global Anchors */
+        h2 { font-size: 32px; font-weight: 900; color: #f8fafc; margin: 0; tracking-tight: -0.025em; }
+        h3 { font-size: 18px; font-weight: 700; color: #f8fafc; margin: 0; }
+
+        /* Responsive Top Filtering Controls */
+        .navbar-filters-grid {
+            display: grid;
+            grid-template-columns: minmax(240px, 2fr) repeat(auto-fit, minmax(130px, 1fr));
+            gap: 12px;
+            align-items: center;
+            background-color: #0b1329;
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid #1e293b;
+            margin-bottom: 24px;
+            box-sizing: border-box;
+        }
+
+        /* Unified Form Field Elements */
+        .navbar-input, .navbar-select {
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #020617 !important;
+            color: #f8fafc !important;
+            border: 1px solid #334155 !important;
+            border-radius: 8px !important;
+            padding: 10px 14px !important;
+            font-size: 13px !important;
+            outline: none;
+            transition: border-color 0.15s ease-in-out;
+        }
+        .navbar-input:focus, .navbar-select:focus {
+            border-color: #22d3ee !important;
+        }
+
+        /* Native Layout Grid Protocol Cards */
+        .matrix-card {
+            border: 1px solid #1e293b; 
+            border-radius: 12px; 
+            padding: 24px; 
+            background-color: rgba(15, 23, 42, 0.4); 
+            display: flex; 
+            flex-direction: column; 
+            gap: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+        }
+        .matrix-card:hover {
+            border-color: #475569;
+            background-color: rgba(30, 41, 59, 0.4);
+        }
+        
+        /* Flex Alignment Header Elements */
+        .matrix-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            width: 100%;
+        }
+
+        /* Two-Column Matrix Parameter Grid */
+        .matrix-grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px 24px;
+            border-top: 1px solid #1e293b;
+            border-bottom: 1px solid #1e293b;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            font-size: 13px;
+        }
+
+        /* Wide Description Block Extension */
+        .full-width-property {
+            grid-column: 1 / -1;
+        }
+
+        /* Global Typography and Utility Links */
         a, a:visited, a:active {
-            color: #22d3ee; /* Electric Cyan default for plain text links */
+            color: #22d3ee;
             text-decoration: none !important;
             transition: all 0.2s ease-in-out;
         }
-        a:hover {
-            color: #dcf3f7; /* Lighter ice cyan on hover */
+        
+        iframe.giscus-frame { 
+            background-color: #0f172a !important; 
+            border-radius: 12px; 
+            padding: 16px; 
+            border: 1px solid #1e293b !important; 
         }
-
-        html, body { background-color: #030712 !important; color: #f8fafc !important; font-family: sans-serif; }
-        iframe.giscus-frame { background-color: #0f172a !important; border-radius: 12px; padding: 16px; border: 1px solid #1e293b !important; }
     </style>
 </head>
 
 <body class="min-h-screen antialiased selection:bg-blue-500/30 selection:text-blue-100">
 
     <!-- Global Minimal Navigation Menu -->
-    <nav class="border-b border-slate-800 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50 px-6 py-4">
-        <div class="max-w-4xl mx-auto flex justify-between items-center">
+    <nav style="border-bottom: 1px solid #1e293b; background-color: rgba(2, 6, 23, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 50; padding: 16px 24px; box-sizing: border-box;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; gap: 24px; width: 100%;">
             
             <!-- Brand Header Container with Group Logo -->
-            <div class="flex items-center gap-3 select-none">
-                <!-- 🎯 Group Logo Integration Node -->
+            <div style="display: flex; align-items: center; gap: 12px; user-select: none; flex-shrink: 0; min-height: 28px;">
                 <img src="images/wildsheet_logo.png" 
-                    alt="WildSheet Logo" 
-                    class="h-7 w-auto object-contain brightness-110 tracking-tight"
-                    onerror="this.style.display='none';">
-                    
-                <!-- 🎯 This uses pure HTML inline styling to bypass Tailwind and force a 24px font size instantly -->
-                <span class="font-black tracking-wider text-slate-100 uppercase" style="font-size: 50px !important;">
+                     alt="WildSheet Logo" 
+                     style="height: 28px; width: auto; object-fit: contain; filter: brightness(1.1); display: block;"
+                     onerror="this.style.display='none';">
+                <span style="font-weight: 800; color: #f8fafc; text-transform: uppercase; font-size: 24px; letter-spacing: 0px; white-space: nowrap; display: block; line-height: 1;">
                     Wildsheet Light Sheet Community
                 </span>
             </div>
             
             <!-- Navigation Tabs Link Tree -->
-            <div class="flex items-center gap-4 text-base font-bold select-none shrink-0">
-                <a href="index.html" class="text-slate-400 hover:text-cyan-400 transition-colors">Overview</a>
-                <span class="text-slate-700 font-normal">|</span>
-                <a href="registry.html" class="text-cyan-400 font-black tracking-wide underline decoration-2 underline-offset-4">Tissue Clearing Database</a>
-                <span class="text-slate-700 font-normal">|</span>
-                <a href="events.html" class="text-slate-400 hover:text-cyan-400 transition-colors">Events</a>
+            <div style="display: flex; align-items: center; gap: 16px; font-size: 14px; font-weight: 700; user-select: none; flex-shrink: 0; white-space: nowrap;">
+                <a href="index.html" style="color: #94a3b8; transition: color 0.2s; text-decoration: none !important;" onmouseover="this.style.color='#22d3ee'" onmouseout="this.style.color='#94a3b8'">Overview</a>
+                
+                <span style="color: #334155; font-weight: 400;">|</span>
+                
+                <!-- Active Link style matching your design tracking specs -->
+                <a href="registry.html" style="color: #22d3ee; font-weight: 900; text-decoration: underline !important; text-underline-offset: 4px; text-decoration-thickness: 2px;">Tissue Clearing Database</a>
+                
+                <span style="color: #334155; font-weight: 400;">|</span>
+                
+                <a href="events.html" style="color: #94a3b8; transition: color 0.2s; text-decoration: none !important;" onmouseover="this.style.color='#22d3ee'" onmouseout="this.style.color='#94a3b8'">Events</a>
             </div>
         </div>
     </nav>
 
+
+
     <!-- Main Workspace Content -->
-    <main class="max-w-4xl mx-auto p-6 md:p-12">
-        <section class="space-y-8">
-            <header class="space-y-2">
-                <h2 class="text-3xl font-extrabold tracking-tight text-slate-100">Tissue Clearing Database</h2>
-                <p class="text-sm text-slate-400 leading-relaxed max-w-2xl">
+    <main style="max-w: 1200px; margin: 0 auto; padding: 24px; box-sizing: border-box;">
+        <section style="display: flex; flex-direction: column; gap: 32px;">
+            <header style="display: flex; flex-direction: column; gap: 8px;">
+                <h2>Tissue Clearing Database</h2>
+                <p style="color: #cbd5e1; font-size: 16px; display: flex; flex-direction: column; gap: 0px; max-width: 44rem;">
                     A non-exhaustive, regularly-updated searchable database of tissue clearing methods with filterable parameters and links to papers that use the technique, alongside a discussion space for users (GitHub login required).
                 </p>
             </header>
 
             <!-- Expanded 2-Column Responsive Layout Framework Matrix -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-2">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; padding-top: 8px;">
                 
                 <!-- Left Sidebar Filters Module Panel Grid Layout -->
-                <div class="md:col-span-1 space-y-4">
-                    <h3 class="text-lg font-bold text-slate-100 tracking-tight border-b border-slate-800 pb-2">Filters</h3>
-                    <div id="filters-sidebar-target" class="space-y-4 bg-slate-900/40 p-4 rounded-xl border border-slate-800 shadow-inner h-fit">
-                        <div class="p-4 text-center text-xs text-slate-500">Generating parameter blocks...</div>
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                    <h3 id="sidebar-headline-title" style="font-size: 18px; font-weight: 700; color: #f8fafc; border-bottom: 1px solid #1e293b; padding-bottom: 8px; margin: 0;">Filters</h3>
+                    <div id="sidebar-panel-container">
+                        <div id="filters-sidebar-target" style="display: flex; flex-direction: column; gap: 16px; background-color: rgba(15, 23, 42, 0.4); padding: 16px; border-radius: 12px; border: 1px solid #1e293b; height: fit-content; box-sizing: border-box;">
+                            <div style="padding: 16px; text-align: center; font-size: 12px; color: #64748b;">Generating parameter blocks...</div>
+                        </div>
                     </div>
                 </div>
+
                 
-                <!-- Right Grid Results Output Pipeline display area -->
-                <div class="md:col-span-2 space-y-4">
-                    <h3 id="results-headline-title" class="text-lg font-bold text-slate-100 tracking-tight border-b border-slate-800 pb-2">Search Results</h3>
-                    <div id="registry-cards-container" class="space-y-6">
-                        <div class="p-8 text-center text-slate-500 bg-slate-900/10 rounded-xl border border-slate-800 border-dashed text-sm">
+                <!-- Right Grid Results Output Pipeline display area (Forces a larger width allocation on desktop) -->
+                <div style="grid-column: span auto; display: flex; flex-direction: column; gap: 16px; flex-grow: 2;">
+                    <h3 id="results-headline-title" style="font-size: 18px; font-weight: 700; color: #f8fafc; border-bottom: 1px solid #1e293b; padding-bottom: 8px; margin: 0;">Search Results</h3>
+                    <div id="registry-cards-container" style="display: flex; flex-direction: column; gap: 24px;">
+                        <div style="padding: 32px; text-align: center; color: #64748b; background-color: rgba(15, 23, 42, 0.1); border-radius: 12px; border: 1px dashed #1e293b; font-size: 14px;">
                             Loading database matrix tracking elements...
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Global Community Communication Space -->
-            <div class="border-t border-slate-800 pt-6 mt-8">
-                <h3 id="wiki-title" class="text-sm font-bold text-slate-300 mb-4 tracking-tight">💬 Community Discussion</h3>
-                <div id="giscus-frame-container" class="min-h-[280px]"></div>
-            </div>
         </section>
     </main>
 
@@ -111,7 +213,7 @@
                     const validMethod = cachedMethodsRegistry.find(m => m.method_name === activeMethodId);
                     if (validMethod) isFocusModeActive = true;
                 } else if (cachedMethodsRegistry.length > 0) {
-                    activeMethodId = cachedMethodsRegistry.method_name;
+                    activeMethodId = cachedMethodsRegistry[0].method_name;
                 }
                 
                 populateDynamicDropdownFilters();
@@ -119,13 +221,13 @@
             } catch (error) {
                 console.error("Pipeline Sync Error:", error);
                 document.getElementById('registry-cards-container').innerHTML = `
-                    <div class="p-8 text-center text-red-400 bg-red-950/20 rounded-xl border border-red-900 text-sm font-medium">
+                    <div style="padding: 32px; text-align: center; color: #f87171; background-color: rgba(69,10,10,0.2); border-radius: 12px; border: 1px solid #7f1d1d; font-size: 14px; font-weight: 500;">
                         ❌ Error loading tissue_clearing_db.json. Ensure the file is named correctly and placed in the same folder.
                     </div>`;
             }
         }
 
-        // Programmatically populate multi-variable search criteria cleanly
+        // Programmatically populate multi-variable search criteria cleanly using native CSS fields
         function populateDynamicDropdownFilters() {
             const classes = new Set();
             const ris = new Set();
@@ -143,38 +245,52 @@
 
             const targetBox = document.getElementById('filters-sidebar-target');
             if (targetBox) {
+                const labelStyle = 'display: block; font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;';
+                const inputStyle = 'width: 100%; box-sizing: border-box; background-color: #020617; border: 1px solid #1e293b; border-radius: 8px; padding: 10px; font-size: 13px; color: #e2e8f0; outline: none; transition: border-color 0.15s ease-in-out; font-family: inherit;';
+                
                 targetBox.innerHTML = `
-                    <div class="space-y-4">
+                    <div style="display: flex; flex-direction: column; gap: 16px; width: 100%;">
                         <div>
-                            <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Search</label>
-                            <input id="text-search" type="text" placeholder="Search title, year, RI, tissue types..." class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-cyan-400 placeholder-slate-600 shadow-inner min-w-[200px]">
+                            <label style="${labelStyle}">Search</label>
+                            <input id="text-search" type="text" placeholder="Search title, year, RI, tissue types..." style="${inputStyle}" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
                         </div>
                         <div>
-                            <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Tissue Compatibility</label>
-                            <select id="tissue-filter" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-cyan-400 cursor-pointer shadow-inner">
+                            <label style="${labelStyle}">Tissue Compatibility</label>
+                            <select id="tissue-filter" style="${inputStyle} cursor: pointer;" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
                                 <option value="all">Show All Species</option>
                                 ${Array.from(species).sort().map(s => `<option value="${s}">${s}</option>`).join('')}
                             </select>
                         </div>
                         <div>
-                            <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Chemical Category</label>
-                            <select id="class-filter" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-cyan-400 cursor-pointer shadow-inner">
+                            <label style="${labelStyle}">Chemical Category</label>
+                            <select id="class-filter" style="${inputStyle} cursor: pointer;" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
                                 <option value="all">Show All Classes</option>
                                 ${Array.from(classes).sort().map(c => `<option value="${c}">${c}</option>`).join('')}
                             </select>
                         </div>
                         <div>
-                            <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Refractive Index (RI)</label>
-                            <select id="ri-filter" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-cyan-400 cursor-pointer shadow-inner">
+                            <label style="${labelStyle}">Refractive Index (RI)</label>
+                            <select id="ri-filter" style="${inputStyle} cursor: pointer;" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
                                 <option value="all">Show All RIs</option>
                                 ${Array.from(ris).sort((a,b) => b-a).map(r => `<option value="${r}">RI — ${r}</option>`).join('')}
                             </select>
                         </div>
                         <div>
-                            <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Year Published</label>
-                            <select id="year-filter" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-cyan-400 cursor-pointer shadow-inner">
+                            <label style="${labelStyle}">Year Published</label>
+                            <select id="year-filter" style="${inputStyle} cursor: pointer;" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
                                 <option value="all">Show All Years</option>
                                 ${Array.from(years).sort((a,b) => b-a).map(y => `<option value="${y}">${y}</option>`).join('')}
+                            </select>
+                        </div>
+                        
+                        <!-- 🎯 New Filter: Numeric Verification Counts Toggle -->
+                        <div>
+                            <label style="${labelStyle}">Real World Validations</label>
+                            <select id="validation-filter" style="${inputStyle} cursor: pointer;" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
+                                <option value="all">Any Count</option>
+                                <option value="none">No Validation Papers (0)</option>
+                                <option value="active">Has Validations (1+)</option>
+                                <option value="high">Extensive Validations (2+)</option>
                             </select>
                         </div>
                     </div>
@@ -186,6 +302,7 @@
             document.getElementById('class-filter').addEventListener('change', renderFilteredRegistry);
             document.getElementById('ri-filter').addEventListener('change', renderFilteredRegistry);
             document.getElementById('year-filter').addEventListener('change', renderFilteredRegistry);
+            document.getElementById('validation-filter').addEventListener('change', renderFilteredRegistry);
         }
         
         // Multi-Variable Multi-Filter Dynamic Layout Engine
@@ -195,9 +312,13 @@
             const selectedClass = document.getElementById('class-filter')?.value || 'all';
             const selectedRI = document.getElementById('ri-filter')?.value || 'all';
             const selectedYear = document.getElementById('year-filter')?.value || 'all';
+            const selectedVal = document.getElementById('validation-filter')?.value || 'all';
+            
             const container = document.getElementById('registry-cards-container');
-            const discussionWrapper = document.getElementById('wiki-title')?.parentNode;
             const titleNode = document.getElementById('results-headline-title');
+            
+            const sidebarHeadline = document.getElementById('sidebar-headline-title');
+            const sidebarContainer = document.getElementById('sidebar-panel-container');
 
             let filtered = cachedMethodsRegistry.filter(m => {
                 const matchesTissue = selectedTissue === 'all' || (m.tissue_compatibilities && m.tissue_compatibilities.includes(selectedTissue));
@@ -205,72 +326,161 @@
                 const matchesRI = selectedRI === 'all' || String(m.refractive_index) === selectedRI;
                 const matchesYear = selectedYear === 'all' || String(m.year_invented) === selectedYear;
 
+                const valCount = m.real_world_validations ? m.real_world_validations.length : 0;
+                let matchesValidation = true;
+                if (selectedVal === 'none') matchesValidation = (valCount === 0);
+                else if (selectedVal === 'active') matchesValidation = (valCount >= 1);
+                else if (selectedVal === 'high') matchesValidation = (valCount >= 2);
+
                 const textHaystack = `${m.method_name} ${m.year_invented} ${m.chemical_class} ${m.refractive_index} ${m.sample_size_compatibility} ${m.primary_citation} ${(m.tissue_compatibilities || []).join(' ')}`.toLowerCase();
                 const matchesText = !query || textHaystack.includes(query);
 
-                return matchesTissue && matchesClass && matchesRI && matchesYear && matchesText;
+                return matchesTissue && matchesClass && matchesRI && matchesYear && matchesValidation && matchesText;
             });
 
+            // FOCUS MODE
             if (isFocusModeActive && activeMethodId) {
                 const targetRecord = cachedMethodsRegistry.find(m => m.method_name === activeMethodId);
                 if (targetRecord) {
-                    if (titleNode) titleNode.innerText = "Discussion for Selected Method";
+                    if (titleNode) titleNode.innerText = "Info for Selected Method";
+                    
+                    if (sidebarContainer && document.getElementById('filters-sidebar-target')) {
+                        filtersBackupHTML = sidebarContainer.innerHTML;
+                    }
+
+                    if (sidebarHeadline) sidebarHeadline.innerText = `💬 Community Discussion: ${targetRecord.method_name}`;
+                    if (sidebarContainer) {
+                        sidebarContainer.innerHTML = `<div id="giscus-frame-container" style="min-height: 380px; width: 100%;"></div>`;
+                    }
+
                     container.innerHTML = `
-                        <div class="mb-4">
-                            <button onclick="exitFocusViewMode()" class="mb-3 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition flex items-center gap-1.5 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg shadow-sm cursor-pointer" style="color: #22d3ee !important;">
+                        <div style="margin-bottom: 24px; text-align: left;">
+                            <button onclick="exitFocusViewMode()" style="background-color: #f8fafc; color: #0f172a; border: 1px solid #cbd5e1; padding: 10px 18px; border-radius: 8px; font-size: 14px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
                                 &larr; Return to Complete Protocol List
                             </button>
                         </div>
                         ${buildCardTemplateHtml(targetRecord, true)}
                     `;
-                    // Ensure the outer block is completely visible before rendering Giscus
-                    if (discussionWrapper) discussionWrapper.style.display = 'block';
+                    
                     syncGiscusFrameContext();
                     return;
                 }
             }
 
+            // LIST MODE
             if (titleNode) titleNode.innerText = "Search Results";
-            // Cleanly clear out the layout container rather than hiding the main element
-            if (discussionWrapper) discussionWrapper.style.display = 'none';
+            if (sidebarHeadline) sidebarHeadline.innerText = "Filters";
+            
+            if (sidebarContainer && !document.getElementById('filters-sidebar-target') && filtersBackupHTML) {
+                sidebarContainer.innerHTML = filtersBackupHTML;
+                document.getElementById('text-search').addEventListener('input', renderFilteredRegistry);
+                document.getElementById('tissue-filter').addEventListener('change', renderFilteredRegistry);
+                document.getElementById('class-filter').addEventListener('change', renderFilteredRegistry);
+                document.getElementById('ri-filter').addEventListener('change', renderFilteredRegistry);
+                document.getElementById('year-filter').addEventListener('change', renderFilteredRegistry);
+                document.getElementById('validation-filter').addEventListener('change', renderFilteredRegistry);
+            }
 
             if (filtered.length === 0) {
-                container.innerHTML = `<div class="p-8 text-center text-slate-500 bg-slate-900/20 rounded-xl border border-slate-800 border-dashed text-sm">No protocols match selection.</div>`;
+                container.innerHTML = `<div style="padding: 32px; text-align: center; color: #64748b; background-color: rgba(15,23,42,0.2); border-radius: 12px; border: 1px dashed #334155; font-size: 14px;">No protocols match selection.</div>`;
                 return;
             }
 
-            container.innerHTML = filtered.map((m, index) => `
-                ${buildCardTemplateHtml(m, false)}
-                ${index < filtered.length - 1 ? '<div class="py-6 select-none"><div class="w-full h-0 border-t border-dashed border-slate-800"></div></div>' : ''}
-            `).join('');
+            container.innerHTML = filtered.map(m => buildCardTemplateHtml(m, false)).join('');
         }
 
         function buildCardTemplateHtml(m, isFocused) {
-            return `
-                <div onclick="selectNewMethodWiki('${m.method_name}')" class="p-6 border rounded-xl transition-all duration-200 cursor-pointer shadow-md bg-slate-900/40 border-slate-800/80 hover:border-slate-700 hover:bg-slate-900/60 flex flex-col justify-between gap-4 ${m.method_name === activeMethodId && isFocusModeActive ? 'border-cyan-400 ring-1 ring-cyan-400/30 bg-slate-900' : ''}">
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center gap-4 flex-wrap">
-                            <div>
-                                <h4 class="text-xl font-black text-slate-100 tracking-tight">${m.method_name} (${m.year_invented})</h4>
+            // 🎯 Updated to use your exact "real_world_validations" matrix key
+            const paperCount = m.real_world_validations ? m.real_world_validations.length : 0;
+            
+            let validationSectionHtml = '';
+            if (isFocused) {
+                if (paperCount === 0) {
+                    validationSectionHtml = `
+                        <div class="full-width-property" style="border-top: 1px dashed rgba(30,41,59,0.6); padding-top: 16px; margin-top: 8px;">
+                            <strong style="color: #e2e8f0; font-weight: 700; display: block; margin-bottom: 4px;">Real World Validation Papers:</strong>
+                            <span style="color: #64748b; font-style: italic; font-size: 13px;">No validation records registered for this specific technique yet.</span>
+                        </div>
+                    `;
+                } else {
+                    // 🎯 Updated mapping loop to extract "first_author" parameters cleanly
+                    const papersListHtml = m.real_world_validations.map(p => `
+                        <div style="background-color: #020617; border: 1px solid #1e293b; padding: 14px; border-radius: 8px; display: flex; flex-direction: column; gap: 6px; text-align: left;">
+                            <span style="color: #f8fafc; font-weight: 800; font-size: 14px; line-height: 1.4;">${p.title}</span>
+                            <div style="font-size: 12px; color: #94a3b8; display: flex; flex-wrap: wrap; gap: 8px 12px;">
+                                <span><strong style="color: #cbd5e1;">First Author:</strong> ${p.first_author || 'N/A'}</span>
+                                <span><strong style="color: #cbd5e1;">Journal:</strong> ${p.journal} (${p.year})</span>
                             </div>
-                            
-                            ${isFocused ? '' : `
-                                <div>
-                                    <span class="text-xs font-bold text-cyan-400 hover:text-cyan-300 hover:underline transition-all select-none" style="color: #22d3ee !important;">
-                                        💬 Open Discussion &rarr;
-                                    </span>
-                                </div>
-                            `}
+                            <div style="font-size: 12px; border-top: 1px dashed #1e293b; padding-top: 6px; margin-top: 2px;">
+                                <strong style="color: #cbd5e1;">DOI Link:</strong> 
+                                <a href="https://doi.org/${p.doi}" target="_blank" rel="noopener noreferrer" style="color: #22d3ee; text-decoration: underline !important; font-family: monospace;">
+                                    doi.org/${p.doi}
+                                </a>
+                            </div>
                         </div>
+                    `).join('');
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 text-xs border-t border-b border-slate-800/60 py-4 text-slate-400">
-                            <div><strong class="text-slate-200 font-bold tracking-tight">Chemical Category:</strong> <span class="text-cyan-400 font-mono ml-1">${m.chemical_class}</span></div>
-                            <div><strong class="text-slate-200 font-bold tracking-tight">RI:</strong> <span class="text-emerald-400 font-mono font-bold ml-1">${m.refractive_index}</span></div>
-                            <div><strong class="text-slate-200 font-bold tracking-tight">Tissue Compatibility:</strong> <span class="text-slate-300 ml-1">${m.tissue_compatibilities.join(', ')}</span></div>
-                            <div class="sm:col-span-2"><strong class="text-slate-200 font-bold tracking-tight block mb-0.5">Sample Size Compatibility:</strong> <span class="text-slate-300 leading-relaxed">${m.sample_size_compatibility}</span></div>
-                            <div class="sm:col-span-2 border-t border-slate-800/40 pt-2.5 mt-1"><strong class="text-slate-200 font-bold tracking-tight block mb-1">Primary Citation:</strong> <span class="text-slate-300 italic font-normal tracking-wide block bg-slate-950 p-2.5 rounded-lg border border-slate-800/60 leading-relaxed">${m.primary_citation || 'N/A'}</span></div>
+                    validationSectionHtml = `
+                        <div class="full-width-property" style="border-top: 1px dashed rgba(30,41,59,0.6); padding-top: 16px; margin-top: 8px;">
+                            <strong style="color: #22d3ee; font-weight: 700; display: block; margin-bottom: 12px; font-size: 14px; letter-spacing: 0.025em; text-align: left;">
+                                📋 Validation Papers (${paperCount})
+                            </strong>
+                            <div style="display: flex; flex-direction: column; gap: 12px;">
+                                ${papersListHtml}
+                            </div>
                         </div>
+                    `;
+                }
+            }
+
+            return `
+                <div onclick="selectNewMethodWiki('${m.method_name}')" class="matrix-card" style="${m.method_name === activeMethodId && isFocusModeActive ? 'border-color: #22d3ee; box-shadow: 0 0 0 1px rgba(34,211,238,0.3); background-color: #0f172a; cursor: default;' : ''}">
+                    
+                    <div class="matrix-card-header">
+                        <h4 style="margin: 0; font-size: 20px; font-weight: 900; color: #f8fafc;">
+                            ${m.method_name} (${m.year_invented})
+                        </h4>
+                        
+                        ${isFocused ? '' : `
+                            <div>
+                                <button style="background-color: #f8fafc; color: #0f172a; border: 1px solid #cbd5e1; padding: 8px 16px; border-radius: 8px; font-size: 14px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;">
+                                    💬 Info and Discussion &rarr;
+                                </button>
+                            </div>
+                        `}
                     </div>
+
+                    <div class="matrix-grid-layout" style="color: #94a3b8;">
+                        <div>
+                            <strong style="color: #e2e8f0; font-weight: 700;">Chemical Category:</strong> 
+                            <span style="color: #22d3ee; font-family: monospace; margin-left: 4px;">${m.chemical_class}</span>
+                        </div>
+                        <div>
+                            <strong style="color: #e2e8f0; font-weight: 700;">RI:</strong> 
+                            <span style="color: #34d399; font-family: monospace; font-weight: 700; margin-left: 4px;">${m.refractive_index}</span>
+                        </div>
+                        <div>
+                            <strong style="color: #e2e8f0; font-weight: 700;">Validations:</strong> 
+                            <span style="color: #f8fafc; font-weight: 700; margin-left: 4px; background-color: rgba(34,211,238,0.1); padding: 2px 6px; border-radius: 4px; border: 1px solid rgba(34,211,238,0.2);">${paperCount} papers</span>
+                        </div>
+                        <div class="full-width-property">
+                            <strong style="color: #e2e8f0; font-weight: 700;">Tissue Compatibility:</strong> 
+                            <span style="color: #cbd5e1; margin-left: 4px;">${m.tissue_compatibilities.join(', ')}</span>
+                        </div>
+                        <div class="full-width-property">
+                            <strong style="color: #e2e8f0; font-weight: 700; display: block; margin-bottom: 2px;">Sample Size Compatibility:</strong> 
+                            <span style="color: #cbd5e1; line-height: 1.5;">${m.sample_size_compatibility}</span>
+                        </div>
+                        <div class="full-width-property" style="border-top: 1px dashed rgba(30,41,59,0.6); padding-top: 12px; margin-top: 4px;">
+                            <strong style="color: #e2e8f0; font-weight: 700; display: block; margin-bottom: 6px;">Primary Citation:</strong> 
+                            <span style="color: #cbd5e1; font-style: italic; background-color: #020617; padding: 10px; border-radius: 6px; border: 1px solid #1e293b; display: block; line-height: 1.5;">
+                                ${m.primary_citation || 'N/A'}
+                            </span>
+                        </div>
+                        
+                        ${validationSectionHtml}
+                    </div>
+
                 </div>
             `;
         }
@@ -280,28 +490,41 @@
             const container = document.getElementById('giscus-frame-container');
             if (!targetMethod || !container) return;
 
-            document.getElementById('wiki-title').innerText = `💬 Community Discussion: ${targetMethod.method_name}`;
-            container.innerHTML = '<div class="text-xs font-mono text-slate-500">Connecting to GitHub Discussion room...</div>'; 
+            // Look for an already active Giscus iframe instance on your document layer
+            const existingIframe = document.querySelector('iframe.giscus-frame');
             
-            const giscusScript = document.createElement('script');
-            giscusScript.src = "https://giscus.app";
-            giscusScript.setAttribute('data-repo', "wildsheet/wildsheet.github.io");
-            giscusScript.setAttribute('data-repo-id', "R_kgDOUOWJeg");
-            giscusScript.setAttribute('data-category', "General");
-            giscusScript.setAttribute('data-category-id', "DIC_kwDOUOWJes4DE315");
-            giscusScript.setAttribute('data-mapping', 'specific');
-            giscusScript.setAttribute('data-term', targetMethod.method_name); 
-            giscusScript.setAttribute('data-strict', '0');
-            giscusScript.setAttribute('data-reactions-enabled', '1');
-            giscusScript.setAttribute('data-emit-metadata', '0');
-            giscusScript.setAttribute('data-input-position', 'top');
-            giscusScript.setAttribute('data-theme', 'dark_dimmed');
-            giscusScript.setAttribute('data-lang', 'en');
-            giscusScript.crossOrigin = "anonymous";
-            giscusScript.async = true;
-            
-            container.innerHTML = '';
-            container.appendChild(giscusScript);
+            if (existingIframe) {
+                // 🎯 Fast Path: Post an operational payload message to instantly recalculate the room view
+                existingIframe.contentWindow.postMessage({
+                    giscus: {
+                        setConfig: {
+                            term: targetMethod.method_name
+                        }
+                    }
+                }, 'https://giscus.app');
+            } else {
+                // 🎯 Fallback Path: First load sequence - cleanly injects the base script node engine 
+                container.innerHTML = '';
+                
+                const giscusScript = document.createElement('script');
+                giscusScript.src = "https://giscus.app/client.js";
+                giscusScript.setAttribute('data-repo', "wildsheet/wildsheet.github.io");
+                giscusScript.setAttribute('data-repo-id', "R_kgDOUOWJeg");
+                giscusScript.setAttribute('data-category', "General");
+                giscusScript.setAttribute('data-category-id', "DIC_kwDOUOWJes4DE315");
+                giscusScript.setAttribute('data-mapping', 'specific');
+                giscusScript.setAttribute('data-term', targetMethod.method_name); 
+                giscusScript.setAttribute('data-strict', '0');
+                giscusScript.setAttribute('data-reactions-enabled', '1');
+                giscusScript.setAttribute('data-emit-metadata', '0');
+                giscusScript.setAttribute('data-input-position', 'top');
+                giscusScript.setAttribute('data-theme', 'dark_dimmed');
+                giscusScript.setAttribute('data-lang', 'en');
+                giscusScript.crossOrigin = "anonymous";
+                giscusScript.async = true;
+                
+                container.appendChild(giscusScript);
+            }
         }
 
         function selectNewMethodWiki(methodId) {
@@ -309,14 +532,15 @@
             activeMethodId = methodId;
             isFocusModeActive = true; 
             renderFilteredRegistry();
-            document.getElementById('wiki-title')?.scrollIntoView({ behavior: 'smooth' });
         }
 
         function exitFocusViewMode() {
             window.location.hash = '';
             isFocusModeActive = false;
+            
             const container = document.getElementById('giscus-frame-container');
             if (container) container.innerHTML = ''; 
+            
             renderFilteredRegistry();
             document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
         }
