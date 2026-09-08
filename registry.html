@@ -84,7 +84,7 @@
             </div>
 
             <!-- Global Community Communication Space -->
-            <div class="border-t border-slate-800 pt-6 mt-8 hidden">
+            <div class="border-t border-slate-800 pt-6 mt-8">
                 <h3 id="wiki-title" class="text-sm font-bold text-slate-300 mb-4 tracking-tight">💬 Community Discussion</h3>
                 <div id="giscus-frame-container" class="min-h-[280px]"></div>
             </div>
@@ -217,30 +217,31 @@
                     if (titleNode) titleNode.innerText = "Discussion for Selected Method";
                     container.innerHTML = `
                         <div class="mb-4">
-                            <button onclick="exitFocusViewMode()" class="mb-3 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition flex items-center gap-1.5 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg shadow-sm cursor-pointer">
+                            <button onclick="exitFocusViewMode()" class="mb-3 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition flex items-center gap-1.5 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg shadow-sm cursor-pointer" style="color: #22d3ee !important;">
                                 &larr; Return to Complete Protocol List
                             </button>
                         </div>
                         ${buildCardTemplateHtml(targetRecord, true)}
                     `;
-                    if (discussionWrapper) discussionWrapper.classList.remove('hidden');
+                    // Ensure the outer block is completely visible before rendering Giscus
+                    if (discussionWrapper) discussionWrapper.style.display = 'block';
                     syncGiscusFrameContext();
                     return;
                 }
             }
 
             if (titleNode) titleNode.innerText = "Search Results";
-            if (discussionWrapper) discussionWrapper.classList.add('hidden');
+            // Cleanly clear out the layout container rather than hiding the main element
+            if (discussionWrapper) discussionWrapper.style.display = 'none';
 
             if (filtered.length === 0) {
                 container.innerHTML = `<div class="p-8 text-center text-slate-500 bg-slate-900/20 rounded-xl border border-slate-800 border-dashed text-sm">No protocols match selection.</div>`;
                 return;
             }
 
-            // 🎯 Fixed: Clean dashed dividing line layout added purely underneath intermediate items
             container.innerHTML = filtered.map((m, index) => `
                 ${buildCardTemplateHtml(m, false)}
-                ${index < filtered.length - 1 ? '<div class="py-6 select-none"><div class="w-full border-b border-slate-800/80 border-dashed"></div></div>' : ''}
+                ${index < filtered.length - 1 ? '<div class="py-6 select-none"><div class="w-full h-0 border-t border-dashed border-slate-800"></div></div>' : ''}
             `).join('');
         }
 
@@ -253,7 +254,6 @@
                                 <h4 class="text-xl font-black text-slate-100 tracking-tight">${m.method_name} (${m.year_invented})</h4>
                             </div>
                             
-                            <!-- 🎯 Fixed: Closed class quotes and formatted style="" as an independent, standalone attribute -->
                             ${isFocused ? '' : `
                                 <div>
                                     <span class="text-xs font-bold text-cyan-400 hover:text-cyan-300 hover:underline transition-all select-none" style="color: #22d3ee !important;">
@@ -263,7 +263,6 @@
                             `}
                         </div>
 
-                        <!-- Card Parameters Data Fields Matrix -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 text-xs border-t border-b border-slate-800/60 py-4 text-slate-400">
                             <div><strong class="text-slate-200 font-bold tracking-tight">Chemical Category:</strong> <span class="text-cyan-400 font-mono ml-1">${m.chemical_class}</span></div>
                             <div><strong class="text-slate-200 font-bold tracking-tight">RI:</strong> <span class="text-emerald-400 font-mono font-bold ml-1">${m.refractive_index}</span></div>
@@ -305,13 +304,12 @@
             container.appendChild(giscusScript);
         }
 
-        // 🎯 Typo Fixed: Changed from Python "def" back to JavaScript "function" syntax
         function selectNewMethodWiki(methodId) {
             window.location.hash = methodId;
             activeMethodId = methodId;
             isFocusModeActive = true; 
             renderFilteredRegistry();
-            document.getElementById('wiki-title').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('wiki-title')?.scrollIntoView({ behavior: 'smooth' });
         }
 
         function exitFocusViewMode() {
