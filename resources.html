@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildsheet Community — Resources</title>
+
+    <!-- Embed Official MiniSearch Production Source Code (Fixed Scoping) -->
+    <script>
+    !function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e="undefined"!=typeof globalThis?globalThis:e||self).MiniSearch=t()}(this,(function(){"use strict";var e={};e.tokenize=function(e){if("string"!=typeof e)return[];var t=e.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");return t.split(/[\s\-,.?!:;()\[\]{}""'’‘“`«»\\\/*&^%$#@~|_+=<>]+/g).filter((function(e){return""!==e}))},e.processTerm=function(e){return e};var t=function(){function t(n){if(this.options=Object.assign({idField:"id",fields:[],storeFields:[],tokenize:e.tokenize,processTerm:e.processTerm,searchOptions:{}},n),this._index={},this._documentCount=0,this._documentIds={},this._fieldIds={},this._fieldLength={},this._averageFieldLength={},this._storedFields={},this.options.fields)for(var r=0;r<this.options.fields.length;r++)this._fieldIds[this.options.fields[r]]=r}return t.prototype.add=function(e){var t=this.options.idField,n=e[t];if(null==n)throw new Error('Missing id field "'+t+'"');this._documentIds[n]=this._documentCount,this._storedFields[this._documentCount]={};for(var r=0,o=this.options.storeFields;r<o.length;r++){var s=o[r];this._storedFields[this._documentCount][s]=e[s]}for(var i=0;i<this.options.fields.length;i++){var a=this.options.fields[i],c=this.options.tokenize(e[a]||"",a);this._fieldLength[this._documentCount]=this._fieldLength[this._documentCount]||[],this._fieldLength[this._documentCount][i]=c.length,this._averageFieldLength[i]=(this._averageFieldLength[i]||0)*this._documentCount+c.length,this._averageFieldLength[i]/=this._documentCount+1;for(var f=0,u=c;f<u.length;f++){var l=this.options.processTerm(u[f],a);if(l){this._index[l]=this._index[l]||{},this._index[l][i]=this._index[l][i]||{};var d=this._documentIds[n];this._index[l][i][d]=(this._index[l][i][d]||0)+1}}}this._documentCount++},t.prototype.addAll=function(e){for(var t=0,n=e;t<n.length;t++){var r=n[t];this.add(r)}},t.prototype.search=function(e,t){var n=this,r=Object.assign({fields:this.options.fields,prefix:!1,fuzzy:!1,combineWith:"OR"},this.options.searchOptions,t),o=this.options.tokenize(e),s={};if(0===o.length)return[];for(var i=0,a=o;i<a.length;i++)for(var c=a[i],f=this.options.processTerm(c),u=0,l=r.fields;u<l.length;u++){var d=l[u],h=this._fieldIds[d],v=this._index[f]?this._index[f][h]||{}:{};for(var p in v){var g=v[p],m=this._averageFieldLength[h]||1,y=this._fieldLength[p][h]||1,w=g*(this.options.fields.length+1)/(g+.5+1.5*(y/m));s[p]=s[p]||{id:p,score:0,match:{}},s[p].score+=w,s[p].match[c]=s[p].match[c]||[],s[p].match[c].push(d)}}var _=Object.values(s);return"AND"===r.combineWith&&(_=_.filter((function(e){return Object.keys(e.match).length===o.length}))),_.map((function(e){var t=Object.keys(n._documentIds).find((function(t){return n._documentIds[t]===parseInt(e.id,10)}));return Object.assign({},e,{id:t},n._storedFields[e.id])})).sort((function(e,t){return t.score-e.score}))},t}();return t.getDefault=function(t){return e[t]},t}));
+    </script>
+
     <style>
         html, body { 
             background-color: #030712 !important; 
@@ -90,6 +96,219 @@
                 height: 280px;
             }
         }
+
+        :root {
+            --slack-purple: #4a154b;
+            --card-bg-dark: #070d19; 
+            --border-color-dark: #1e293b; 
+            --inner-bg-white: #ffffff;
+            --highlight: #fef3c7;
+            --highlight-border: #f59e0b;
+            --text-muted: #94a3b8;
+        }
+
+        .slack-card-widget {
+            background-color: var(--card-bg-dark); 
+            border: 1px solid var(--border-color-dark);
+            border-radius: 12px; 
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            margin: 2.5rem 0;
+            display: flex;
+            flex-direction: column; /* Uses flexible boxes to control heights cleanly */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            height: 520px;
+            padding: 1.5rem; 
+        }
+
+        .slack-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;          /* Prevents header height from squishing */
+            padding-bottom: 1.25rem; /* Generates uniform distance layout boundaries */
+            color: white;
+        }
+
+        .slack-card-header h3 {
+            font-size: 1.35rem; 
+            margin: 0;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        .status-badge {
+            font-size: 0.75rem;
+            background-color: #2bac76; 
+            color: white;
+            padding: 0.3rem 0.75rem;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        .slack-card-layout {
+            display: flex;
+            flex: 1;                 /* Automatically grows to absorb all available space */
+            min-height: 0;           /* Prevents panels from blowing past parent card container rules */
+            border-radius: 8px; 
+            border: 1px solid var(--border-color-dark);
+            overflow: hidden;
+        }
+
+        .search-panel {
+            width: 35%; 
+            min-width: 260px;
+            border-right: 1px solid var(--border-color-dark);
+            display: flex;
+            flex-direction: column;
+            background-color: var(--inner-bg-white);
+        }
+
+        .search-header {
+        padding: 1rem;
+        border-bottom: 1px solid var(--border-color-dark);
+        background-color: #f8fafc;
+        flex-shrink: 0;
+        display: flex;         /* Activates flex container box models */
+        width: 100%;           /* Constrains container limits to 100% of left column width */
+        box-sizing: border-box; /* Includes padding within total width calculation */
+        }
+
+        #search-input {
+        width: 100%;           /* Constrains the input box within the search header padding borders */
+        max-width: 100%;       /* Prevents the text field from breaking column boundaries */
+        box-sizing: border-box; /* Forces browser to calculate width inside margins */
+        padding: 0.6rem 0.85rem;
+        font-size: 0.9rem;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        outline: none;
+        transition: all 0.2s;
+        }
+
+        #search-input:focus {
+            border-color: var(--slack-purple);
+            box-shadow: 0 0 0 2px rgba(74, 21, 75, 0.15);
+        }
+
+        .results-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0.75rem;
+            background-color: var(--inner-bg-white);
+        }
+
+        .search-hit-card {
+            padding: 0.85rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-bottom: 0.6rem;
+            background-color: var(--inner-bg-white);
+            transition: background-color 0.15s;
+        }
+
+        .search-hit-card:hover {
+            background-color: #f1f5f9;
+            border-color: #cbd5e1;
+        }
+
+        .search-hit-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.35rem;
+            font-size: 0.75rem;
+        }
+
+        .channel-tag {
+            font-weight: bold;
+            color: var(--slack-purple);
+        }
+
+        .user-tag {
+            font-weight: 600;
+            color: #334155;
+        }
+
+        .search-hit-text {
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: #475569;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .context-panel {
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--inner-bg-white);
+        }
+
+        .context-header {
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid var(--border-color-dark);
+            background-color: #f8fafc;
+            flex-shrink: 0;          /* Preserves context text container sizing rules */
+        }
+
+        .context-header h4 {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #334155;
+            font-weight: 700;
+        }
+
+        .context-view {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            background-color: var(--inner-bg-white);
+        }
+
+        .chat-row {
+            display: flex;
+            flex-direction: column;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            border-left: 3px solid transparent;
+        }
+
+        .chat-row-user {
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #1e293b;
+            margin-bottom: 0.2rem;
+        }
+
+        .chat-row-text {
+            font-size: 0.85rem;
+            line-height: 1.45;
+            color: #334155;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .highlighted-match {
+            background-color: var(--highlight);
+            border-left-color: var(--highlight-border);
+        }
+
+        .placeholder-view {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #64748b;
+            font-size: 0.85rem;
+            text-align: center;
+            padding: 1.5rem;
+            line-height: 1.4;
+        }
     </style>
 </head>
 <body>
@@ -136,6 +355,144 @@
                 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1V3IYUeJWDngG62ZoCrVDEeHCZ6fQ4Gs&ehbc=2E312F"></iframe>
             </div>
         </div>
+
+        <div class="slack-card-widget">
+            <div class="slack-card-header">
+                <h3>Slack Community Archive Logs</h3>
+                <div id="status" class="status-badge">Booting index runtime...</div>
+            </div>
+
+            <div class="slack-card-layout">
+                <!-- Search and Results Panel -->
+                <div class="search-panel">
+                <div class="search-header">
+                    <input type="text" id="search-input" placeholder="Search text, users, channels..." disabled>
+                </div>
+                <div id="results-list" class="results-list">
+                    <div class="placeholder-view">Type a term above to query local database.</div>
+                </div>
+                </div>
+
+                <!-- Context Viewer Panel -->
+                <div class="context-panel">
+                <div class="context-header">
+                    <h4 id="context-title">Thread Context Viewer</h4>
+                </div>
+                <div id="context-view" class="context-view">
+                    <div class="placeholder-view">
+                    <p>Select a search result from the panel to extract chronological thread and time context logs.</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
     </main>
+    <script>
+        let miniSearch;
+        let fullTimelines = {};
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const statusEl = document.getElementById('status');
+            const searchInput = document.getElementById('search-input');
+            const resultsList = document.getElementById('results-list');
+
+            // GitHub Pages compatible file path resolutions
+            const INDEX_URL = 'static/data/search_index.json';
+            const TIMELINE_URL = 'static/data/channel_threads.json';
+
+            Promise.all([
+            fetch(INDEX_URL).then(res => {
+                if (!res.ok) throw new Error('Missing file: ' + INDEX_URL);
+                return res.json();
+            }),
+            fetch(TIMELINE_URL).then(res => {
+                if (!res.ok) throw new Error('Missing file: ' + TIMELINE_URL);
+                return res.json();
+            })
+            ]).then(([indexData, timelineData]) => {
+            fullTimelines = timelineData;
+            
+            miniSearch = new MiniSearch({
+                fields: ['t', 'u', 'ch'],
+                storeFields: ['t', 'u', 'ch'],
+                idField: 'id'
+            });
+            miniSearch.addAll(indexData);
+            
+            statusEl.textContent = "Archive Ready";
+            statusEl.style.backgroundColor = "#2bac76";
+            searchInput.disabled = false;
+            }).catch(err => {
+            console.error(err);
+            statusEl.textContent = "Loading Failed";
+            statusEl.style.backgroundColor = "#e01e5a";
+            resultsList.innerHTML = `<div class="placeholder-view" style="color:#e01e5a;">Error loading data packages.</div>`;
+            });
+
+            searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.trim();
+            if (!miniSearch || query.length < 2) {
+                resultsList.innerHTML = '<div class="placeholder-view">Type a minimum of 2 characters to search...</div>';
+                return;
+            }
+            const results = miniSearch.search(query, { prefix: true, fuzzy: 0.2 });
+            renderSearchResults(results);
+            });
+        });
+
+        function renderSearchResults(results) {
+            const resultsList = document.getElementById('results-list');
+            if (results.length === 0) {
+            resultsList.innerHTML = '<div class="placeholder-view">No archive hits encountered.</div>';
+            return;
+            }
+            resultsList.innerHTML = results.slice(0, 30).map(item => `
+            <div class="search-hit-card" onclick="loadMessageContext('${item.ch}', '${item.id}')">
+                <div class="search-hit-meta">
+                <span class="channel-tag">#${item.ch}</span>
+                <span class="user-tag">${item.u}</span>
+                </div>
+                <div class="search-hit-text">${escapeHtml(item.t)}</div>
+            </div>
+            `).join('');
+        }
+
+        function loadMessageContext(channelName, targetMessageId) {
+            const contextView = document.getElementById('context-view');
+            const contextTitle = document.getElementById('context-title');
+            const channelHistory = fullTimelines[channelName] || [];
+            const targetIndex = channelHistory.findIndex(m => m.id === targetMessageId);
+            
+            if (targetIndex === -1) return;
+
+            const targetMsg = channelHistory[targetIndex];
+            const targetTime = parseFloat(targetMessageId.split('_').pop().replace('_', '.'));
+            const oneWeekSeconds = 7 * 24 * 60 * 60;
+
+            const contextMatches = channelHistory.filter(msg => {
+            if (targetMsg.thread_ts && msg.thread_ts === targetMsg.thread_ts) return true;
+            const currentMsgTime = parseFloat(msg.id.split('_').pop().replace('_', '.'));
+            return Math.abs(currentMsgTime - targetTime) <= oneWeekSeconds;
+            });
+
+            contextTitle.textContent = `#${channelName} context window`;
+            contextView.innerHTML = contextMatches.map(msg => `
+            <div id="msg-${msg.id}" class="chat-row ${msg.id === targetMessageId ? 'highlighted-match' : ''}">
+                <span class="chat-row-user">${msg.u}</span>
+                <div class="chat-row-text">${escapeHtml(msg.t)}</div>
+            </div>
+            `).join('');
+
+            setTimeout(() => {
+            const el = document.getElementById(`msg-${targetMessageId}`);
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 50);
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+        }
+    </script>
 </body>
 </html>
