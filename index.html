@@ -6,9 +6,20 @@
     <title>Wildsheet Community - Connect with Light Sheet Microscopy Enthusiasts</title>
     <script src="https://tailwindcss.com"></script>
     <style>
+        a, a:visited, a:active {
+            color: #22d3ee; /* Electric Cyan default for plain text links */
+            text-decoration: none !important;
+            transition: all 0.2s ease-in-out;
+        }
+        a:hover {
+            color: #dcf3f7; /* Lighter ice cyan on hover */
+        }
+
         html, body { background-color: #030712 !important; color: #f8fafc !important; font-family: sans-serif; }
+        iframe.giscus-frame { background-color: #0f172a !important; border-radius: 12px; padding: 16px; border: 1px solid #1e293b !important; }
     </style>
 </head>
+
 <body class="min-h-screen antialiased selection:bg-blue-500/30 selection:text-blue-100">
 
     <!-- Global Minimal Navigation Menu -->
@@ -26,15 +37,15 @@
                 <span class="font-black tracking-wider text-slate-100 uppercase" style="font-size: 50px !important;">
                     Wildsheet Light Sheet Community
                 </span>
-
             </div>
             
             <!-- Navigation Tabs Link Tree -->
-            <!-- 🎯 Increased Linked Pages Font Size to text-base -->
-            <div class="flex items-center gap-6 text-base font-semibold tracking-tight">
-                <a href="index.html" class="text-blue-400 border-b-2 border-blue-500 pb-1">Overview</a>
-                <a href="registry.html" class="text-slate-400 hover:text-slate-100 transition-all pb-1 border-b-2 border-transparent">Clearing Registry</a>
-                <a href="events.html" class="text-slate-400 hover:text-slate-100 transition-all pb-1 border-b-2 border-transparent">Events</a>
+            <div class="flex items-center gap-4 text-base font-bold select-none shrink-0">
+                <a href="index.html" class="text-cyan-400 font-black tracking-wide underline decoration-2 underline-offset-4">Overview</a>
+                <span class="text-slate-700 font-normal">|</span>
+                <a href="registry.html" class="text-slate-400 hover:text-cyan-400 transition-colors">Tissue Clearing Database</a>
+                <span class="text-slate-700 font-normal">|</span>
+                <a href="events.html" class="text-slate-400 hover:text-cyan-400 transition-colors">Events</a>
             </div>
         </div>
     </nav>

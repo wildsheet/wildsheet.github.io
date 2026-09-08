@@ -7,17 +7,19 @@
     <script src="https://tailwindcss.com"></script>
     <style>
         a, a:visited, a:active {
-            color: #94a3b8; 
+            color: #22d3ee; /* Electric Cyan default for plain text links */
             text-decoration: none !important;
+            transition: all 0.2s ease-in-out;
         }
         a:hover {
-            color: #22d3ee; 
+            color: #dcf3f7; /* Lighter ice cyan on hover */
         }
 
         html, body { background-color: #030712 !important; color: #f8fafc !important; font-family: sans-serif; }
         iframe.giscus-frame { background-color: #0f172a !important; border-radius: 12px; padding: 16px; border: 1px solid #1e293b !important; }
     </style>
 </head>
+
 <body class="min-h-screen antialiased selection:bg-blue-500/30 selection:text-blue-100">
 
     <!-- Global Minimal Navigation Menu -->
@@ -39,23 +41,12 @@
             </div>
             
             <!-- Navigation Tabs Link Tree -->
-            <!-- 🎯 Find the links row right under your title text and replace it with this: -->
-            <div class="flex flex-wrap items-center gap-3 text-sm select-none shrink-0 mt-4">
-                
-                <!-- Overview Button (Faded Slate, turns Cyan on hover) -->
-                <a href="index.html" class="bg-slate-900/60 text-slate-300 font-semibold px-4 py-2.5 rounded-xl border border-slate-800/80 hover:border-cyan-400 hover:text-cyan-400 hover:bg-slate-900 transition-all duration-200 shadow-sm no-underline inline-block">
-                    Overview
-                </a>
-                
-                <!-- Active Button: Clearing Registry (Solid Glowing Cyan Badge) -->
-                <a href="registry.html" class="bg-cyan-400 text-slate-950 font-black px-5 py-2.5 rounded-xl border border-cyan-300 shadow-[0_0_15px_rgba(34,211,238,0.25)] tracking-wide transition-all inline-block no-underline">
-                    Clearing Registry
-                </a>
-                
-                <!-- Events Button (Faded Slate, turns Cyan on hover) -->
-                <a href="events.html" class="bg-slate-900/60 text-slate-300 font-semibold px-4 py-2.5 rounded-xl border border-slate-800/80 hover:border-cyan-400 hover:text-cyan-400 hover:bg-slate-900 transition-all duration-200 shadow-sm no-underline inline-block">
-                    Events
-                </a>
+            <div class="flex items-center gap-4 text-base font-bold select-none shrink-0">
+                <a href="index.html" class="text-slate-400 hover:text-cyan-400 transition-colors">Overview</a>
+                <span class="text-slate-700 font-normal">|</span>
+                <a href="registry.html" class="text-cyan-400 font-black tracking-wide underline decoration-2 underline-offset-4">Tissue Clearing Database</a>
+                <span class="text-slate-700 font-normal">|</span>
+                <a href="events.html" class="text-slate-400 hover:text-cyan-400 transition-colors">Events</a>
             </div>
         </div>
     </nav>
@@ -64,7 +55,7 @@
     <main class="max-w-4xl mx-auto p-6 md:p-12">
         <section class="space-y-8">
             <header class="space-y-2">
-                <h2 class="text-3xl font-extrabold tracking-tight text-slate-100">Tissue Clearing Matrix</h2>
+                <h2 class="text-3xl font-extrabold tracking-tight text-slate-100">Tissue Clearing Database</h2>
                 <p class="text-sm text-slate-400 leading-relaxed max-w-2xl">
                     A non-exhaustive, regularly-updated searchable database of tissue clearing methods with filterable parameters and links to papers that use the technique, alongside a discussion space for users (GitHub login required).
                 </p>
@@ -196,15 +187,16 @@
             document.getElementById('ri-filter').addEventListener('change', renderFilteredRegistry);
             document.getElementById('year-filter').addEventListener('change', renderFilteredRegistry);
         }
+        
         // Multi-Variable Multi-Filter Dynamic Layout Engine
         function renderFilteredRegistry() {
-            const query = document.getElementById('text-search').value.toLowerCase().trim();
-            const selectedTissue = document.getElementById('tissue-filter').value;
-            const selectedClass = document.getElementById('class-filter').value;
-            const selectedRI = document.getElementById('ri-filter').value;
-            const selectedYear = document.getElementById('year-filter').value;
+            const query = document.getElementById('text-search')?.value.toLowerCase().trim() || '';
+            const selectedTissue = document.getElementById('tissue-filter')?.value || 'all';
+            const selectedClass = document.getElementById('class-filter')?.value || 'all';
+            const selectedRI = document.getElementById('ri-filter')?.value || 'all';
+            const selectedYear = document.getElementById('year-filter')?.value || 'all';
             const container = document.getElementById('registry-cards-container');
-            const discussionWrapper = document.getElementById('wiki-title').parentNode;
+            const discussionWrapper = document.getElementById('wiki-title')?.parentNode;
             const titleNode = document.getElementById('results-headline-title');
 
             let filtered = cachedMethodsRegistry.filter(m => {
@@ -222,10 +214,10 @@
             if (isFocusModeActive && activeMethodId) {
                 const targetRecord = cachedMethodsRegistry.find(m => m.method_name === activeMethodId);
                 if (targetRecord) {
-                    if (titleNode) titleNode.innerText = "Selected Method Room";
+                    if (titleNode) titleNode.innerText = "Discussion for Selected Method";
                     container.innerHTML = `
                         <div class="mb-4">
-                            <button onclick="exitFocusViewMode()" class="mb-3 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition flex items-center gap-1.5 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg shadow-sm">
+                            <button onclick="exitFocusViewMode()" class="mb-3 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition flex items-center gap-1.5 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg shadow-sm cursor-pointer">
                                 &larr; Return to Complete Protocol List
                             </button>
                         </div>
@@ -245,9 +237,10 @@
                 return;
             }
 
+            // 🎯 Fixed: Text layout placeholders removed. Clean separator bar applies purely at the base of intermediate elements.
             container.innerHTML = filtered.map((m, index) => `
                 ${buildCardTemplateHtml(m, false)}
-                ${index < filtered.length - 1 ? '<div class="relative py-4 select-none"><div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-800/80 border-dashed"></div></div><div class="relative flex justify-center text-[9px] font-mono tracking-widest text-slate-700 uppercase bg-[#030712] px-3">METHOD DIVIDER MATRIX</div></div>' : ''}
+                ${index < filtered.length - 1 ? '<div class="py-4 select-none"><div class="w-full border-b border-slate-800/80 border-dashed"></div></div>' : ''}
             `).join('');
         }
 
@@ -255,29 +248,30 @@
             return `
                 <div onclick="selectNewMethodWiki('${m.method_name}')" class="p-6 border rounded-xl transition-all duration-200 cursor-pointer shadow-md bg-slate-900/40 border-slate-800/80 hover:border-slate-600 hover:bg-slate-900/60 flex flex-col justify-between gap-4 ${m.method_name === activeMethodId && isFocusModeActive ? 'border-cyan-400 ring-1 ring-cyan-400/30 bg-slate-900' : ''}">
                     <div class="space-y-4">
-                        <div class="flex justify-between items-start gap-4">
+                        <div class="flex justify-between items-start gap-4 flex-wrap">
                             <div>
-                                <h4 class="text-xl font-black text-slate-100 tracking-tight">${m.method_name}</h4>
+                                <h4 class="text-xl font-black text-slate-100 tracking-tight">${m.method_name} (${m.year_invented})</h4>
                             </div>
+                            
+                            <!-- 🎯 Fixed: Repositioned trigger badge rendered in high-contrast neon amber color format -->
+                            ${isFocused ? '' : `
+                                <div>
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-500/10 border border-amber-500/30 text-amber-400 hover:bg-amber-500 hover:text-slate-950 hover:border-amber-400 transition shadow-sm select-none">
+                                        💬 Open Discussion &rarr;
+                                    </span>
+                                </div>
+                            `}
                         </div>
 
+                        <!-- Card Parameters Data Fields Matrix -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 text-xs border-t border-b border-slate-800/60 py-4 font-medium text-slate-400">
                             <div><span class="text-slate-500 font-bold tracking-tight">Chemical Category:</span> <span class="text-cyan-400 font-mono">${m.chemical_class}</span></div>
                             <div><span class="text-slate-500 font-bold tracking-tight">RI:</span> <span class="text-emerald-400 font-mono font-bold">${m.refractive_index}</span></div>
-                            <div><span class="text-slate-500 font-bold tracking-tight">Year Published:</span> <span class="text-slate-300">${m.year_invented}</span></div>
                             <div><span class="text-slate-500 font-bold tracking-tight">Tissue Compatibility:</span> <span class="text-slate-300">${m.tissue_compatibilities.join(', ')}</span></div>
                             <div class="sm:col-span-2"><span class="text-slate-500 font-bold tracking-tight">Sample Size Compatibility:</span> <span class="text-slate-300 leading-relaxed">${m.sample_size_compatibility}</span></div>
-                            <div class="sm:col-span-2 border-t border-slate-800/40 pt-2.5 mt-1"><span class="text-slate-500 font-bold tracking-tight block mb-1">Primary Citation:</span> <span class="text-slate-300 italic font-normal tracking-wide block bg-slate-950 p-2.5 rounded-lg border border-slate-800/60 leading-relaxed">${m.primary_citation}</span></div>
+                            <div class="sm:col-span-2 border-t border-slate-800/40 pt-2.5 mt-1"><span class="text-slate-500 font-bold tracking-tight block mb-1">Primary Citation:</span> <span class="text-slate-300 italic font-normal tracking-wide block bg-slate-950 p-2.5 rounded-lg border border-slate-800/60 leading-relaxed">${m.primary_citation || 'N/A'}</span></div>
                         </div>
                     </div>
-
-                    ${isFocused ? '' : `
-                        <div class="flex justify-end pt-2">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500 hover:text-slate-950 hover:border-cyan-400 transition shadow-sm select-none">
-                                💬 Open Discussion &rarr;
-                            </span>
-                        </div>
-                    `}
                 </div>
             `;
         }

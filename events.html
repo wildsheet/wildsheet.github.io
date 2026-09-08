@@ -6,9 +6,20 @@
     <title>Wildsheet Community — Events</title>
     <script src="https://tailwindcss.com"></script>
     <style>
+        a, a:visited, a:active {
+            color: #22d3ee; /* Electric Cyan default for plain text links */
+            text-decoration: none !important;
+            transition: all 0.2s ease-in-out;
+        }
+        a:hover {
+            color: #dcf3f7; /* Lighter ice cyan on hover */
+        }
+
         html, body { background-color: #030712 !important; color: #f8fafc !important; font-family: sans-serif; }
+        iframe.giscus-frame { background-color: #0f172a !important; border-radius: 12px; padding: 16px; border: 1px solid #1e293b !important; }
     </style>
 </head>
+
 <body class="min-h-screen antialiased selection:bg-blue-500/30 selection:text-blue-100">
 
     <!-- Global Minimal Navigation Menu -->
@@ -30,11 +41,12 @@
             </div>
             
             <!-- Navigation Tabs Link Tree -->
-            <div class="flex items-center gap-6 text-sm font-semibold tracking-tight">
-                <!-- Note: Apply the "text-blue-400 border-b-2 border-blue-500" classes to whichever page is currently active -->
-                <a href="index.html" class="text-slate-400 hover:text-slate-100 transition-all pb-1 border-b-2 border-transparent">Overview</a>
-                <a href="registry.html" class="text-slate-400 hover:text-slate-100 transition-all pb-1 border-b-2 border-transparent">Clearing Registry</a>
-                <a href="events.html" class="text-slate-400 hover:text-slate-100 transition-all pb-1 border-b-2 border-transparent">Events</a>
+            <div class="flex items-center gap-3 text-sm font-semibold select-none shrink-0">
+                <a href="index.html" class="nav-btn-link bg-slate-900/60 text-slate-300 px-4 py-2.5 rounded-xl border border-slate-800/80 hover:border-cyan-400 hover:text-cyan-400 hover:bg-slate-900">Overview</a>
+                <span class="text-slate-700 font-normal px-1">|</span>
+                <a href="registry.html" class="nav-btn-link bg-slate-900/60 text-slate-300 px-4 py-2.5 rounded-xl border border-slate-800/80 hover:border-cyan-400 hover:text-cyan-400 hover:bg-slate-900">Tissue Clearing Database</a>
+                <span class="text-slate-700 font-normal px-1">|</span>
+                <a href="events.html" class="nav-btn-link bg-cyan-400 text-slate-950 font-black px-5 py-2.5 rounded-xl border border-cyan-300 shadow-[0_0_15px_rgba(34,211,238,0.25)] tracking-wide">Events</a>
             </div>
         </div>
     </nav>
