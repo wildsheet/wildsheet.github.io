@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildsheet Community — Resources</title>
+    <style>
+        html, body { 
+            background-color: #030712 !important; 
+            color: #f8fafc !important; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 8px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        main { max-width: 1200px; margin: 0 auto; padding: 12px; box-sizing: border-box; }
+        h2 { font-size: 32px; font-weight: 900; color: #f8fafc; margin: 0 0 16px 0; tracking-tight: -0.025em; text-align: left; }
+        a, a:visited, a:active { color: #22d3ee; text-decoration: none !important; transition: all 0.2s ease-in-out; }
+        a:hover { color: #dcf3f7; }
+        .info-card { background-color: rgba(15, 23, 42, 0.4); border: 1px solid #1e293b; padding: 24px; border-radius: 12px; margin-bottom: 16px; text-align: left; }
+        
+        /* 🎯 Flex card grid layout for events and resources */
+        .info-card {
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 24px;
+            background-color: rgba(15, 23, 42, 0.4);
+            display: flex;
+            flex-direction: row;        /* Formats layout side-by-side */
+            justify-content: space-between;
+            align-items: flex-start;        /* Centers elements vertically */
+            gap: 24px;                  /* Buffer gap between details and text columns */
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        /* Forces textual items to flex scale and fill the empty row line space */
+        .card-text-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Enforces specific, crisp constraints over right-aligned graphics */
+        .card-graphic-wrapper {
+            width: 140px;               /* Fixed thumbnail horizontal tracking width */
+            height: 90px;               /* Fixed graphic tracking line height */
+            flex-shrink: 0;             /* Prevents layout panels from squishing elements */
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #1e293b;
+            background-color: #020617;
+        }
+
+        .card-graphic-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;         /* Crops asset frame nicely within border margins */
+            display: block;
+        }
+
+                /* 🎯 Responsive wrapper block to scale maps and media objects */
+        .card-media-wrapper {
+            width: 480px;
+            height: 320px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #1e293b;
+            background-color: #020617;
+        }
+
+        .card-media-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Responsive fallback layout configuration for mobile phone screen sizes */
+        @media (max-width: 768px) {
+            .info-card {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .card-media-wrapper {
+                width: 100%;
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Global Minimal Navigation Menu -->
+    <nav style="border-bottom: 1px solid #1e293b; background-color: rgba(2, 6, 23, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 50; padding: 16px 24px; box-sizing: border-box;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; gap: 24px; width: 100%;">
+            <div style="display: flex; align-items: center; gap: 12px; user-select: none; flex-shrink: 0; min-height: 28px;">
+                <img src="images/wildsheet_logo.png" alt="WildSheet Logo" style="height: 28px; width: auto; object-fit: contain; filter: brightness(1.1); display: block;" onerror="this.style.display='none';">
+                <span style="font-weight: 800; color: #f8fafc; text-transform: uppercase; font-size: 24px; letter-spacing: 0px; white-space: nowrap; display: block; line-height: 1;">Wildsheet Light Sheet Community</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 16px; font-size: 14px; font-weight: 700; user-select: none; flex-shrink: 0; white-space: nowrap;">
+                <a href="index.html" style="color: #94a3b8; transition: color 0.2s; text-decoration: none !important;" onmouseover="this.style.color='#22d3ee'" onmouseout="this.style.color='#94a3b8'">Overview</a>
+                <span style="color: #334155; font-weight: 400;">|</span>
+                <a href="database.html" style="color: #94a3b8; transition: color 0.2s; text-decoration: none !important;" onmouseover="this.style.color='#22d3ee'" onmouseout="this.style.color='#94a3b8'">Tissue Clearing Database</a>
+                <span style="color: #334155; font-weight: 400;">|</span>
+                <a href="events.html" style="color: #94a3b8; transition: color 0.2s; text-decoration: none !important;" onmouseover="this.style.color='#22d3ee'" onmouseout="this.style.color='#94a3b8'">Events</a>
+                <span style="color: #334155; font-weight: 400;">|</span>
+                <!-- 🎯 Active styling specifically set here -->
+                <a href="resources.html" style="color: #22d3ee; font-weight: 900; text-decoration: underline !important; text-underline-offset: 4px; text-decoration-thickness: 2px;">Resources</a>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
+        <h2>Community Resources</h2>
+        <!-- Interactive Lightsheet Microscopes Map Card Component -->
+        <div class="info-card">
+            <!-- Left Column: Resource descriptive information -->
+            <div class="card-text-content">
+                <h3 style="font-size: 20px; font-weight: 800; color: #f8fafc; margin: 0;">Global Lightsheet Microscopes Map</h3>
+                <p style="color: #94a3b8; margin: 0; font-size: 16px; line-height: 1.6;">
+                    Explore our community-driven interactive map highlighting light sheet microscope installations worldwide.
+                </p>
+                <p style="color: #94a3b8; margin: 0; font-size: 16px; line-height: 1.6;">
+                    Please add your light sheet microscope to help others find systems nearby to them, look at the instructions at the main page to understand how to add a new pin on the map.
+                </p>
+                <p style="color: #94a3b8; margin: 0; font-size: 16px; line-height: 1.6;">
+                    This map was created by Robert Lees, initially for the UK, but added to by many contributors.
+                </p>
+            </div>
+            
+            <!-- Right Column: Scaled interactive media frame -->
+            <div class="card-media-wrapper">
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1V3IYUeJWDngG62ZoCrVDEeHCZ6fQ4Gs&ehbc=2E312F"></iframe>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
