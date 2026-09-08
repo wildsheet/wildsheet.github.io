@@ -253,17 +253,17 @@
                                 <h4 class="text-xl font-black text-slate-100 tracking-tight">${m.method_name} (${m.year_invented})</h4>
                             </div>
                             
-                            <!-- 🎯 Fixed: Added text-cyan-400 !important styling properties directly onto the target link wrapper tag -->
+                            <!-- 🎯 Fixed: Closed class quotes and formatted style="" as an independent, standalone attribute -->
                             ${isFocused ? '' : `
                                 <div>
-                                    <span class="text-xs font-bold text-cyan-400 hover:text-cyan-300 hover:underline transition-all select-none style="color: #22d3ee !important;">
+                                    <span class="text-xs font-bold text-cyan-400 hover:text-cyan-300 hover:underline transition-all select-none" style="color: #22d3ee !important;">
                                         💬 Open Discussion &rarr;
                                     </span>
                                 </div>
                             `}
                         </div>
 
-                        <!-- 🎯 Fixed: Bold text styling variables separated away onto explicit label nodes -->
+                        <!-- Card Parameters Data Fields Matrix -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 text-xs border-t border-b border-slate-800/60 py-4 text-slate-400">
                             <div><strong class="text-slate-200 font-bold tracking-tight">Chemical Category:</strong> <span class="text-cyan-400 font-mono ml-1">${m.chemical_class}</span></div>
                             <div><strong class="text-slate-200 font-bold tracking-tight">RI:</strong> <span class="text-emerald-400 font-mono font-bold ml-1">${m.refractive_index}</span></div>
