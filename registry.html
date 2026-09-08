@@ -6,6 +6,14 @@
     <title>Wildsheet Community — Tissue Clearing Database</title>
     <script src="https://tailwindcss.com"></script>
     <style>
+        a, a:visited, a:active {
+            color: #94a3b8; 
+            text-decoration: none !important;
+        }
+        a:hover {
+            color: #22d3ee; 
+        }
+
         html, body { background-color: #030712 !important; color: #f8fafc !important; font-family: sans-serif; }
         iframe.giscus-frame { background-color: #0f172a !important; border-radius: 12px; padding: 16px; border: 1px solid #1e293b !important; }
     </style>
@@ -31,11 +39,23 @@
             </div>
             
             <!-- Navigation Tabs Link Tree -->
-            <div class="flex items-center gap-6 text-sm font-semibold tracking-tight">
-                <!-- Note: Apply the "text-blue-400 border-b-2 border-blue-500" classes to whichever page is currently active -->
-                <a href="index.html" class="text-slate-400 hover:text-slate-100 transition-all pb-1 border-b-2 border-transparent">Overview</a>
-                <a href="registry.html" class="text-slate-400 hover:text-slate-100 transition-all pb-1 border-b-2 border-transparent">Clearing Registry</a>
-                <a href="events.html" class="text-slate-400 hover:text-slate-100 transition-all pb-1 border-b-2 border-transparent">Events</a>
+            <!-- 🎯 Find the links row right under your title text and replace it with this: -->
+            <div class="flex flex-wrap items-center gap-3 text-sm select-none shrink-0 mt-4">
+                
+                <!-- Overview Button (Faded Slate, turns Cyan on hover) -->
+                <a href="index.html" class="bg-slate-900/60 text-slate-300 font-semibold px-4 py-2.5 rounded-xl border border-slate-800/80 hover:border-cyan-400 hover:text-cyan-400 hover:bg-slate-900 transition-all duration-200 shadow-sm no-underline inline-block">
+                    Overview
+                </a>
+                
+                <!-- Active Button: Clearing Registry (Solid Glowing Cyan Badge) -->
+                <a href="registry.html" class="bg-cyan-400 text-slate-950 font-black px-5 py-2.5 rounded-xl border border-cyan-300 shadow-[0_0_15px_rgba(34,211,238,0.25)] tracking-wide transition-all inline-block no-underline">
+                    Clearing Registry
+                </a>
+                
+                <!-- Events Button (Faded Slate, turns Cyan on hover) -->
+                <a href="events.html" class="bg-slate-900/60 text-slate-300 font-semibold px-4 py-2.5 rounded-xl border border-slate-800/80 hover:border-cyan-400 hover:text-cyan-400 hover:bg-slate-900 transition-all duration-200 shadow-sm no-underline inline-block">
+                    Events
+                </a>
             </div>
         </div>
     </nav>
@@ -44,52 +64,42 @@
     <main class="max-w-4xl mx-auto p-6 md:p-12">
         <section class="space-y-8">
             <header class="space-y-2">
-                <h2 class="text-3xl font-extrabold tracking-tight text-slate-100">Tissue Clearing Database</h2>
-                <p class="text-sm text-slate-400">Proven combinations for endogenous fluorescence preservation and refractive index matching.</p>
+                <h2 class="text-3xl font-extrabold tracking-tight text-slate-100">Tissue Clearing Matrix</h2>
+                <p class="text-sm text-slate-400 leading-relaxed max-w-2xl">
+                    A non-exhaustive, regularly-updated searchable database of tissue clearing methods with filterable parameters and links to papers that use the technique, alongside a discussion space for users (GitHub login required).
+                </p>
             </header>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
-                <div class="md:col-span-1 space-y-4 bg-slate-900/40 p-4 rounded-xl border border-slate-800 shadow-inner">
-                    <div>
-                        <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Target Organ</label>
-                        <select id="tissue-filter" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-500">
-                            <option value="all">Show All Organs</option>
-                            <option value="brain">Brain</option>
-                            <option value="heart">Heart</option>
-                            <option value="lung">Lung</option>
-                            <option value="kidney">Kidney</option>
-                        </select>
+            <!-- Expanded 2-Column Responsive Layout Framework Matrix -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-2">
+                
+                <!-- Left Sidebar Filters Module Panel Grid Layout -->
+                <div class="md:col-span-1 space-y-4">
+                    <h3 class="text-lg font-bold text-slate-100 tracking-tight border-b border-slate-800 pb-2">Filters</h3>
+                    <div id="filters-sidebar-target" class="space-y-4 bg-slate-900/40 p-4 rounded-xl border border-slate-800 shadow-inner h-fit">
+                        <div class="p-4 text-center text-xs text-slate-500">Generating parameter blocks...</div>
                     </div>
                 </div>
-                <div id="registry-cards-container" class="md:col-span-2 space-y-3">
-                    <!-- Cards injection hook -->
+                
+                <!-- Right Grid Results Output Pipeline display area -->
+                <div class="md:col-span-2 space-y-4">
+                    <h3 id="results-headline-title" class="text-lg font-bold text-slate-100 tracking-tight border-b border-slate-800 pb-2">Search Results</h3>
+                    <div id="registry-cards-container" class="space-y-6">
+                        <div class="p-8 text-center text-slate-500 bg-slate-900/10 rounded-xl border border-slate-800 border-dashed text-sm">
+                            Loading database matrix tracking elements...
+                        </div>
+                    </div>
                 </div>
             </div>
 
+            <!-- Global Community Communication Space -->
             <div class="border-t border-slate-800 pt-6 mt-8 hidden">
-                <h3 id="wiki-title" class="text-sm font-bold text-slate-300 mb-4 tracking-tight">💬 Community Notes Panel</h3>
-                <div id="giscus-frame-container" class="min-h-[280px]">
-                    <!-- Giscus Mount Script -->
-                    <script src="https://giscus.app"
-                            data-repo="wildsheet/wildsheet.github.io"
-                            data-repo-id="R_kgDOUOWJeg"
-                            data-category="General"
-                            data-category-id="DIC_kwDOUOWJes4DE315"
-                            data-mapping="specific"
-                            data-term="iDISCO-Plus"
-                            data-strict="0"
-                            data-reactions-enabled="1"
-                            data-emit-metadata="0"
-                            data-input-position="top"
-                            data-theme="dark_dimmed"
-                            data-lang="en"
-                            crossorigin="anonymous"
-                            async>
-                    </script>
-                </div>
+                <h3 id="wiki-title" class="text-sm font-bold text-slate-300 mb-4 tracking-tight">💬 Community Discussion</h3>
+                <div id="giscus-frame-container" class="min-h-[280px]"></div>
             </div>
         </section>
     </main>
+
 
     <!-- Runtime Advanced Multi-Filter Client Engine -->
     <script>
@@ -97,7 +107,7 @@
         let activeMethodId = window.location.hash.replace('#', '') || '';
         let isFocusModeActive = false;
 
-        // 1. Asynchronously fetch the JSON file produced by your Python repo script
+        // Asynchronously fetch the JSON file produced by your Python repo script
         async function bootstrapRegistryData() {
             try {
                 const response = await fetch('tissue_clearing_db.json');
@@ -124,7 +134,7 @@
             }
         }
 
-        // 2. Programmatically populate multi-variable search criteria cleanly
+        // Programmatically populate multi-variable search criteria cleanly
         function populateDynamicDropdownFilters() {
             const classes = new Set();
             const ris = new Set();
@@ -140,43 +150,45 @@
                 }
             });
 
-            const leftSidebar = document.getElementById('tissue-filter').parentNode.parentNode;
-            leftSidebar.innerHTML = `
-                <div class="space-y-4">
-                    <div>
-                        <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Live Parameter Search</label>
-                        <input id="text-search" type="text" placeholder="Search title, year, RI, tissue..." class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-500 placeholder-slate-600 shadow-inner">
+            const targetBox = document.getElementById('filters-sidebar-target');
+            if (targetBox) {
+                targetBox.innerHTML = `
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Search</label>
+                            <input id="text-search" type="text" placeholder="Search title, year, RI, tissue types..." class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-cyan-400 placeholder-slate-600 shadow-inner min-w-[200px]">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Tissue Compatibility</label>
+                            <select id="tissue-filter" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-cyan-400 cursor-pointer shadow-inner">
+                                <option value="all">Show All Species</option>
+                                ${Array.from(species).sort().map(s => `<option value="${s}">${s}</option>`).join('')}
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Chemical Category</label>
+                            <select id="class-filter" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-cyan-400 cursor-pointer shadow-inner">
+                                <option value="all">Show All Classes</option>
+                                ${Array.from(classes).sort().map(c => `<option value="${c}">${c}</option>`).join('')}
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Refractive Index (RI)</label>
+                            <select id="ri-filter" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-cyan-400 cursor-pointer shadow-inner">
+                                <option value="all">Show All RIs</option>
+                                ${Array.from(ris).sort((a,b) => b-a).map(r => `<option value="${r}">RI — ${r}</option>`).join('')}
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Year Published</label>
+                            <select id="year-filter" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-cyan-400 cursor-pointer shadow-inner">
+                                <option value="all">Show All Years</option>
+                                ${Array.from(years).sort((a,b) => b-a).map(y => `<option value="${y}">${y}</option>`).join('')}
+                            </select>
+                        </div>
                     </div>
-                    <div>
-                        <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Target Host Species</label>
-                        <select id="tissue-filter" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-inner">
-                            <option value="all">Show All Species</option>
-                            ${Array.from(species).sort().map(s => `<option value="${s}">${s}</option>`).join('')}
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Biochemical Strategy</label>
-                        <select id="class-filter" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-inner">
-                            <option value="all">Show All Classes</option>
-                            ${Array.from(classes).sort().map(c => `<option value="${c}">${c}</option>`).join('')}
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Refractive Index (RI)</label>
-                        <select id="ri-filter" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-inner">
-                            <option value="all">Show All RIs</option>
-                            ${Array.from(ris).sort((a,b) => b-a).map(r => `<option value="${r}">RI — ${r}</option>`).join('')}
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Invention Year</label>
-                        <select id="year-filter" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer shadow-inner">
-                            <option value="all">Show All Years</option>
-                            ${Array.from(years).sort((a,b) => b-a).map(y => `<option value="${y}">${y}</option>`).join('')}
-                        </select>
-                    </div>
-                </div>
-            `;
+                `;
+            }
 
             document.getElementById('text-search').addEventListener('input', renderFilteredRegistry);
             document.getElementById('tissue-filter').addEventListener('change', renderFilteredRegistry);
@@ -184,7 +196,7 @@
             document.getElementById('ri-filter').addEventListener('change', renderFilteredRegistry);
             document.getElementById('year-filter').addEventListener('change', renderFilteredRegistry);
         }
-        // 3. Multi-Variable Multi-Filter Dynamic Layout Engine
+        // Multi-Variable Multi-Filter Dynamic Layout Engine
         function renderFilteredRegistry() {
             const query = document.getElementById('text-search').value.toLowerCase().trim();
             const selectedTissue = document.getElementById('tissue-filter').value;
@@ -193,6 +205,7 @@
             const selectedYear = document.getElementById('year-filter').value;
             const container = document.getElementById('registry-cards-container');
             const discussionWrapper = document.getElementById('wiki-title').parentNode;
+            const titleNode = document.getElementById('results-headline-title');
 
             let filtered = cachedMethodsRegistry.filter(m => {
                 const matchesTissue = selectedTissue === 'all' || (m.tissue_compatibilities && m.tissue_compatibilities.includes(selectedTissue));
@@ -200,7 +213,7 @@
                 const matchesRI = selectedRI === 'all' || String(m.refractive_index) === selectedRI;
                 const matchesYear = selectedYear === 'all' || String(m.year_invented) === selectedYear;
 
-                const textHaystack = `${m.method_name} ${m.year_invented} ${m.chemical_class} ${m.refractive_index} ${m.sample_size_compatibility} ${(m.tissue_compatibilities || []).join(' ')}`.toLowerCase();
+                const textHaystack = `${m.method_name} ${m.year_invented} ${m.chemical_class} ${m.refractive_index} ${m.sample_size_compatibility} ${m.primary_citation} ${(m.tissue_compatibilities || []).join(' ')}`.toLowerCase();
                 const matchesText = !query || textHaystack.includes(query);
 
                 return matchesTissue && matchesClass && matchesRI && matchesYear && matchesText;
@@ -209,21 +222,22 @@
             if (isFocusModeActive && activeMethodId) {
                 const targetRecord = cachedMethodsRegistry.find(m => m.method_name === activeMethodId);
                 if (targetRecord) {
+                    if (titleNode) titleNode.innerText = "Selected Method Room";
                     container.innerHTML = `
                         <div class="mb-4">
-                            <button onclick="exitFocusViewMode()" class="mb-3 text-xs font-bold text-blue-400 hover:text-blue-300 transition flex items-center gap-1.5 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg shadow-sm">
+                            <button onclick="exitFocusViewMode()" class="mb-3 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition flex items-center gap-1.5 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg shadow-sm">
                                 &larr; Return to Complete Protocol List
                             </button>
                         </div>
                         ${buildCardTemplateHtml(targetRecord, true)}
                     `;
-                    
                     if (discussionWrapper) discussionWrapper.classList.remove('hidden');
                     syncGiscusFrameContext();
                     return;
                 }
             }
 
+            if (titleNode) titleNode.innerText = "Search Results";
             if (discussionWrapper) discussionWrapper.classList.add('hidden');
 
             if (filtered.length === 0) {
@@ -231,28 +245,39 @@
                 return;
             }
 
-            container.innerHTML = filtered.map(m => buildCardTemplateHtml(m, false)).join('');
+            container.innerHTML = filtered.map((m, index) => `
+                ${buildCardTemplateHtml(m, false)}
+                ${index < filtered.length - 1 ? '<div class="relative py-4 select-none"><div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-800/80 border-dashed"></div></div><div class="relative flex justify-center text-[9px] font-mono tracking-widest text-slate-700 uppercase bg-[#030712] px-3">METHOD DIVIDER MATRIX</div></div>' : ''}
+            `).join('');
         }
 
         function buildCardTemplateHtml(m, isFocused) {
             return `
-                <div onclick="selectNewMethodWiki('${m.method_name}')" class="p-5 border rounded-xl transition-all duration-200 cursor-pointer shadow-md ${m.method_name === activeMethodId && isFocusModeActive ? 'bg-slate-900 border-blue-500 ring-1 ring-blue-500/30' : 'bg-slate-900/40 border-slate-800/80 hover:border-slate-700 hover:bg-slate-900/60'}">
-                    <div class="space-y-2">
+                <div onclick="selectNewMethodWiki('${m.method_name}')" class="p-6 border rounded-xl transition-all duration-200 cursor-pointer shadow-md bg-slate-900/40 border-slate-800/80 hover:border-slate-600 hover:bg-slate-900/60 flex flex-col justify-between gap-4 ${m.method_name === activeMethodId && isFocusModeActive ? 'border-cyan-400 ring-1 ring-cyan-400/30 bg-slate-900' : ''}">
+                    <div class="space-y-4">
                         <div class="flex justify-between items-start gap-4">
                             <div>
-                                <span class="text-[9px] font-mono font-bold uppercase bg-slate-950/80 border border-slate-800 px-2 py-0.5 rounded text-blue-400 tracking-wide">${m.chemical_class}</span>
-                                <h4 class="text-base font-bold text-slate-100 mt-1.5">${m.method_name} <span class="text-slate-500 text-xs font-normal">(${m.year_invented})</span></h4>
+                                <h4 class="text-xl font-black text-slate-100 tracking-tight">${m.method_name}</h4>
                             </div>
-                            <span class="text-[10px] font-mono text-emerald-400 font-bold bg-slate-950 px-2 py-0.5 rounded border border-slate-800 tracking-wide shrink-0 shadow-sm">RI ${m.refractive_index}</span>
                         </div>
-                        <p class="text-xs text-slate-400 leading-relaxed ${isFocused ? '' : 'line-clamp-2'}">${m.sample_size_compatibility}</p>
-                        <div class="flex justify-between items-center pt-2 border-t border-slate-800/40">
-                            <div class="flex gap-1.5 flex-wrap">
-                                ${m.tissue_compatibilities.map(t => `<span class="text-[9px] font-medium bg-slate-950 px-2 py-0.5 rounded text-slate-400 border border-slate-800/60">📍 ${t}</span>`).join('')}
-                            </div>
-                            ${isFocused ? '' : '<span class="text-[11px] text-blue-400/90 font-bold group-hover:underline flex items-center gap-1 shrink-0">Open Focus Room &rarr;</span>'}
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 text-xs border-t border-b border-slate-800/60 py-4 font-medium text-slate-400">
+                            <div><span class="text-slate-500 font-bold tracking-tight">Chemical Category:</span> <span class="text-cyan-400 font-mono">${m.chemical_class}</span></div>
+                            <div><span class="text-slate-500 font-bold tracking-tight">RI:</span> <span class="text-emerald-400 font-mono font-bold">${m.refractive_index}</span></div>
+                            <div><span class="text-slate-500 font-bold tracking-tight">Year Published:</span> <span class="text-slate-300">${m.year_invented}</span></div>
+                            <div><span class="text-slate-500 font-bold tracking-tight">Tissue Compatibility:</span> <span class="text-slate-300">${m.tissue_compatibilities.join(', ')}</span></div>
+                            <div class="sm:col-span-2"><span class="text-slate-500 font-bold tracking-tight">Sample Size Compatibility:</span> <span class="text-slate-300 leading-relaxed">${m.sample_size_compatibility}</span></div>
+                            <div class="sm:col-span-2 border-t border-slate-800/40 pt-2.5 mt-1"><span class="text-slate-500 font-bold tracking-tight block mb-1">Primary Citation:</span> <span class="text-slate-300 italic font-normal tracking-wide block bg-slate-950 p-2.5 rounded-lg border border-slate-800/60 leading-relaxed">${m.primary_citation}</span></div>
                         </div>
                     </div>
+
+                    ${isFocused ? '' : `
+                        <div class="flex justify-end pt-2">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500 hover:text-slate-950 hover:border-cyan-400 transition shadow-sm select-none">
+                                💬 Open Discussion &rarr;
+                            </span>
+                        </div>
+                    `}
                 </div>
             `;
         }
@@ -262,7 +287,6 @@
             const container = document.getElementById('giscus-frame-container');
             if (!targetMethod || !container) return;
 
-            // 🎯 Fixed: Casing changed to "Community Discussion" header label text string format
             document.getElementById('wiki-title').innerText = `💬 Community Discussion: ${targetMethod.method_name}`;
             container.innerHTML = '<div class="text-xs font-mono text-slate-500">Connecting to GitHub Discussion room...</div>'; 
             
@@ -287,6 +311,7 @@
             container.appendChild(giscusScript);
         }
 
+        // 🎯 Typo Fixed: Changed from Python "def" back to JavaScript "function" syntax
         function selectNewMethodWiki(methodId) {
             window.location.hash = methodId;
             activeMethodId = methodId;
@@ -295,14 +320,11 @@
             document.getElementById('wiki-title').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // 🎯 Fixed: Explicitly unmounting the active Giscus node structure to force deletion upon return action
         function exitFocusViewMode() {
             window.location.hash = '';
             isFocusModeActive = false;
-            
             const container = document.getElementById('giscus-frame-container');
             if (container) container.innerHTML = ''; 
-            
             renderFilteredRegistry();
             document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
         }
