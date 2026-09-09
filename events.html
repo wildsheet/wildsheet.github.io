@@ -110,6 +110,22 @@
             margin-bottom: 8px;   /* Spacing between individual bullet lines */
             color: #94a3b8;       /* Changes the list color to clean gray */
         }
+
+        @media (max-width: 1100px) {
+            nav > div {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 12px !important;
+            }
+            
+            /* Permits the navigation list elements to wrap naturally across lines if needed on narrow displays */
+            nav div:last-child {
+                width: 100%;
+                overflow-x: auto;
+                padding-top: 4px;
+                justify-content: flex-start;
+            }
+        }
     </style>
 </head>
 <body>

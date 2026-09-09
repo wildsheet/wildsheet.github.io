@@ -117,6 +117,22 @@
             padding: 16px; 
             border: 1px solid #1e293b !important; 
         }
+
+        @media (max-width: 1100px) {
+            nav > div {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 12px !important;
+            }
+            
+            /* Permits the navigation list elements to wrap naturally across lines if needed on narrow displays */
+            nav div:last-child {
+                width: 100%;
+                overflow-x: auto;
+                padding-top: 4px;
+                justify-content: flex-start;
+            }
+        }
     </style>
 </head>
 

@@ -104,6 +104,23 @@
             position: absolute;
             left: 0;
         }
+        
+        @media (max-width: 1100px) {
+            nav > div {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 12px !important;
+            }
+            
+            /* Permits the navigation list elements to wrap naturally across lines if needed on narrow displays */
+            nav div:last-child {
+                width: 100%;
+                overflow-x: auto;
+                padding-top: 4px;
+                justify-content: flex-start;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -135,25 +152,23 @@
             </header>
 
             <article style="color: #cbd5e1; font-size: 16px; display: flex; flex-direction: column; gap: 0px; max-width: 44rem;">
-                <p>Light sheet (LS) microscopy encompasses a suite of powerful techniques spanning multiple length scales and many fields. Yet, as many of us well know, the technology is not ubiquitous, the instruments often not turn key and the data sets invariably large. This brings unique challenges and struggles for LS users, but rest assured you are not alone!</p>
-                
-                <p>Wildsheet is a community for all those out there, in the wild, with any and every light sheet technology. Our main focus at Wildsheet is to provide a friendly, accessible space for people to discuss their experiences with LS technologies.</p>
-                
+                <p style="margin-bottom: 0px;">We are a friendly community for everyone working with tissue clearing and light sheet technologies out there, in the wild.</p>
+                <p style="margin-bottom: 0px;">Light sheet fluorescence microscopy (LSFM) encompasses a suite of powerful techniques spanning multiple length scales and many fields. Yet, as many of us well know, the technology is not ubiquitous, the instruments often not turn key and the datasets invariably large. This brings unique challenges and struggles for LSFM users, but rest assured you are not alone!</p>
+                <p>We use a Slack workspace to organise our community and keep a record of discussions. If you are interested, we hope that you will join us and we encourage you to engage and tailor it in any way that you need.</p>
+                                
                 <!-- Purpose Section Panel Matrix -->
                 <div class="purpose-box">
                     <h3>The purpose of the Wildsheet Slack workspace is to provide a platform for:</h3>
                     <ul class="purpose-list">
-                        <li>Meeting and networking with LS users, builders, vendors and other LS fanatics</li>
+                        <li>Meeting and networking with LSFM users, builders, vendors and other LSFM fanatics</li>
                         <li>Creating and maintaining smaller shared interest groups</li>
                         <li>Asking for help and advice in a friendly, accessible and informal environment</li>
                         <li>Facilitating organisation and promotion of virtual and in-person meetings</li>
                         <li>Sharing resources and best practices</li>
-                        <li>Discussing the needs of the LS community</li>
+                        <li>Discussing the needs of the LSFM community</li>
                     </ul>
                 </div>
 
-                <p style="padding-top: 16px; color: #94a3b8; font-style: italic; margin: 0;">We hope that you find this workspace useful and we encourage you to engage and tailor it in any way that you need.</p>
-                
                 <div style="margin-top: 16px; border-top: 1px dashed #1e293b; padding-top: 16px;">
                     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdpiDNfp-InGFcFU1yoNoc9koM0kC5l54YH3o5FdLrs2GVJmQ/viewform?embedded=true" width="700" height="906" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 </a>
