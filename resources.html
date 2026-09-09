@@ -441,53 +441,60 @@
         });
 
         function renderSearchResults(results) {
-            const resultsList = document.getElementById('results-list');
-            if (results.length === 0) {
+        const resultsList = document.getElementById('results-list');
+        if (results.length === 0) {
             resultsList.innerHTML = '<div class="placeholder-view">No archive hits encountered.</div>';
             return;
-            }
-            resultsList.innerHTML = results.slice(0, 30).map(item => `
+        }
+        resultsList.innerHTML = results.slice(0, 30).map(item => `
             <div class="search-hit-card" onclick="loadMessageContext('${item.ch}', '${item.id}')">
-                <div class="search-hit-meta">
+            <div class="search-hit-meta">
                 <span class="channel-tag">#${item.ch}</span>
+                <div>
                 <span class="user-tag">${item.u}</span>
+                <span style="color: var(--text-muted); font-size: 0.7rem; margin-left: 4px;">${item.d || ''}</span>
                 </div>
-                <div class="search-hit-text">${escapeHtml(item.t)}</div>
             </div>
-            `).join('');
+            <div class="search-hit-text">${escapeHtml(item.t)}</div>
+            </div>
+        `).join('');
         }
 
         function loadMessageContext(channelName, targetMessageId) {
-            const contextView = document.getElementById('context-view');
-            const contextTitle = document.getElementById('context-title');
-            const channelHistory = fullTimelines[channelName] || [];
-            const targetIndex = channelHistory.findIndex(m => m.id === targetMessageId);
-            
-            if (targetIndex === -1) return;
+        const contextView = document.getElementById('context-view');
+        const contextTitle = document.getElementById('context-title');
+        const channelHistory = fullTimelines[channelName] || [];
+        const targetIndex = channelHistory.findIndex(m => m.id === targetMessageId);
+        
+        if (targetIndex === -1) return;
 
-            const targetMsg = channelHistory[targetIndex];
-            const targetTime = parseFloat(targetMessageId.split('_').pop().replace('_', '.'));
-            const oneWeekSeconds = 7 * 24 * 60 * 60;
+        const targetMsg = channelHistory[targetIndex];
+        const targetTime = parseFloat(targetMessageId.split('_').pop().replace('_', '.'));
+        const oneWeekSeconds = 7 * 24 * 60 * 60;
 
-            const contextMatches = channelHistory.filter(msg => {
+        const contextMatches = channelHistory.filter(msg => {
             if (targetMsg.thread_ts && msg.thread_ts === targetMsg.thread_ts) return true;
             const currentMsgTime = parseFloat(msg.id.split('_').pop().replace('_', '.'));
             return Math.abs(currentMsgTime - targetTime) <= oneWeekSeconds;
-            });
+        });
 
-            contextTitle.textContent = `#${channelName} context window`;
-            contextView.innerHTML = contextMatches.map(msg => `
+        contextTitle.textContent = `#${channelName} context window`;
+        contextView.innerHTML = contextMatches.map(msg => `
             <div id="msg-${msg.id}" class="chat-row ${msg.id === targetMessageId ? 'highlighted-match' : ''}">
+            <div class="chat-row-meta" style="display: flex; justify-content: space-between; font-size: 0.75rem; margin-bottom: 2px;">
                 <span class="chat-row-user">${msg.u}</span>
-                <div class="chat-row-text">${escapeHtml(msg.t)}</div>
+                <span style="color: var(--text-muted);">${msg.d || ''}</span>
             </div>
-            `).join('');
+            <div class="chat-row-text">${escapeHtml(msg.t)}</div>
+            </div>
+        `).join('');
 
-            setTimeout(() => {
+        setTimeout(() => {
             const el = document.getElementById(`msg-${targetMessageId}`);
             if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 50);
+        }, 50);
         }
+
 
         function escapeHtml(text) {
             if (!text) return '';
