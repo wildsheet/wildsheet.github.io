@@ -328,7 +328,7 @@
                 const matchesRI = selectedRI === 'all' || String(m.refractive_index) === selectedRI;
                 const matchesYear = selectedYear === 'all' || String(m.year_invented) === selectedYear;
 
-                const valCount = m.real_world_validations ? m.real_world_validations.length : 0;
+                const valCount = getApplicationPapers(m).length;
                 let matchesValidation = true;
                 if (selectedVal === 'none') matchesValidation = (valCount === 0);
                 else if (selectedVal === 'active') matchesValidation = (valCount >= 1);
@@ -391,98 +391,83 @@
             container.innerHTML = filtered.map(m => buildCardTemplateHtml(m, false)).join('');
         }
 
-        function buildCardTemplateHtml(m, isFocused) {
-            // 🎯 Updated to use your exact "real_world_validations" matrix key
-            const paperCount = m.real_world_validations ? m.real_world_validations.length : 0;
-            
-            let validationSectionHtml = '';
-            if (isFocused) {
-                if (paperCount === 0) {
-                    validationSectionHtml = `
-                        <div class="full-width-property" style="border-top: 1px dashed rgba(30,41,59,0.6); padding-top: 16px; margin-top: 8px;">
-                            <strong style="color: #e2e8f0; font-weight: 700; display: block; margin-bottom: 4px;">Real World Validation Papers:</strong>
-                            <span style="color: #64748b; font-style: italic; font-size: 13px;">No validation records registered for this specific technique yet.</span>
-                        </div>
-                    `;
-                } else {
-                    // 🎯 Updated mapping loop to extract "first_author" parameters cleanly
-                    const papersListHtml = m.real_world_validations.map(p => `
-                        <div style="background-color: #020617; border: 1px solid #1e293b; padding: 14px; border-radius: 8px; display: flex; flex-direction: column; gap: 6px; text-align: left;">
-                            <span style="color: #f8fafc; font-weight: 800; font-size: 14px; line-height: 1.4;">${p.title}</span>
-                            <div style="font-size: 12px; color: #94a3b8; display: flex; flex-wrap: wrap; gap: 8px 12px;">
-                                <span><strong style="color: #cbd5e1;">First Author:</strong> ${p.first_author || 'N/A'}</span>
-                                <span><strong style="color: #cbd5e1;">Journal:</strong> ${p.journal} (${p.year})</span>
-                            </div>
-                            <div style="font-size: 12px; border-top: 1px dashed #1e293b; padding-top: 6px; margin-top: 2px;">
-                                <strong style="color: #cbd5e1;">DOI Link:</strong> 
-                                <a href="https://doi.org/${p.doi}" target="_blank" rel="noopener noreferrer" style="color: #22d3ee; text-decoration: underline !important; font-family: monospace;">
-                                    doi.org/${p.doi}
-                                </a>
-                            </div>
-                        </div>
-                    `).join('');
+        function getApplicationPapers(method) {
+            return method.real_world_application_papers || [];
+        }
 
-                    validationSectionHtml = `
-                        <div class="full-width-property" style="border-top: 1px dashed rgba(30,41,59,0.6); padding-top: 16px; margin-top: 8px;">
-                            <strong style="color: #22d3ee; font-weight: 700; display: block; margin-bottom: 12px; font-size: 14px; letter-spacing: 0.025em; text-align: left;">
-                                📋 Validation Papers (${paperCount})
-                            </strong>
-                            <div style="display: flex; flex-direction: column; gap: 12px;">
-                                ${papersListHtml}
-                            </div>
-                        </div>
-                    `;
-                }
+        function escapeHtml(value) {
+            return String(value ?? 'N/A')
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+        }
+
+        function doiLink(doi) {
+            const cleanDoi = String(doi || '').trim();
+            if (!cleanDoi) return escapeHtml('DOI unavailable');
+            const href = `https://doi.org/${encodeURIComponent(cleanDoi).replace(/%2F/g, '/')}`;
+            return `<a href="${href}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">${escapeHtml(`doi.org/${cleanDoi}`)}</a>`;
+        }
+
+        function primaryCitationHtml(method) {
+            const reference = method.original_reference || {};
+            const title = reference.title || method.primary_citation || 'Citation unavailable';
+            const year = reference.year || method.year_invented || '';
+            const authors = reference.authors || [];
+            const authorText = authors.length ? `${authors[0]}${authors.length > 1 ? ' et al.' : ''}` : '';
+            const citationText = [authorText, year].filter(Boolean).join(' ');
+            const titleHtml = reference.doi
+                ? `<a href="https://doi.org/${encodeURIComponent(reference.doi).replace(/%2F/g, '/')}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">${escapeHtml(title)}</a>`
+                : escapeHtml(title);
+            return `${titleHtml}${citationText ? ` <span style="color: #94a3b8;">(${escapeHtml(citationText)})</span>` : ''}`;
+        }
+
+        function buildApplicationPapersHtml(method) {
+            const papers = getApplicationPapers(method);
+            if (!papers.length) {
+                return '<span style="color: #64748b; font-style: italic;">No real-world application papers registered.</span>';
             }
+            return papers.map(paper => `
+                <article style="background-color: #020617; border: 1px solid #1e293b; padding: 14px; border-radius: 8px; display: flex; flex-direction: column; gap: 7px; text-align: left;">
+                    <strong style="color: #f8fafc; font-size: 14px; line-height: 1.4;">${paper.doi ? `<a href="https://doi.org/${encodeURIComponent(paper.doi).replace(/%2F/g, '/')}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">${escapeHtml(paper.title || 'Untitled paper')}</a>` : escapeHtml(paper.title || 'Untitled paper')}</strong>
+                    <span style="font-size: 12px; color: #94a3b8;">${escapeHtml([paper.first_author, paper.journal, paper.year].filter(Boolean).join(' · ') || 'Citation details unavailable')}</span>
+                    <span style="font-size: 13px; color: #cbd5e1; border-top: 1px dashed #1e293b; padding-top: 7px;">${escapeHtml(paper.evidence || 'Evidence summary unavailable.')}</span>
+                </article>
+            `).join('');
+        }
+
+        function buildCardTemplateHtml(m, isFocused) {
+            const papers = getApplicationPapers(m);
+            const detailHtml = isFocused ? `
+                <div class="full-width-property" style="border-top: 1px dashed rgba(30,41,59,0.6); padding-top: 16px; margin-top: 4px;">
+                    <strong style="color: #22d3ee; display: block; margin-bottom: 12px;">Method Details</strong>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px 24px;">
+                        ${[['Fluorescent Protein Compatibility', m.fluorescent_protein_compatibility], ['Clearing Speed', m.clearing_speed], ['Morphology Impact', m.morphology_impact], ['Equipment Complexity', m.equipment_complexity], ['Toxicity Hazard', m.toxicity_hazard]].map(([label, value]) => `
+                            <div><strong style="color: #e2e8f0; display: block; margin-bottom: 3px;">${label}</strong><span>${escapeHtml(value || 'Unknown')}</span></div>
+                        `).join('')}
+                    </div>
+                </div>
+                <div class="full-width-property" style="border-top: 1px dashed rgba(30,41,59,0.6); padding-top: 16px; margin-top: 4px;">
+                    <strong style="color: #22d3ee; display: block; margin-bottom: 12px;">Real-World Application Papers (${papers.length})</strong>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">${buildApplicationPapersHtml(m)}</div>
+                </div>
+            ` : '';
 
             return `
-                <div onclick="selectNewMethodWiki('${m.method_name}')" class="matrix-card" style="${m.method_name === activeMethodId && isFocusModeActive ? 'border-color: #22d3ee; box-shadow: 0 0 0 1px rgba(34,211,238,0.3); background-color: #0f172a; cursor: default;' : ''}">
-                    
+                <div onclick="selectNewMethodWiki('${String(m.method_name).replace(/'/g, "\\'")}')" class="matrix-card" style="${m.method_name === activeMethodId && isFocused ? 'border-color: #22d3ee; box-shadow: 0 0 0 1px rgba(34,211,238,0.3); background-color: #0f172a; cursor: default;' : ''}">
                     <div class="matrix-card-header">
-                        <h4 style="margin: 0; font-size: 20px; font-weight: 900; color: #f8fafc;">
-                            ${m.method_name} (${m.year_invented})
-                        </h4>
-                        
-                        ${isFocused ? '' : `
-                            <div>
-                                <button style="background-color: #f8fafc; color: #0f172a; border: 1px solid #cbd5e1; padding: 8px 16px; border-radius: 8px; font-size: 14px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;">
-                                    💬 Info and Discussion &rarr;
-                                </button>
-                            </div>
-                        `}
+                        <h4 style="margin: 0; font-size: 20px; font-weight: 900; color: #f8fafc;">${escapeHtml(m.method_name)} <span style="color: #94a3b8;">(${escapeHtml(m.year_invented)})</span></h4>
+                        ${isFocused ? '' : '<button type="button" style="background-color: #f8fafc; color: #0f172a; border: 1px solid #cbd5e1; padding: 10px 18px; border-radius: 8px; font-size: 14px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">Info and Discussion &rarr;</button>'}
                     </div>
-
                     <div class="matrix-grid-layout" style="color: #94a3b8;">
-                        <div>
-                            <strong style="color: #e2e8f0; font-weight: 700;">Chemical Category:</strong> 
-                            <span style="color: #22d3ee; font-family: monospace; margin-left: 4px;">${m.chemical_class}</span>
-                        </div>
-                        <div>
-                            <strong style="color: #e2e8f0; font-weight: 700;">RI:</strong> 
-                            <span style="color: #34d399; font-family: monospace; font-weight: 700; margin-left: 4px;">${m.refractive_index}</span>
-                        </div>
-                        <div>
-                            <strong style="color: #e2e8f0; font-weight: 700;">Validations:</strong> 
-                            <span style="color: #f8fafc; font-weight: 700; margin-left: 4px; background-color: rgba(34,211,238,0.1); padding: 2px 6px; border-radius: 4px; border: 1px solid rgba(34,211,238,0.2);">${paperCount} papers</span>
-                        </div>
-                        <div class="full-width-property">
-                            <strong style="color: #e2e8f0; font-weight: 700;">Tissue Compatibility:</strong> 
-                            <span style="color: #cbd5e1; margin-left: 4px;">${m.tissue_compatibilities.join(', ')}</span>
-                        </div>
-                        <div class="full-width-property">
-                            <strong style="color: #e2e8f0; font-weight: 700; display: block; margin-bottom: 2px;">Sample Size Compatibility:</strong> 
-                            <span style="color: #cbd5e1; line-height: 1.5;">${m.sample_size_compatibility}</span>
-                        </div>
-                        <div class="full-width-property" style="border-top: 1px dashed rgba(30,41,59,0.6); padding-top: 12px; margin-top: 4px;">
-                            <strong style="color: #e2e8f0; font-weight: 700; display: block; margin-bottom: 6px;">Primary Citation:</strong> 
-                            <span style="color: #cbd5e1; font-style: italic; background-color: #020617; padding: 10px; border-radius: 6px; border: 1px solid #1e293b; display: block; line-height: 1.5;">
-                                ${m.primary_citation || 'N/A'}
-                            </span>
-                        </div>
-                        
-                        ${validationSectionHtml}
+                        <div><strong style="color: #e2e8f0;">Chemical Class:</strong> <span style="color: #22d3ee;">${escapeHtml(m.chemical_class)}</span></div>
+                        <div><strong style="color: #e2e8f0;">Refractive Index:</strong> <span style="color: #34d399; font-family: monospace;">${escapeHtml(m.refractive_index)}</span></div>
+                        <div class="full-width-property"><strong style="color: #e2e8f0; display: block; margin-bottom: 3px;">Tissue Compatibilities:</strong> <span>${escapeHtml((m.tissue_compatibilities || []).join(', ') || 'Unknown')}</span></div>
+                        <div class="full-width-property"><strong style="color: #e2e8f0; display: block; margin-bottom: 3px;">Primary Citation:</strong> <span style="font-style: italic;">${primaryCitationHtml(m)}</span></div>
+                        ${detailHtml}
                     </div>
-
                 </div>
             `;
         }
@@ -534,6 +519,7 @@
             activeMethodId = methodId;
             isFocusModeActive = true; 
             renderFiltereddatabase();
+            window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
         }
 
         function exitFocusViewMode() {
