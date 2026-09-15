@@ -456,7 +456,7 @@
             ` : '';
 
             return `
-                <div onclick="selectNewMethodWiki('${String(m.method_name).replace(/'/g, "\\'")}')" class="matrix-card" style="${m.method_name === activeMethodId && isFocused ? 'border-color: #22d3ee; box-shadow: 0 0 0 1px rgba(34,211,238,0.3); background-color: #0f172a; cursor: default;' : ''}">
+                <div ${isFocused ? '' : `onclick="selectNewMethodWiki('${String(m.method_name).replace(/'/g, "\\'")}')"`} class="matrix-card" style="${isFocused ? 'border-color: #22d3ee; box-shadow: 0 0 0 1px rgba(34,211,238,0.3); background-color: #0f172a; cursor: default;' : ''}">
                     <div class="matrix-card-header">
                         <h4 style="margin: 0; font-size: 20px; font-weight: 900; color: #f8fafc;">${escapeHtml(m.method_name)} <span style="color: #94a3b8;">(${escapeHtml(m.year_invented)})</span></h4>
                         ${isFocused ? '' : '<button type="button" style="background-color: #f8fafc; color: #0f172a; border: 1px solid #cbd5e1; padding: 10px 18px; border-radius: 8px; font-size: 14px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">Info and Discussion &rarr;</button>'}
