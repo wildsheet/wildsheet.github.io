@@ -235,13 +235,26 @@
             const ris = new Set();
             const species = new Set();
             const years = new Set();
+            const speeds = new Set();
+            const morphologies = new Set();
+            const toxicities = new Set();
+            const fluorescenceCompatibility = new Set();
+            const equipmentComplexity = new Set();
 
             cachedMethodsdatabase.forEach(m => {
-                if (m.chemical_class) classes.add(m.chemical_class.trim());
-                if (m.refractive_index) ris.add(m.refractive_index);
-                if (m.year_invented) years.add(m.year_invented);
-                if (m.tissue_compatibilities) {
-                    m.tissue_compatibilities.forEach(t => species.add(t.trim()));
+                if (isMeaningfulValue(m.chemical_class)) classes.add(String(m.chemical_class).trim());
+                if (isMeaningfulValue(m.refractive_index)) ris.add(String(m.refractive_index).trim());
+                if (isMeaningfulValue(m.year_invented)) years.add(String(m.year_invented).trim());
+                if (isMeaningfulValue(m.clearing_speed)) speeds.add(String(m.clearing_speed).trim());
+                if (isMeaningfulValue(m.morphology_impact)) morphologies.add(String(m.morphology_impact).trim());
+                if (isMeaningfulValue(m.toxicity_hazard)) toxicities.add(String(m.toxicity_hazard).trim());
+                if (isMeaningfulValue(m.fluorescent_protein_compatibility)) fluorescenceCompatibility.add(String(m.fluorescent_protein_compatibility).trim());
+                if (isMeaningfulValue(m.equipment_complexity)) equipmentComplexity.add(String(m.equipment_complexity).trim());
+                if (Array.isArray(m.tissue_compatibilities)) {
+                    m.tissue_compatibilities.forEach(t => {
+                        const value = String(t || '').trim();
+                        if (value && value !== 'Unknown') species.add(value);
+                    });
                 }
             });
 
@@ -249,7 +262,7 @@
             if (targetBox) {
                 const labelStyle = 'display: block; font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;';
                 const inputStyle = 'width: 100%; box-sizing: border-box; background-color: #020617; border: 1px solid #1e293b; border-radius: 8px; padding: 10px; font-size: 13px; color: #e2e8f0; outline: none; transition: border-color 0.15s ease-in-out; font-family: inherit;';
-                
+
                 targetBox.innerHTML = `
                     <div style="display: flex; flex-direction: column; gap: 16px; width: 100%;">
                         <div>
@@ -258,13 +271,10 @@
                         </div>
                         <div>
                             <label style="${labelStyle}">Tissue Compatibility</label>
-                            <select id="tissue-filter" style="${inputStyle} cursor: pointer;" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
-                                <option value="all">Show All Species</option>
-                                ${Array.from(species).sort().map(s => `<option value="${s}">${s}</option>`).join('')}
-                            </select>
+                            <input id="tissue-filter" type="text" placeholder="Type tissue name..." style="${inputStyle}" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
                         </div>
                         <div>
-                            <label style="${labelStyle}">Chemical Category</label>
+                            <label style="${labelStyle}">Chemical Class</label>
                             <select id="class-filter" style="${inputStyle} cursor: pointer;" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
                                 <option value="all">Show All Classes</option>
                                 ${Array.from(classes).sort().map(c => `<option value="${c}">${c}</option>`).join('')}
@@ -274,117 +284,157 @@
                             <label style="${labelStyle}">Refractive Index (RI)</label>
                             <select id="ri-filter" style="${inputStyle} cursor: pointer;" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
                                 <option value="all">Show All RIs</option>
-                                ${Array.from(ris).sort((a,b) => b-a).map(r => `<option value="${r}">RI — ${r}</option>`).join('')}
+                                ${Array.from(ris).sort((a, b) => String(b).localeCompare(String(a))).map(r => `<option value="${r}">${r}</option>`).join('')}
+                            </select>
+                        </div>
+                        <div>
+                            <label style="${labelStyle}">Clearing Speed</label>
+                            <select id="speed-filter" style="${inputStyle} cursor: pointer;" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
+                                <option value="all">Show All Speeds</option>
+                                ${Array.from(speeds).sort().map(v => `<option value="${v}">${v}</option>`).join('')}
+                            </select>
+                        </div>
+                        <div>
+                            <label style="${labelStyle}">Morphology Impact</label>
+                            <select id="morphology-filter" style="${inputStyle} cursor: pointer;" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
+                                <option value="all">Show All Morphologies</option>
+                                ${Array.from(morphologies).sort().map(v => `<option value="${v}">${v}</option>`).join('')}
+                            </select>
+                        </div>
+                        <div>
+                            <label style="${labelStyle}">Toxicity Hazard</label>
+                            <select id="toxicity-filter" style="${inputStyle} cursor: pointer;" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
+                                <option value="all">Show All Hazards</option>
+                                ${Array.from(toxicities).sort().map(v => `<option value="${v}">${v}</option>`).join('')}
+                            </select>
+                        </div>
+                        <div>
+                            <label style="${labelStyle}">Fluorescent Protein Compatibility</label>
+                            <select id="fluorescence-filter" style="${inputStyle} cursor: pointer;" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
+                                <option value="all">Show All Options</option>
+                                ${Array.from(fluorescenceCompatibility).sort().map(v => `<option value="${v}">${v}</option>`).join('')}
+                            </select>
+                        </div>
+                        <div>
+                            <label style="${labelStyle}">Equipment Complexity</label>
+                            <select id="equipment-filter" style="${inputStyle} cursor: pointer;" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
+                                <option value="all">Show All Options</option>
+                                ${Array.from(equipmentComplexity).sort().map(v => `<option value="${v}">${v}</option>`).join('')}
                             </select>
                         </div>
                         <div>
                             <label style="${labelStyle}">Year Published</label>
                             <select id="year-filter" style="${inputStyle} cursor: pointer;" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
                                 <option value="all">Show All Years</option>
-                                ${Array.from(years).sort((a,b) => b-a).map(y => `<option value="${y}">${y}</option>`).join('')}
+                                ${Array.from(years).sort((a, b) => Number(b) - Number(a)).map(y => `<option value="${y}">${y}</option>`).join('')}
                             </select>
                         </div>
-                        
-                        <!-- 🎯 New Filter: Numeric Verification Counts Toggle -->
                         <div>
-                            <label style="${labelStyle}">Real World Validations</label>
-                            <select id="validation-filter" style="${inputStyle} cursor: pointer;" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
-                                <option value="all">Any Count</option>
-                                <option value="none">No Validation Papers (0)</option>
-                                <option value="active">Has Validations (1+)</option>
-                                <option value="high">Extensive Validations (2+)</option>
-                            </select>
+                            <label style="${labelStyle}">Real World Applications</label>
+                            <input id="validation-filter" type="number" min="0" step="1" placeholder="Any count" title="Number of citations" style="${inputStyle}" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
                         </div>
                     </div>
                 `;
             }
 
             document.getElementById('text-search').addEventListener('input', renderFiltereddatabase);
-            document.getElementById('tissue-filter').addEventListener('change', renderFiltereddatabase);
+            document.getElementById('tissue-filter').addEventListener('input', renderFiltereddatabase);
             document.getElementById('class-filter').addEventListener('change', renderFiltereddatabase);
             document.getElementById('ri-filter').addEventListener('change', renderFiltereddatabase);
+            document.getElementById('speed-filter').addEventListener('change', renderFiltereddatabase);
+            document.getElementById('morphology-filter').addEventListener('change', renderFiltereddatabase);
+            document.getElementById('toxicity-filter').addEventListener('change', renderFiltereddatabase);
+            document.getElementById('fluorescence-filter').addEventListener('change', renderFiltereddatabase);
+            document.getElementById('equipment-filter').addEventListener('change', renderFiltereddatabase);
             document.getElementById('year-filter').addEventListener('change', renderFiltereddatabase);
-            document.getElementById('validation-filter').addEventListener('change', renderFiltereddatabase);
+            document.getElementById('validation-filter').addEventListener('input', renderFiltereddatabase);
         }
-        
+
         // Multi-Variable Multi-Filter Dynamic Layout Engine
         function renderFiltereddatabase() {
             const query = document.getElementById('text-search')?.value.toLowerCase().trim() || '';
-            const selectedTissue = document.getElementById('tissue-filter')?.value || 'all';
+            const selectedTissue = (document.getElementById('tissue-filter')?.value || '').trim();
             const selectedClass = document.getElementById('class-filter')?.value || 'all';
             const selectedRI = document.getElementById('ri-filter')?.value || 'all';
+            const selectedSpeed = document.getElementById('speed-filter')?.value || 'all';
+            const selectedMorphology = document.getElementById('morphology-filter')?.value || 'all';
+            const selectedToxicity = document.getElementById('toxicity-filter')?.value || 'all';
+            const selectedFluorescence = document.getElementById('fluorescence-filter')?.value || 'all';
+            const selectedEquipment = document.getElementById('equipment-filter')?.value || 'all';
             const selectedYear = document.getElementById('year-filter')?.value || 'all';
-            const selectedVal = document.getElementById('validation-filter')?.value || 'all';
-            
+            const selectedValRaw = document.getElementById('validation-filter')?.value;
+            const selectedVal = selectedValRaw === '' || selectedValRaw === undefined || selectedValRaw === null ? 'all' : Number(selectedValRaw);
+
             const container = document.getElementById('database-cards-container');
             const titleNode = document.getElementById('results-headline-title');
-            
             const sidebarHeadline = document.getElementById('sidebar-headline-title');
             const sidebarContainer = document.getElementById('sidebar-panel-container');
 
-            let filtered = cachedMethodsdatabase.filter(m => {
-                const matchesTissue = selectedTissue === 'all' || (m.tissue_compatibilities && m.tissue_compatibilities.includes(selectedTissue));
-                const matchesClass = selectedClass === 'all' || m.chemical_class === selectedClass;
-                const matchesRI = selectedRI === 'all' || String(m.refractive_index) === selectedRI;
-                const matchesYear = selectedYear === 'all' || String(m.year_invented) === selectedYear;
+            const filtered = cachedMethodsdatabase.filter(m => {
+                const matchesTissue = !selectedTissue || (Array.isArray(m.tissue_compatibilities) && m.tissue_compatibilities.some(t => String(t || '').trim().toLowerCase().includes(selectedTissue.toLowerCase())));
+                const matchesClass = selectedClass === 'all' || String(m.chemical_class || '').trim() === selectedClass;
+                const matchesRI = selectedRI === 'all' || String(m.refractive_index || '').trim() === selectedRI;
+                const matchesSpeed = selectedSpeed === 'all' || String(m.clearing_speed || '').trim() === selectedSpeed;
+                const matchesMorphology = selectedMorphology === 'all' || String(m.morphology_impact || '').trim() === selectedMorphology;
+                const matchesToxicity = selectedToxicity === 'all' || String(m.toxicity_hazard || '').trim() === selectedToxicity;
+                const matchesFluorescence = selectedFluorescence === 'all' || String(m.fluorescent_protein_compatibility || '').trim() === selectedFluorescence;
+                const matchesEquipment = selectedEquipment === 'all' || String(m.equipment_complexity || '').trim() === selectedEquipment;
+                const matchesYear = selectedYear === 'all' || String(m.year_invented || '').trim() === selectedYear;
 
                 const valCount = getApplicationPapers(m).length;
                 let matchesValidation = true;
-                if (selectedVal === 'none') matchesValidation = (valCount === 0);
-                else if (selectedVal === 'active') matchesValidation = (valCount >= 1);
-                else if (selectedVal === 'high') matchesValidation = (valCount >= 2);
+                if (selectedVal !== 'all') {
+                    matchesValidation = (valCount >= Number(selectedVal));
+                }
 
-                const textHaystack = `${m.method_name} ${m.year_invented} ${m.chemical_class} ${m.refractive_index} ${m.sample_size_compatibility} ${m.primary_citation} ${(m.tissue_compatibilities || []).join(' ')}`.toLowerCase();
+                const textHaystack = `${m.method_name} ${m.year_invented} ${m.chemical_class} ${m.refractive_index} ${m.primary_citation} ${(m.tissue_compatibilities || []).join(' ')} ${m.clearing_speed} ${m.morphology_impact} ${m.toxicity_hazard} ${m.fluorescent_protein_compatibility} ${m.equipment_complexity}`.toLowerCase();
                 const matchesText = !query || textHaystack.includes(query);
 
-                return matchesTissue && matchesClass && matchesRI && matchesYear && matchesValidation && matchesText;
+                return matchesTissue && matchesClass && matchesRI && matchesSpeed && matchesMorphology && matchesToxicity && matchesFluorescence && matchesEquipment && matchesYear && matchesValidation && matchesText;
             });
 
-            // FOCUS MODE
             if (isFocusModeActive && activeMethodId) {
                 const targetRecord = cachedMethodsdatabase.find(m => m.method_name === activeMethodId);
                 if (targetRecord) {
-                    if (titleNode) titleNode.innerText = "Info for Selected Method";
-                    
+                    if (titleNode) titleNode.innerText = 'Info for Selected Method';
                     if (sidebarContainer && document.getElementById('filters-sidebar-target')) {
                         filtersBackupHTML = sidebarContainer.innerHTML;
                     }
-
                     if (sidebarHeadline) sidebarHeadline.innerText = `💬 Community Discussion: ${targetRecord.method_name}`;
                     if (sidebarContainer) {
-                        sidebarContainer.innerHTML = `<div id="giscus-frame-container" style="min-height: 380px; width: 100%;"></div>`;
+                        sidebarContainer.innerHTML = '<div id="giscus-frame-container" style="min-height: 380px; width: 100%;"></div>';
                     }
-
                     container.innerHTML = `
                         <div style="margin-bottom: 24px; text-align: left;">
-                            <button onclick="exitFocusViewMode()" style="background-color: #f8fafc; color: #0f172a; border: 1px solid #cbd5e1; padding: 10px 18px; border-radius: 8px; font-size: 14px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
-                                &larr; Return to Complete Protocol List
-                            </button>
+                            <button onclick="exitFocusViewMode()" style="background-color: #f8fafc; color: #0f172a; border: 1px solid #cbd5e1; padding: 10px 18px; border-radius: 8px; font-size: 14px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">&larr; Return to Complete Protocol List</button>
                         </div>
                         ${buildCardTemplateHtml(targetRecord, true)}
                     `;
-                    
                     syncGiscusFrameContext();
                     return;
                 }
             }
 
-            // LIST MODE
-            if (titleNode) titleNode.innerText = "Search Results";
-            if (sidebarHeadline) sidebarHeadline.innerText = "Filters";
-            
+            if (titleNode) titleNode.innerText = `Search Results (${filtered.length})`;
+            if (sidebarHeadline) sidebarHeadline.innerText = 'Filters';
+
             if (sidebarContainer && !document.getElementById('filters-sidebar-target') && filtersBackupHTML) {
                 sidebarContainer.innerHTML = filtersBackupHTML;
                 document.getElementById('text-search').addEventListener('input', renderFiltereddatabase);
-                document.getElementById('tissue-filter').addEventListener('change', renderFiltereddatabase);
+                document.getElementById('tissue-filter').addEventListener('input', renderFiltereddatabase);
                 document.getElementById('class-filter').addEventListener('change', renderFiltereddatabase);
                 document.getElementById('ri-filter').addEventListener('change', renderFiltereddatabase);
+                document.getElementById('speed-filter').addEventListener('change', renderFiltereddatabase);
+                document.getElementById('morphology-filter').addEventListener('change', renderFiltereddatabase);
+                document.getElementById('toxicity-filter').addEventListener('change', renderFiltereddatabase);
+                document.getElementById('fluorescence-filter').addEventListener('change', renderFiltereddatabase);
+                document.getElementById('equipment-filter').addEventListener('change', renderFiltereddatabase);
                 document.getElementById('year-filter').addEventListener('change', renderFiltereddatabase);
-                document.getElementById('validation-filter').addEventListener('change', renderFiltereddatabase);
+                document.getElementById('validation-filter').addEventListener('input', renderFiltereddatabase);
             }
 
             if (filtered.length === 0) {
-                container.innerHTML = `<div style="padding: 32px; text-align: center; color: #64748b; background-color: rgba(15,23,42,0.2); border-radius: 12px; border: 1px dashed #334155; font-size: 14px;">No protocols match selection.</div>`;
+                container.innerHTML = '<div style="padding: 32px; text-align: center; color: #64748b; background-color: rgba(15,23,42,0.2); border-radius: 12px; border: 1px dashed #334155; font-size: 14px;">No protocols match selection.</div>';
                 return;
             }
 
@@ -424,15 +474,76 @@
             return `${titleHtml}${citationText ? ` <span style="color: #94a3b8;">(${escapeHtml(citationText)})</span>` : ''}`;
         }
 
-        function buildApplicationPapersHtml(method) {
+        function getUniqueValues(values) {
+            const unique = new Set();
+            (values || []).forEach(value => {
+                const text = String(value || '').trim();
+                if (text && text !== 'Unknown') unique.add(text);
+            });
+            return Array.from(unique).sort();
+        }
+
+        function isMeaningfulValue(value) {
+            if (value === undefined || value === null) return false;
+            const text = String(value).trim();
+            return text !== '' && text !== 'Unknown' && text !== 'N/A';
+        }
+
+        function getMethodPropertyRows(method, includeTissueCompatibility = false) {
+            const rows = [
+                ['Chemical Class', method.chemical_class],
+                ['Refractive Index', method.refractive_index],
+                ['Clearing Speed', method.clearing_speed],
+                ['Morphology Impact', method.morphology_impact],
+                ['Toxicity Hazard', method.toxicity_hazard],
+                ['Fluorescent Protein Compatibility', method.fluorescent_protein_compatibility],
+                ['Equipment Complexity', method.equipment_complexity],
+                ['Primary Citation', primaryCitationHtml(method)]
+            ].filter(([, value]) => isMeaningfulValue(value));
+
+            if (includeTissueCompatibility) {
+                const tissueValues = getUniqueValues(method.tissue_compatibilities);
+                if (tissueValues.length) rows.push(['Tissue Compatibilities', tissueValues]);
+            }
+            return rows;
+        }
+
+        function applyPaperTissueFilter(listId, methodName, selectedTissue) {
+            const listNode = document.getElementById(listId);
+            const method = cachedMethodsdatabase.find(candidate => candidate.method_name === methodName);
+            if (!listNode || !method) return;
+            listNode.innerHTML = buildApplicationPapersHtml(method, selectedTissue);
+        }
+
+        function getPaperTissues(paper) {
+            const tissueCompatibilities = Array.isArray(paper.tissue_compatibilities) ? paper.tissue_compatibilities : [];
+            if (tissueCompatibilities.length) return tissueCompatibilities;
+            return Array.isArray(paper.cleared_tissues) ? paper.cleared_tissues : [];
+        }
+
+        function buildApplicationPapersHtml(method, selectedTissue = 'all') {
             const papers = getApplicationPapers(method);
             if (!papers.length) {
                 return '<span style="color: #64748b; font-style: italic;">No real-world application papers registered.</span>';
             }
-            return papers.map(paper => `
+
+            const normalizedQuery = String(selectedTissue || '').trim().toLowerCase();
+
+            const filteredPapers = papers.filter(paper => {
+                if (!normalizedQuery || normalizedQuery === 'all') return true;
+                const values = getPaperTissues(paper);
+                return values.some(value => String(value || '').trim().toLowerCase().includes(normalizedQuery));
+            });
+
+            if (!filteredPapers.length) {
+                return '<span style="color: #64748b; font-style: italic;">No application papers match the selected tissue compatibility.</span>';
+            }
+
+            return filteredPapers.map(paper => `
                 <article style="background-color: #020617; border: 1px solid #1e293b; padding: 14px; border-radius: 8px; display: flex; flex-direction: column; gap: 7px; text-align: left;">
                     <strong style="color: #f8fafc; font-size: 14px; line-height: 1.4;">${paper.doi ? `<a href="https://doi.org/${encodeURIComponent(paper.doi).replace(/%2F/g, '/')}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">${escapeHtml(paper.title || 'Untitled paper')}</a>` : escapeHtml(paper.title || 'Untitled paper')}</strong>
                     <span style="font-size: 12px; color: #94a3b8;">${escapeHtml([paper.first_author, paper.journal, paper.year].filter(Boolean).join(' · ') || 'Citation details unavailable')}</span>
+                    <span style="font-size: 12px; color: #cbd5e1;">${escapeHtml(getPaperTissues(paper).join(', ') || 'No tissue compatibility recorded')}</span>
                     <span style="font-size: 13px; color: #cbd5e1; border-top: 1px dashed #1e293b; padding-top: 7px;">${escapeHtml(paper.evidence || 'Evidence summary unavailable.')}</span>
                 </article>
             `).join('');
@@ -440,18 +551,24 @@
 
         function buildCardTemplateHtml(m, isFocused) {
             const papers = getApplicationPapers(m);
+            const mainRows = getMethodPropertyRows(m, false);
+            const detailRows = getMethodPropertyRows(m, true);
+            const safeMethodKey = String(m.method_name || 'method').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'method';
+            const paperListId = `paper-list-${safeMethodKey}`;
+            const paperFilterId = `paper-tissue-filter-${safeMethodKey}`;
+
             const detailHtml = isFocused ? `
                 <div class="full-width-property" style="border-top: 1px dashed rgba(30,41,59,0.6); padding-top: 16px; margin-top: 4px;">
-                    <strong style="color: #22d3ee; display: block; margin-bottom: 12px;">Method Details</strong>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px 24px;">
-                        ${[['Fluorescent Protein Compatibility', m.fluorescent_protein_compatibility], ['Clearing Speed', m.clearing_speed], ['Morphology Impact', m.morphology_impact], ['Equipment Complexity', m.equipment_complexity], ['Toxicity Hazard', m.toxicity_hazard]].map(([label, value]) => `
-                            <div><strong style="color: #e2e8f0; display: block; margin-bottom: 3px;">${label}</strong><span>${escapeHtml(value || 'Unknown')}</span></div>
-                        `).join('')}
+                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
+                        <strong style="color: #f8fafc; font-weight: 700; display: block;">Real-World Application Papers (${papers.length})</strong>
+                        ${papers.length ? `
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <label style="font-size: 11px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em;">Tissue compatibilities filter</label>
+                                <input id="${paperFilterId}" data-paper-list-id="${paperListId}" data-method-name="${escapeHtml(String(m.method_name || ''))}" type="text" placeholder="Type tissue name..." style="background-color: #020617; border: 1px solid #1e293b; border-radius: 8px; padding: 6px 10px; color: #e2e8f0; font-size: 12px;" oninput="applyPaperTissueFilter(this.dataset.paperListId, this.dataset.methodName, this.value)">
+                            </div>
+                        ` : ''}
                     </div>
-                </div>
-                <div class="full-width-property" style="border-top: 1px dashed rgba(30,41,59,0.6); padding-top: 16px; margin-top: 4px;">
-                    <strong style="color: #22d3ee; display: block; margin-bottom: 12px;">Real-World Application Papers (${papers.length})</strong>
-                    <div style="display: flex; flex-direction: column; gap: 12px;">${buildApplicationPapersHtml(m)}</div>
+                    <div id="${paperListId}" style="display: flex; flex-direction: column; gap: 12px;">${buildApplicationPapersHtml(m, 'all')}</div>
                 </div>
             ` : '';
 
@@ -462,10 +579,9 @@
                         ${isFocused ? '' : '<button type="button" style="background-color: #f8fafc; color: #0f172a; border: 1px solid #cbd5e1; padding: 10px 18px; border-radius: 8px; font-size: 14px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">Info and Discussion &rarr;</button>'}
                     </div>
                     <div class="matrix-grid-layout" style="color: #94a3b8;">
-                        <div><strong style="color: #e2e8f0;">Chemical Class:</strong> <span style="color: #22d3ee;">${escapeHtml(m.chemical_class)}</span></div>
-                        <div><strong style="color: #e2e8f0;">Refractive Index:</strong> <span style="color: #34d399; font-family: monospace;">${escapeHtml(m.refractive_index)}</span></div>
-                        <div class="full-width-property"><strong style="color: #e2e8f0; display: block; margin-bottom: 3px;">Tissue Compatibilities:</strong> <span>${escapeHtml((m.tissue_compatibilities || []).join(', ') || 'Unknown')}</span></div>
-                        <div class="full-width-property"><strong style="color: #e2e8f0; display: block; margin-bottom: 3px;">Primary Citation:</strong> <span style="font-style: italic;">${primaryCitationHtml(m)}</span></div>
+                        ${(isFocused ? detailRows : mainRows).map(([label, value]) => `
+                            <div ${['Primary Citation', 'Tissue Compatibilities'].includes(label) ? 'class="full-width-property"' : ''}><strong style="color: #e2e8f0; display: block; margin-bottom: 3px;">${label}:</strong>${Array.isArray(value) ? `<div style="max-height: 120px; overflow-y: auto; padding: 8px 10px; background-color: rgba(2, 6, 23, 0.55); border: 1px solid #1e293b; border-radius: 6px;">${value.map(tissue => `<div style="padding: 2px 0;">${escapeHtml(tissue)}</div>`).join('')}</div>` : `<span>${value}</span>`}</div>
+                        `).join('')}
                         ${detailHtml}
                     </div>
                 </div>
