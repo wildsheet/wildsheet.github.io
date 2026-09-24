@@ -83,10 +83,10 @@
         "journal": "Cell",
         "year": "2014",
         "volume": "157",
-        "issue": "",
+        "issue": "3",
         "pages": "726-739",
         "doi": "10.1016/j.cell.2014.03.042",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "High",
       "clearing_speed": "Moderate (1-2 Weeks)",
@@ -1668,7 +1668,14 @@
         "Mouse | uterus",
         "Mouse | kidney",
         "Human | skin",
-        "Human | brain"
+        "Human | brain",
+        "Mouse | embryo",
+        "Human | embryo",
+        "Mouse | skeletal muscle",
+        "Human | cerebral organoid",
+        "Mouse | skin",
+        "Mouse | squamous cell carcinoma",
+        "Human | cerebral cortex"
       ],
       "primary_citation": "Ertürk et al., 2012b",
       "original_reference": {
@@ -1689,10 +1696,10 @@
         "journal": "Nature Medicine",
         "year": "2012",
         "volume": "18",
-        "issue": "",
+        "issue": "1",
         "pages": "166-171",
         "doi": "10.1038/nm.2600",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Low (Quenched)",
       "clearing_speed": "Fast (Hours to Days)",
@@ -1916,6 +1923,96 @@
           "tissue_compatibilities": [
             "Mouse | intestine",
             "Mouse | sympathetic ganglia"
+          ]
+        },
+        {
+          "title": "Microglia innately develop within cerebral organoids",
+          "doi": "10.1038/s41467-018-06684-2",
+          "journal": "Nat Commun",
+          "year": "2018",
+          "first_author": "Paul R Ormel",
+          "pmid": "30301888",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used 3DISCO clearing and 3D imaging to demonstrate the innate development, ramified morphology, and synaptic phagocytosis of microglia inside cerebral organoids.",
+          "cleared_tissues": [
+            "Human | cerebral organoid"
+          ],
+          "tissue_compatibilities": [
+            "Human | cerebral organoid"
+          ]
+        },
+        {
+          "title": "Epidermal Merkel cells are mechanosensory cells that tune mammalian touch receptors",
+          "doi": "10.1038/nature13250",
+          "journal": "Nature",
+          "year": "2014",
+          "first_author": "Srdjan Maksimovic",
+          "pmid": "24717432",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Utilized 3DISCO clearing to image intact touch domes and elucidate how epidermal Merkel cells transduce dynamic versus static tactile signals.",
+          "cleared_tissues": [
+            "Mouse | skin"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | skin"
+          ]
+        },
+        {
+          "title": "TGF-β Promotes Heterogeneity and Drug Resistance in Squamous Cell Carcinoma",
+          "doi": "10.1016/j.cell.2015.01.043",
+          "journal": "Cell",
+          "year": "2015",
+          "first_author": "Naoki Oshimori",
+          "pmid": "25723170",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Applied 3DISCO clearing to visualize tumor-vasculature niches and map TGF-beta-responding cancer stem cells driving chemoresistance in intact tumors.",
+          "cleared_tissues": [
+            "Mouse | squamous cell carcinoma"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | squamous cell carcinoma"
+          ]
+        },
+        {
+          "title": "Sustained antigen availability during germinal center initiation enhances antibody responses to vaccination",
+          "doi": "10.1073/pnas.1606050113",
+          "journal": "Proc Natl Acad Sci U S A",
+          "year": "2016",
+          "first_author": "Hok Hei Tam",
+          "pmid": "27702895",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used 3DISCO clearing and 3D imaging of lymph nodes to evaluate antigen retention kinetics and germinal center B-cell expansion during sustained-dose vaccination.",
+          "cleared_tissues": [
+            "Mouse | lymph node"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | lymph node"
+          ]
+        },
+        {
+          "title": "Immune homeostasis enforced by co-localized effector and regulatory T cells",
+          "doi": "10.1038/nature16169",
+          "journal": "Nature",
+          "year": "2015",
+          "first_author": "Zhiduo Liu",
+          "pmid": "26605524",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Employed whole-organ clearing and volumetric multiplex imaging to identify clusters where regulatory T cells co-localize with self-reactive effector T cells.",
+          "cleared_tissues": [
+            "Mouse | lymph node"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | lymph node"
           ]
         }
       ],
@@ -2655,6 +2752,20 @@
           "evidence": "This article is a review detailing astrocyte interactions with immune cells and CNS barriers.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
+        },
+        {
+          "title": "The Biology of Regeneration Failure and Success After Spinal Cord Injury",
+          "doi": "10.1152/physrev.00017.2017",
+          "journal": "Physiol Rev",
+          "year": "2018",
+          "first_author": "Amanda Phuong Tran",
+          "pmid": "29513146",
+          "status": "uncertain",
+          "category": "review",
+          "confidence": "high",
+          "evidence": "A review article covering the cellular and molecular mechanisms of glial scarring and axonal regeneration failure after spinal cord injury.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
         }
       ],
       "source_manifest": {
@@ -2711,10 +2822,10 @@
         "journal": "Cell",
         "year": "2014",
         "volume": "159",
-        "issue": "",
+        "issue": "4",
         "pages": "896-910",
         "doi": "10.1016/j.cell.2014.10.010",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Fast (Hours to Days)",
@@ -3827,10 +3938,10 @@
         "journal": "Cell",
         "year": "2016",
         "volume": "165",
-        "issue": "",
+        "issue": "7",
         "pages": "1789-1802",
         "doi": "10.1016/j.cell.2016.05.007",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "High",
       "clearing_speed": "Fast (Hours to Days)",
@@ -4277,10 +4388,10 @@
         "journal": "Nature",
         "year": "2013",
         "volume": "497",
-        "issue": "",
+        "issue": "7449",
         "pages": "332-337",
         "doi": "10.1038/nature12107",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "High",
       "clearing_speed": "Slow (Weeks)",
@@ -5021,10 +5132,10 @@
         "journal": "Dev. Camb. Engl.",
         "year": "1989",
         "volume": "105",
-        "issue": "",
+        "issue": "1",
         "pages": "61-74",
         "doi": "10.1242/dev.105.1.61",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Fast (Hours to Days)",
@@ -6328,10 +6439,10 @@
         "journal": "Nat. Neurosci.",
         "year": "2013",
         "volume": "16",
-        "issue": "",
+        "issue": "8",
         "pages": "1154-1161",
         "doi": "10.1038/nn.3447",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "High",
       "clearing_speed": "Fast (Hours to Days)",
@@ -7237,10 +7348,10 @@
         "journal": "Sci. Adv.",
         "year": "2020",
         "volume": "6",
-        "issue": "",
+        "issue": "22",
         "pages": "eaba0365",
         "doi": "10.1126/sciadv.aba0365",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Unknown",
@@ -17453,7 +17564,8 @@
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
         "Mouse | whole brain",
-        "Mouse | brain"
+        "Mouse | brain",
+        "Mouse | whole organ"
       ],
       "primary_citation": "Hahn et al., 2019",
       "original_reference": {
@@ -19250,10 +19362,10 @@
         "journal": "PLoS ONE",
         "year": "2012",
         "volume": "7",
-        "issue": "Unknown",
+        "issue": "3",
         "pages": "e33916",
         "doi": "10.1371/journal.pone.0033916",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Fast (Hours to Days)",
@@ -19508,10 +19620,10 @@
         "journal": "Cell Metab.",
         "year": "2018",
         "volume": "27",
-        "issue": "Unknown",
+        "issue": "1",
         "pages": "226-236.e3",
         "doi": "10.1016/j.cmet.2017.12.011",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Unknown",
@@ -19996,10 +20108,10 @@
         "journal": "Medicine",
         "year": "2018",
         "volume": "97",
-        "issue": "Unknown",
+        "issue": "39",
         "pages": "e12392",
         "doi": "10.1097/md.0000000000012392",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Unknown",
@@ -20195,10 +20307,10 @@
         "journal": "Exp. Mol. Med.",
         "year": "2016",
         "volume": "48",
-        "issue": "Unknown",
+        "issue": "12",
         "pages": "e274",
         "doi": "10.1038/emm.2016.105",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "High",
       "clearing_speed": "Fast (Hours to Days)",
@@ -20443,10 +20555,10 @@
         "journal": "Nat. Biotechnol.",
         "year": "2016",
         "volume": "34",
-        "issue": "Unknown",
+        "issue": "9",
         "pages": "973–981",
         "doi": "10.1038/nbt.3641",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Low (Quenched)",
       "clearing_speed": "Fast (Hours to Days)",
@@ -20709,10 +20821,10 @@
         "journal": "Nat. Neurosci.",
         "year": "2015",
         "volume": "18",
-        "issue": "Unknown",
+        "issue": "10",
         "pages": "1518–1529",
         "doi": "10.1038/nn.4107",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "High",
       "clearing_speed": "Fast (Hours to Days)",
@@ -21192,10 +21304,10 @@
         "journal": "Cel Rep.",
         "year": "2018",
         "volume": "24",
-        "issue": "Unknown",
+        "issue": "8",
         "pages": "2196–2210.e9",
         "doi": "10.1016/j.celrep.2018.07.056",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Low (Quenched)",
       "clearing_speed": "Fast (Hours to Days)",
@@ -21544,10 +21656,10 @@
         "journal": "Nat. Neurosci.",
         "year": "2018",
         "volume": "21",
-        "issue": "Unknown",
+        "issue": "4",
         "pages": "625–637",
         "doi": "10.1038/s41593-018-0109-1",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "High",
       "clearing_speed": "Fast (Hours to Days)",
@@ -21689,10 +21801,10 @@
         "journal": "Proc. Natl. Acad. Sci. USA",
         "year": "2019",
         "volume": "116",
-        "issue": "Unknown",
+        "issue": "23",
         "pages": "11480–11489",
         "doi": "10.1073/pnas.1819583116",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "High",
       "clearing_speed": "Fast (Hours to Days)",
@@ -22051,7 +22163,15 @@
         "Zebrafish | cardiovascular system",
         "Mouse | tooth germ",
         "Xenopus | oocyte",
-        "Chick | embryo"
+        "Chick | embryo",
+        "Mouse | whole embryo",
+        "Mouse | brain sections",
+        "Plant | specimen",
+        "Mouse | whole organ",
+        "Plant | tissue",
+        "Mouse | whole body",
+        "Mouse | bone",
+        "Human | tissue"
       ],
       "primary_citation": "Dodt et al., 2007",
       "original_reference": {
@@ -22068,10 +22188,10 @@
         "journal": "Nat. Methods",
         "year": "2007",
         "volume": "4",
-        "issue": "Unknown",
+        "issue": "4",
         "pages": "331–336",
         "doi": "10.1038/nmeth1036",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Low (Quenched)",
       "clearing_speed": "Fast (Hours to Days)",
@@ -23474,7 +23594,23 @@
         "Mouse | bone marrow",
         "Mouse | lymph node",
         "Mouse | intestine",
-        "Human | lymph node"
+        "Human | lymph node",
+        "Mouse | whole organ",
+        "Mouse | tumor-draining lymphatics",
+        "Mouse | tumor stroma",
+        "Mouse | mesenteric lymph node",
+        "Mouse | small intestine",
+        "Mouse | skin",
+        "Mouse | skin wound",
+        "Mouse | tumor",
+        "Mouse | embryo",
+        "Mouse | colorectal tumor",
+        "Mouse | pancreatic tumor",
+        "Ambystoma mexicanum | limb",
+        "Mouse | popliteal lymph node",
+        "Mouse | synovium",
+        "Mouse | nasal-associated lymphoid tissue",
+        "Mouse | turbinates"
       ],
       "primary_citation": "Li et al., 2017",
       "original_reference": {
@@ -23488,10 +23624,10 @@
         "journal": "Proc. Natl. Acad. Sci. USA",
         "year": "2017",
         "volume": "114",
-        "issue": "",
+        "issue": "35",
         "pages": "E7321–E7330",
         "doi": "10.1073/pnas.1708981114",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "High",
       "clearing_speed": "Fast (Hours to Days)",
@@ -23695,6 +23831,230 @@
           ],
           "tissue_compatibilities": [
             "Mouse | lymph node"
+          ]
+        },
+        {
+          "title": "IL-33-induced metabolic reprogramming controls the differentiation of alternatively activated macrophages and the resolution of inflammation.",
+          "doi": "10.1016/j.immuni.2021.09.010",
+          "journal": "Immunity",
+          "year": "2021",
+          "first_author": "Faas M",
+          "pmid": "34644537",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Demonstrates that IL-33 triggers mitochondrial rewiring and GATA3-mediated macrophage polarization to drive resolution of inflammation and muscle repair after injury.",
+          "cleared_tissues": [
+            "Mouse | muscle"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | muscle"
+          ]
+        },
+        {
+          "title": "Lymphatic-localized Treg-mregDC crosstalk limits antigen trafficking and restrains anti-tumor immunity.",
+          "doi": "10.1016/j.ccell.2024.06.014",
+          "journal": "Cancer Cell",
+          "year": "2024",
+          "first_author": "You S",
+          "pmid": "39029466",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Identifies a peri-lymphatic Treg-mregDC niche in tumor stroma that promotes Treg activation, restrains antigen trafficking to lymph nodes, and suppresses anti-tumor immunity.",
+          "cleared_tissues": [
+            "Mouse | tumor stroma",
+            "Mouse | mesenteric lymph node"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | tumor stroma",
+            "Mouse | mesenteric lymph node"
+          ]
+        },
+        {
+          "title": "Endothelial sensing of AHR ligands regulates intestinal homeostasis.",
+          "doi": "10.1038/s41586-023-06508-4",
+          "journal": "Nature",
+          "year": "2023",
+          "first_author": "Wiggins BG",
+          "pmid": "37586410",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Demonstrates that endothelial AHR signaling senses dietary metabolites to maintain intestinal vascular normalcy and protect against enteric infection.",
+          "cleared_tissues": [
+            "Mouse | small intestine"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | small intestine"
+          ]
+        },
+        {
+          "title": "Matrix-producing neutrophils populate and shield the skin.",
+          "doi": "10.1038/s41586-025-08741-5",
+          "journal": "Nature",
+          "year": "2025",
+          "first_author": "Vicanolo T",
+          "pmid": "40108463",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Discovers a population of matrix-producing skin neutrophils that build extracellular matrix rings around wounds via TGF-beta signaling to shield against bacterial invasion.",
+          "cleared_tissues": [
+            "Mouse | skin"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | skin"
+          ]
+        },
+        {
+          "title": "Multitier mechanics control stromal adaptations in the swelling lymph node.",
+          "doi": "10.1038/s41590-022-01257-4",
+          "journal": "Nat Immunol",
+          "year": "2022",
+          "first_author": "Assen FP",
+          "pmid": "35817845",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Characterizes the biomechanical forces and fibroblastic reticular cell adaptations driving lymph node swelling upon immunological challenge.",
+          "cleared_tissues": [
+            "Mouse | lymph node"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | lymph node"
+          ]
+        },
+        {
+          "title": "Transcriptional space-time mapping identifies concerted immune and stromal cell patterns and gene programs in wound healing and cancer.",
+          "doi": "10.1016/j.stem.2023.05.001",
+          "journal": "Cell Stem Cell",
+          "year": "2023",
+          "first_author": "Hu KH",
+          "pmid": "37267918",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Maps spatiotemporal transcriptional patterns during skin wound closure and demonstrates conserved multicellular gene movements in mouse and human tumors.",
+          "cleared_tissues": [
+            "Mouse | skin wound",
+            "Mouse | tumor"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | skin wound",
+            "Mouse | tumor"
+          ]
+        },
+        {
+          "title": "Rapid and efficient degradation of endogenous proteins in vivo identifies stage-specific roles of RNA Pol II pausing in mammalian development.",
+          "doi": "10.1016/j.devcel.2022.03.013",
+          "journal": "Dev Cell",
+          "year": "2022",
+          "first_author": "Abuhashem A",
+          "pmid": "35421370",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Demonstrates that acute depletion of NELFB using dTAG degrons impairs the zygote-to-2-cell transition and zygotic genome activation in mouse embryos.",
+          "cleared_tissues": [
+            "Mouse | embryo"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | embryo"
+          ]
+        },
+        {
+          "title": "Multi-Parameter Quantitative Imaging of Tumor Microenvironments Reveals Perivascular Immune Niches Associated With Anti-Tumor Immunity.",
+          "doi": "10.3389/fimmu.2021.726492",
+          "journal": "Front Immunol",
+          "year": "2021",
+          "first_author": "Stoltzfus CR",
+          "pmid": "34421928",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Reveals perivascular myeloid-T cell immune niches in murine tumor microenvironments that expand following immunotherapy and correlate with therapeutic response.",
+          "cleared_tissues": [
+            "Mouse | colorectal tumor",
+            "Mouse | pancreatic tumor"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | colorectal tumor",
+            "Mouse | pancreatic tumor"
+          ]
+        },
+        {
+          "title": "Canonical Wnt signaling and the regulation of divergent mesenchymal Fgf8 expression in axolotl limb development and regeneration.",
+          "doi": "10.7554/elife.79762",
+          "journal": "Elife",
+          "year": "2022",
+          "first_author": "Glotzer GL",
+          "pmid": "35587651",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Demonstrates that canonical Wnt signaling acts on limb mesenchyme to drive Amex.Fgf8 expression during axolotl limb development and regeneration.",
+          "cleared_tissues": [
+            "Ambystoma mexicanum | limb"
+          ],
+          "tissue_compatibilities": [
+            "Ambystoma mexicanum | limb"
+          ]
+        },
+        {
+          "title": "Quantification of the Whole Lymph Node Vasculature Based on Tomography of the Vessel Corrosion Casts.",
+          "doi": "10.1038/s41598-019-49055-7",
+          "journal": "Sci Rep",
+          "year": "2019",
+          "first_author": "Jafarnejad M",
+          "pmid": "31527597",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Quantifies the 3D spatial distribution of blood vessels in murine popliteal lymph nodes and models transmural fluid movement across capillary walls.",
+          "cleared_tissues": [
+            "Mouse | popliteal lymph node"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | popliteal lymph node"
+          ]
+        },
+        {
+          "title": "Macrophages and nociceptor neurons form a sentinel unit around fenestrated capillaries to defend the synovium from circulating immune challenge.",
+          "doi": "10.1038/s41590-024-02011-8",
+          "journal": "Nat Immunol",
+          "year": "2024",
+          "first_author": "Hasegawa T",
+          "pmid": "39587345",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Identifies a synovial blood-joint barrier formed by macrophage-nociceptor units around PV1+ fenestrated capillaries that defends against circulating immune complexes.",
+          "cleared_tissues": [
+            "Mouse | synovium"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | synovium"
+          ]
+        },
+        {
+          "title": "Turbinate-homing IgA-secreting cells originate in the nasal lymphoid tissues.",
+          "doi": "10.1038/s41586-024-07729-x",
+          "journal": "Nature",
+          "year": "2024",
+          "first_author": "Liu J",
+          "pmid": "39085603",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Demonstrates that nasal vaccination induces B cell expansion in the subepithelial dome of NALTs and that IgA-secreting plasma cells home to turbinate glandular acinar structures via the circulation.",
+          "cleared_tissues": [
+            "Mouse | nasal-associated lymphoid tissue",
+            "Mouse | turbinates"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | nasal-associated lymphoid tissue",
+            "Mouse | turbinates"
           ]
         }
       ],
@@ -23966,6 +24326,272 @@
           "evidence": "The study presents a tissue engineering strategy utilizing sacrificial carbohydrate templates to pattern dendritic vessel networks in hydrogels.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
+        },
+        {
+          "title": "An analysis modality for vascular structures combining tissue-clearing technology and topological data analysis.",
+          "doi": "10.1038/s41467-022-32848-2",
+          "journal": "Nat Commun",
+          "year": "2022",
+          "first_author": "Takahashi K",
+          "pmid": "36097010",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Develops and evaluates an analytical pipeline combining CUBIC tissue clearing with topological data analysis for 3D vascular network quantification.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Antigen retrieval and clearing for whole-organ immunofluorescence by FLASH.",
+          "doi": "10.1038/s41596-020-00414-z",
+          "journal": "Nat Protoc",
+          "year": "2020",
+          "first_author": "Messal HA",
+          "pmid": "33247285",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Describes and validates FLASH, a method for rapid antigen retrieval, tissue clearing, and volumetric immunofluorescence.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "IL-33-induced metabolic reprogramming controls the differentiation of alternatively activated macrophages and the resolution of inflammation.",
+          "doi": "10.1016/j.immuni.2021.09.010",
+          "journal": "Immunity",
+          "year": "2021",
+          "first_author": "Faas M",
+          "pmid": "34644537",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Demonstrates that IL-33 triggers mitochondrial rewiring and GATA3-mediated macrophage polarization to drive resolution of inflammation and muscle repair after injury.",
+          "cleared_tissues": [
+            "Mouse | muscle"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | muscle"
+          ]
+        },
+        {
+          "title": "Lymphatic-localized Treg-mregDC crosstalk limits antigen trafficking and restrains anti-tumor immunity.",
+          "doi": "10.1016/j.ccell.2024.06.014",
+          "journal": "Cancer Cell",
+          "year": "2024",
+          "first_author": "You S",
+          "pmid": "39029466",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Identifies a peri-lymphatic Treg-mregDC niche in tumor stroma that promotes Treg activation, restrains antigen trafficking to lymph nodes, and suppresses anti-tumor immunity.",
+          "cleared_tissues": [
+            "Mouse | tumor stroma",
+            "Mouse | mesenteric lymph node"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | tumor stroma",
+            "Mouse | mesenteric lymph node"
+          ]
+        },
+        {
+          "title": "Endothelial sensing of AHR ligands regulates intestinal homeostasis.",
+          "doi": "10.1038/s41586-023-06508-4",
+          "journal": "Nature",
+          "year": "2023",
+          "first_author": "Wiggins BG",
+          "pmid": "37586410",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Demonstrates that endothelial AHR signaling senses dietary metabolites to maintain intestinal vascular normalcy and protect against enteric infection.",
+          "cleared_tissues": [
+            "Mouse | small intestine"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | small intestine"
+          ]
+        },
+        {
+          "title": "Matrix-producing neutrophils populate and shield the skin.",
+          "doi": "10.1038/s41586-025-08741-5",
+          "journal": "Nature",
+          "year": "2025",
+          "first_author": "Vicanolo T",
+          "pmid": "40108463",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Discovers a population of matrix-producing skin neutrophils that build extracellular matrix rings around wounds via TGF-beta signaling to shield against bacterial invasion.",
+          "cleared_tissues": [
+            "Mouse | skin"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | skin"
+          ]
+        },
+        {
+          "title": "Multitier mechanics control stromal adaptations in the swelling lymph node.",
+          "doi": "10.1038/s41590-022-01257-4",
+          "journal": "Nat Immunol",
+          "year": "2022",
+          "first_author": "Assen FP",
+          "pmid": "35817845",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Characterizes the biomechanical forces and fibroblastic reticular cell adaptations driving lymph node swelling upon immunological challenge.",
+          "cleared_tissues": [
+            "Mouse | lymph node"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | lymph node"
+          ]
+        },
+        {
+          "title": "Transcriptional space-time mapping identifies concerted immune and stromal cell patterns and gene programs in wound healing and cancer.",
+          "doi": "10.1016/j.stem.2023.05.001",
+          "journal": "Cell Stem Cell",
+          "year": "2023",
+          "first_author": "Hu KH",
+          "pmid": "37267918",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Maps spatiotemporal transcriptional patterns during skin wound closure and demonstrates conserved multicellular gene movements in mouse and human tumors.",
+          "cleared_tissues": [
+            "Mouse | skin wound",
+            "Mouse | tumor"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | skin wound",
+            "Mouse | tumor"
+          ]
+        },
+        {
+          "title": "Rapid and efficient degradation of endogenous proteins in vivo identifies stage-specific roles of RNA Pol II pausing in mammalian development.",
+          "doi": "10.1016/j.devcel.2022.03.013",
+          "journal": "Dev Cell",
+          "year": "2022",
+          "first_author": "Abuhashem A",
+          "pmid": "35421370",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Demonstrates that acute depletion of NELFB using dTAG degrons impairs the zygote-to-2-cell transition and zygotic genome activation in mouse embryos.",
+          "cleared_tissues": [
+            "Mouse | embryo"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | embryo"
+          ]
+        },
+        {
+          "title": "Multi-Parameter Quantitative Imaging of Tumor Microenvironments Reveals Perivascular Immune Niches Associated With Anti-Tumor Immunity.",
+          "doi": "10.3389/fimmu.2021.726492",
+          "journal": "Front Immunol",
+          "year": "2021",
+          "first_author": "Stoltzfus CR",
+          "pmid": "34421928",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Reveals perivascular myeloid-T cell immune niches in murine tumor microenvironments that expand following immunotherapy and correlate with therapeutic response.",
+          "cleared_tissues": [
+            "Mouse | colorectal tumor",
+            "Mouse | pancreatic tumor"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | colorectal tumor",
+            "Mouse | pancreatic tumor"
+          ]
+        },
+        {
+          "title": "Canonical Wnt signaling and the regulation of divergent mesenchymal Fgf8 expression in axolotl limb development and regeneration.",
+          "doi": "10.7554/elife.79762",
+          "journal": "Elife",
+          "year": "2022",
+          "first_author": "Glotzer GL",
+          "pmid": "35587651",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Demonstrates that canonical Wnt signaling acts on limb mesenchyme to drive Amex.Fgf8 expression during axolotl limb development and regeneration.",
+          "cleared_tissues": [
+            "Ambystoma mexicanum | limb"
+          ],
+          "tissue_compatibilities": [
+            "Ambystoma mexicanum | limb"
+          ]
+        },
+        {
+          "title": "A battery-free nanofluidic intracellular delivery patch for internal organs.",
+          "doi": "10.1038/s41586-025-08943-x",
+          "journal": "Nature",
+          "year": "2025",
+          "first_author": "Yin D",
+          "pmid": "40307560",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Reports the engineering and in vivo electroperforation testing of a nanofluidic patch for organ-targeted intracellular payload delivery.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Quantification of the Whole Lymph Node Vasculature Based on Tomography of the Vessel Corrosion Casts.",
+          "doi": "10.1038/s41598-019-49055-7",
+          "journal": "Sci Rep",
+          "year": "2019",
+          "first_author": "Jafarnejad M",
+          "pmid": "31527597",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Quantifies the 3D spatial distribution of blood vessels in murine popliteal lymph nodes and models transmural fluid movement across capillary walls.",
+          "cleared_tissues": [
+            "Mouse | popliteal lymph node"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | popliteal lymph node"
+          ]
+        },
+        {
+          "title": "Macrophages and nociceptor neurons form a sentinel unit around fenestrated capillaries to defend the synovium from circulating immune challenge.",
+          "doi": "10.1038/s41590-024-02011-8",
+          "journal": "Nat Immunol",
+          "year": "2024",
+          "first_author": "Hasegawa T",
+          "pmid": "39587345",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Identifies a synovial blood-joint barrier formed by macrophage-nociceptor units around PV1+ fenestrated capillaries that defends against circulating immune complexes.",
+          "cleared_tissues": [
+            "Mouse | synovium"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | synovium"
+          ]
+        },
+        {
+          "title": "Turbinate-homing IgA-secreting cells originate in the nasal lymphoid tissues.",
+          "doi": "10.1038/s41586-024-07729-x",
+          "journal": "Nature",
+          "year": "2024",
+          "first_author": "Liu J",
+          "pmid": "39085603",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Demonstrates that nasal vaccination induces B cell expansion in the subepithelial dome of NALTs and that IgA-secreting plasma cells home to turbinate glandular acinar structures via the circulation.",
+          "cleared_tissues": [
+            "Mouse | nasal-associated lymphoid tissue",
+            "Mouse | turbinates"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | nasal-associated lymphoid tissue",
+            "Mouse | turbinates"
+          ]
         }
       ],
       "source_manifest": {
@@ -23998,10 +24624,10 @@
         "journal": "Adv. Sci. (Weinh)",
         "year": "2020",
         "volume": "7",
-        "issue": "",
+        "issue": "8",
         "pages": "1903185",
         "doi": "10.1002/advs.201903185",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "High",
       "clearing_speed": "Fast (Hours to Days)",
@@ -24306,10 +24932,10 @@
         "journal": "Eur. J. Neurosci.",
         "year": "2018",
         "volume": "47",
-        "issue": "",
+        "issue": "9",
         "pages": "1033–1042",
         "doi": "10.1111/ejn.13901",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "High",
       "clearing_speed": "Fast (Hours to Days)",
@@ -24435,10 +25061,10 @@
         "journal": "Nat. Commun.",
         "year": "2018",
         "volume": "9",
-        "issue": "",
+        "issue": "1",
         "pages": "1066",
         "doi": "10.1038/s41467-018-03359-w",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "High",
       "clearing_speed": "Fast (Hours to Days)",
@@ -25053,10 +25679,10 @@
         "journal": "Science",
         "year": "2015",
         "volume": "347",
-        "issue": "",
+        "issue": "6221",
         "pages": "543–548",
         "doi": "10.1126/science.1260088",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Unknown",
@@ -25280,10 +25906,10 @@
         "journal": "Scientific Reports",
         "year": "2017",
         "volume": "7",
-        "issue": "",
+        "issue": "1",
         "pages": "9895",
         "doi": "10.1038/s41598-017-10204-5",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Unknown",
@@ -25659,10 +26285,10 @@
         "journal": "Scientific Reports",
         "year": "2017",
         "volume": "7",
-        "issue": "",
+        "issue": "1",
         "pages": "12218",
         "doi": "10.1038/s41598-017-12484-3",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Unknown",
@@ -25991,10 +26617,10 @@
         "journal": "Scientific Reports",
         "year": "2019",
         "volume": "9",
-        "issue": "",
+        "issue": "1",
         "pages": "10571",
         "doi": "10.1038/s41598-019-46814-4",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Fast (Hours to Days)",
@@ -26076,10 +26702,10 @@
         "journal": "Proc Natl Acad Sci U S A",
         "year": "2015",
         "volume": "112",
-        "issue": "",
+        "issue": "46",
         "pages": "E6274–6283",
         "doi": "10.1073/pnas.1510133112",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Fast (Hours to Days)",
@@ -26318,10 +26944,10 @@
         "journal": "Nature Protocols",
         "year": "2014",
         "volume": "9",
-        "issue": "",
+        "issue": "7",
         "pages": "1682–1697",
         "doi": "10.1038/nprot.2014.123",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Slow (Weeks)",
@@ -26756,10 +27382,10 @@
         "journal": "Cell",
         "year": "2014",
         "volume": "158",
-        "issue": "",
+        "issue": "4",
         "pages": "945–958",
         "doi": "10.1016/j.cell.2014.07.017",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "High",
       "clearing_speed": "Fast (Hours to Days)",
@@ -27350,10 +27976,10 @@
         "journal": "Science Translational Medicine",
         "year": "2017",
         "volume": "9",
-        "issue": "",
+        "issue": "387",
         "pages": "eaah6518",
         "doi": "10.1126/scitranslmed.aah6518",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Fast (Hours to Days)",
@@ -27688,10 +28314,10 @@
         "journal": "Nat Commun",
         "year": "2019",
         "volume": "10",
-        "issue": "",
+        "issue": "1",
         "pages": "2312",
         "doi": "10.1038/s41467-019-10338-2",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "High",
       "clearing_speed": "Fast (Hours to Days)",
@@ -28360,10 +28986,10 @@
         "journal": "Cancer Cell",
         "year": "2019",
         "volume": "35",
-        "issue": "",
+        "issue": "4",
         "pages": "618-632.e6",
         "doi": "10.1016/j.ccell.2019.02.010",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Fast (Hours to Days)",
@@ -28789,10 +29415,10 @@
         "journal": "Nat Metab",
         "year": "2019",
         "volume": "1",
-        "issue": "",
+        "issue": "2",
         "pages": "236-250",
         "doi": "10.1038/s42255-018-0016-5",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Moderate (1-2 Weeks)",
@@ -29361,10 +29987,10 @@
         "journal": "J Comp Neurol",
         "year": "2001",
         "volume": "440",
-        "issue": "",
+        "issue": "1",
         "pages": "1-11",
         "doi": "10.1002/cne.1365",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Fast (Hours to Days)",
@@ -30265,317 +30891,6 @@
       }
     },
     {
-      "method_name": "3DISCO",
-      "year_invented": "2012",
-      "chemical_class": "Hydrophobic",
-      "refractive_index": "~ 1.55",
-      "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
-      "tissue_compatibilities": [
-        "Mouse | brain",
-        "Mouse | spinal cord",
-        "Mouse | lung",
-        "Mouse | spleen",
-        "Mouse | lymph node",
-        "Mouse | liver",
-        "Mouse | uterus",
-        "Mouse | embryo",
-        "Mouse | bone marrow",
-        "Human | embryo",
-        "Mouse | skeletal muscle",
-        "Human | cerebral organoid",
-        "Mouse | skin",
-        "Mouse | squamous cell carcinoma",
-        "Human | skin",
-        "Human | cerebral cortex",
-        "Mouse | intestine"
-      ],
-      "primary_citation": "Ertürk et al (2012a)",
-      "original_reference": {
-        "citation": "Ertürk A, Becker K, Jährling N, Mauch CP, Hojer CD, Egen JG, Hellal F, Bradke F, Sheng M, Dodt H-U (2012a) Three-dimensional imaging of solvent-cleared organs using 3DISCO. Nat Protoc 7: 1983–1995",
-        "title": "Three-dimensional imaging of solvent-cleared organs using 3DISCO",
-        "authors": [
-          "A. Ertürk",
-          "K. Becker",
-          "N. Jährling",
-          "C. P. Mauch",
-          "C. D. Hojer",
-          "J. G. Egen",
-          "F. Hellal",
-          "F. Bradke",
-          "M. Sheng",
-          "H.-U. Dodt"
-        ],
-        "journal": "Nat Protoc",
-        "year": "2012",
-        "volume": "7",
-        "issue": "Unknown",
-        "pages": "1983–1995",
-        "doi": "10.1038/nprot.2012.119",
-        "doi_status": "extracted"
-      },
-      "fluorescent_protein_compatibility": "Low (Quenched)",
-      "clearing_speed": "Fast (Hours to Days)",
-      "morphology_impact": "Shrinkage",
-      "equipment_complexity": "Low (Standard Bench)",
-      "toxicity_hazard": "Moderate (Requires Monomer Mixes)",
-      "real_world_application_papers": [
-        {
-          "title": "Microglia innately develop within cerebral organoids",
-          "doi": "10.1038/s41467-018-06684-2",
-          "journal": "Nat Commun",
-          "year": "2018",
-          "first_author": "Paul R Ormel",
-          "pmid": "30301888",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Used 3DISCO clearing and 3D imaging to demonstrate the innate development, ramified morphology, and synaptic phagocytosis of microglia inside cerebral organoids.",
-          "cleared_tissues": [
-            "Human | cerebral organoid"
-          ],
-          "tissue_compatibilities": [
-            "Human | cerebral organoid"
-          ]
-        },
-        {
-          "title": "Epidermal Merkel cells are mechanosensory cells that tune mammalian touch receptors",
-          "doi": "10.1038/nature13250",
-          "journal": "Nature",
-          "year": "2014",
-          "first_author": "Srdjan Maksimovic",
-          "pmid": "24717432",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Utilized 3DISCO clearing to image intact touch domes and elucidate how epidermal Merkel cells transduce dynamic versus static tactile signals.",
-          "cleared_tissues": [
-            "Mouse | skin"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | skin"
-          ]
-        },
-        {
-          "title": "TGF-β Promotes Heterogeneity and Drug Resistance in Squamous Cell Carcinoma",
-          "doi": "10.1016/j.cell.2015.01.043",
-          "journal": "Cell",
-          "year": "2015",
-          "first_author": "Naoki Oshimori",
-          "pmid": "25723170",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Applied 3DISCO clearing to visualize tumor-vasculature niches and map TGF-beta-responding cancer stem cells driving chemoresistance in intact tumors.",
-          "cleared_tissues": [
-            "Mouse | squamous cell carcinoma"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | squamous cell carcinoma"
-          ]
-        },
-        {
-          "title": "Sustained antigen availability during germinal center initiation enhances antibody responses to vaccination",
-          "doi": "10.1073/pnas.1606050113",
-          "journal": "Proc Natl Acad Sci U S A",
-          "year": "2016",
-          "first_author": "Hok Hei Tam",
-          "pmid": "27702895",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Used 3DISCO clearing and 3D imaging of lymph nodes to evaluate antigen retention kinetics and germinal center B-cell expansion during sustained-dose vaccination.",
-          "cleared_tissues": [
-            "Mouse | lymph node"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | lymph node"
-          ]
-        },
-        {
-          "title": "Immune homeostasis enforced by co-localized effector and regulatory T cells",
-          "doi": "10.1038/nature16169",
-          "journal": "Nature",
-          "year": "2015",
-          "first_author": "Zhiduo Liu",
-          "pmid": "26605524",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Employed whole-organ clearing and volumetric multiplex imaging to identify clusters where regulatory T cells co-localize with self-reactive effector T cells.",
-          "cleared_tissues": [
-            "Mouse | lymph node"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | lymph node"
-          ]
-        },
-        {
-          "title": "Microbiota modulate sympathetic neurons via a gut-brain circuit.",
-          "doi": "10.1038/s41586-020-2474-7",
-          "journal": "Nature",
-          "year": "2020",
-          "first_author": "Muller PA",
-          "pmid": "32641826",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Demonstrates that the gut microbiota modulates gut-extrinsic sympathetic neurons and gastrointestinal transit via a retrograde gut-brain neuronal circuit in mice.",
-          "cleared_tissues": [
-            "Mouse | intestine",
-            "Mouse | brain"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | intestine",
-            "Mouse | brain"
-          ]
-        }
-      ],
-      "validation_candidates": [
-        {
-          "title": "Recent progress in tissue optical clearing",
-          "doi": "10.1002/lpor.201200056",
-          "journal": "Laser Photon Rev",
-          "year": "2013",
-          "first_author": "Dan Zhu",
-          "pmid": "24348874",
-          "status": "uncertain",
-          "category": "review",
-          "confidence": "high",
-          "evidence": "A review examining optical clearing mechanisms, penetration enhancement techniques, and 3D imaging applications.",
-          "cleared_tissues": [],
-          "tissue_compatibilities": []
-        },
-        {
-          "title": "The Biology of Regeneration Failure and Success After Spinal Cord Injury",
-          "doi": "10.1152/physrev.00017.2017",
-          "journal": "Physiol Rev",
-          "year": "2018",
-          "first_author": "Amanda Phuong Tran",
-          "pmid": "29513146",
-          "status": "uncertain",
-          "category": "review",
-          "confidence": "high",
-          "evidence": "A review article covering the cellular and molecular mechanisms of glial scarring and axonal regeneration failure after spinal cord injury.",
-          "cleared_tissues": [],
-          "tissue_compatibilities": []
-        },
-        {
-          "title": "Microglia innately develop within cerebral organoids",
-          "doi": "10.1038/s41467-018-06684-2",
-          "journal": "Nat Commun",
-          "year": "2018",
-          "first_author": "Paul R Ormel",
-          "pmid": "30301888",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Used 3DISCO clearing and 3D imaging to demonstrate the innate development, ramified morphology, and synaptic phagocytosis of microglia inside cerebral organoids.",
-          "cleared_tissues": [
-            "Human | cerebral organoid"
-          ],
-          "tissue_compatibilities": [
-            "Human | cerebral organoid"
-          ]
-        },
-        {
-          "title": "Epidermal Merkel cells are mechanosensory cells that tune mammalian touch receptors",
-          "doi": "10.1038/nature13250",
-          "journal": "Nature",
-          "year": "2014",
-          "first_author": "Srdjan Maksimovic",
-          "pmid": "24717432",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Utilized 3DISCO clearing to image intact touch domes and elucidate how epidermal Merkel cells transduce dynamic versus static tactile signals.",
-          "cleared_tissues": [
-            "Mouse | skin"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | skin"
-          ]
-        },
-        {
-          "title": "TGF-β Promotes Heterogeneity and Drug Resistance in Squamous Cell Carcinoma",
-          "doi": "10.1016/j.cell.2015.01.043",
-          "journal": "Cell",
-          "year": "2015",
-          "first_author": "Naoki Oshimori",
-          "pmid": "25723170",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Applied 3DISCO clearing to visualize tumor-vasculature niches and map TGF-beta-responding cancer stem cells driving chemoresistance in intact tumors.",
-          "cleared_tissues": [
-            "Mouse | squamous cell carcinoma"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | squamous cell carcinoma"
-          ]
-        },
-        {
-          "title": "Sustained antigen availability during germinal center initiation enhances antibody responses to vaccination",
-          "doi": "10.1073/pnas.1606050113",
-          "journal": "Proc Natl Acad Sci U S A",
-          "year": "2016",
-          "first_author": "Hok Hei Tam",
-          "pmid": "27702895",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Used 3DISCO clearing and 3D imaging of lymph nodes to evaluate antigen retention kinetics and germinal center B-cell expansion during sustained-dose vaccination.",
-          "cleared_tissues": [
-            "Mouse | lymph node"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | lymph node"
-          ]
-        },
-        {
-          "title": "Immune homeostasis enforced by co-localized effector and regulatory T cells",
-          "doi": "10.1038/nature16169",
-          "journal": "Nature",
-          "year": "2015",
-          "first_author": "Zhiduo Liu",
-          "pmid": "26605524",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Employed whole-organ clearing and volumetric multiplex imaging to identify clusters where regulatory T cells co-localize with self-reactive effector T cells.",
-          "cleared_tissues": [
-            "Mouse | lymph node"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | lymph node"
-          ]
-        },
-        {
-          "title": "Microbiota modulate sympathetic neurons via a gut-brain circuit.",
-          "doi": "10.1038/s41586-020-2474-7",
-          "journal": "Nature",
-          "year": "2020",
-          "first_author": "Muller PA",
-          "pmid": "32641826",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Demonstrates that the gut microbiota modulates gut-extrinsic sympathetic neurons and gastrointestinal transit via a retrograde gut-brain neuronal circuit in mice.",
-          "cleared_tissues": [
-            "Mouse | intestine",
-            "Mouse | brain"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | intestine",
-            "Mouse | brain"
-          ]
-        }
-      ],
-      "source_manifest": {
-        "type": "Review PDF Extract",
-        "file": "msb.20209807.pdf"
-      }
-    },
-    {
       "method_name": "ClearT",
       "year_invented": "2015",
       "chemical_class": "Hydrophilic",
@@ -30598,10 +30913,10 @@
         "journal": "Biotech Histochem",
         "year": "2015",
         "volume": "90",
-        "issue": "Unknown",
+        "issue": "6",
         "pages": "424–431",
         "doi": "10.3109/10520295.2015.1019564",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Unknown",
@@ -30842,10 +31157,10 @@
         "journal": "Nat Biomed Eng",
         "year": "2017",
         "volume": "1",
-        "issue": "Unknown",
+        "issue": "10",
         "pages": "796–806",
         "doi": "10.1038/s41551-017-0139-0",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Unknown",
@@ -31304,10 +31619,10 @@
         "journal": "Appl. Plant Sci.",
         "year": "2013",
         "volume": "1",
-        "issue": "Unknown",
+        "issue": "5",
         "pages": "1300016",
         "doi": "10.3732/apps.1300016",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Unknown",
@@ -31538,10 +31853,10 @@
         "journal": "Plant Physiol.",
         "year": "2014",
         "volume": "166",
-        "issue": "Unknown",
+        "issue": "4",
         "pages": "1684–1687",
         "doi": "10.1104/pp.114.244673",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Unknown",
@@ -31947,10 +32262,10 @@
         "journal": "Plant Cell Physiol.",
         "year": "2016",
         "volume": "57",
-        "issue": "Unknown",
+        "issue": "3",
         "pages": "462–472",
         "doi": "10.1093/pcp/pcw027",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Unknown",
@@ -32405,10 +32720,10 @@
         "journal": "PLoS ONE",
         "year": "2016",
         "volume": "11",
-        "issue": "Unknown",
+        "issue": "8",
         "pages": "e0161107",
         "doi": "10.1371/journal.pone.0161107",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Fast (Hours to Days)",
@@ -32971,10 +33286,10 @@
         "journal": "Commun. Biol.",
         "year": "2022",
         "volume": "5",
-        "issue": "Unknown",
+        "issue": "1",
         "pages": "12",
         "doi": "10.1038/s42003-021-02955-9",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Unknown",
@@ -33573,129 +33888,6 @@
       }
     },
     {
-      "method_name": "ECi",
-      "year_invented": "2019",
-      "chemical_class": "Organic solvent-based",
-      "refractive_index": "1.56",
-      "sample_size_compatibility": "Unknown",
-      "tissue_compatibilities": [],
-      "primary_citation": "J. Huang, C. Brenna, A. U. M. Khan, C. Daniele, R. Rudolf, V. Heuveline, N. Gretz, Sci. Rep. 2019, 9, 521.",
-      "original_reference": {
-        "citation": "J. Huang, C. Brenna, A. U. M. Khan, C. Daniele, R. Rudolf, V. Heuveline, N. Gretz, Sci. Rep. 2019, 9, 521.",
-        "title": "Unknown",
-        "authors": [
-          "J. Huang",
-          "C. Brenna",
-          "A. U. M. Khan",
-          "C. Daniele",
-          "R. Rudolf",
-          "V. Heuveline",
-          "N. Gretz"
-        ],
-        "journal": "Sci. Rep.",
-        "year": "2019",
-        "volume": "9",
-        "issue": "",
-        "pages": "521",
-        "doi": "10.1038/s41598-018-36741-1",
-        "doi_status": "extracted"
-      },
-      "fluorescent_protein_compatibility": "Unknown",
-      "clearing_speed": "Unknown",
-      "morphology_impact": "Unknown",
-      "equipment_complexity": "Unknown",
-      "toxicity_hazard": "High (Harsh Solvents)",
-      "real_world_application_papers": [],
-      "validation_candidates": [],
-      "source_manifest": {
-        "type": "Review PDF Extract",
-        "file": "Tissue_clearing_and_its_applications_in_human_tiss.pdf"
-      }
-    },
-    {
-      "method_name": "sDISCO",
-      "year_invented": "2021",
-      "chemical_class": "Organic solvent-based",
-      "refractive_index": "1.56",
-      "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
-      "tissue_compatibilities": [
-        "Mouse | whole organ"
-      ],
-      "primary_citation": "P. Matryba, K. Lukasiewicz, M. Pawlowska, J. Tomczuk, J. Golab, Int. J. Mol. Sci. 2021, 22, 6730.",
-      "original_reference": {
-        "citation": "P. Matryba, K. Lukasiewicz, M. Pawlowska, J. Tomczuk, J. Golab, Int. J. Mol. Sci. 2021, 22, 6730.",
-        "title": "Unknown",
-        "authors": [
-          "P. Matryba",
-          "K. Lukasiewicz",
-          "M. Pawlowska",
-          "J. Tomczuk",
-          "J. Golab"
-        ],
-        "journal": "Int. J. Mol. Sci.",
-        "year": "2021",
-        "volume": "22",
-        "issue": "",
-        "pages": "6730",
-        "doi": "10.3390/ijms22136730",
-        "doi_status": "extracted"
-      },
-      "fluorescent_protein_compatibility": "Unknown",
-      "clearing_speed": "Unknown",
-      "morphology_impact": "Shrinkage",
-      "equipment_complexity": "Low (Standard Bench)",
-      "toxicity_hazard": "High (Harsh Solvents)",
-      "real_world_application_papers": [],
-      "validation_candidates": [],
-      "source_manifest": {
-        "type": "Review PDF Extract",
-        "file": "Tissue_clearing_and_its_applications_in_human_tiss.pdf"
-      }
-    },
-    {
-      "method_name": "BABB",
-      "year_invented": "Unknown",
-      "chemical_class": "Organic solvent-based",
-      "refractive_index": "1.55–1.56",
-      "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
-      "tissue_compatibilities": [
-        "Human | skin",
-        "Mouse | whole embryo",
-        "Mouse | brain sections",
-        "Mouse | brain",
-        "Plant | specimen",
-        "Mouse | whole organ",
-        "Plant | tissue",
-        "Mouse | whole body",
-        "Mouse | bone",
-        "Human | tissue"
-      ],
-      "primary_citation": "Unknown",
-      "original_reference": {
-        "citation": "Unknown",
-        "title": "Unknown",
-        "authors": [],
-        "journal": "Unknown",
-        "year": "Unknown",
-        "volume": "Unknown",
-        "issue": "Unknown",
-        "pages": "Unknown",
-        "doi": "10.3998/mpub.11373292.cmp.2602",
-        "doi_status": "extracted"
-      },
-      "fluorescent_protein_compatibility": "Unknown",
-      "clearing_speed": "Unknown",
-      "morphology_impact": "Expansion",
-      "equipment_complexity": "Unknown",
-      "toxicity_hazard": "Unknown",
-      "real_world_application_papers": [],
-      "validation_candidates": [],
-      "source_manifest": {
-        "type": "Review PDF Extract",
-        "file": "Tissue_clearing_and_its_applications_in_human_tiss.pdf"
-      }
-    },
-    {
       "method_name": "FLASH",
       "year_invented": "2021",
       "chemical_class": "Aqueous-based (simple immersion)",
@@ -33705,7 +33897,7 @@
       "primary_citation": "H. A. Messal, J. Almagro, M. Zaw Thin, A. Tedeschi, A. Ciccarelli, L. Blackie, K. I. Anderson, I. Miguel-Aliaga, J. van Rheenen, A. Behrens, Nat. Protoc. 2021, 16, 239.",
       "original_reference": {
         "citation": "H. A. Messal, J. Almagro, M. Zaw Thin, A. Tedeschi, A. Ciccarelli, L. Blackie, K. I. Anderson, I. Miguel-Aliaga, J. van Rheenen, A. Behrens, Nat. Protoc. 2021, 16, 239.",
-        "title": "Unknown",
+        "title": "Antigen retrieval and clearing for whole-organ immunofluorescence by FLASH.",
         "authors": [
           "H. A. Messal",
           "J. Almagro",
@@ -33721,10 +33913,10 @@
         "journal": "Nat. Protoc.",
         "year": "2021",
         "volume": "16",
-        "issue": "",
+        "issue": "1",
         "pages": "239",
         "doi": "10.1038/s41596-020-00414-z",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Fast (Hours to Days)",
@@ -33733,603 +33925,6 @@
       "toxicity_hazard": "Unknown",
       "real_world_application_papers": [],
       "validation_candidates": [],
-      "source_manifest": {
-        "type": "Review PDF Extract",
-        "file": "Tissue_clearing_and_its_applications_in_human_tiss.pdf"
-      }
-    },
-    {
-      "method_name": "Ce3D",
-      "year_invented": "2019",
-      "chemical_class": "Hydrogel embedding",
-      "refractive_index": "NA",
-      "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
-      "tissue_compatibilities": [
-        "Mouse | whole organ",
-        "Mouse | muscle",
-        "Mouse | tumor-draining lymphatics",
-        "Mouse | tumor stroma",
-        "Mouse | mesenteric lymph node",
-        "Mouse | small intestine",
-        "Mouse | skin",
-        "Mouse | lymph node",
-        "Mouse | skin wound",
-        "Mouse | tumor",
-        "Mouse | embryo",
-        "Mouse | colorectal tumor",
-        "Mouse | pancreatic tumor",
-        "Ambystoma mexicanum | limb",
-        "Mouse | popliteal lymph node",
-        "Mouse | synovium",
-        "Mouse | nasal-associated lymphoid tissue",
-        "Mouse | turbinates"
-      ],
-      "primary_citation": "W. Li, R. N. Germain, M. Y. Gerner, Nat. Protoc. 2019, 14, 1708.",
-      "original_reference": {
-        "citation": "W. Li, R. N. Germain, M. Y. Gerner, Nat. Protoc. 2019, 14, 1708.",
-        "title": "Unknown",
-        "authors": [
-          "W. Li",
-          "R. N. Germain",
-          "M. Y. Gerner"
-        ],
-        "journal": "Nat. Protoc.",
-        "year": "2019",
-        "volume": "14",
-        "issue": "",
-        "pages": "1708",
-        "doi": "10.1038/s41596-019-0156-4",
-        "doi_status": "extracted"
-      },
-      "fluorescent_protein_compatibility": "Unknown",
-      "clearing_speed": "Fast (Hours to Days)",
-      "morphology_impact": "Unknown",
-      "equipment_complexity": "Low (Standard Bench)",
-      "toxicity_hazard": "Moderate (Requires Monomer Mixes)",
-      "real_world_application_papers": [
-        {
-          "title": "IL-33-induced metabolic reprogramming controls the differentiation of alternatively activated macrophages and the resolution of inflammation.",
-          "doi": "10.1016/j.immuni.2021.09.010",
-          "journal": "Immunity",
-          "year": "2021",
-          "first_author": "Faas M",
-          "pmid": "34644537",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Demonstrates that IL-33 triggers mitochondrial rewiring and GATA3-mediated macrophage polarization to drive resolution of inflammation and muscle repair after injury.",
-          "cleared_tissues": [
-            "Mouse | muscle"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | muscle"
-          ]
-        },
-        {
-          "title": "Lymphatic-preserving treatment sequencing with immune checkpoint inhibition unleashes cDC1-dependent antitumor immunity in HNSCC.",
-          "doi": "10.1038/s41467-022-31941-w",
-          "journal": "Nat Commun",
-          "year": "2022",
-          "first_author": "Saddawi-Konefka R",
-          "pmid": "35879302",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Shows that regional lymphablation abrogates immune checkpoint inhibition responses by depleting conventional type I dendritic cells in tumor-draining lymphatics.",
-          "cleared_tissues": [
-            "Mouse | tumor-draining lymphatics"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | tumor-draining lymphatics"
-          ]
-        },
-        {
-          "title": "Lymphatic-localized Treg-mregDC crosstalk limits antigen trafficking and restrains anti-tumor immunity.",
-          "doi": "10.1016/j.ccell.2024.06.014",
-          "journal": "Cancer Cell",
-          "year": "2024",
-          "first_author": "You S",
-          "pmid": "39029466",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Identifies a peri-lymphatic Treg-mregDC niche in tumor stroma that promotes Treg activation, restrains antigen trafficking to lymph nodes, and suppresses anti-tumor immunity.",
-          "cleared_tissues": [
-            "Mouse | tumor stroma",
-            "Mouse | mesenteric lymph node"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | tumor stroma",
-            "Mouse | mesenteric lymph node"
-          ]
-        },
-        {
-          "title": "Endothelial sensing of AHR ligands regulates intestinal homeostasis.",
-          "doi": "10.1038/s41586-023-06508-4",
-          "journal": "Nature",
-          "year": "2023",
-          "first_author": "Wiggins BG",
-          "pmid": "37586410",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Demonstrates that endothelial AHR signaling senses dietary metabolites to maintain intestinal vascular normalcy and protect against enteric infection.",
-          "cleared_tissues": [
-            "Mouse | small intestine"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | small intestine"
-          ]
-        },
-        {
-          "title": "Matrix-producing neutrophils populate and shield the skin.",
-          "doi": "10.1038/s41586-025-08741-5",
-          "journal": "Nature",
-          "year": "2025",
-          "first_author": "Vicanolo T",
-          "pmid": "40108463",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Discovers a population of matrix-producing skin neutrophils that build extracellular matrix rings around wounds via TGF-beta signaling to shield against bacterial invasion.",
-          "cleared_tissues": [
-            "Mouse | skin"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | skin"
-          ]
-        },
-        {
-          "title": "Multitier mechanics control stromal adaptations in the swelling lymph node.",
-          "doi": "10.1038/s41590-022-01257-4",
-          "journal": "Nat Immunol",
-          "year": "2022",
-          "first_author": "Assen FP",
-          "pmid": "35817845",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Characterizes the biomechanical forces and fibroblastic reticular cell adaptations driving lymph node swelling upon immunological challenge.",
-          "cleared_tissues": [
-            "Mouse | lymph node"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | lymph node"
-          ]
-        },
-        {
-          "title": "Transcriptional space-time mapping identifies concerted immune and stromal cell patterns and gene programs in wound healing and cancer.",
-          "doi": "10.1016/j.stem.2023.05.001",
-          "journal": "Cell Stem Cell",
-          "year": "2023",
-          "first_author": "Hu KH",
-          "pmid": "37267918",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Maps spatiotemporal transcriptional patterns during skin wound closure and demonstrates conserved multicellular gene movements in mouse and human tumors.",
-          "cleared_tissues": [
-            "Mouse | skin wound",
-            "Mouse | tumor"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | skin wound",
-            "Mouse | tumor"
-          ]
-        },
-        {
-          "title": "Rapid and efficient degradation of endogenous proteins in vivo identifies stage-specific roles of RNA Pol II pausing in mammalian development.",
-          "doi": "10.1016/j.devcel.2022.03.013",
-          "journal": "Dev Cell",
-          "year": "2022",
-          "first_author": "Abuhashem A",
-          "pmid": "35421370",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Demonstrates that acute depletion of NELFB using dTAG degrons impairs the zygote-to-2-cell transition and zygotic genome activation in mouse embryos.",
-          "cleared_tissues": [
-            "Mouse | embryo"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | embryo"
-          ]
-        },
-        {
-          "title": "Multi-Parameter Quantitative Imaging of Tumor Microenvironments Reveals Perivascular Immune Niches Associated With Anti-Tumor Immunity.",
-          "doi": "10.3389/fimmu.2021.726492",
-          "journal": "Front Immunol",
-          "year": "2021",
-          "first_author": "Stoltzfus CR",
-          "pmid": "34421928",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Reveals perivascular myeloid-T cell immune niches in murine tumor microenvironments that expand following immunotherapy and correlate with therapeutic response.",
-          "cleared_tissues": [
-            "Mouse | colorectal tumor",
-            "Mouse | pancreatic tumor"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | colorectal tumor",
-            "Mouse | pancreatic tumor"
-          ]
-        },
-        {
-          "title": "Canonical Wnt signaling and the regulation of divergent mesenchymal Fgf8 expression in axolotl limb development and regeneration.",
-          "doi": "10.7554/elife.79762",
-          "journal": "Elife",
-          "year": "2022",
-          "first_author": "Glotzer GL",
-          "pmid": "35587651",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Demonstrates that canonical Wnt signaling acts on limb mesenchyme to drive Amex.Fgf8 expression during axolotl limb development and regeneration.",
-          "cleared_tissues": [
-            "Ambystoma mexicanum | limb"
-          ],
-          "tissue_compatibilities": [
-            "Ambystoma mexicanum | limb"
-          ]
-        },
-        {
-          "title": "Quantification of the Whole Lymph Node Vasculature Based on Tomography of the Vessel Corrosion Casts.",
-          "doi": "10.1038/s41598-019-49055-7",
-          "journal": "Sci Rep",
-          "year": "2019",
-          "first_author": "Jafarnejad M",
-          "pmid": "31527597",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Quantifies the 3D spatial distribution of blood vessels in murine popliteal lymph nodes and models transmural fluid movement across capillary walls.",
-          "cleared_tissues": [
-            "Mouse | popliteal lymph node"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | popliteal lymph node"
-          ]
-        },
-        {
-          "title": "Macrophages and nociceptor neurons form a sentinel unit around fenestrated capillaries to defend the synovium from circulating immune challenge.",
-          "doi": "10.1038/s41590-024-02011-8",
-          "journal": "Nat Immunol",
-          "year": "2024",
-          "first_author": "Hasegawa T",
-          "pmid": "39587345",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Identifies a synovial blood-joint barrier formed by macrophage-nociceptor units around PV1+ fenestrated capillaries that defends against circulating immune complexes.",
-          "cleared_tissues": [
-            "Mouse | synovium"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | synovium"
-          ]
-        },
-        {
-          "title": "Turbinate-homing IgA-secreting cells originate in the nasal lymphoid tissues.",
-          "doi": "10.1038/s41586-024-07729-x",
-          "journal": "Nature",
-          "year": "2024",
-          "first_author": "Liu J",
-          "pmid": "39085603",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Demonstrates that nasal vaccination induces B cell expansion in the subepithelial dome of NALTs and that IgA-secreting plasma cells home to turbinate glandular acinar structures via the circulation.",
-          "cleared_tissues": [
-            "Mouse | nasal-associated lymphoid tissue",
-            "Mouse | turbinates"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | nasal-associated lymphoid tissue",
-            "Mouse | turbinates"
-          ]
-        }
-      ],
-      "validation_candidates": [
-        {
-          "title": "An analysis modality for vascular structures combining tissue-clearing technology and topological data analysis.",
-          "doi": "10.1038/s41467-022-32848-2",
-          "journal": "Nat Commun",
-          "year": "2022",
-          "first_author": "Takahashi K",
-          "pmid": "36097010",
-          "status": "uncertain",
-          "category": "experimental_test",
-          "confidence": "high",
-          "evidence": "Develops and evaluates an analytical pipeline combining CUBIC tissue clearing with topological data analysis for 3D vascular network quantification.",
-          "cleared_tissues": [],
-          "tissue_compatibilities": []
-        },
-        {
-          "title": "Antigen retrieval and clearing for whole-organ immunofluorescence by FLASH.",
-          "doi": "10.1038/s41596-020-00414-z",
-          "journal": "Nat Protoc",
-          "year": "2020",
-          "first_author": "Messal HA",
-          "pmid": "33247285",
-          "status": "uncertain",
-          "category": "experimental_test",
-          "confidence": "high",
-          "evidence": "Describes and validates FLASH, a method for rapid antigen retrieval, tissue clearing, and volumetric immunofluorescence.",
-          "cleared_tissues": [],
-          "tissue_compatibilities": []
-        },
-        {
-          "title": "CytoMAP: A Spatial Analysis Toolbox Reveals Features of Myeloid Cell Organization in Lymphoid Tissues.",
-          "doi": "10.1016/j.celrep.2020.107523",
-          "journal": "Cell Rep",
-          "year": "2020",
-          "first_author": "Stoltzfus CR",
-          "pmid": "32320656",
-          "status": "uncertain",
-          "category": "experimental_test",
-          "confidence": "high",
-          "evidence": "Develops CytoMAP, a spatial analytics software toolbox for multidimensional imaging data, and validates its performance in mapping lymph node microanatomy.",
-          "cleared_tissues": [],
-          "tissue_compatibilities": []
-        },
-        {
-          "title": "IL-33-induced metabolic reprogramming controls the differentiation of alternatively activated macrophages and the resolution of inflammation.",
-          "doi": "10.1016/j.immuni.2021.09.010",
-          "journal": "Immunity",
-          "year": "2021",
-          "first_author": "Faas M",
-          "pmid": "34644537",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Demonstrates that IL-33 triggers mitochondrial rewiring and GATA3-mediated macrophage polarization to drive resolution of inflammation and muscle repair after injury.",
-          "cleared_tissues": [
-            "Mouse | muscle"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | muscle"
-          ]
-        },
-        {
-          "title": "Lymphatic-preserving treatment sequencing with immune checkpoint inhibition unleashes cDC1-dependent antitumor immunity in HNSCC.",
-          "doi": "10.1038/s41467-022-31941-w",
-          "journal": "Nat Commun",
-          "year": "2022",
-          "first_author": "Saddawi-Konefka R",
-          "pmid": "35879302",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Shows that regional lymphablation abrogates immune checkpoint inhibition responses by depleting conventional type I dendritic cells in tumor-draining lymphatics.",
-          "cleared_tissues": [
-            "Mouse | tumor-draining lymphatics"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | tumor-draining lymphatics"
-          ]
-        },
-        {
-          "title": "Lymphatic-localized Treg-mregDC crosstalk limits antigen trafficking and restrains anti-tumor immunity.",
-          "doi": "10.1016/j.ccell.2024.06.014",
-          "journal": "Cancer Cell",
-          "year": "2024",
-          "first_author": "You S",
-          "pmid": "39029466",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Identifies a peri-lymphatic Treg-mregDC niche in tumor stroma that promotes Treg activation, restrains antigen trafficking to lymph nodes, and suppresses anti-tumor immunity.",
-          "cleared_tissues": [
-            "Mouse | tumor stroma",
-            "Mouse | mesenteric lymph node"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | tumor stroma",
-            "Mouse | mesenteric lymph node"
-          ]
-        },
-        {
-          "title": "Endothelial sensing of AHR ligands regulates intestinal homeostasis.",
-          "doi": "10.1038/s41586-023-06508-4",
-          "journal": "Nature",
-          "year": "2023",
-          "first_author": "Wiggins BG",
-          "pmid": "37586410",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Demonstrates that endothelial AHR signaling senses dietary metabolites to maintain intestinal vascular normalcy and protect against enteric infection.",
-          "cleared_tissues": [
-            "Mouse | small intestine"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | small intestine"
-          ]
-        },
-        {
-          "title": "Matrix-producing neutrophils populate and shield the skin.",
-          "doi": "10.1038/s41586-025-08741-5",
-          "journal": "Nature",
-          "year": "2025",
-          "first_author": "Vicanolo T",
-          "pmid": "40108463",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Discovers a population of matrix-producing skin neutrophils that build extracellular matrix rings around wounds via TGF-beta signaling to shield against bacterial invasion.",
-          "cleared_tissues": [
-            "Mouse | skin"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | skin"
-          ]
-        },
-        {
-          "title": "Multitier mechanics control stromal adaptations in the swelling lymph node.",
-          "doi": "10.1038/s41590-022-01257-4",
-          "journal": "Nat Immunol",
-          "year": "2022",
-          "first_author": "Assen FP",
-          "pmid": "35817845",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Characterizes the biomechanical forces and fibroblastic reticular cell adaptations driving lymph node swelling upon immunological challenge.",
-          "cleared_tissues": [
-            "Mouse | lymph node"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | lymph node"
-          ]
-        },
-        {
-          "title": "Transcriptional space-time mapping identifies concerted immune and stromal cell patterns and gene programs in wound healing and cancer.",
-          "doi": "10.1016/j.stem.2023.05.001",
-          "journal": "Cell Stem Cell",
-          "year": "2023",
-          "first_author": "Hu KH",
-          "pmid": "37267918",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Maps spatiotemporal transcriptional patterns during skin wound closure and demonstrates conserved multicellular gene movements in mouse and human tumors.",
-          "cleared_tissues": [
-            "Mouse | skin wound",
-            "Mouse | tumor"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | skin wound",
-            "Mouse | tumor"
-          ]
-        },
-        {
-          "title": "Rapid and efficient degradation of endogenous proteins in vivo identifies stage-specific roles of RNA Pol II pausing in mammalian development.",
-          "doi": "10.1016/j.devcel.2022.03.013",
-          "journal": "Dev Cell",
-          "year": "2022",
-          "first_author": "Abuhashem A",
-          "pmid": "35421370",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Demonstrates that acute depletion of NELFB using dTAG degrons impairs the zygote-to-2-cell transition and zygotic genome activation in mouse embryos.",
-          "cleared_tissues": [
-            "Mouse | embryo"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | embryo"
-          ]
-        },
-        {
-          "title": "Multi-Parameter Quantitative Imaging of Tumor Microenvironments Reveals Perivascular Immune Niches Associated With Anti-Tumor Immunity.",
-          "doi": "10.3389/fimmu.2021.726492",
-          "journal": "Front Immunol",
-          "year": "2021",
-          "first_author": "Stoltzfus CR",
-          "pmid": "34421928",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Reveals perivascular myeloid-T cell immune niches in murine tumor microenvironments that expand following immunotherapy and correlate with therapeutic response.",
-          "cleared_tissues": [
-            "Mouse | colorectal tumor",
-            "Mouse | pancreatic tumor"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | colorectal tumor",
-            "Mouse | pancreatic tumor"
-          ]
-        },
-        {
-          "title": "Canonical Wnt signaling and the regulation of divergent mesenchymal Fgf8 expression in axolotl limb development and regeneration.",
-          "doi": "10.7554/elife.79762",
-          "journal": "Elife",
-          "year": "2022",
-          "first_author": "Glotzer GL",
-          "pmid": "35587651",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Demonstrates that canonical Wnt signaling acts on limb mesenchyme to drive Amex.Fgf8 expression during axolotl limb development and regeneration.",
-          "cleared_tissues": [
-            "Ambystoma mexicanum | limb"
-          ],
-          "tissue_compatibilities": [
-            "Ambystoma mexicanum | limb"
-          ]
-        },
-        {
-          "title": "A battery-free nanofluidic intracellular delivery patch for internal organs.",
-          "doi": "10.1038/s41586-025-08943-x",
-          "journal": "Nature",
-          "year": "2025",
-          "first_author": "Yin D",
-          "pmid": "40307560",
-          "status": "uncertain",
-          "category": "experimental_test",
-          "confidence": "high",
-          "evidence": "Reports the engineering and in vivo electroperforation testing of a nanofluidic patch for organ-targeted intracellular payload delivery.",
-          "cleared_tissues": [],
-          "tissue_compatibilities": []
-        },
-        {
-          "title": "Quantification of the Whole Lymph Node Vasculature Based on Tomography of the Vessel Corrosion Casts.",
-          "doi": "10.1038/s41598-019-49055-7",
-          "journal": "Sci Rep",
-          "year": "2019",
-          "first_author": "Jafarnejad M",
-          "pmid": "31527597",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Quantifies the 3D spatial distribution of blood vessels in murine popliteal lymph nodes and models transmural fluid movement across capillary walls.",
-          "cleared_tissues": [
-            "Mouse | popliteal lymph node"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | popliteal lymph node"
-          ]
-        },
-        {
-          "title": "Macrophages and nociceptor neurons form a sentinel unit around fenestrated capillaries to defend the synovium from circulating immune challenge.",
-          "doi": "10.1038/s41590-024-02011-8",
-          "journal": "Nat Immunol",
-          "year": "2024",
-          "first_author": "Hasegawa T",
-          "pmid": "39587345",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Identifies a synovial blood-joint barrier formed by macrophage-nociceptor units around PV1+ fenestrated capillaries that defends against circulating immune complexes.",
-          "cleared_tissues": [
-            "Mouse | synovium"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | synovium"
-          ]
-        },
-        {
-          "title": "Turbinate-homing IgA-secreting cells originate in the nasal lymphoid tissues.",
-          "doi": "10.1038/s41586-024-07729-x",
-          "journal": "Nature",
-          "year": "2024",
-          "first_author": "Liu J",
-          "pmid": "39085603",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Demonstrates that nasal vaccination induces B cell expansion in the subepithelial dome of NALTs and that IgA-secreting plasma cells home to turbinate glandular acinar structures via the circulation.",
-          "cleared_tissues": [
-            "Mouse | nasal-associated lymphoid tissue",
-            "Mouse | turbinates"
-          ],
-          "tissue_compatibilities": [
-            "Mouse | nasal-associated lymphoid tissue",
-            "Mouse | turbinates"
-          ]
-        }
-      ],
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "Tissue_clearing_and_its_applications_in_human_tiss.pdf"
@@ -34348,7 +33943,7 @@
       "primary_citation": "A. J. Moy, B. V. Capulong, R. B. Saager, M. P. Wiersma, P. C. Lo, A. J. Durkin, B. Choi, J. Biomed. Opt. 2015, 20, 95010.",
       "original_reference": {
         "citation": "A. J. Moy, B. V. Capulong, R. B. Saager, M. P. Wiersma, P. C. Lo, A. J. Durkin, B. Choi, J. Biomed. Opt. 2015, 20, 95010.",
-        "title": "Unknown",
+        "title": "Optical properties of mouse brain tissue after optical clearing with FocusClear™.",
         "authors": [
           "A. J. Moy",
           "B. V. Capulong",
@@ -34361,10 +33956,10 @@
         "journal": "J. Biomed. Opt.",
         "year": "2015",
         "volume": "20",
-        "issue": "",
+        "issue": "9",
         "pages": "95010",
         "doi": "10.1117/1.jbo.20.9.095010",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Unknown",
@@ -34397,7 +33992,7 @@
       "primary_citation": "P. H. Neckel, U. Mattheus, B. Hirt, L. Just, A. F. Mack, Sci. Rep. 2016, 6, 34331.",
       "original_reference": {
         "citation": "P. H. Neckel, U. Mattheus, B. Hirt, L. Just, A. F. Mack, Sci. Rep. 2016, 6, 34331.",
-        "title": "Unknown",
+        "title": "Large-scale tissue clearing (PACT): Technical evaluation and new perspectives in immunofluorescence, histology, and ultrastructure.",
         "authors": [
           "P. H. Neckel",
           "U. Mattheus",
@@ -34411,7 +34006,7 @@
         "issue": "",
         "pages": "34331",
         "doi": "10.1038/srep34331",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "High",
       "clearing_speed": "Moderate (1-2 Weeks)",
@@ -34727,7 +34322,7 @@
       "primary_citation": "T. Yu, J. Zhu, D. Li, D. Zhu, iScience 2021, 24, 102178.",
       "original_reference": {
         "citation": "T. Yu, J. Zhu, D. Li, D. Zhu, iScience 2021, 24, 102178.",
-        "title": "Unknown",
+        "title": "Physical and chemical mechanisms of tissue optical clearing.",
         "authors": [
           "T. Yu",
           "J. Zhu",
@@ -34737,10 +34332,10 @@
         "journal": "iScience",
         "year": "2021",
         "volume": "24",
-        "issue": "",
+        "issue": "3",
         "pages": "102178",
         "doi": "10.1016/j.isci.2021.102178",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Unknown",
@@ -34766,7 +34361,7 @@
       "primary_citation": "J. Choi, E. Lee, J. H. Kim, W. Sun, Exp. Neurobiol. 2019, 28, 436.",
       "original_reference": {
         "citation": "J. Choi, E. Lee, J. H. Kim, W. Sun, Exp. Neurobiol. 2019, 28, 436.",
-        "title": "Unknown",
+        "title": "FxClear, A Free-hydrogel Electrophoretic Tissue Clearing Method for Rapid De-lipidation of Tissues with High Preservation of Immunoreactivity.",
         "authors": [
           "J. Choi",
           "E. Lee",
@@ -34776,10 +34371,10 @@
         "journal": "Exp. Neurobiol.",
         "year": "2019",
         "volume": "28",
-        "issue": "",
+        "issue": "3",
         "pages": "436",
         "doi": "10.5607/en.2019.28.3.436",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Unknown",
@@ -34807,7 +34402,7 @@
       "primary_citation": "M. P. I. Williams, M. Rigon, T. Straka, S. J. Horner, M. Thiel, N. Gretz, M. Hafner, M. Reischl, R. Rudolf, Front. Cell. Neurosci. 2019, 13, 49.",
       "original_reference": {
         "citation": "M. P. I. Williams, M. Rigon, T. Straka, S. J. Horner, M. Thiel, N. Gretz, M. Hafner, M. Reischl, R. Rudolf, Front. Cell. Neurosci. 2019, 13, 49.",
-        "title": "Unknown",
+        "title": "A Novel Optical Tissue Clearing Protocol for Mouse Skeletal Muscle to Visualize Endplates in Their Tissue Context.",
         "authors": [
           "M. P. I. Williams",
           "M. Rigon",
@@ -34825,7 +34420,7 @@
         "issue": "",
         "pages": "49",
         "doi": "10.3389/fncel.2019.00049",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Unknown",
@@ -34849,7 +34444,7 @@
       "primary_citation": "S. P. Amato, F. Pan, J. Schwartz, T. M. Ragan, Front. Neuroanat. 2016, 10, 31.",
       "original_reference": {
         "citation": "S. P. Amato, F. Pan, J. Schwartz, T. M. Ragan, Front. Neuroanat. 2016, 10, 31.",
-        "title": "Unknown",
+        "title": "Whole Brain Imaging with Serial Two-Photon Tomography.",
         "authors": [
           "S. P. Amato",
           "F. Pan",
@@ -34862,7 +34457,7 @@
         "issue": "",
         "pages": "31",
         "doi": "10.3389/fnana.2016.00031",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Unknown",
@@ -34886,7 +34481,7 @@
       "primary_citation": "Z. Wang, J. Zhang, G. Fan, H. Zhao, X. Wang, J. Zhang, P. Zhang, W. Wang, Biomed. Opt. Express 2018, 9, 423.",
       "original_reference": {
         "citation": "Z. Wang, J. Zhang, G. Fan, H. Zhao, X. Wang, J. Zhang, P. Zhang, W. Wang, Biomed. Opt. Express 2018, 9, 423.",
-        "title": "Unknown",
+        "title": "Imaging transparent intact cardiac tissue with single-cell resolution.",
         "authors": [
           "Z. Wang",
           "J. Zhang",
@@ -34900,10 +34495,10 @@
         "journal": "Biomed. Opt. Express",
         "year": "2018",
         "volume": "9",
-        "issue": "",
+        "issue": "2",
         "pages": "423",
         "doi": "10.1364/boe.9.000423",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Unknown",
@@ -34997,7 +34592,7 @@
       "primary_citation": "A. K. L. Liu, H. M. Lai, R. C. Chang, S. M. Gentleman, Neuropathol. Appl. Neurobiol. 2017, 43, 346.",
       "original_reference": {
         "citation": "A. K. L. Liu, H. M. Lai, R. C. Chang, S. M. Gentleman, Neuropathol. Appl. Neurobiol. 2017, 43, 346.",
-        "title": "Unknown",
+        "title": "Free of acrylamide sodium dodecyl sulphate (SDS)-based tissue clearing (FASTClear): a novel protocol of tissue clearing for three-dimensional visualization of human brain tissues.",
         "authors": [
           "A. K. L. Liu",
           "H. M. Lai",
@@ -35007,10 +34602,10 @@
         "journal": "Neuropathol. Appl. Neurobiol.",
         "year": "2017",
         "volume": "43",
-        "issue": "",
+        "issue": "4",
         "pages": "346",
         "doi": "10.1111/nan.12361",
-        "doi_status": "extracted"
+        "doi_status": "verified"
       },
       "fluorescent_protein_compatibility": "Unknown",
       "clearing_speed": "Fast (Hours to Days)",
@@ -35211,40 +34806,6 @@
           "tissue_compatibilities": []
         }
       ],
-      "source_manifest": {
-        "type": "Review PDF Extract",
-        "file": "Tissue_clearing_and_its_applications_in_human_tiss.pdf"
-      }
-    },
-    {
-      "method_name": "BABB",
-      "year_invented": "1911",
-      "chemical_class": "Hydrophobic",
-      "refractive_index": "1.55–1.56",
-      "sample_size_compatibility": "Unknown",
-      "tissue_compatibilities": [],
-      "primary_citation": "Spalteholz, 1911",
-      "original_reference": {
-        "citation": "W. Spalteholz, Verlag von S. Hirzel, Leipzig 1911.",
-        "title": "Über das Durchsichtigmachen von menschlichen und tierischen Präparaten: Nebst Anhang, Über Knochenfärbung",
-        "authors": [
-          "W. Spalteholz"
-        ],
-        "journal": "Verlag von S. Hirzel, Leipzig",
-        "year": "1911",
-        "volume": "",
-        "issue": "",
-        "pages": "",
-        "doi": "10.1056/nejm189512191332510",
-        "doi_status": "extracted"
-      },
-      "fluorescent_protein_compatibility": "Unknown",
-      "clearing_speed": "Unknown",
-      "morphology_impact": "Shrinkage",
-      "equipment_complexity": "Low (Standard Bench)",
-      "toxicity_hazard": "High (Harsh Solvents)",
-      "real_world_application_papers": [],
-      "validation_candidates": [],
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "Tissue_clearing_and_its_applications_in_human_tiss.pdf"
