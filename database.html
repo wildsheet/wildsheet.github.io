@@ -247,6 +247,7 @@
         let isFocusModeActive = false;
         let filtersBackupHTML = '';
         let savedFilterState = null;
+        let returnScrollPosition = null;
         let resultSort = 'name-asc';
 
         const filterDefinitions = [
@@ -760,6 +761,7 @@
         }
 
         function selectNewMethodWiki(methodId) {
+            returnScrollPosition = window.scrollY;
             window.location.hash = methodId;
             activeMethodId = methodId;
             isFocusModeActive = true; 
@@ -775,7 +777,13 @@
             if (container) container.innerHTML = ''; 
             
             renderFiltereddatabase();
-            document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
+            if (returnScrollPosition !== null) {
+                const scrollPosition = returnScrollPosition;
+                returnScrollPosition = null;
+                window.setTimeout(() => window.scrollTo({ top: scrollPosition, behavior: 'auto' }), 100);
+            } else {
+                document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
+            }
         }
 
         function syncFocusModeFromHash() {
