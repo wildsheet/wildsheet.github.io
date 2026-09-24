@@ -58,6 +58,36 @@
             border-color: #22d3ee !important;
         }
 
+        .active-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: -4px;
+        }
+
+        .active-filter-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid #155e75;
+            border-radius: 999px;
+            padding: 5px 8px 5px 10px;
+            background-color: rgba(8, 47, 73, 0.7);
+            color: #cffafe;
+            font-size: 12px;
+            line-height: 1.2;
+        }
+
+        .active-filter-chip button {
+            border: 0;
+            padding: 0 2px;
+            background: transparent;
+            color: #67e8f9;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 1;
+        }
+
         /* Native Layout Grid Protocol Cards */
         .matrix-card {
             border: 1px solid #1e293b; 
@@ -187,6 +217,7 @@
                 <!-- Right Grid Results Output Pipeline display area (Forces a larger width allocation on desktop) -->
                 <div style="grid-column: span auto; display: flex; flex-direction: column; gap: 16px; flex-grow: 2;">
                     <h3 id="results-headline-title" style="font-size: 18px; font-weight: 700; color: #f8fafc; border-bottom: 1px solid #1e293b; padding-bottom: 8px; margin: 0;">Search Results</h3>
+                    <div id="active-filters-container" class="active-filters" aria-live="polite"></div>
                     <div id="database-cards-container" style="display: flex; flex-direction: column; gap: 24px;">
                         <div style="padding: 32px; text-align: center; color: #64748b; background-color: rgba(15, 23, 42, 0.1); border-radius: 12px; border: 1px dashed #1e293b; font-size: 14px;">
                             Loading database matrix tracking elements...
@@ -204,6 +235,67 @@
         let cachedMethodsdatabase = [];
         let activeMethodId = window.location.hash.replace('#', '') || '';
         let isFocusModeActive = false;
+        let filtersBackupHTML = '';
+        let savedFilterState = null;
+
+        const filterDefinitions = [
+            ['text-search', 'Search', 'text'],
+            ['tissue-filter', 'Tissue', 'text'],
+            ['class-filter', 'Chemical class', 'select'],
+            ['ri-filter', 'RI', 'select'],
+            ['speed-filter', 'Clearing speed', 'select'],
+            ['morphology-filter', 'Morphology', 'select'],
+            ['toxicity-filter', 'Toxicity', 'select'],
+            ['fluorescence-filter', 'Fluorescence', 'select'],
+            ['equipment-filter', 'Equipment', 'select'],
+            ['year-filter', 'Year', 'select'],
+            ['validation-filter', 'Applications', 'number']
+        ];
+
+        function getFilterState() {
+            return Object.fromEntries(filterDefinitions.map(([id]) => [id, document.getElementById(id)?.value || '']));
+        }
+
+        function getFilterValue(filterId) {
+            return document.getElementById(filterId)?.value ?? savedFilterState?.[filterId] ?? '';
+        }
+
+        function restoreFilterState() {
+            if (!savedFilterState) return;
+            filterDefinitions.forEach(([id]) => {
+                const input = document.getElementById(id);
+                if (input && savedFilterState[id] !== undefined) input.value = savedFilterState[id];
+            });
+        }
+
+        function renderActiveFilters() {
+            const container = document.getElementById('active-filters-container');
+            if (!container) return;
+
+            const activeFilters = filterDefinitions
+                .map(([id, label, type]) => ({ id, label, type, value: getFilterValue(id) }))
+                .filter(({ value, type }) => value.trim() && (type !== 'select' || value !== 'all'));
+
+            container.innerHTML = activeFilters.map(({ id, label, value }) => `
+                <span class="active-filter-chip">
+                    <span>${escapeHtml(label)}: ${escapeHtml(value)}</span>
+                    <button type="button" aria-label="Remove ${escapeHtml(label)} filter" onclick="clearFilter('${id}')">&times;</button>
+                </span>
+            `).join('');
+        }
+
+        function clearFilter(filterId) {
+            const input = document.getElementById(filterId);
+            if (!input && savedFilterState) {
+                savedFilterState[filterId] = '';
+                renderFiltereddatabase();
+                return;
+            }
+            if (!input) return;
+            input.value = input.tagName === 'SELECT' ? 'all' : '';
+            const eventName = input.tagName === 'SELECT' ? 'change' : 'input';
+            input.dispatchEvent(new Event(eventName, { bubbles: true }));
+        }
 
         // Asynchronously fetch the JSON file produced by your Python repo script
         async function bootstrapdatabaseData() {
@@ -355,23 +447,25 @@
 
         // Multi-Variable Multi-Filter Dynamic Layout Engine
         function renderFiltereddatabase() {
-            const query = document.getElementById('text-search')?.value.toLowerCase().trim() || '';
-            const selectedTissue = (document.getElementById('tissue-filter')?.value || '').trim();
-            const selectedClass = document.getElementById('class-filter')?.value || 'all';
-            const selectedRI = document.getElementById('ri-filter')?.value || 'all';
-            const selectedSpeed = document.getElementById('speed-filter')?.value || 'all';
-            const selectedMorphology = document.getElementById('morphology-filter')?.value || 'all';
-            const selectedToxicity = document.getElementById('toxicity-filter')?.value || 'all';
-            const selectedFluorescence = document.getElementById('fluorescence-filter')?.value || 'all';
-            const selectedEquipment = document.getElementById('equipment-filter')?.value || 'all';
-            const selectedYear = document.getElementById('year-filter')?.value || 'all';
-            const selectedValRaw = document.getElementById('validation-filter')?.value;
+            const query = getFilterValue('text-search').toLowerCase().trim();
+            const selectedTissue = getFilterValue('tissue-filter').trim();
+            const selectedClass = getFilterValue('class-filter') || 'all';
+            const selectedRI = getFilterValue('ri-filter') || 'all';
+            const selectedSpeed = getFilterValue('speed-filter') || 'all';
+            const selectedMorphology = getFilterValue('morphology-filter') || 'all';
+            const selectedToxicity = getFilterValue('toxicity-filter') || 'all';
+            const selectedFluorescence = getFilterValue('fluorescence-filter') || 'all';
+            const selectedEquipment = getFilterValue('equipment-filter') || 'all';
+            const selectedYear = getFilterValue('year-filter') || 'all';
+            const selectedValRaw = getFilterValue('validation-filter');
             const selectedVal = selectedValRaw === '' || selectedValRaw === undefined || selectedValRaw === null ? 'all' : Number(selectedValRaw);
 
             const container = document.getElementById('database-cards-container');
             const titleNode = document.getElementById('results-headline-title');
             const sidebarHeadline = document.getElementById('sidebar-headline-title');
             const sidebarContainer = document.getElementById('sidebar-panel-container');
+
+            renderActiveFilters();
 
             const filtered = cachedMethodsdatabase.filter(m => {
                 const matchesTissue = !selectedTissue || (Array.isArray(m.tissue_compatibilities) && m.tissue_compatibilities.some(t => String(t || '').trim().toLowerCase().includes(selectedTissue.toLowerCase())));
@@ -402,6 +496,7 @@
                     if (titleNode) titleNode.innerText = 'Info for Selected Method';
                     if (sidebarContainer && document.getElementById('filters-sidebar-target')) {
                         filtersBackupHTML = sidebarContainer.innerHTML;
+                        savedFilterState = getFilterState();
                     }
                     if (sidebarHeadline) sidebarHeadline.innerText = `💬 Community Discussion: ${targetRecord.method_name}`;
                     if (sidebarContainer) {
@@ -423,6 +518,7 @@
 
             if (sidebarContainer && !document.getElementById('filters-sidebar-target') && filtersBackupHTML) {
                 sidebarContainer.innerHTML = filtersBackupHTML;
+                restoreFilterState();
                 document.getElementById('text-search').addEventListener('input', renderFiltereddatabase);
                 document.getElementById('tissue-filter').addEventListener('input', renderFiltereddatabase);
                 document.getElementById('class-filter').addEventListener('change', renderFiltereddatabase);
@@ -434,6 +530,7 @@
                 document.getElementById('equipment-filter').addEventListener('change', renderFiltereddatabase);
                 document.getElementById('year-filter').addEventListener('change', renderFiltereddatabase);
                 document.getElementById('validation-filter').addEventListener('input', renderFiltereddatabase);
+                renderActiveFilters();
             }
 
             if (filtered.length === 0) {
@@ -651,6 +748,15 @@
             renderFiltereddatabase();
             document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
         }
+
+        function syncFocusModeFromHash() {
+            activeMethodId = decodeURIComponent(window.location.hash.replace('#', '') || '');
+            isFocusModeActive = Boolean(activeMethodId && cachedMethodsdatabase.some(m => m.method_name === activeMethodId));
+            if (cachedMethodsdatabase.length) renderFiltereddatabase();
+        }
+
+        window.addEventListener('hashchange', syncFocusModeFromHash);
+        window.addEventListener('popstate', syncFocusModeFromHash);
 
         window.addEventListener('DOMContentLoaded', bootstrapdatabaseData);
     </script>
