@@ -180,8 +180,16 @@
         background-color: #f8fafc;
         flex-shrink: 0;
         display: flex;         /* Activates flex container box models */
+        flex-direction: column;
+        gap: 0.5rem;
         width: 100%;           /* Constrains container limits to 100% of left column width */
         box-sizing: border-box; /* Includes padding within total width calculation */
+        }
+
+        .result-count {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            line-height: 1.2;
         }
 
         #search-input {
@@ -378,6 +386,7 @@
                 <div class="search-panel">
                 <div class="search-header">
                     <input type="text" id="search-input" placeholder="Search text, users, channels..." disabled>
+                    <div id="result-count" class="result-count" aria-live="polite">Type at least 2 characters to search.</div>
                 </div>
                 <div id="results-list" class="results-list">
                     <div class="placeholder-view">Type a term above to query local database.</div>
@@ -391,7 +400,7 @@
                 </div>
                 <div id="context-view" class="context-view">
                     <div class="placeholder-view">
-                    <p>Select a search result from the panel to extract chronological thread and time context logs.</p>
+                    <p>Select a search result to view the 10 messages immediately before and after it in the channel.</p>
                     </div>
                 </div>
                 </div>
@@ -401,11 +410,13 @@
     <script>
         let miniSearch;
         let fullTimelines = {};
+        let archiveMessages = [];
 
         document.addEventListener("DOMContentLoaded", () => {
             const statusEl = document.getElementById('status');
             const searchInput = document.getElementById('search-input');
             const resultsList = document.getElementById('results-list');
+            const resultCount = document.getElementById('result-count');
 
             // GitHub Pages compatible file path resolutions
             const INDEX_URL = 'static/data/search_index.json';
@@ -422,6 +433,7 @@
             })
             ]).then(([indexData, timelineData]) => {
             fullTimelines = timelineData;
+            archiveMessages = indexData;
             
             miniSearch = new MiniSearch({
                 fields: ['t', 'u', 'ch'],
@@ -437,6 +449,7 @@
             console.error(err);
             statusEl.textContent = "Loading Failed";
             statusEl.style.backgroundColor = "#e01e5a";
+            resultCount.textContent = "Search unavailable.";
             resultsList.innerHTML = `<div class="placeholder-view" style="color:#e01e5a;">Error loading data packages.</div>`;
             });
 
@@ -444,20 +457,38 @@
             const query = e.target.value.trim();
             if (!miniSearch || query.length < 2) {
                 resultsList.innerHTML = '<div class="placeholder-view">Type a minimum of 2 characters to search...</div>';
+                resultCount.textContent = miniSearch ? "Type at least 2 characters to search." : "Search unavailable.";
                 return;
             }
-            const results = miniSearch.search(query, { prefix: true, fuzzy: 0.2 });
+            const results = searchArchive(query);
             renderSearchResults(results);
             });
         });
 
+        function searchArchive(query) {
+        const results = miniSearch.search(query, { prefix: true, fuzzy: 0.2, combineWith: 'AND' });
+        const resultIds = new Set(results.map(result => result.id));
+        const tokenize = MiniSearch.getDefault('tokenize');
+        const queryTerms = tokenize(query);
+        const partialMatches = archiveMessages.filter(message =>
+            queryTerms.every(term =>
+                ['t', 'u', 'ch'].some(field =>
+                    tokenize(message[field] || '').some(word => word.includes(term))
+                )
+            ) && !resultIds.has(message.id)
+        );
+        return results.concat(partialMatches);
+        }
+
         function renderSearchResults(results) {
         const resultsList = document.getElementById('results-list');
+        const resultCount = document.getElementById('result-count');
+        resultCount.textContent = `${results.length} ${results.length === 1 ? 'result' : 'results'}`;
         if (results.length === 0) {
             resultsList.innerHTML = '<div class="placeholder-view">No archive hits encountered.</div>';
             return;
         }
-        resultsList.innerHTML = results.slice(0, 30).map(item => `
+        resultsList.innerHTML = results.map(item => `
             <div class="search-hit-card" onclick="loadMessageContext('${item.ch}', '${item.id}')">
             <div class="search-hit-meta">
                 <span class="channel-tag">#${item.ch}</span>
@@ -479,17 +510,13 @@
         
         if (targetIndex === -1) return;
 
-        const targetMsg = channelHistory[targetIndex];
-        const targetTime = parseFloat(targetMessageId.split('_').pop().replace('_', '.'));
-        const oneWeekSeconds = 7 * 24 * 60 * 60;
+        const contextRadius = 10;
+        const contextMatches = channelHistory.slice(
+            Math.max(0, targetIndex - contextRadius),
+            Math.min(channelHistory.length, targetIndex + contextRadius + 1)
+        );
 
-        const contextMatches = channelHistory.filter(msg => {
-            if (targetMsg.thread_ts && msg.thread_ts === targetMsg.thread_ts) return true;
-            const currentMsgTime = parseFloat(msg.id.split('_').pop().replace('_', '.'));
-            return Math.abs(currentMsgTime - targetTime) <= oneWeekSeconds;
-        });
-
-        contextTitle.textContent = `#${channelName} context window`;
+        contextTitle.textContent = `#${channelName} context around message`;
         contextView.innerHTML = contextMatches.map(msg => `
             <div id="msg-${msg.id}" class="chat-row ${msg.id === targetMessageId ? 'highlighted-match' : ''}">
             <div class="chat-row-meta" style="display: flex; justify-content: space-between; font-size: 0.75rem; margin-bottom: 2px;">
