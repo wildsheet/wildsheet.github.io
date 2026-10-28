@@ -26908,119 +26908,6 @@
       }
     },
     {
-      "method_name": "Spalteholz's technique",
-      "year_invented": "1914",
-      "chemical_class": "Solvent",
-      "refractive_index": "1.55",
-      "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
-      "tissue_compatibilities": [
-        "Human | heart",
-        "Human | hand",
-        "Sheep | tibia",
-        "Sheep | femur"
-      ],
-      "primary_citation": "Spalteholz (1914)",
-      "original_reference": {
-        "citation": "Spalteholz W (1914) Uber das Durchsichtigmachen von menschlichen und tierischen Prasparaten und seine theoretischen Bedingungen, nebst Anhang: Uber Knochenfarbung, Leipzig: S. Hirzel",
-        "title": "Uber das Durchsichtigmachen von menschlichen und tierischen Prasparaten und seine theoretischen Bedingungen, nebst Anhang: Uber Knochenfarbung",
-        "authors": [
-          "W Spalteholz"
-        ],
-        "journal": "Leipzig: S. Hirzel",
-        "year": "1914",
-        "volume": "",
-        "issue": "",
-        "pages": "",
-        "doi": "10.5962/bhl.title.8419",
-        "doi_status": "extracted"
-      },
-      "fluorescent_protein_compatibility": "Unknown",
-      "clearing_speed": "Unknown",
-      "morphology_impact": "Unknown",
-      "equipment_complexity": "Low (Standard Bench)",
-      "toxicity_hazard": "Unknown",
-      "real_world_application_papers": [
-        {
-          "title": "Bone lengthening osteogenesis, a combination of intramembranous and endochondral ossification: an experimental study in sheep.",
-          "doi": "10.1007/s11751-010-0083-y",
-          "journal": "Strategies Trauma Limb Reconstr",
-          "year": "2010",
-          "first_author": "Francisco Forriol",
-          "pmid": "21811902",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Spalteholz's technique was used to study vascularization in sheep tibial callotasis, revealing a combination of intramembranous and endochondral ossification.",
-          "cleared_tissues": [
-            "Sheep | tibia"
-          ],
-          "tissue_compatibilities": [
-            "Sheep | tibia"
-          ]
-        },
-        {
-          "title": "Radiological and histological analysis of cortical allografts: an experimental study in sheep femora.",
-          "doi": "10.1007/s00402-004-0653-x",
-          "journal": "Arch Orthop Trauma Surg",
-          "year": "2004",
-          "first_author": "Hirofumi Taira",
-          "pmid": "15060834",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Spalteholz's clearing method demonstrated revascularization patterns during incorporation of differently prepared cortical allografts in sheep femora.",
-          "cleared_tissues": [
-            "Sheep | femur"
-          ],
-          "tissue_compatibilities": [
-            "Sheep | femur"
-          ]
-        }
-      ],
-      "validation_candidates": [
-        {
-          "title": "Bone lengthening osteogenesis, a combination of intramembranous and endochondral ossification: an experimental study in sheep.",
-          "doi": "10.1007/s11751-010-0083-y",
-          "journal": "Strategies Trauma Limb Reconstr",
-          "year": "2010",
-          "first_author": "Francisco Forriol",
-          "pmid": "21811902",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Spalteholz's technique was used to study vascularization in sheep tibial callotasis, revealing a combination of intramembranous and endochondral ossification.",
-          "cleared_tissues": [
-            "Sheep | tibia"
-          ],
-          "tissue_compatibilities": [
-            "Sheep | tibia"
-          ]
-        },
-        {
-          "title": "Radiological and histological analysis of cortical allografts: an experimental study in sheep femora.",
-          "doi": "10.1007/s00402-004-0653-x",
-          "journal": "Arch Orthop Trauma Surg",
-          "year": "2004",
-          "first_author": "Hirofumi Taira",
-          "pmid": "15060834",
-          "status": "uncertain",
-          "category": "application",
-          "confidence": "high",
-          "evidence": "Spalteholz's clearing method demonstrated revascularization patterns during incorporation of differently prepared cortical allografts in sheep femora.",
-          "cleared_tissues": [
-            "Sheep | femur"
-          ],
-          "tissue_compatibilities": [
-            "Sheep | femur"
-          ]
-        }
-      ],
-      "source_manifest": {
-        "type": "Review PDF Extract",
-        "file": "msb.20209807.pdf"
-      }
-    },
-    {
       "method_name": "BALANCE",
       "year_invented": "2019",
       "chemical_class": "Solvent",
@@ -30598,40 +30485,6 @@
       }
     },
     {
-      "method_name": "Spalteholz technique",
-      "year_invented": "1911",
-      "chemical_class": "Solvent",
-      "refractive_index": "Unknown",
-      "sample_size_compatibility": "Unknown",
-      "tissue_compatibilities": [],
-      "primary_citation": "W. Spalteholz, Über das Durchsichtigmachen von menschlichen und tierischen Präparaten: Nebst Anhang, Über Knochenfärbung, Verlag von S. Hirzel, Leipzig 1911.",
-      "original_reference": {
-        "citation": "W. Spalteholz, Über das Durchsichtigmachen von menschlichen und tierischen Präparaten: Nebst Anhang, Über Knochenfärbung, Verlag von S. Hirzel, Leipzig 1911.",
-        "title": "Über das Durchsichtigmachen von menschlichen und tierischen Präparaten: Nebst Anhang, Über Knochenfärbung",
-        "authors": [
-          "W. Spalteholz"
-        ],
-        "journal": "Verlag von S. Hirzel, Leipzig",
-        "year": "1911",
-        "volume": "",
-        "issue": "",
-        "pages": "",
-        "doi": "10.1515/9783112535325-021",
-        "doi_status": "extracted"
-      },
-      "fluorescent_protein_compatibility": "Unknown",
-      "clearing_speed": "Unknown",
-      "morphology_impact": "Unknown",
-      "equipment_complexity": "Unknown",
-      "toxicity_hazard": "High (Harsh Solvents)",
-      "real_world_application_papers": [],
-      "validation_candidates": [],
-      "source_manifest": {
-        "type": "Review PDF Extract",
-        "file": "Tissue_clearing_and_its_applications_in_human_tiss.pdf"
-      }
-    },
-    {
       "method_name": "FLASH",
       "year_invented": "2021",
       "chemical_class": "Aqueous",
@@ -32427,6 +32280,119 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "fbioe-09-784626.pdf"
+      }
+    },
+    {
+      "method_name": "Spalteholz technique",
+      "year_invented": "1914",
+      "chemical_class": "Solvent",
+      "refractive_index": "1.55",
+      "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
+      "tissue_compatibilities": [
+        "Human | heart",
+        "Human | hand",
+        "Sheep | tibia",
+        "Sheep | femur"
+      ],
+      "primary_citation": "Spalteholz (1914)",
+      "original_reference": {
+        "citation": "Spalteholz W (1914) Uber das Durchsichtigmachen von menschlichen und tierischen Prasparaten und seine theoretischen Bedingungen, nebst Anhang: Uber Knochenfarbung, Leipzig: S. Hirzel",
+        "title": "Uber das Durchsichtigmachen von menschlichen und tierischen Prasparaten und seine theoretischen Bedingungen, nebst Anhang: Uber Knochenfarbung",
+        "authors": [
+          "W Spalteholz"
+        ],
+        "journal": "Leipzig: S. Hirzel",
+        "year": "1914",
+        "volume": "",
+        "issue": "",
+        "pages": "",
+        "doi": "10.5962/bhl.title.8419",
+        "doi_status": "extracted"
+      },
+      "fluorescent_protein_compatibility": "Unknown",
+      "clearing_speed": "Unknown",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Low (Standard Bench)",
+      "toxicity_hazard": "High (Harsh Solvents)",
+      "real_world_application_papers": [
+        {
+          "title": "Bone lengthening osteogenesis, a combination of intramembranous and endochondral ossification: an experimental study in sheep.",
+          "doi": "10.1007/s11751-010-0083-y",
+          "journal": "Strategies Trauma Limb Reconstr",
+          "year": "2010",
+          "first_author": "Francisco Forriol",
+          "pmid": "21811902",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Spalteholz's technique was used to study vascularization in sheep tibial callotasis, revealing a combination of intramembranous and endochondral ossification.",
+          "cleared_tissues": [
+            "Sheep | tibia"
+          ],
+          "tissue_compatibilities": [
+            "Sheep | tibia"
+          ]
+        },
+        {
+          "title": "Radiological and histological analysis of cortical allografts: an experimental study in sheep femora.",
+          "doi": "10.1007/s00402-004-0653-x",
+          "journal": "Arch Orthop Trauma Surg",
+          "year": "2004",
+          "first_author": "Hirofumi Taira",
+          "pmid": "15060834",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Spalteholz's clearing method demonstrated revascularization patterns during incorporation of differently prepared cortical allografts in sheep femora.",
+          "cleared_tissues": [
+            "Sheep | femur"
+          ],
+          "tissue_compatibilities": [
+            "Sheep | femur"
+          ]
+        }
+      ],
+      "validation_candidates": [
+        {
+          "title": "Bone lengthening osteogenesis, a combination of intramembranous and endochondral ossification: an experimental study in sheep.",
+          "doi": "10.1007/s11751-010-0083-y",
+          "journal": "Strategies Trauma Limb Reconstr",
+          "year": "2010",
+          "first_author": "Francisco Forriol",
+          "pmid": "21811902",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Spalteholz's technique was used to study vascularization in sheep tibial callotasis, revealing a combination of intramembranous and endochondral ossification.",
+          "cleared_tissues": [
+            "Sheep | tibia"
+          ],
+          "tissue_compatibilities": [
+            "Sheep | tibia"
+          ]
+        },
+        {
+          "title": "Radiological and histological analysis of cortical allografts: an experimental study in sheep femora.",
+          "doi": "10.1007/s00402-004-0653-x",
+          "journal": "Arch Orthop Trauma Surg",
+          "year": "2004",
+          "first_author": "Hirofumi Taira",
+          "pmid": "15060834",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Spalteholz's clearing method demonstrated revascularization patterns during incorporation of differently prepared cortical allografts in sheep femora.",
+          "cleared_tissues": [
+            "Sheep | femur"
+          ],
+          "tissue_compatibilities": [
+            "Sheep | femur"
+          ]
+        }
+      ],
+      "source_manifest": {
+        "type": "Review PDF Extract",
+        "file": "msb.20209807.pdf"
       }
     }
   ]
