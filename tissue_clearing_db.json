@@ -3,8 +3,8 @@
     {
       "method_name": "CUBIC",
       "year_invented": "2014",
-      "chemical_class": "Aqueous-based",
-      "refractive_index": "~1.45",
+      "chemical_class": "Aqueous",
+      "refractive_index": "1.45",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
         "Mouse | whole brain",
@@ -1627,8 +1627,8 @@
     {
       "method_name": "3DISCO",
       "year_invented": "2012",
-      "chemical_class": "Organic solvent-based",
-      "refractive_index": "~1.56",
+      "chemical_class": "Solvent",
+      "refractive_index": "1.56",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
         "Mouse | spinal cord",
@@ -2776,8 +2776,8 @@
     {
       "method_name": "iDISCO",
       "year_invented": "2014",
-      "chemical_class": "Organic solvent-based",
-      "refractive_index": "~1.56",
+      "chemical_class": "Solvent",
+      "refractive_index": "1.56",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
         "Mouse | brain",
@@ -3902,8 +3902,8 @@
     {
       "method_name": "iDISCO+",
       "year_invented": "2016",
-      "chemical_class": "Organic solvent-based",
-      "refractive_index": "~1.56",
+      "chemical_class": "Solvent",
+      "refractive_index": "1.56",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
         "Mouse | brain",
@@ -4346,8 +4346,8 @@
     {
       "method_name": "CLARITY",
       "year_invented": "2013",
-      "chemical_class": "Hydrogel crosslink-based",
-      "refractive_index": "~1.45",
+      "chemical_class": "Hydrogel",
+      "refractive_index": "1.45",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
         "Mouse | brain",
@@ -5088,8 +5088,8 @@
     {
       "method_name": "BABB (Murray's method)",
       "year_invented": "1989",
-      "chemical_class": "Organic solvent-based",
-      "refractive_index": "~1.56",
+      "chemical_class": "Solvent",
+      "refractive_index": "1.56",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
         "Xenopus | eggs",
@@ -6400,8 +6400,8 @@
     {
       "method_name": "SeeDB",
       "year_invented": "2013",
-      "chemical_class": "Aqueous-based",
-      "refractive_index": "1.3 to ~1.45",
+      "chemical_class": "Aqueous",
+      "refractive_index": "1.49",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
         "Mouse | brain",
@@ -7293,8 +7293,8 @@
     {
       "method_name": "DEEP-Clear",
       "year_invented": "2020",
-      "chemical_class": "Aqueous-based",
-      "refractive_index": "1.3 to ~1.45",
+      "chemical_class": "Aqueous",
+      "refractive_index": "1.45",
       "sample_size_compatibility": "Macro/Whole-Body (>2 cm)",
       "tissue_compatibilities": [
         "Platynereis dumerilii | whole body",
@@ -8686,7 +8686,7 @@
     {
       "method_name": "Glycerin/KOH)",
       "year_invented": "1952",
-      "chemical_class": "Aqueous-based",
+      "chemical_class": "Aqueous",
       "refractive_index": "Unknown",
       "sample_size_compatibility": "Macro/Whole-Body (>2 cm)",
       "tissue_compatibilities": [
@@ -8726,7 +8726,7 @@
     {
       "method_name": "Fructose/glycerol",
       "year_invented": "2019",
-      "chemical_class": "Aqueous-based",
+      "chemical_class": "Aqueous",
       "refractive_index": "Unknown",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
@@ -9068,8 +9068,8 @@
     {
       "method_name": "CUBIC-perfusion",
       "year_invented": "2014",
-      "chemical_class": "Aqueous-based",
-      "refractive_index": "1.3 to ~1.45",
+      "chemical_class": "Aqueous",
+      "refractive_index": "1.49",
       "sample_size_compatibility": "Macro/Whole-Body (>2 cm)",
       "tissue_compatibilities": [
         "Mouse | whole body (neonatal and adult)",
@@ -9491,8 +9491,8 @@
     {
       "method_name": "ClearSee",
       "year_invented": "2015",
-      "chemical_class": "Aqueous-based",
-      "refractive_index": "1.3 to ~1.45",
+      "chemical_class": "Aqueous",
+      "refractive_index": "1.41",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
         "Arabidopsis thaliana | whole plant",
@@ -10236,7 +10236,7 @@
     {
       "method_name": "ClearT2",
       "year_invented": "2013",
-      "chemical_class": "Aqueous-based",
+      "chemical_class": "Aqueous",
       "refractive_index": "1.44",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
@@ -10817,7 +10817,7 @@
     {
       "method_name": "FlyClear",
       "year_invented": "2018",
-      "chemical_class": "Aqueous-based",
+      "chemical_class": "Aqueous",
       "refractive_index": "1.45",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
@@ -11017,8 +11017,8 @@
     {
       "method_name": "FRUIT",
       "year_invented": "2015",
-      "chemical_class": "Aqueous-based",
-      "refractive_index": "1.3 to ~1.45",
+      "chemical_class": "Aqueous",
+      "refractive_index": "1.48",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
         "Mouse | brain",
@@ -11510,7 +11510,7 @@
     {
       "method_name": "IMES",
       "year_invented": "2019",
-      "chemical_class": "Aqueous-based",
+      "chemical_class": "Aqueous",
       "refractive_index": "1.42",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
@@ -11653,7 +11653,7 @@
     {
       "method_name": "Scale",
       "year_invented": "2011",
-      "chemical_class": "Aqueous-based",
+      "chemical_class": "Aqueous",
       "refractive_index": "1.38",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
@@ -12130,8 +12130,8 @@
     {
       "method_name": "SeeDB2",
       "year_invented": "2016",
-      "chemical_class": "Aqueous-based",
-      "refractive_index": "1.5",
+      "chemical_class": "Aqueous",
+      "refractive_index": "1.50",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
         "Mouse | brain",
@@ -12560,8 +12560,8 @@
     {
       "method_name": "RTF",
       "year_invented": "2018",
-      "chemical_class": "Aqueous-based",
-      "refractive_index": "1.3 to ~1.45",
+      "chemical_class": "Aqueous",
+      "refractive_index": "1.46",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
         "Mouse | embryo and neonate",
@@ -12824,7 +12824,7 @@
     {
       "method_name": "mPACT-A",
       "year_invented": "2020",
-      "chemical_class": "Hydrogel crosslink-based",
+      "chemical_class": "Hydrogel",
       "refractive_index": "1.45",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
@@ -12946,7 +12946,7 @@
     {
       "method_name": "PEA-CLARITY",
       "year_invented": "2015",
-      "chemical_class": "Hydrogel crosslink-based",
+      "chemical_class": "Hydrogel",
       "refractive_index": "1.45",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
@@ -13266,7 +13266,7 @@
     {
       "method_name": "SWITCH",
       "year_invented": "2015",
-      "chemical_class": "Hydrogel crosslink-based",
+      "chemical_class": "Hydrogel",
       "refractive_index": "1.45",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
@@ -13758,7 +13758,7 @@
     {
       "method_name": "2ECi",
       "year_invented": "2019",
-      "chemical_class": "Organic solvent-based",
+      "chemical_class": "Solvent",
       "refractive_index": "1.56",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
@@ -14182,7 +14182,7 @@
     {
       "method_name": "ECi",
       "year_invented": "2017",
-      "chemical_class": "Organic solvent-based",
+      "chemical_class": "Solvent",
       "refractive_index": "1.56",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
@@ -14794,7 +14794,7 @@
     {
       "method_name": "EyeDISCO",
       "year_invented": "2020",
-      "chemical_class": "Organic solvent-based",
+      "chemical_class": "Solvent",
       "refractive_index": "1.56",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
@@ -15289,7 +15289,7 @@
     {
       "method_name": "EyeCi",
       "year_invented": "2018",
-      "chemical_class": "Organic solvent-based",
+      "chemical_class": "Solvent",
       "refractive_index": "1.56",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
@@ -15682,7 +15682,7 @@
     {
       "method_name": "FDISCO",
       "year_invented": "2019",
-      "chemical_class": "Organic solvent-based",
+      "chemical_class": "Solvent",
       "refractive_index": "1.56",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
@@ -16079,7 +16079,7 @@
     {
       "method_name": "FluoClearBABB",
       "year_invented": "2015",
-      "chemical_class": "Organic solvent-based",
+      "chemical_class": "Solvent",
       "refractive_index": "1.56",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
@@ -16345,7 +16345,7 @@
     {
       "method_name": "PEGASOS",
       "year_invented": "2018",
-      "chemical_class": "Organic solvent-based",
+      "chemical_class": "Solvent",
       "refractive_index": "1.56",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
@@ -16823,7 +16823,7 @@
     {
       "method_name": "sDISCO",
       "year_invented": "2019",
-      "chemical_class": "Organic solvent-based",
+      "chemical_class": "Solvent",
       "refractive_index": "1.56",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
@@ -17153,7 +17153,7 @@
     {
       "method_name": "SHANEL",
       "year_invented": "2020",
-      "chemical_class": "Organic solvent-based",
+      "chemical_class": "Solvent",
       "refractive_index": "1.56",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
@@ -17688,7 +17688,7 @@
     {
       "method_name": "uDISCO",
       "year_invented": "2016",
-      "chemical_class": "Organic solvent-based",
+      "chemical_class": "Solvent",
       "refractive_index": "1.56",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
@@ -18059,7 +18059,7 @@
     {
       "method_name": "vDISCO",
       "year_invented": "2019",
-      "chemical_class": "Organic solvent-based",
+      "chemical_class": "Solvent",
       "refractive_index": "1.56",
       "sample_size_compatibility": "Macro/Whole-Body (>2 cm)",
       "tissue_compatibilities": [
@@ -18562,7 +18562,7 @@
     {
       "method_name": "NaOH",
       "year_invented": "1952",
-      "chemical_class": "Aqueous-based",
+      "chemical_class": "Aqueous",
       "refractive_index": "Unknown",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
@@ -18602,8 +18602,8 @@
     {
       "method_name": "Dibenzyl Ether",
       "year_invented": "2012",
-      "chemical_class": "Organic solvent-based",
-      "refractive_index": "~1.56",
+      "chemical_class": "Solvent",
+      "refractive_index": "1.56",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
         "Mouse | brain",
@@ -18858,8 +18858,8 @@
     {
       "method_name": "AdipoClear",
       "year_invented": "2018",
-      "chemical_class": "Organic solvent-based",
-      "refractive_index": "~1.56",
+      "chemical_class": "Solvent",
+      "refractive_index": "1.56",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
         "Mouse | adipose tissue",
@@ -19348,7 +19348,7 @@
     {
       "method_name": "X-CLARITY",
       "year_invented": "2018",
-      "chemical_class": "Hydrogel crosslink-based",
+      "chemical_class": "Hydrogel",
       "refractive_index": "Unknown",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
@@ -19542,7 +19542,7 @@
     {
       "method_name": "mPACT/psPACT/PACT-deCAL",
       "year_invented": "2016",
-      "chemical_class": "Hydrogel-based",
+      "chemical_class": "Hydrogel",
       "refractive_index": "1.47",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
@@ -19798,7 +19798,7 @@
     {
       "method_name": "Tissue-MAP",
       "year_invented": "2016",
-      "chemical_class": "Hydrogel-based",
+      "chemical_class": "Hydrogel",
       "refractive_index": "1.47",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
@@ -20060,7 +20060,7 @@
     {
       "method_name": "ScaleS",
       "year_invented": "2015",
-      "chemical_class": "Hydrophilic",
+      "chemical_class": "Aqueous",
       "refractive_index": "1.43",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
@@ -20534,7 +20534,7 @@
     {
       "method_name": "CUBIC-L/R",
       "year_invented": "2018",
-      "chemical_class": "Hydrophilic",
+      "chemical_class": "Aqueous",
       "refractive_index": "1.52",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
@@ -20899,7 +20899,7 @@
     {
       "method_name": "CUBIC-X",
       "year_invented": "2018",
-      "chemical_class": "Hydrophilic",
+      "chemical_class": "Aqueous",
       "refractive_index": "1.52",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
@@ -21040,7 +21040,7 @@
     {
       "method_name": "FOCM",
       "year_invented": "2019",
-      "chemical_class": "Hydrophilic",
+      "chemical_class": "Aqueous",
       "refractive_index": "1.48",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
@@ -21406,7 +21406,7 @@
     {
       "method_name": "BABB",
       "year_invented": "2007",
-      "chemical_class": "Hydrophobic",
+      "chemical_class": "Solvent",
       "refractive_index": "1.55",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
@@ -22847,7 +22847,7 @@
     {
       "method_name": "Ce3D",
       "year_invented": "2017",
-      "chemical_class": "Hydrophilic",
+      "chemical_class": "Aqueous",
       "refractive_index": "1.50",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
@@ -23867,7 +23867,7 @@
     {
       "method_name": "MACS",
       "year_invented": "2020",
-      "chemical_class": "Hydrophilic",
+      "chemical_class": "Aqueous",
       "refractive_index": "1.50",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
@@ -24078,7 +24078,7 @@
     {
       "method_name": "LUCID",
       "year_invented": "2018",
-      "chemical_class": "Hydrophilic",
+      "chemical_class": "Aqueous",
       "refractive_index": "1.45",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
@@ -24203,7 +24203,7 @@
     {
       "method_name": "OPTIClear",
       "year_invented": "2018",
-      "chemical_class": "Hydrophilic",
+      "chemical_class": "Aqueous",
       "refractive_index": "1.47",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
@@ -24444,7 +24444,7 @@
     {
       "method_name": "SHIELD",
       "year_invented": "2019",
-      "chemical_class": "Hydrogel-based",
+      "chemical_class": "Hydrogel",
       "refractive_index": "1.46",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
@@ -24827,7 +24827,7 @@
     {
       "method_name": "Expansion microscopy",
       "year_invented": "2015",
-      "chemical_class": "Hydrogel-based",
+      "chemical_class": "Hydrogel",
       "refractive_index": "1.33",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
@@ -25598,8 +25598,8 @@
     {
       "method_name": "ACT-PRESTO",
       "year_invented": "2016",
-      "chemical_class": "Hydrogel embedding",
-      "refractive_index": "1.45–1.46",
+      "chemical_class": "Hydrogel",
+      "refractive_index": "1.45",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
         "Mouse | brain",
@@ -25763,7 +25763,7 @@
     {
       "method_name": "PRE-CLARITY",
       "year_invented": "2019",
-      "chemical_class": "Hydrogel embedding",
+      "chemical_class": "Hydrogel",
       "refractive_index": "Unknown",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
@@ -25846,7 +25846,7 @@
     {
       "method_name": "Stochastic electrotransport",
       "year_invented": "2015",
-      "chemical_class": "Hydrogel embedding",
+      "chemical_class": "Hydrogel",
       "refractive_index": "Unknown",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
@@ -26088,7 +26088,7 @@
     {
       "method_name": "PACT/PACT-PARS",
       "year_invented": "2014",
-      "chemical_class": "Hydrogel embedding",
+      "chemical_class": "Hydrogel",
       "refractive_index": "1.45",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
@@ -26694,7 +26694,7 @@
     {
       "method_name": "Bone CLARITY",
       "year_invented": "2017",
-      "chemical_class": "Hydrogel embedding",
+      "chemical_class": "Hydrogel",
       "refractive_index": "1.47",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
@@ -26910,8 +26910,8 @@
     {
       "method_name": "Spalteholz's technique",
       "year_invented": "1914",
-      "chemical_class": "Hydrophobic / Organic solvent-based",
-      "refractive_index": "~1.55",
+      "chemical_class": "Solvent",
+      "refractive_index": "1.55",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
         "Human | heart",
@@ -27023,8 +27023,8 @@
     {
       "method_name": "BALANCE",
       "year_invented": "2019",
-      "chemical_class": "Hydrophobic / Organic solvent-based",
-      "refractive_index": "> 1.5",
+      "chemical_class": "Solvent",
+      "refractive_index": "1.50",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
         "Mouse | heart",
@@ -27702,7 +27702,7 @@
     {
       "method_name": "FUnGI",
       "year_invented": "2019",
-      "chemical_class": "Hydrophilic / Water/sugar solution",
+      "chemical_class": "Aqueous",
       "refractive_index": "Unknown",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
@@ -28129,7 +28129,7 @@
     {
       "method_name": "simpleCLEAR",
       "year_invented": "2019",
-      "chemical_class": "Hydrophilic / Aqueous-based",
+      "chemical_class": "Aqueous",
       "refractive_index": "Unknown",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
@@ -28701,8 +28701,8 @@
     {
       "method_name": "a-uDISCO",
       "year_invented": "2018",
-      "chemical_class": "Organic solvent-based",
-      "refractive_index": "1.55–1.57",
+      "chemical_class": "Solvent",
+      "refractive_index": "1.55",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
         "Mouse | brain",
@@ -28897,8 +28897,8 @@
     {
       "method_name": "Visikol™",
       "year_invented": "2013",
-      "chemical_class": "Hydrophobic methods",
-      "refractive_index": "1.445",
+      "chemical_class": "Solvent",
+      "refractive_index": "1.45",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
         "Origanum vulgare | leaves",
@@ -29125,7 +29125,7 @@
     {
       "method_name": "ScaleP",
       "year_invented": "2014",
-      "chemical_class": "Hydrophilic methods",
+      "chemical_class": "Aqueous",
       "refractive_index": "Unknown",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
@@ -29533,7 +29533,7 @@
     {
       "method_name": "TOMEI",
       "year_invented": "2016",
-      "chemical_class": "Hydrophilic methods",
+      "chemical_class": "Aqueous",
       "refractive_index": "1.47",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
@@ -29992,8 +29992,8 @@
     {
       "method_name": "iTOMEI",
       "year_invented": "2022",
-      "chemical_class": "Hydrophilic methods",
-      "refractive_index": "higher RI",
+      "chemical_class": "Aqueous",
+      "refractive_index": "Unknown",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
         "Marchantia polymorpha | thalli",
@@ -30600,7 +30600,7 @@
     {
       "method_name": "Spalteholz technique",
       "year_invented": "1911",
-      "chemical_class": "Organic solvent-based",
+      "chemical_class": "Solvent",
       "refractive_index": "Unknown",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [],
@@ -30634,7 +30634,7 @@
     {
       "method_name": "FLASH",
       "year_invented": "2021",
-      "chemical_class": "Aqueous-based (simple immersion)",
+      "chemical_class": "Aqueous",
       "refractive_index": "Unknown",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [],
@@ -30677,7 +30677,7 @@
     {
       "method_name": "FxClear",
       "year_invented": "2019",
-      "chemical_class": "Free-hydrogel electrophoretic",
+      "chemical_class": "Hydrogel",
       "refractive_index": "Unknown",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
@@ -30716,7 +30716,7 @@
     {
       "method_name": "MYOCLEAR",
       "year_invented": "2019",
-      "chemical_class": "Hydrogel embedding",
+      "chemical_class": "Hydrogel",
       "refractive_index": "Unknown",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
@@ -30762,7 +30762,7 @@
     {
       "method_name": "SUT",
       "year_invented": "2018",
-      "chemical_class": "Hydrogel embedding",
+      "chemical_class": "Hydrogel",
       "refractive_index": "Unknown",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [],
@@ -30803,8 +30803,8 @@
     {
       "method_name": "FASTClear",
       "year_invented": "2017",
-      "chemical_class": "Aqueous-based (free of acrylamide hydrogel)",
-      "refractive_index": "Not specified",
+      "chemical_class": "Aqueous",
+      "refractive_index": "Unknown",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
         "Human | myocardial slices",
@@ -31075,7 +31075,7 @@
     {
       "method_name": "FocusClear",
       "year_invented": "2001",
-      "chemical_class": "Hydrophilic / High refractive index solution",
+      "chemical_class": "Aqueous",
       "refractive_index": "1.46",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
@@ -31817,7 +31817,7 @@
     {
       "method_name": "TDE",
       "year_invented": "2006",
-      "chemical_class": "Hydrophilic",
+      "chemical_class": "Aqueous",
       "refractive_index": "1.33-1.52",
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [

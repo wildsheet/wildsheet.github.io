@@ -178,11 +178,11 @@
             <div style="display: flex; align-items: center; gap: 16px; font-size: 14px; font-weight: 700; user-select: none; flex-shrink: 0; white-space: nowrap;">
                 <a href="index.html" style="color: #94a3b8; transition: color 0.2s; text-decoration: none !important;" onmouseover="this.style.color='#22d3ee'" onmouseout="this.style.color='#94a3b8'">Overview</a>
                 <span style="color: #334155; font-weight: 400;">|</span>
-                <a href="database.html" style="color: #22d3ee; font-weight: 900; text-decoration: underline !important; text-underline-offset: 4px; text-decoration-thickness: 2px;">Tissue Clearing Database</a>
-                <span style="color: #334155; font-weight: 400;">|</span>
                 <a href="events.html" style="color: #94a3b8; transition: color 0.2s; text-decoration: none !important;" onmouseover="this.style.color='#22d3ee'" onmouseout="this.style.color='#94a3b8'">Events</a>
                 <span style="color: #334155; font-weight: 400;">|</span>
                 <a href="resources.html" style="color: #94a3b8; transition: color 0.2s; text-decoration: none !important;" onmouseover="this.style.color='#22d3ee'" onmouseout="this.style.color='#94a3b8'">Resources</a>
+                <span style="color: #334155; font-weight: 400;">|</span>
+                <a href="database.html" style="color: #22d3ee; font-weight: 900; text-decoration: underline !important; text-underline-offset: 4px; text-decoration-thickness: 2px;">Tissue Clearing Database</a>
             </div>
         </div>
     </nav>
@@ -249,19 +249,20 @@
         let savedFilterState = null;
         let returnScrollPosition = null;
         let resultSort = 'name-asc';
+        const chemicalClassOptions = ['Aqueous', 'Hydrogel', 'Solvent'];
 
         const filterDefinitions = [
             ['text-search', 'Search', 'text'],
             ['tissue-filter', 'Tissue', 'text'],
             ['class-filter', 'Chemical class', 'select'],
-            ['ri-filter', 'RI', 'select'],
+            ['ri-filter', 'Refractive index (estimate)', 'select'],
             ['speed-filter', 'Clearing speed', 'select'],
             ['morphology-filter', 'Morphology', 'select'],
             ['toxicity-filter', 'Toxicity', 'select'],
             ['fluorescence-filter', 'Fluorescence', 'select'],
             ['equipment-filter', 'Equipment', 'select'],
             ['year-filter', 'Year', 'select'],
-            ['validation-filter', 'Applications', 'number']
+            ['validation-filter', 'Number of real world applications', 'number']
         ];
 
         function getFilterState() {
@@ -352,7 +353,6 @@
 
         // Programmatically populate multi-variable search criteria cleanly using native CSS fields
         function populateDynamicDropdownFilters() {
-            const classes = new Set();
             const ris = new Set();
             const species = new Set();
             const years = new Set();
@@ -363,7 +363,6 @@
             const equipmentComplexity = new Set();
 
             cachedMethodsdatabase.forEach(m => {
-                if (isMeaningfulValue(m.chemical_class)) classes.add(String(m.chemical_class).trim());
                 if (isMeaningfulValue(m.refractive_index)) ris.add(String(m.refractive_index).trim());
                 if (isMeaningfulValue(m.year_invented)) years.add(String(m.year_invented).trim());
                 if (isMeaningfulValue(m.clearing_speed)) speeds.add(String(m.clearing_speed).trim());
@@ -388,7 +387,7 @@
                     <div style="display: flex; flex-direction: column; gap: 16px; width: 100%;">
                         <div>
                             <label style="${labelStyle}">Search</label>
-                            <input id="text-search" type="text" placeholder="Search title, year, RI, tissue types..." style="${inputStyle}" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
+                            <input id="text-search" type="text" placeholder="Search title, year, RI estimate, tissue types..." style="${inputStyle}" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
                         </div>
                         <div>
                             <label style="${labelStyle}">Tissue Compatibility</label>
@@ -398,11 +397,11 @@
                             <label style="${labelStyle}">Chemical Class</label>
                             <select id="class-filter" style="${inputStyle} cursor: pointer;" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
                                 <option value="all">Show All Classes</option>
-                                ${Array.from(classes).sort().map(c => `<option value="${c}">${c}</option>`).join('')}
+                                ${chemicalClassOptions.map(c => `<option value="${c}">${c}</option>`).join('')}
                             </select>
                         </div>
                         <div>
-                            <label style="${labelStyle}">Refractive Index (RI)</label>
+                            <label style="${labelStyle}">Refractive Index (Estimate)</label>
                             <select id="ri-filter" style="${inputStyle} cursor: pointer;" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
                                 <option value="all">Show All RIs</option>
                                 ${Array.from(ris).sort((a, b) => String(b).localeCompare(String(a))).map(r => `<option value="${r}">${r}</option>`).join('')}
@@ -451,7 +450,7 @@
                             </select>
                         </div>
                         <div>
-                            <label style="${labelStyle}">Real World Applications</label>
+                            <label style="${labelStyle}">Number of real world applications</label>
                             <input id="validation-filter" type="number" min="0" step="1" placeholder="Any count" title="Number of citations" style="${inputStyle}" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
                         </div>
                     </div>
@@ -625,7 +624,7 @@
         function getMethodPropertyRows(method, includeTissueCompatibility = false) {
             const rows = [
                 ['Chemical Class', method.chemical_class],
-                ['Refractive Index', method.refractive_index],
+                ['Refractive Index (Estimate)', method.refractive_index],
                 ['Clearing Speed', method.clearing_speed],
                 ['Morphology Impact', method.morphology_impact],
                 ['Toxicity Hazard', method.toxicity_hazard],
@@ -693,7 +692,7 @@
             const detailHtml = isFocused ? `
                 <div class="full-width-property" style="border-top: 1px dashed rgba(30,41,59,0.6); padding-top: 16px; margin-top: 4px;">
                     <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
-                        <strong style="color: #f8fafc; font-weight: 700; display: block;">Real-World Application Papers (${papers.length})</strong>
+                        <strong style="color: #f8fafc; font-weight: 700; display: block;">Possible Real-World Application Papers (${papers.length})</strong>
                         ${papers.length ? `
                             <div style="display: flex; align-items: center; gap: 8px;">
                                 <label style="font-size: 11px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em;">Tissue compatibilities filter</label>
