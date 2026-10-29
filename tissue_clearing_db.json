@@ -7295,6 +7295,20 @@
           "evidence": "This paper is a review article describing molecular cues and cellular mechanisms governing axon branching in the developing vertebrate CNS.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
+        },
+        {
+          "title": "Advanced CLARITY for rapid and high-resolution imaging of intact tissues.",
+          "doi": "10.1038/nprot.2014.123",
+          "journal": "Nat Protoc",
+          "year": "2014",
+          "first_author": "Tomer R",
+          "pmid": "24945384",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Methodology and protocol article describing advanced CLARITY procedures including passive clearing and light-sheet integration (COLM).",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
         }
       ],
       "source_manifest": {
@@ -8710,7 +8724,12 @@
         "Goldfish | whole body",
         "Frog | whole body",
         "Lizard | whole body",
-        "Rat | whole body"
+        "Rat | whole body",
+        "Batrachomoeus trispinosus | swimbladder",
+        "Discoglossus sardus | skeleton",
+        "Muraenidae | skull",
+        "Actinopterygii | pectoral fin",
+        "Lepomis macrochirus | pectoral fin"
       ],
       "primary_citation": "Green, 1952",
       "original_reference": {
@@ -8732,8 +8751,204 @@
       "morphology_impact": "Unknown",
       "equipment_complexity": "Low (Standard Bench)",
       "toxicity_hazard": "Low (Aqueous)",
-      "real_world_application_papers": [],
-      "validation_candidates": [],
+      "real_world_application_papers": [
+        {
+          "title": "Novel vocal repertoire and paired swimbladders of the three-spined toadfish, Batrachomoeus trispinosus: insights into the diversity of the Batrachoididae.",
+          "doi": "10.1242/jeb.028506",
+          "journal": "J Exp Biol",
+          "year": "2009",
+          "first_author": "Rice AN",
+          "pmid": "19376959",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used morphological clearance to analyze swimbladder structure and correlate it with the acoustic repertoire and phylogenetic position of Batrachomoeus trispinosus.",
+          "cleared_tissues": [
+            "Batrachomoeus trispinosus | swimbladder"
+          ],
+          "tissue_compatibilities": [
+            "Batrachomoeus trispinosus | swimbladder"
+          ]
+        },
+        {
+          "title": "Osteology and skeletal development of Discoglossus sardus (Anura:Discoglossidae).",
+          "doi": "10.1002/(sici)1097-4687(199709)233:3",
+          "journal": "J Morphol",
+          "year": "1997",
+          "first_author": "Anal\u0000a P\u0000gener L",
+          "pmid": "9259125",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Employed clearing and staining to describe skeletogenesis, chondrocranial development, and osteogenesis in Discoglossus sardus across metamorphosis stages.",
+          "cleared_tissues": [
+            "Discoglossus sardus | skeleton"
+          ],
+          "tissue_compatibilities": [
+            "Discoglossus sardus | skeleton"
+          ]
+        },
+        {
+          "title": "Imperfect morphological convergence: variable changes in cranial structures underlie transitions to durophagy in moray eels.",
+          "doi": "10.1086/675810",
+          "journal": "Am Nat",
+          "year": "2014",
+          "first_author": "Collar DC",
+          "pmid": "24823828",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Analyzed cleared cranial preparations to investigate evolutionary morphological adaptations and convergence associated with durophagy in moray eels.",
+          "cleared_tissues": [
+            "Muraenidae | skull"
+          ],
+          "tissue_compatibilities": [
+            "Muraenidae | skull"
+          ]
+        },
+        {
+          "title": "Ancestry of motor innervation to pectoral fin and forelimb.",
+          "doi": "10.1038/ncomms1045",
+          "journal": "Nat Commun",
+          "year": "2010",
+          "first_author": "Ma LH",
+          "pmid": "20975699",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Examined pectoral fin innervation and motoneuron origins in ray-finned fish using cleared anatomical preparations to determine the ancestral vertebrate phenotype.",
+          "cleared_tissues": [
+            "Actinopterygii | pectoral fin"
+          ],
+          "tissue_compatibilities": [
+            "Actinopterygii | pectoral fin"
+          ]
+        },
+        {
+          "title": "The function of fin rays as proprioceptive sensors in fish.",
+          "doi": "10.1038/ncomms2751",
+          "journal": "Nat Commun",
+          "year": "2013",
+          "first_author": "Williams R 4th",
+          "pmid": "23591896",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Examined the neuroanatomy and mechanosensory capabilities of pectoral fin ray afferent fibers in bluegill sunfish.",
+          "cleared_tissues": [
+            "Lepomis macrochirus | pectoral fin"
+          ],
+          "tissue_compatibilities": [
+            "Lepomis macrochirus | pectoral fin"
+          ]
+        }
+      ],
+      "validation_candidates": [
+        {
+          "title": "Novel vocal repertoire and paired swimbladders of the three-spined toadfish, Batrachomoeus trispinosus: insights into the diversity of the Batrachoididae.",
+          "doi": "10.1242/jeb.028506",
+          "journal": "J Exp Biol",
+          "year": "2009",
+          "first_author": "Rice AN",
+          "pmid": "19376959",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used morphological clearance to analyze swimbladder structure and correlate it with the acoustic repertoire and phylogenetic position of Batrachomoeus trispinosus.",
+          "cleared_tissues": [
+            "Batrachomoeus trispinosus | swimbladder"
+          ],
+          "tissue_compatibilities": [
+            "Batrachomoeus trispinosus | swimbladder"
+          ]
+        },
+        {
+          "title": "Osteology and skeletal development of Discoglossus sardus (Anura:Discoglossidae).",
+          "doi": "10.1002/(sici)1097-4687(199709)233:3",
+          "journal": "J Morphol",
+          "year": "1997",
+          "first_author": "Anal\u0000a P\u0000gener L",
+          "pmid": "9259125",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Employed clearing and staining to describe skeletogenesis, chondrocranial development, and osteogenesis in Discoglossus sardus across metamorphosis stages.",
+          "cleared_tissues": [
+            "Discoglossus sardus | skeleton"
+          ],
+          "tissue_compatibilities": [
+            "Discoglossus sardus | skeleton"
+          ]
+        },
+        {
+          "title": "Detection of mineralized structures in early stages of development of marine Teleostei using a modified alcian blue-alizarin red double staining technique for bone and cartilage.",
+          "doi": "10.3109/10520290009064151",
+          "journal": "Biotech Histochem",
+          "year": "2000",
+          "first_author": "Gavaia PJ",
+          "pmid": "10941510",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Describes the development and optimization of a modified alcian blue/alizarin red double-staining and clearing protocol for early teleost fish larvae.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Imperfect morphological convergence: variable changes in cranial structures underlie transitions to durophagy in moray eels.",
+          "doi": "10.1086/675810",
+          "journal": "Am Nat",
+          "year": "2014",
+          "first_author": "Collar DC",
+          "pmid": "24823828",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Analyzed cleared cranial preparations to investigate evolutionary morphological adaptations and convergence associated with durophagy in moray eels.",
+          "cleared_tissues": [
+            "Muraenidae | skull"
+          ],
+          "tissue_compatibilities": [
+            "Muraenidae | skull"
+          ]
+        },
+        {
+          "title": "Ancestry of motor innervation to pectoral fin and forelimb.",
+          "doi": "10.1038/ncomms1045",
+          "journal": "Nat Commun",
+          "year": "2010",
+          "first_author": "Ma LH",
+          "pmid": "20975699",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Examined pectoral fin innervation and motoneuron origins in ray-finned fish using cleared anatomical preparations to determine the ancestral vertebrate phenotype.",
+          "cleared_tissues": [
+            "Actinopterygii | pectoral fin"
+          ],
+          "tissue_compatibilities": [
+            "Actinopterygii | pectoral fin"
+          ]
+        },
+        {
+          "title": "The function of fin rays as proprioceptive sensors in fish.",
+          "doi": "10.1038/ncomms2751",
+          "journal": "Nat Commun",
+          "year": "2013",
+          "first_author": "Williams R 4th",
+          "pmid": "23591896",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Examined the neuroanatomy and mechanosensory capabilities of pectoral fin ray afferent fibers in bluegill sunfish.",
+          "cleared_tissues": [
+            "Lepomis macrochirus | pectoral fin"
+          ],
+          "tissue_compatibilities": [
+            "Lepomis macrochirus | pectoral fin"
+          ]
+        }
+      ],
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
@@ -9110,7 +9325,8 @@
         "Human | intestine",
         "Human | lymph node",
         "Human | brain slice",
-        "Human | tumor"
+        "Human | tumor",
+        "Mus musculus | lung"
       ],
       "primary_citation": "Tainaka et al., 2014",
       "original_reference": {
@@ -9192,6 +9408,24 @@
           ],
           "tissue_compatibilities": [
             "Mouse | heart"
+          ]
+        },
+        {
+          "title": "KLRG1(+) Effector CD8(+) T Cells Lose KLRG1, Differentiate into All Memory T Cell Lineages, and Convey Enhanced Protective Immunity.",
+          "doi": "10.1016/j.immuni.2018.03.015",
+          "journal": "Immunity",
+          "year": "2018",
+          "first_author": "Herndler-Brandstetter D",
+          "pmid": "29625895",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Investigated the developmental plasticity and protective immunity of KLRG1+ effector CD8+ T cells in mice using 3D tissue clearing to evaluate memory T cell distribution.",
+          "cleared_tissues": [
+            "Mus musculus | lung"
+          ],
+          "tissue_compatibilities": [
+            "Mus musculus | lung"
           ]
         }
       ],
@@ -9499,6 +9733,38 @@
           "category": "review",
           "confidence": "high",
           "evidence": "This review presents light-sheet imaging applications for studying developmental biology and autism spectrum disorders.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "KLRG1(+) Effector CD8(+) T Cells Lose KLRG1, Differentiate into All Memory T Cell Lineages, and Convey Enhanced Protective Immunity.",
+          "doi": "10.1016/j.immuni.2018.03.015",
+          "journal": "Immunity",
+          "year": "2018",
+          "first_author": "Herndler-Brandstetter D",
+          "pmid": "29625895",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Investigated the developmental plasticity and protective immunity of KLRG1+ effector CD8+ T cells in mice using 3D tissue clearing to evaluate memory T cell distribution.",
+          "cleared_tissues": [
+            "Mus musculus | lung"
+          ],
+          "tissue_compatibilities": [
+            "Mus musculus | lung"
+          ]
+        },
+        {
+          "title": "Integration of electrophysiological recordings with single-cell RNA-seq data identifies neuronal subtypes.",
+          "doi": "10.1038/nbt.3443",
+          "journal": "Nat Biotechnol",
+          "year": "2015",
+          "first_author": "Fuzik J",
+          "pmid": "26689544",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "The study focuses on developing the Patch-seq method to couple electrophysiology with single-cell RNA sequencing; tissue clearing is not a primary methodology of the paper.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
         }
@@ -10831,6 +11097,20 @@
           "evidence": "Focuses on genetic engineering of optogenetic switches into the human safe harbor locus; ClearT is not mentioned in the abstract.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
+        },
+        {
+          "title": "Whole-body imaging with single-cell resolution by tissue decolorization.",
+          "doi": "10.1016/j.cell.2014.10.034",
+          "journal": "Cell",
+          "year": "2014",
+          "first_author": "Tainaka K",
+          "pmid": "25417165",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Describes the development of an aminoalcohol-based decolorization and clearing protocol (CUBIC-perfusion) for whole-body and intact organ imaging.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
         }
       ],
       "source_manifest": {
@@ -11031,6 +11311,34 @@
           "category": "experimental_test",
           "confidence": "high",
           "evidence": "The study develops Fish-on-Chips, an optofluidic microfluidics-light sheet imaging platform created to control chemical cues while recording brainwide neural activity in larval zebrafish.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Light-sheet microscopy of cleared tissues with isotropic, subcellular resolution.",
+          "doi": "10.1038/s41592-019-0615-4",
+          "journal": "Nat Methods",
+          "year": "2019",
+          "first_author": "Chakraborty T",
+          "pmid": "31673159",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Presents cleared-tissue axially swept light-sheet microscopy (ctASLM), a microscope technology development for imaging cleared tissues at high resolution.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Broad applicability of a streamlined ethyl cinnamate-based clearing procedure.",
+          "doi": "10.1242/dev.166884",
+          "journal": "Development",
+          "year": "2019",
+          "first_author": "Masselink W",
+          "pmid": "30665888",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Introduces and evaluates 2Eci, a second-generation ethyl cinnamate-based clearing method across multiple model organism tissues.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
         }
@@ -11528,6 +11836,34 @@
           "tissue_compatibilities": [
             "Mouse | bone marrow"
           ]
+        },
+        {
+          "title": "ScaleS: an optical clearing palette for biological imaging.",
+          "doi": "10.1038/nn.4107",
+          "journal": "Nat Neurosci",
+          "year": "2015",
+          "first_author": "Hama H",
+          "pmid": "26368944",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Describes the development, optimization, and comparative benchmarking of ScaleS, a sorbitol-based optical clearing method.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Whole-body tissue stabilization and selective extractions via tissue-hydrogel hybrids for high-resolution intact circuit mapping and phenotyping.",
+          "doi": "10.1038/nprot.2015.122",
+          "journal": "Nat Protoc",
+          "year": "2015",
+          "first_author": "Treweek JB",
+          "pmid": "26492141",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Protocol report detailing PACT, PARS, and RIMS procedures for hydrogel-based tissue clearing and labeling.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
         }
       ],
       "source_manifest": {
@@ -13820,7 +14156,8 @@
         "Mouse | pancreas",
         "Human | pancreas",
         "Mouse | kidney",
-        "Mouse | organ"
+        "Mouse | organ",
+        "Ambystoma mexicanum | forelimb"
       ],
       "primary_citation": "Masselink et al., 2019",
       "original_reference": {
@@ -13905,6 +14242,24 @@
           ],
           "tissue_compatibilities": [
             "Mouse | kidney"
+          ]
+        },
+        {
+          "title": "Single-cell analysis uncovers convergence of cell identities during axolotl limb regeneration.",
+          "doi": "10.1126/science.aaq0681",
+          "journal": "Science",
+          "year": "2018",
+          "first_author": "Gerber T",
+          "pmid": "30262634",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Investigated connective tissue lineage heterogeneity and cellular reprogramming during axolotl forelimb regeneration using optical clearing and 3D imaging alongside scRNA-seq.",
+          "cleared_tissues": [
+            "Ambystoma mexicanum | forelimb"
+          ],
+          "tissue_compatibilities": [
+            "Ambystoma mexicanum | forelimb"
           ]
         }
       ],
@@ -14216,6 +14571,24 @@
           "evidence": "The paper describes the development and validation of a light-sheet fluorescence expansion microscopy system for 3D organoid imaging.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
+        },
+        {
+          "title": "Single-cell analysis uncovers convergence of cell identities during axolotl limb regeneration.",
+          "doi": "10.1126/science.aaq0681",
+          "journal": "Science",
+          "year": "2018",
+          "first_author": "Gerber T",
+          "pmid": "30262634",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Investigated connective tissue lineage heterogeneity and cellular reprogramming during axolotl forelimb regeneration using optical clearing and 3D imaging alongside scRNA-seq.",
+          "cleared_tissues": [
+            "Ambystoma mexicanum | forelimb"
+          ],
+          "tissue_compatibilities": [
+            "Ambystoma mexicanum | forelimb"
+          ]
         }
       ],
       "source_manifest": {
@@ -15069,6 +15442,24 @@
             "Mus musculus | retina",
             "Mus musculus | brainstem"
           ]
+        },
+        {
+          "title": "Three-dimensional characterization of developing and adult ocular vasculature in mice using in toto clearing.",
+          "doi": "10.1038/s42003-022-04104-2",
+          "journal": "Commun Biol",
+          "year": "2022",
+          "first_author": "Darche M",
+          "pmid": "36302949",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Employed whole-eye clearing and light-sheet microscopy to quantify 3D dynamics of hyaloid vasculature regression, post-occlusive remodeling, and cellular distribution in mouse ocular compartments.",
+          "cleared_tissues": [
+            "Mus musculus | eye"
+          ],
+          "tissue_compatibilities": [
+            "Mus musculus | eye"
+          ]
         }
       ],
       "validation_candidates": [
@@ -15327,6 +15718,52 @@
             "Mus musculus | retina",
             "Mus musculus | brainstem"
           ]
+        },
+        {
+          "title": "Three-dimensional characterization of developing and adult ocular vasculature in mice using in toto clearing.",
+          "doi": "10.1038/s42003-022-04104-2",
+          "journal": "Commun Biol",
+          "year": "2022",
+          "first_author": "Darche M",
+          "pmid": "36302949",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Employed whole-eye clearing and light-sheet microscopy to quantify 3D dynamics of hyaloid vasculature regression, post-occlusive remodeling, and cellular distribution in mouse ocular compartments.",
+          "cleared_tissues": [
+            "Mus musculus | eye"
+          ],
+          "tissue_compatibilities": [
+            "Mus musculus | eye"
+          ]
+        },
+        {
+          "title": "Light sheet fluorescence microscopy of cleared human eyes.",
+          "doi": "10.1038/s42003-023-05401-0",
+          "journal": "Commun Biol",
+          "year": "2023",
+          "first_author": "Darche M",
+          "pmid": "37816868",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Presents a procedure (ClearEye based on iDISCO+) for clearing and immunolabeling whole human eyes for 3D histology.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "InVision: An optimized tissue clearing approach for three-dimensional imaging and analysis of intact rodent eyes.",
+          "doi": "10.1016/j.isci.2021.102905",
+          "journal": "iScience",
+          "year": "2021",
+          "first_author": "Gurdita A",
+          "pmid": "34430805",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Develops and validates InVision, an optimized clearing and depigmentation method tailored for imaging intact rodent eyes.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
         }
       ],
       "source_manifest": {
@@ -16389,6 +16826,48 @@
           "tissue_compatibilities": [
             "Mouse | brain"
           ]
+        },
+        {
+          "title": "Mapping of Brain Activity by Automated Volume Analysis of Immediate Early Genes.",
+          "doi": "10.1016/j.cell.2016.05.007",
+          "journal": "Cell",
+          "year": "2016",
+          "first_author": "Renier N",
+          "pmid": "27238021",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Introduces and validates an automated whole-brain imaging and computational analysis pipeline (ClearMap) using immediate early gene profiling in cleared intact mouse brains.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "A three-dimensional single-cell-resolution whole-brain atlas using CUBIC-X expansion microscopy and tissue clearing.",
+          "doi": "10.1038/s41593-018-0109-1",
+          "journal": "Nat Neurosci",
+          "year": "2018",
+          "first_author": "Murakami TC",
+          "pmid": "29507408",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Presents CUBIC-X, an expansion clearing protocol, and constructs the point-based CUBIC-Atlas for mouse whole-brain cell profiling.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Fully Automated Evaluation of Total Glomerular Number and Capillary Tuft Size in Nephritic Kidneys Using Lightsheet Microscopy.",
+          "doi": "10.1681/asn.2016020232",
+          "journal": "J Am Soc Nephrol",
+          "year": "2016",
+          "first_author": "Klingberg A",
+          "pmid": "27487796",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Describes and validates the novel use of ethyl cinnamate as a solvent-based clearing agent combined with automated counting of glomeruli in murine kidneys.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
         }
       ],
       "source_manifest": {
@@ -18659,7 +19138,120 @@
       "equipment_complexity": "Unknown",
       "toxicity_hazard": "Low (Aqueous)",
       "real_world_application_papers": [],
-      "validation_candidates": [],
+      "validation_candidates": [
+        {
+          "title": "Effect of NMP-assisted surface conditioning on the bonding performance and durability of PEEK to acrylic resin.",
+          "doi": "10.1016/j.dental.2026.10.013",
+          "journal": "Dent Mater",
+          "year": "2026",
+          "first_author": "Lim ZM",
+          "pmid": "42951776",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "Sodium hydroxide (NaOH) is used strictly as a surface immersion treatment for polyetheretherketone (PEEK) dental material bonding, unrelated to tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Interpretable machine learning reveals dominant controls and operational windows for humic-associated phosphorus formation during aerobic composting.",
+          "doi": "10.1016/j.biortech.2026.136152",
+          "journal": "Bioresour Technol",
+          "year": "2026",
+          "first_author": "Han S",
+          "pmid": "42951149",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "NaOH refers to an operationally defined chemical fraction (NaOH-extractable humic-associated phosphorus) in aerobic composting, unrelated to optical tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Chemical and Biological Mobilization of Soil Phosphorus by ppk-Expressing Transgenic Rice (Oryza sativa L.).",
+          "doi": "10.3390/plants15203098",
+          "journal": "Plants (Basel)",
+          "year": "2026",
+          "first_author": "Yang S",
+          "pmid": "42943051",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "NaOH-P refers to an operationally defined soil phosphorus chemical pool in plant agronomy, unrelated to optical clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "The Response of Flame-Retardant Polypropylene Composites After Long-Term Exposure to Corrosive Media.",
+          "doi": "10.3390/polym18202480",
+          "journal": "Polymers (Basel)",
+          "year": "2026",
+          "first_author": "Vîlcea EJ",
+          "pmid": "42942601",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "NaOH solution is used as a corrosive liquid medium to test the chemical resistance of polypropylene composites, unrelated to tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Influence of Hydrolysis Medium on Matrix Degradation and Carbon Fibre Recovery from Epoxy-Based CFRPs.",
+          "doi": "10.3390/polym18202458",
+          "journal": "Polymers (Basel)",
+          "year": "2026",
+          "first_author": "Erjavec A",
+          "pmid": "42942579",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "NaOH is used as an alkaline hydrolysis medium for recycling carbon fibers from polymer composites, unrelated to tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "An Accelerated Concrete Prism Test for Evaluating Fly Ash Mitigation of Alkali-Silica Reaction in Reactive Tuff Aggregates.",
+          "doi": "10.3390/ma19204335",
+          "journal": "Materials (Basel)",
+          "year": "2026",
+          "first_author": "Liu X",
+          "pmid": "42941076",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "NaOH immersion is used to accelerate the alkali-silica reaction in concrete testing, unrelated to tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Decoupling the Cation-Induced Vibrational Responses at the Graphdiyne-Water Interface via In Situ Surface-Enhanced Raman Spectroscopy.",
+          "doi": "10.1021/jacs.6c10062",
+          "journal": "J Am Chem Soc",
+          "year": "2026",
+          "first_author": "Wang XT",
+          "pmid": "42938090",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "NaOH is used as an alkaline electrolyte solution in electrochemical Raman spectroscopy, unrelated to tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Measuring Liquid Metal Interfacial Tension by Faraday Wave Dispersion and Zero-Padded FFT.",
+          "doi": "10.1021/acs.langmuir.6c03958",
+          "journal": "Langmuir",
+          "year": "2026",
+          "first_author": "Liu D",
+          "pmid": "42937598",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "NaOH solution is used as the liquid electrolyte layer covering liquid metal in fluid physics measurements, unrelated to tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
@@ -20126,6 +20718,20 @@
           "evidence": "Reports and evaluates Magnify, an anchoring-free expansion microscopy strategy yielding up to 11-fold expansion across diverse specimens.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
+        },
+        {
+          "title": "Iterative expansion microscopy.",
+          "doi": "10.1038/nmeth.4261",
+          "journal": "Nat Methods",
+          "year": "2017",
+          "first_author": "Chang JB",
+          "pmid": "28417997",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Methodological development of iterative expansion microscopy (iExM) for nanoscale imaging using successive swellable hydrogel networks.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
         }
       ],
       "source_manifest": {
@@ -20969,6 +21575,20 @@
           "evidence": "The paper describes and evaluates the FLASH protocol for antigen retrieval and whole-organ tissue clearing.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
+        },
+        {
+          "title": "Multi-immersion open-top light-sheet microscope for high-throughput imaging of cleared tissues.",
+          "doi": "10.1038/s41467-019-10534-0",
+          "journal": "Nat Commun",
+          "year": "2019",
+          "first_author": "Glaser AK",
+          "pmid": "31273194",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Focuses on the engineering and design of an open-top light-sheet microscope compatible with various tissue clearing protocols.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
         }
       ],
       "source_manifest": {
@@ -21110,6 +21730,62 @@
           "category": "experimental_test",
           "confidence": "high",
           "evidence": "Reports ELAST, a technology that transforms tissues into stretchable hydrogels to accelerate probe delivery and molecular labeling.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Advanced CUBIC tissue clearing for whole-organ cell profiling.",
+          "doi": "10.1038/s41596-019-0240-9",
+          "journal": "Nat Protoc",
+          "year": "2019",
+          "first_author": "Matsumoto K",
+          "pmid": "31748753",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Protocol paper detailing advanced CUBIC procedures and computational workflows for high-throughput whole-organ cell profiling.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Chemical Landscape for Tissue Clearing Based on Hydrophilic Reagents.",
+          "doi": "10.1016/j.celrep.2018.07.056",
+          "journal": "Cell Rep",
+          "year": "2018",
+          "first_author": "Tainaka K",
+          "pmid": "30134179",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Chemical screening study profiling hydrophilic reagents for tissue delipidation, decoloring, decalcification, and refractive index matching.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "The mesoSPIM initiative: open-source light-sheet microscopes for imaging cleared tissue.",
+          "doi": "10.1038/s41592-019-0554-0",
+          "journal": "Nat Methods",
+          "year": "2019",
+          "first_author": "Voigt FF",
+          "pmid": "31527839",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Presents an open-hardware light-sheet microscope design (mesoSPIM) engineered for imaging centimeter-sized cleared tissues.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "High-resolution 3D imaging of fixed and cleared organoids.",
+          "doi": "10.1038/s41596-019-0160-8",
+          "journal": "Nat Protoc",
+          "year": "2019",
+          "first_author": "Dekkers JF",
+          "pmid": "31053799",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Protocol describing a fructose-glycerol clearing pipeline optimized for 3D imaging of fixed whole-mount organoids.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
         }
@@ -21478,6 +22154,20 @@
           "category": "experimental_test",
           "confidence": "high",
           "evidence": "This study develops and evaluates AKS, an alkaline tissue clearing solution for rapid brain slice and whole-organ clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Highly-multiplexed volumetric mapping with Raman dye imaging and tissue clearing.",
+          "doi": "10.1038/s41587-021-01041-z",
+          "journal": "Nat Biotechnol",
+          "year": "2021",
+          "first_author": "Shi L",
+          "pmid": "34608326",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Describes the development of RADIANT and rDISCO clearing for multiplexed Raman spectroscopy imaging in thick biological samples.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
         }
@@ -22923,6 +23613,34 @@
           "evidence": "Describes and validates the non-radioactive digoxigenin-based whole-mount in situ hybridization method in Xenopus embryos.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
+        },
+        {
+          "title": "Single-cell phenotyping within transparent intact tissue through whole-body clearing.",
+          "doi": "10.1016/j.cell.2014.07.017",
+          "journal": "Cell",
+          "year": "2014",
+          "first_author": "Yang B",
+          "pmid": "25088144",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "This paper describes the development and validation of whole-body and intact organ clearing techniques (PACT, RIMS, and PARS) rather than applying them to answer a specific biological question.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Whole-brain imaging with single-cell resolution using chemical cocktails and computational analysis.",
+          "doi": "10.1016/j.cell.2014.03.042",
+          "journal": "Cell",
+          "year": "2014",
+          "first_author": "Susaki EA",
+          "pmid": "24746791",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Reports the chemical screening and development of CUBIC reagents for whole-brain clearing and single-cell resolution imaging.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
         }
       ],
       "source_manifest": {
@@ -23962,7 +24680,8 @@
       "sample_size_compatibility": "Micro/Slice (<2 mm)",
       "tissue_compatibilities": [
         "Rat | brain",
-        "Mouse | brain"
+        "Mouse | brain",
+        "Mus musculus | skeletal muscle"
       ],
       "primary_citation": "Zhu et al., 2020",
       "original_reference": {
@@ -23989,7 +24708,26 @@
       "morphology_impact": "Unknown",
       "equipment_complexity": "Low (Standard Bench)",
       "toxicity_hazard": "Low (Aqueous)",
-      "real_world_application_papers": [],
+      "real_world_application_papers": [
+        {
+          "title": "Spatial Distribution of Motor Endplates and its Adaptive Change in Skeletal Muscle.",
+          "doi": "10.7150/thno.28729",
+          "journal": "Theranostics",
+          "year": "2019",
+          "first_author": "Yin X",
+          "pmid": "30809305",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used tissue optical clearing with light-sheet microscopy to map the 3D lamella organization of motor endplates in skeletal muscle and evaluate adaptations during denervation and reinnervation.",
+          "cleared_tissues": [
+            "Mus musculus | skeletal muscle"
+          ],
+          "tissue_compatibilities": [
+            "Mus musculus | skeletal muscle"
+          ]
+        }
+      ],
       "validation_candidates": [
         {
           "title": "High-speed mapping of whole-mouse peripheral nerves at subcellular resolution.",
@@ -24158,6 +24896,24 @@
           "evidence": "The study presents SCARF, a sodium cholate-based active delipidation method for rapid tissue clearing and deep immunolabeling.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
+        },
+        {
+          "title": "Spatial Distribution of Motor Endplates and its Adaptive Change in Skeletal Muscle.",
+          "doi": "10.7150/thno.28729",
+          "journal": "Theranostics",
+          "year": "2019",
+          "first_author": "Yin X",
+          "pmid": "30809305",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used tissue optical clearing with light-sheet microscopy to map the 3D lamella organization of motor endplates in skeletal muscle and evaluate adaptations during denervation and reinnervation.",
+          "cleared_tissues": [
+            "Mus musculus | skeletal muscle"
+          ],
+          "tissue_compatibilities": [
+            "Mus musculus | skeletal muscle"
+          ]
         }
       ],
       "source_manifest": {
@@ -24526,6 +25282,20 @@
           "category": "experimental_test",
           "confidence": "high",
           "evidence": "Presents the design and characterization of CUBIC-HistoVIsion, an optimized 3D staining and clearing pipeline derived from electrolyte-gel tissue physics.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "MACS: Rapid Aqueous Clearing System for 3D Mapping of Intact Organs.",
+          "doi": "10.1002/advs.201903185",
+          "journal": "Adv Sci (Weinh)",
+          "year": "2020",
+          "first_author": "Zhu J",
+          "pmid": "32328422",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Presents the development of MACS, an m-xylylenediamine-based aqueous tissue-clearing system compatible with lipophilic dyes.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
         }
@@ -25690,6 +26460,20 @@
           "evidence": "The study evaluates clearing performance and optical transparency changes in costal cartilage induced by iohexol injection.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
+        },
+        {
+          "title": "A large, switchable optical clearing skull window for cerebrovascular imaging.",
+          "doi": "10.7150/thno.23686",
+          "journal": "Theranostics",
+          "year": "2018",
+          "first_author": "Zhang C",
+          "pmid": "29774069",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Evaluates the development, efficacy, and safety of an optical clearing agent for creating non-invasive cranial windows for intravital cerebrovascular imaging.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
         }
       ],
       "source_manifest": {
@@ -25959,7 +26743,8 @@
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
       "tissue_compatibilities": [
         "Mouse | brain",
-        "Mice | brain"
+        "Mice | brain",
+        "Mus musculus | brain"
       ],
       "primary_citation": "Kim et al., 2015",
       "original_reference": {
@@ -26021,6 +26806,24 @@
           ],
           "tissue_compatibilities": [
             "Mice | brain"
+          ]
+        },
+        {
+          "title": "Multi-sensory Gamma Stimulation Ameliorates Alzheimer's-Associated Pathology and Improves Cognition.",
+          "doi": "10.1016/j.cell.2019.02.014",
+          "journal": "Cell",
+          "year": "2019",
+          "first_author": "Martorell AJ",
+          "pmid": "30879788",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used SHIELD tissue clearing to perform whole-brain 3D quantification of amyloid plaque burden and microglial responses following multi-sensory gamma stimulation in Alzheimer's mouse models.",
+          "cleared_tissues": [
+            "Mus musculus | brain"
+          ],
+          "tissue_compatibilities": [
+            "Mus musculus | brain"
           ]
         }
       ],
@@ -26184,6 +26987,66 @@
           "category": "review",
           "confidence": "high",
           "evidence": "This publication is a review that presents an overview and comparison of clearing and labeling techniques for large-scale biological tissues.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Protection of tissue physicochemical properties using polyfunctional crosslinkers.",
+          "doi": "10.1038/nbt.4281",
+          "journal": "Nat Biotechnol",
+          "year": "2018",
+          "first_author": "Park YG",
+          "pmid": "30556815",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Reports the engineering and development of SHIELD, a polyfunctional crosslinking method to preserve biomolecules and fluorescence during tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Multi-sensory Gamma Stimulation Ameliorates Alzheimer's-Associated Pathology and Improves Cognition.",
+          "doi": "10.1016/j.cell.2019.02.014",
+          "journal": "Cell",
+          "year": "2019",
+          "first_author": "Martorell AJ",
+          "pmid": "30879788",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used SHIELD tissue clearing to perform whole-brain 3D quantification of amyloid plaque burden and microglial responses following multi-sensory gamma stimulation in Alzheimer's mouse models.",
+          "cleared_tissues": [
+            "Mus musculus | brain"
+          ],
+          "tissue_compatibilities": [
+            "Mus musculus | brain"
+          ]
+        },
+        {
+          "title": "Multiplexed and scalable super-resolution imaging of three-dimensional protein localization in size-adjustable tissues.",
+          "doi": "10.1038/nbt.3641",
+          "journal": "Nat Biotechnol",
+          "year": "2016",
+          "first_author": "Ku T",
+          "pmid": "27454740",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Describes the invention and characterization of magnified analysis of the proteome (MAP), an expansion clearing method.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Versatile whole-organ/body staining and imaging based on electrolyte-gel properties of biological tissues.",
+          "doi": "10.1038/s41467-020-15906-5",
+          "journal": "Nat Commun",
+          "year": "2020",
+          "first_author": "Susaki EA",
+          "pmid": "32341345",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Characterizes the electrolyte-gel properties of tissue to design and optimize the CUBIC-HistoVIsion 3D whole-organ staining and clearing protocol.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
         }
@@ -27012,6 +27875,34 @@
           "tissue_compatibilities": [
             "Mouse | intestine"
           ]
+        },
+        {
+          "title": "Panoptic imaging of transparent mice reveals whole-body neuronal projections and skull-meninges connections.",
+          "doi": "10.1038/s41593-018-0301-3",
+          "journal": "Nat Neurosci",
+          "year": "2018",
+          "first_author": "Cai R",
+          "pmid": "30598527",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Describes the development of the vDISCO whole-body clearing and immunolabeling technology to enhance fluorescent signals across transparent rodent bodies.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Tissue clearing of both hard and soft tissue organs with the PEGASOS method.",
+          "doi": "10.1038/s41422-018-0049-z",
+          "journal": "Cell Res",
+          "year": "2018",
+          "first_author": "Jing D",
+          "pmid": "29844583",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Describes the development of PEGASOS, a clearing method engineered to render hard and soft tissue organs transparent while preserving endogenous fluorescence.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
         }
       ],
       "source_manifest": {
@@ -27038,7 +27929,8 @@
         "Mice | brachiocephalic arteries",
         "Rats | heart",
         "Human | heart",
-        "Human | sentinel lymph nodes"
+        "Human | sentinel lymph nodes",
+        "Mus musculus | brain"
       ],
       "primary_citation": "Merz et al, 2019",
       "original_reference": {
@@ -27274,6 +28166,24 @@
           ],
           "tissue_compatibilities": [
             "Mice | heart"
+          ]
+        },
+        {
+          "title": "Quantitative whole-brain 3D imaging of tyrosine hydroxylase-labeled neuron architecture in the mouse MPTP model of Parkinson's disease.",
+          "doi": "10.1242/dmm.042200",
+          "journal": "Dis Model Mech",
+          "year": "2019",
+          "first_author": "Roostalu U",
+          "pmid": "31704726",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Applied whole-brain iDISCO clearing and light-sheet imaging to quantify MPTP-induced alterations and neurodegeneration of tyrosine hydroxylase-positive dopaminergic neurons in a Parkinson's disease mouse model.",
+          "cleared_tissues": [
+            "Mus musculus | brain"
+          ],
+          "tissue_compatibilities": [
+            "Mus musculus | brain"
           ]
         }
       ],
@@ -27693,6 +28603,24 @@
           "evidence": "Investigates galectin-1 in ischemia-reperfusion using H&E, echocardiography, and flow cytometry without optical tissue clearing.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
+        },
+        {
+          "title": "Quantitative whole-brain 3D imaging of tyrosine hydroxylase-labeled neuron architecture in the mouse MPTP model of Parkinson's disease.",
+          "doi": "10.1242/dmm.042200",
+          "journal": "Dis Model Mech",
+          "year": "2019",
+          "first_author": "Roostalu U",
+          "pmid": "31704726",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Applied whole-brain iDISCO clearing and light-sheet imaging to quantify MPTP-induced alterations and neurodegeneration of tyrosine hydroxylase-positive dopaminergic neurons in a Parkinson's disease mouse model.",
+          "cleared_tissues": [
+            "Mus musculus | brain"
+          ],
+          "tissue_compatibilities": [
+            "Mus musculus | brain"
+          ]
         }
       ],
       "source_manifest": {
@@ -28714,7 +29642,10 @@
       "tissue_compatibilities": [
         "Mouse | brain",
         "Mouse | fornix",
-        "Mouse | whole organ"
+        "Mouse | whole organ",
+        "Mus musculus | adipose tissue",
+        "Mus musculus | brain",
+        "Mus musculus | kidney"
       ],
       "primary_citation": "Li et al., Front. Neuroanat. 2018, 12, 67.",
       "original_reference": {
@@ -28759,6 +29690,28 @@
           "tissue_compatibilities": [
             "Mouse | fornix",
             "Mouse | brain"
+          ]
+        },
+        {
+          "title": "Conditional gene targeting using UCP1-Cre mice directly targets the central nervous system beyond thermogenic adipose tissues.",
+          "doi": "10.1016/j.molmet.2021.101405",
+          "journal": "Mol Metab",
+          "year": "2021",
+          "first_author": "Claflin KE",
+          "pmid": "34844020",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Employed tissue clearing and fluorescent imaging across intact organs to determine the off-target central nervous system and peripheral expression of Cre in UCP1-Cre mice.",
+          "cleared_tissues": [
+            "Mus musculus | adipose tissue",
+            "Mus musculus | brain",
+            "Mus musculus | kidney"
+          ],
+          "tissue_compatibilities": [
+            "Mus musculus | adipose tissue",
+            "Mus musculus | brain",
+            "Mus musculus | kidney"
           ]
         }
       ],
@@ -28894,6 +29847,28 @@
           "evidence": "The paper establishes and validates a imaging workflow combining light sheet and confocal microscopy for tracking regions of interest in tumor tissues.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
+        },
+        {
+          "title": "Conditional gene targeting using UCP1-Cre mice directly targets the central nervous system beyond thermogenic adipose tissues.",
+          "doi": "10.1016/j.molmet.2021.101405",
+          "journal": "Mol Metab",
+          "year": "2021",
+          "first_author": "Claflin KE",
+          "pmid": "34844020",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Employed tissue clearing and fluorescent imaging across intact organs to determine the off-target central nervous system and peripheral expression of Cre in UCP1-Cre mice.",
+          "cleared_tissues": [
+            "Mus musculus | adipose tissue",
+            "Mus musculus | brain",
+            "Mus musculus | kidney"
+          ],
+          "tissue_compatibilities": [
+            "Mus musculus | adipose tissue",
+            "Mus musculus | brain",
+            "Mus musculus | kidney"
+          ]
         }
       ],
       "source_manifest": {
@@ -29122,6 +30097,20 @@
           "category": "review",
           "confidence": "high",
           "evidence": "Protocol book chapter describing chloral hydrate clearing methods for microscopic examination of Arabidopsis gynoecia and ovules.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Semiautomated confocal imaging of fungal pathogenesis on plants: Microscopic analysis of macroscopic specimens.",
+          "doi": "10.1002/jemt.22709",
+          "journal": "Microsc Res Tech",
+          "year": "2016",
+          "first_author": "Minker KR",
+          "pmid": "27342138",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Standardizes and evaluates an optical clearing and confocal phenotyping pipeline for investigating fungal plant pathogen interactions on maize specimens.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
         }
@@ -29995,6 +30984,34 @@
           "evidence": "Paper focuses on the protein engineering and characterization of tandem dimeric fluorescent proteins; TOMEI is not used.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
+        },
+        {
+          "title": "Direct fluorescence imaging of lignocellulosic and suberized cell walls in roots and stems.",
+          "doi": "10.1093/aobpla/plaa032",
+          "journal": "AoB Plants",
+          "year": "2020",
+          "first_author": "Kitin P",
+          "pmid": "32793329",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Demonstrates and discusses protocols utilizing glycerol clearing and direct fluorophores for imaging lignified and suberized plant cell walls.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "ClearSeeAlpha: Advanced Optical Clearing for Whole-Plant Imaging.",
+          "doi": "10.1093/pcp/pcab033",
+          "journal": "Plant Cell Physiol",
+          "year": "2021",
+          "first_author": "Kurihara D",
+          "pmid": "33638989",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Reports the chemical optimization and validation of ClearSeeAlpha to prevent oxidation and browning during optical clearing of plant tissues.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
         }
       ],
       "source_manifest": {
@@ -30620,7 +31637,12 @@
       "chemical_class": "Aqueous",
       "refractive_index": "Unknown",
       "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
-      "tissue_compatibilities": [],
+      "tissue_compatibilities": [
+        "Mus musculus | lung",
+        "Mus musculus | lymph node",
+        "Homo sapiens | pancreatic ductal adenocarcinoma organoids",
+        "Mus musculus | pancreatic ductal adenocarcinoma organoids"
+      ],
       "primary_citation": "H. A. Messal, J. Almagro, M. Zaw Thin, A. Tedeschi, A. Ciccarelli, L. Blackie, K. I. Anderson, I. Miguel-Aliaga, J. van Rheenen, A. Behrens, Nat. Protoc. 2021, 16, 239.",
       "original_reference": {
         "citation": "H. A. Messal, J. Almagro, M. Zaw Thin, A. Tedeschi, A. Ciccarelli, L. Blackie, K. I. Anderson, I. Miguel-Aliaga, J. van Rheenen, A. Behrens, Nat. Protoc. 2021, 16, 239.",
@@ -30650,8 +31672,164 @@
       "morphology_impact": "Unknown",
       "equipment_complexity": "Unknown",
       "toxicity_hazard": "Unknown",
-      "real_world_application_papers": [],
-      "validation_candidates": [],
+      "real_world_application_papers": [
+        {
+          "title": "Antibodies against endogenous retroviruses promote lung cancer immunotherapy.",
+          "doi": "10.1038/s41586-023-05771-9",
+          "journal": "Nature",
+          "year": "2023",
+          "first_author": "Ng KW",
+          "pmid": "37046094",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used tissue clearing to investigate 3D tertiary lymphoid structure organization and B-cell antitumor immunity directed against endogenous retrovirus glycoproteins in lung adenocarcinoma.",
+          "cleared_tissues": [
+            "Mus musculus | lung"
+          ],
+          "tissue_compatibilities": [
+            "Mus musculus | lung"
+          ]
+        },
+        {
+          "title": "Long-term retention of antigens in germinal centers is controlled by the spatial organization of the follicular dendritic cell network.",
+          "doi": "10.1038/s41590-023-01559-1",
+          "journal": "Nat Immunol",
+          "year": "2023",
+          "first_author": "Mart\u0000nez-Ria\u0000o A",
+          "pmid": "37443283",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Applied tissue clearing to analyze the 3D spatial organization of follicular dendritic cells and long-term immune complex retention in intact lymph node germinal centers.",
+          "cleared_tissues": [
+            "Mus musculus | lymph node"
+          ],
+          "tissue_compatibilities": [
+            "Mus musculus | lymph node"
+          ]
+        },
+        {
+          "title": "Heterogeneity-driven phenotypic plasticity and treatment response in branched-organoid models of pancreatic ductal adenocarcinoma.",
+          "doi": "10.1038/s41551-024-01273-9",
+          "journal": "Nat Biomed Eng",
+          "year": "2024",
+          "first_author": "Papargyriou A",
+          "pmid": "39658630",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Employed optical tissue clearing to reconstruct 3D architectural and phenotypic intratumoral heterogeneity in branched pancreatic ductal adenocarcinoma organoids.",
+          "cleared_tissues": [
+            "Homo sapiens | pancreatic ductal adenocarcinoma organoids",
+            "Mus musculus | pancreatic ductal adenocarcinoma organoids"
+          ],
+          "tissue_compatibilities": [
+            "Homo sapiens | pancreatic ductal adenocarcinoma organoids",
+            "Mus musculus | pancreatic ductal adenocarcinoma organoids"
+          ]
+        }
+      ],
+      "validation_candidates": [
+        {
+          "title": "TISSUE CLEARING.",
+          "doi": "10.1038/s43586-021-00080-9",
+          "journal": "Nat Rev Methods Primers",
+          "year": "2021",
+          "first_author": "Richardson DS",
+          "pmid": "35128463",
+          "status": "uncertain",
+          "category": "review",
+          "confidence": "high",
+          "evidence": "Primer review outlining modular workflows, mechanisms, and computational requirements for tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "3D molecular phenotyping of cleared human brain tissues with light-sheet fluorescence microscopy.",
+          "doi": "10.1038/s42003-022-03390-0",
+          "journal": "Commun Biol",
+          "year": "2022",
+          "first_author": "Pesce L",
+          "pmid": "35551498",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Optimizes and validates SHORT (a SWITCH-H2O2-antigen retrieval-TDE protocol) for clearing and multicolor labeling of human brain slices.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Antibodies against endogenous retroviruses promote lung cancer immunotherapy.",
+          "doi": "10.1038/s41586-023-05771-9",
+          "journal": "Nature",
+          "year": "2023",
+          "first_author": "Ng KW",
+          "pmid": "37046094",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used tissue clearing to investigate 3D tertiary lymphoid structure organization and B-cell antitumor immunity directed against endogenous retrovirus glycoproteins in lung adenocarcinoma.",
+          "cleared_tissues": [
+            "Mus musculus | lung"
+          ],
+          "tissue_compatibilities": [
+            "Mus musculus | lung"
+          ]
+        },
+        {
+          "title": "Long-term retention of antigens in germinal centers is controlled by the spatial organization of the follicular dendritic cell network.",
+          "doi": "10.1038/s41590-023-01559-1",
+          "journal": "Nat Immunol",
+          "year": "2023",
+          "first_author": "Mart\u0000nez-Ria\u0000o A",
+          "pmid": "37443283",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Applied tissue clearing to analyze the 3D spatial organization of follicular dendritic cells and long-term immune complex retention in intact lymph node germinal centers.",
+          "cleared_tissues": [
+            "Mus musculus | lymph node"
+          ],
+          "tissue_compatibilities": [
+            "Mus musculus | lymph node"
+          ]
+        },
+        {
+          "title": "Heterogeneity-driven phenotypic plasticity and treatment response in branched-organoid models of pancreatic ductal adenocarcinoma.",
+          "doi": "10.1038/s41551-024-01273-9",
+          "journal": "Nat Biomed Eng",
+          "year": "2024",
+          "first_author": "Papargyriou A",
+          "pmid": "39658630",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Employed optical tissue clearing to reconstruct 3D architectural and phenotypic intratumoral heterogeneity in branched pancreatic ductal adenocarcinoma organoids.",
+          "cleared_tissues": [
+            "Homo sapiens | pancreatic ductal adenocarcinoma organoids",
+            "Mus musculus | pancreatic ductal adenocarcinoma organoids"
+          ],
+          "tissue_compatibilities": [
+            "Homo sapiens | pancreatic ductal adenocarcinoma organoids",
+            "Mus musculus | pancreatic ductal adenocarcinoma organoids"
+          ]
+        },
+        {
+          "title": "An analysis modality for vascular structures combining tissue-clearing technology and topological data analysis.",
+          "doi": "10.1038/s41467-022-32848-2",
+          "journal": "Nat Commun",
+          "year": "2022",
+          "first_author": "Takahashi K",
+          "pmid": "36097010",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Evaluates the feasibility of combining CUBIC tissue clearing with topological data analysis for geometric feature extraction of vascular structures.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "Tissue_clearing_and_its_applications_in_human_tiss.pdf"
@@ -30666,7 +31844,8 @@
       "refractive_index": "Unknown",
       "sample_size_compatibility": "Unknown",
       "tissue_compatibilities": [
-        "Mouse | brain"
+        "Mouse | brain",
+        "Homo sapiens | breast"
       ],
       "primary_citation": "J. Choi, E. Lee, J. H. Kim, W. Sun, Exp. Neurobiol. 2019, 28, 436.",
       "original_reference": {
@@ -30691,8 +31870,88 @@
       "morphology_impact": "Unknown",
       "equipment_complexity": "Unknown",
       "toxicity_hazard": "Unknown",
-      "real_world_application_papers": [],
-      "validation_candidates": [],
+      "real_world_application_papers": [
+        {
+          "title": "Optimized prediction of breast cancer tumor microenvironment using MRI-based intratumoral and peritumoral radiomics: a prospective study.",
+          "doi": "10.3389/fonc.2025.1654508",
+          "journal": "Front Oncol",
+          "year": "2025",
+          "first_author": "Kim ES",
+          "pmid": "41278298",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used 3D volume histology of cleared clinical breast cancer specimens as the reference standard to evaluate the prediction of tumor microenvironment composition by MRI radiomics.",
+          "cleared_tissues": [
+            "Homo sapiens | breast"
+          ],
+          "tissue_compatibilities": [
+            "Homo sapiens | breast"
+          ]
+        }
+      ],
+      "validation_candidates": [
+        {
+          "title": "CLARITY techniques based tissue clearing: types and differences.",
+          "doi": "10.5603/fm.a2021.0012",
+          "journal": "Folia Morphol (Warsz)",
+          "year": "2021",
+          "first_author": "Guo Z",
+          "pmid": "33577077",
+          "status": "uncertain",
+          "category": "review",
+          "confidence": "high",
+          "evidence": "Review article summarizing and classifying CLARITY-based tissue clearing methods.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Optimized prediction of breast cancer tumor microenvironment using MRI-based intratumoral and peritumoral radiomics: a prospective study.",
+          "doi": "10.3389/fonc.2025.1654508",
+          "journal": "Front Oncol",
+          "year": "2025",
+          "first_author": "Kim ES",
+          "pmid": "41278298",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used 3D volume histology of cleared clinical breast cancer specimens as the reference standard to evaluate the prediction of tumor microenvironment composition by MRI radiomics.",
+          "cleared_tissues": [
+            "Homo sapiens | breast"
+          ],
+          "tissue_compatibilities": [
+            "Homo sapiens | breast"
+          ]
+        },
+        {
+          "title": "MAX: a simple, affordable, and rapid tissue clearing reagent for 3D imaging of wide variety of biological specimens.",
+          "doi": "10.1038/s41598-022-23376-6",
+          "journal": "Sci Rep",
+          "year": "2022",
+          "first_author": "Lee B",
+          "pmid": "36376344",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Reports the formulation, testing, and optimization of MAX, an MXDA-based tissue clearing reagent designed for ECM-rich specimens.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Revealing the MRI-Contrast in Optically Cleared Brains.",
+          "doi": "10.1002/advs.202400316",
+          "journal": "Adv Sci (Weinh)",
+          "year": "2024",
+          "first_author": "Oz S",
+          "pmid": "38647385",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Investigates the mechanisms and preservation of MRI contrast across different optical tissue clearing methods in intact brains.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "Tissue_clearing_and_its_applications_in_human_tiss.pdf"
@@ -30709,7 +31968,8 @@
       "tissue_compatibilities": [
         "Mouse | neuromuscular junction",
         "Mouse | diaphragm",
-        "Mouse | muscle"
+        "Mouse | muscle",
+        "Mus musculus | skeletal muscle"
       ],
       "primary_citation": "M. P. I. Williams, M. Rigon, T. Straka, S. J. Horner, M. Thiel, N. Gretz, M. Hafner, M. Reischl, R. Rudolf, Front. Cell. Neurosci. 2019, 13, 49.",
       "original_reference": {
@@ -30739,8 +31999,88 @@
       "morphology_impact": "Unknown",
       "equipment_complexity": "Unknown",
       "toxicity_hazard": "Unknown",
-      "real_world_application_papers": [],
-      "validation_candidates": [],
+      "real_world_application_papers": [
+        {
+          "title": "Lifetime analysis of mdx skeletal muscle reveals a progressive pathology that leads to myofiber loss.",
+          "doi": "10.1038/s41598-020-74192-9",
+          "journal": "Sci Rep",
+          "year": "2020",
+          "first_author": "Massopust RT",
+          "pmid": "33057110",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used optical tissue clearing to reconstruct intact skeletal muscles in mdx mice, demonstrating progressive myofiber hypertrophy coupled with myofiber loss across lifespan.",
+          "cleared_tissues": [
+            "Mus musculus | skeletal muscle"
+          ],
+          "tissue_compatibilities": [
+            "Mus musculus | skeletal muscle"
+          ]
+        }
+      ],
+      "validation_candidates": [
+        {
+          "title": "Routine Optical Clearing of 3D-Cell Cultures: Simplicity Forward.",
+          "doi": "10.3389/fmolb.2020.00020",
+          "journal": "Front Mol Biosci",
+          "year": "2020",
+          "first_author": "N\u0000rnberg E",
+          "pmid": "32154265",
+          "status": "uncertain",
+          "category": "comparison",
+          "confidence": "high",
+          "evidence": "Compares the performance, transparency, shrinkage, and signal preservation of six different optical clearing protocols across seven types of 3D cell cultures.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Lifetime analysis of mdx skeletal muscle reveals a progressive pathology that leads to myofiber loss.",
+          "doi": "10.1038/s41598-020-74192-9",
+          "journal": "Sci Rep",
+          "year": "2020",
+          "first_author": "Massopust RT",
+          "pmid": "33057110",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used optical tissue clearing to reconstruct intact skeletal muscles in mdx mice, demonstrating progressive myofiber hypertrophy coupled with myofiber loss across lifespan.",
+          "cleared_tissues": [
+            "Mus musculus | skeletal muscle"
+          ],
+          "tissue_compatibilities": [
+            "Mus musculus | skeletal muscle"
+          ]
+        },
+        {
+          "title": "GFAP hyperpalmitoylation exacerbates astrogliosis and neurodegenerative pathology in PPT1-deficient mice.",
+          "doi": "10.1073/pnas.2022261118",
+          "journal": "Proc Natl Acad Sci U S A",
+          "year": "2021",
+          "first_author": "Yuan W",
+          "pmid": "33753498",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "Biological study investigating GFAP palmitoylation in PPT1-deficient mice; the abstract contains no mention or application of tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "3D finite element models from serial section histology of skeletal muscle tissue - The role of micro-architecture on mechanical behaviour.",
+          "doi": "10.1016/j.jmbbm.2020.104109",
+          "journal": "J Mech Behav Biomed Mater",
+          "year": "2020",
+          "first_author": "Kuravi R",
+          "pmid": "33080565",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "Study builds finite element models based on physical serial section histology, not optical clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "Tissue_clearing_and_its_applications_in_human_tiss.pdf"
@@ -31060,7 +32400,92 @@
       "equipment_complexity": "Low (Standard Bench)",
       "toxicity_hazard": "Low (Aqueous)",
       "real_world_application_papers": [],
-      "validation_candidates": [],
+      "validation_candidates": [
+        {
+          "title": "Chromosome-level genome assembly of the Japanese sawyer beetle Monochamus alternatus.",
+          "doi": "10.1038/s41597-024-03048-y",
+          "journal": "Sci Data",
+          "year": "2024",
+          "first_author": "Gao YF",
+          "pmid": "38351308",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "Genomics paper reporting chromosome-level genome assembly of Monochamus alternatus; tissue clearing is absent from the abstract.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Swift regulation of nicotinic acetylcholine receptors (nAChRs) and glutathione S-transferase (GST) enables the rapid detoxification of thiacloprid in pine sawyer beetles.",
+          "doi": "10.1016/j.pestbp.2024.105996",
+          "journal": "Pestic Biochem Physiol",
+          "year": "2024",
+          "first_author": "Yuan H",
+          "pmid": "39084770",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "Toxicology and molecular physiology paper investigating insecticide detoxification mechanisms; optical tissue clearing is not mentioned in the abstract.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Cloning and RNAi-mediated functional characterization of two Monochamus alternatus chitinase genes.",
+          "doi": "10.1002/ps.70013",
+          "journal": "Pest Manag Sci",
+          "year": "2025",
+          "first_author": "Fang S",
+          "pmid": "40726266",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "Molecular entomology study characterizing chitinase genes through RNAi; does not involve or mention optical tissue clearing in the abstract.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Physiological Measurements and Transcriptomics Reveal the Fitness Costs of Monochamus saltuarius to Bursaphelenchus xylophilus.",
+          "doi": "10.3390/ijms25094906",
+          "journal": "Int J Mol Sci",
+          "year": "2024",
+          "first_author": "Li J",
+          "pmid": "38732123",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "Transcriptomics and physiological evaluation of nematode parasitism on vector beetles; no optical clearing is reported in the abstract.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Plant pathogenic nematode exosomes remodel vector tracheae to enhance pathogen transmission.",
+          "doi": "10.1073/pnas.2600386123",
+          "journal": "Proc Natl Acad Sci U S A",
+          "year": "2026",
+          "first_author": "Chang Y",
+          "pmid": "41989858",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "Reports cross-kingdom manipulation of beetle trachea development by nematode exosomal miRNA; tissue clearing is not referenced in the abstract.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Elasticity of trachea in the silkworm: A role of gene BmMuc91C.",
+          "doi": "10.1111/1744-7917.13492",
+          "journal": "Insect Sci",
+          "year": "2025",
+          "first_author": "Chen Y",
+          "pmid": "39821476",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "Study on the elasticity of silkworm tracheal cuticle mediated by BmMuc91C; no tissue clearing application is presented in the abstract.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
       "source_manifest": {
         "type": "AI Gap Finder"
       },
@@ -32419,6 +33844,76 @@
           "tissue_compatibilities": [
             "Arabidopsis thaliana | ovule"
           ]
+        },
+        {
+          "title": "SeeDB: a simple and morphology-preserving optical clearing agent for neuronal circuit reconstruction.",
+          "doi": "10.1038/nn.3447",
+          "journal": "Nat Neurosci",
+          "year": "2013",
+          "first_author": "Ke MT",
+          "pmid": "23792946",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Presents the development and characterization of SeeDB, a water-based optical clearing agent that preserves tissue morphology.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Composition of isolated synaptic boutons reveals the amounts of vesicle trafficking proteins.",
+          "doi": "10.1126/science.1252884",
+          "journal": "Science",
+          "year": "2014",
+          "first_author": "Wilhelm BG",
+          "pmid": "24876496",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "Integrative quantitative modeling of isolated synaptosomes using super-resolution microscopy; TDE is merely an optical mounting medium rather than being used for gross tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Spherical nanosized focal spot unravels the interior of cells.",
+          "doi": "10.1038/nmeth.1214",
+          "journal": "Nat Methods",
+          "year": "2008",
+          "first_author": "Schmidt R",
+          "pmid": "18488034",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Optical engineering paper introducing a nanoscopy method to achieve spherical focal spots; clearing reagents like TDE are evaluated for refractive index matching in optics rather than biological specimen discovery.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Genesis and growth of extracellular-vesicle-derived microcalcification in atherosclerotic plaques.",
+          "doi": "10.1038/nmat4519",
+          "journal": "Nat Mater",
+          "year": "2016",
+          "first_author": "Hutcheson JD",
+          "pmid": "26752654",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "Investigates mineral formation and calcification in collagen hydrogels and atherosclerotic plaques; optical tissue clearing is not mentioned in the abstract.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Bassoon and the synaptic ribbon organize Ca²+ channels and vesicles to add release sites and promote refilling.",
+          "doi": "10.1016/j.neuron.2010.10.027",
+          "journal": "Neuron",
+          "year": "2010",
+          "first_author": "Frank T",
+          "pmid": "21092861",
+          "status": "uncertain",
+          "category": "uncertain",
+          "confidence": "high",
+          "evidence": "The abstract investigates the role of Bassoon and the synaptic ribbon at hair cell synapses in mice, but does not mention TDE or tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
         }
       ],
       "source_manifest": {
@@ -32438,7 +33933,16 @@
         "Human | heart",
         "Human | hand",
         "Sheep | tibia",
-        "Sheep | femur"
+        "Sheep | femur",
+        "Human | talus",
+        "Human | meniscus",
+        "Human | cervical longitudinal ligaments",
+        "Human | femoral head",
+        "Human | ulnar collateral ligament",
+        "Human | ear auricle",
+        "Human | deltoid ligament",
+        "Human | posterior tibial nerve",
+        "Human | peroneal tendons"
       ],
       "primary_citation": "Spalteholz (1914)",
       "original_reference": {
@@ -32496,6 +34000,186 @@
           "tissue_compatibilities": [
             "Sheep | femur"
           ]
+        },
+        {
+          "title": "[Translated article] Graphic representation of intraosseous and extraosseous talus blood supply. Illustrated anatomy.",
+          "doi": "10.1016/j.recot.2022.07.003",
+          "journal": "Rev Esp Cir Ortop Traumatol",
+          "year": "2022",
+          "first_author": "Fernández Á",
+          "pmid": "35843553",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used the modified Spalteholz clearing technique on human cadaveric foot specimens injected with ink/latex to reveal intraosseous and extraosseous vascular anatomy of the talus.",
+          "cleared_tissues": [
+            "Human | talus"
+          ],
+          "tissue_compatibilities": [
+            "Human | talus"
+          ]
+        },
+        {
+          "title": "Graphic Representation of Intraosseous and Extraosseous Talus Blood Supply. Illustrated Anatomy.",
+          "doi": "10.1016/j.recot.2021.03.004",
+          "journal": "Rev Esp Cir Ortop Traumatol",
+          "year": "2022",
+          "first_author": "Fernández Á",
+          "pmid": "34148811",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Applied the modified Spalteholz clearing technique with latex/ink injection in human cadaver foot slices to characterize the arterial network of the talus.",
+          "cleared_tissues": [
+            "Human | talus"
+          ],
+          "tissue_compatibilities": [
+            "Human | talus"
+          ]
+        },
+        {
+          "title": "Microvascular Anatomy and Intrinsic Gene Expression of Menisci From Young Adults.",
+          "doi": "10.1177/0363546520961555",
+          "journal": "Am J Sports Med",
+          "year": "2020",
+          "first_author": "Crawford MD",
+          "pmid": "33044839",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Utilized Spalteholz tissue clearing with arterial India ink injection in young adult human cadaveric knees to quantify the peripheral depth of microvascular penetration in menisci.",
+          "cleared_tissues": [
+            "Human | meniscus"
+          ],
+          "tissue_compatibilities": [
+            "Human | meniscus"
+          ]
+        },
+        {
+          "title": "On the importance of the innervation of the human cervical longitudinal ligaments at vertebral level.",
+          "doi": "10.1007/s00276-019-02316-6",
+          "journal": "Surg Radiol Anat",
+          "year": "2020",
+          "first_author": "Stegmann T",
+          "pmid": "31493007",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Applied Spalteholz clearing alongside Sihler staining and immunohistochemistry to map sensory and nociceptive nerve distributions in human cervical longitudinal ligaments.",
+          "cleared_tissues": [
+            "Human | cervical longitudinal ligaments"
+          ],
+          "tissue_compatibilities": [
+            "Human | cervical longitudinal ligaments"
+          ]
+        },
+        {
+          "title": "Anatomic study on the blood supply to the femoral head following hip resurfacing using the posterior approach.",
+          "doi": "10.1177/1120700019850765",
+          "journal": "Hip Int",
+          "year": "2019",
+          "first_author": "Alsheri M",
+          "pmid": "31109180",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used the modified Spalteholz clearing technique following arterial India ink perfusion to evaluate spatial vascular perfusion deficits in the human femoral head after posterior hip resurfacing.",
+          "cleared_tissues": [
+            "Human | femoral head"
+          ],
+          "tissue_compatibilities": [
+            "Human | femoral head"
+          ]
+        },
+        {
+          "title": "Variations in Blood Supply From Proximal to Distal in the Ulnar Collateral Ligament of the Elbow: A Qualitative Descriptive Cadaveric Study.",
+          "doi": "10.1177/0363546519831693",
+          "journal": "Am J Sports Med",
+          "year": "2019",
+          "first_author": "Buckley PS",
+          "pmid": "30896969",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Applied the modified Spalteholz clearing method to human cadaver elbow sections following ink injection to analyze regional variation in vascular supply along the ulnar collateral ligament.",
+          "cleared_tissues": [
+            "Human | ulnar collateral ligament"
+          ],
+          "tissue_compatibilities": [
+            "Human | ulnar collateral ligament"
+          ]
+        },
+        {
+          "title": "Peri-arterial Autonomic Innervation of the Human Ear.",
+          "doi": "10.1038/s41598-018-29839-z",
+          "journal": "Sci Rep",
+          "year": "2018",
+          "first_author": "Cakmak YO",
+          "pmid": "30065349",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Combined Spalteholz clearing and micro-CT imaging of human auricles to map 3D auricular arterial networks as a structural framework for peri-arterial autonomic innervation.",
+          "cleared_tissues": [
+            "Human | ear auricle"
+          ],
+          "tissue_compatibilities": [
+            "Human | ear auricle"
+          ]
+        },
+        {
+          "title": "The Arterial Anatomy of the Deltoid Ligament: A Cadaveric Study.",
+          "doi": "10.1177/1071100717702464",
+          "journal": "Foot Ankle Int",
+          "year": "2017",
+          "first_author": "Haynes JA",
+          "pmid": "28447855",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used the modified Spalteholz technique after vascular ink and latex perfusion to visualize and delineate intraosseous and extraosseous arterial sources supplying the human deltoid ligament.",
+          "cleared_tissues": [
+            "Human | deltoid ligament"
+          ],
+          "tissue_compatibilities": [
+            "Human | deltoid ligament"
+          ]
+        },
+        {
+          "title": "Arterial Anatomy of the Posterior Tibial Nerve in the Tarsal Tunnel.",
+          "doi": "10.2106/jbjs.15.00787",
+          "journal": "J Bone Joint Surg Am",
+          "year": "2016",
+          "first_author": "Manske MC",
+          "pmid": "26984918",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used the Spalteholz clearing technique to microscopically analyze the arterial blood supply and vascular density entering the posterior tibial nerve and its branches within the human tarsal tunnel.",
+          "cleared_tissues": [
+            "Human | posterior tibial nerve"
+          ],
+          "tissue_compatibilities": [
+            "Human | posterior tibial nerve"
+          ]
+        },
+        {
+          "title": "Peroneal tendons well vascularized: results from a cadaveric study.",
+          "doi": "10.1007/s00167-015-3946-4",
+          "journal": "Knee Surg Sports Traumatol Arthrosc",
+          "year": "2016",
+          "first_author": "van Dijk PA",
+          "pmid": "26740089",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Cleared human cadaveric peroneal tendons using the modified Spalteholz technique following latex perfusion to reveal intratendinous vascularization patterns and identify avascular zones.",
+          "cleared_tissues": [
+            "Human | peroneal tendons"
+          ],
+          "tissue_compatibilities": [
+            "Human | peroneal tendons"
+          ]
         }
       ],
       "validation_candidates": [
@@ -32533,6 +34217,186 @@
           ],
           "tissue_compatibilities": [
             "Sheep | femur"
+          ]
+        },
+        {
+          "title": "[Translated article] Graphic representation of intraosseous and extraosseous talus blood supply. Illustrated anatomy.",
+          "doi": "10.1016/j.recot.2022.07.003",
+          "journal": "Rev Esp Cir Ortop Traumatol",
+          "year": "2022",
+          "first_author": "Fernández Á",
+          "pmid": "35843553",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used the modified Spalteholz clearing technique on human cadaveric foot specimens injected with ink/latex to reveal intraosseous and extraosseous vascular anatomy of the talus.",
+          "cleared_tissues": [
+            "Human | talus"
+          ],
+          "tissue_compatibilities": [
+            "Human | talus"
+          ]
+        },
+        {
+          "title": "Graphic Representation of Intraosseous and Extraosseous Talus Blood Supply. Illustrated Anatomy.",
+          "doi": "10.1016/j.recot.2021.03.004",
+          "journal": "Rev Esp Cir Ortop Traumatol",
+          "year": "2022",
+          "first_author": "Fernández Á",
+          "pmid": "34148811",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Applied the modified Spalteholz clearing technique with latex/ink injection in human cadaver foot slices to characterize the arterial network of the talus.",
+          "cleared_tissues": [
+            "Human | talus"
+          ],
+          "tissue_compatibilities": [
+            "Human | talus"
+          ]
+        },
+        {
+          "title": "Microvascular Anatomy and Intrinsic Gene Expression of Menisci From Young Adults.",
+          "doi": "10.1177/0363546520961555",
+          "journal": "Am J Sports Med",
+          "year": "2020",
+          "first_author": "Crawford MD",
+          "pmid": "33044839",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Utilized Spalteholz tissue clearing with arterial India ink injection in young adult human cadaveric knees to quantify the peripheral depth of microvascular penetration in menisci.",
+          "cleared_tissues": [
+            "Human | meniscus"
+          ],
+          "tissue_compatibilities": [
+            "Human | meniscus"
+          ]
+        },
+        {
+          "title": "On the importance of the innervation of the human cervical longitudinal ligaments at vertebral level.",
+          "doi": "10.1007/s00276-019-02316-6",
+          "journal": "Surg Radiol Anat",
+          "year": "2020",
+          "first_author": "Stegmann T",
+          "pmid": "31493007",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Applied Spalteholz clearing alongside Sihler staining and immunohistochemistry to map sensory and nociceptive nerve distributions in human cervical longitudinal ligaments.",
+          "cleared_tissues": [
+            "Human | cervical longitudinal ligaments"
+          ],
+          "tissue_compatibilities": [
+            "Human | cervical longitudinal ligaments"
+          ]
+        },
+        {
+          "title": "Anatomic study on the blood supply to the femoral head following hip resurfacing using the posterior approach.",
+          "doi": "10.1177/1120700019850765",
+          "journal": "Hip Int",
+          "year": "2019",
+          "first_author": "Alsheri M",
+          "pmid": "31109180",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used the modified Spalteholz clearing technique following arterial India ink perfusion to evaluate spatial vascular perfusion deficits in the human femoral head after posterior hip resurfacing.",
+          "cleared_tissues": [
+            "Human | femoral head"
+          ],
+          "tissue_compatibilities": [
+            "Human | femoral head"
+          ]
+        },
+        {
+          "title": "Variations in Blood Supply From Proximal to Distal in the Ulnar Collateral Ligament of the Elbow: A Qualitative Descriptive Cadaveric Study.",
+          "doi": "10.1177/0363546519831693",
+          "journal": "Am J Sports Med",
+          "year": "2019",
+          "first_author": "Buckley PS",
+          "pmid": "30896969",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Applied the modified Spalteholz clearing method to human cadaver elbow sections following ink injection to analyze regional variation in vascular supply along the ulnar collateral ligament.",
+          "cleared_tissues": [
+            "Human | ulnar collateral ligament"
+          ],
+          "tissue_compatibilities": [
+            "Human | ulnar collateral ligament"
+          ]
+        },
+        {
+          "title": "Peri-arterial Autonomic Innervation of the Human Ear.",
+          "doi": "10.1038/s41598-018-29839-z",
+          "journal": "Sci Rep",
+          "year": "2018",
+          "first_author": "Cakmak YO",
+          "pmid": "30065349",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Combined Spalteholz clearing and micro-CT imaging of human auricles to map 3D auricular arterial networks as a structural framework for peri-arterial autonomic innervation.",
+          "cleared_tissues": [
+            "Human | ear auricle"
+          ],
+          "tissue_compatibilities": [
+            "Human | ear auricle"
+          ]
+        },
+        {
+          "title": "The Arterial Anatomy of the Deltoid Ligament: A Cadaveric Study.",
+          "doi": "10.1177/1071100717702464",
+          "journal": "Foot Ankle Int",
+          "year": "2017",
+          "first_author": "Haynes JA",
+          "pmid": "28447855",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used the modified Spalteholz technique after vascular ink and latex perfusion to visualize and delineate intraosseous and extraosseous arterial sources supplying the human deltoid ligament.",
+          "cleared_tissues": [
+            "Human | deltoid ligament"
+          ],
+          "tissue_compatibilities": [
+            "Human | deltoid ligament"
+          ]
+        },
+        {
+          "title": "Arterial Anatomy of the Posterior Tibial Nerve in the Tarsal Tunnel.",
+          "doi": "10.2106/jbjs.15.00787",
+          "journal": "J Bone Joint Surg Am",
+          "year": "2016",
+          "first_author": "Manske MC",
+          "pmid": "26984918",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used the Spalteholz clearing technique to microscopically analyze the arterial blood supply and vascular density entering the posterior tibial nerve and its branches within the human tarsal tunnel.",
+          "cleared_tissues": [
+            "Human | posterior tibial nerve"
+          ],
+          "tissue_compatibilities": [
+            "Human | posterior tibial nerve"
+          ]
+        },
+        {
+          "title": "Peroneal tendons well vascularized: results from a cadaveric study.",
+          "doi": "10.1007/s00167-015-3946-4",
+          "journal": "Knee Surg Sports Traumatol Arthrosc",
+          "year": "2016",
+          "first_author": "van Dijk PA",
+          "pmid": "26740089",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Cleared human cadaveric peroneal tendons using the modified Spalteholz technique following latex perfusion to reveal intratendinous vascularization patterns and identify avascular zones.",
+          "cleared_tissues": [
+            "Human | peroneal tendons"
+          ],
+          "tissue_compatibilities": [
+            "Human | peroneal tendons"
           ]
         }
       ],
@@ -32744,6 +34608,48 @@
           "evidence": "The study focuses on developing and validating the SeeDB-Live clearing method for live-cell imaging rather than applying an established method to answer a specific biological research question.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
+        },
+        {
+          "title": "A simple and versatile plasma membrane staining method for visualizing living cell morphology in reproductive tissues across diverse plant species.",
+          "doi": "10.1186/s13007-025-01465-7",
+          "journal": "Plant Methods",
+          "year": "2025",
+          "first_author": "Hanaki Y",
+          "pmid": "41250120",
+          "status": "uncertain",
+          "category": "uncertain",
+          "confidence": "high",
+          "evidence": "The study describes a live fluorescent membrane staining protocol (FM4-64) for plant reproductive tissues and does not mention SeeDB-Live or tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Tartrazine clears live cells while preserving viability at high refractive indices and osmolality.",
+          "doi": "10.1021/acs.bioconjchem.6c00164",
+          "journal": "bioRxiv",
+          "year": "2026",
+          "first_author": "Hou X",
+          "pmid": "42039509",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "The paper benchmarks and systematically tests optical contrast, refractive index limits, hyperosmolality, and cell viability for live-cell optical clearing using tartrazine.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Dendritic compartment-specific spine formation in layer 5 neurons underlies cortical circuit maturation during adolescence.",
+          "doi": "10.1126/sciadv.adw8458",
+          "journal": "Sci Adv",
+          "year": "2026",
+          "first_author": "Egashira R",
+          "pmid": "41533795",
+          "status": "uncertain",
+          "category": "uncertain",
+          "confidence": "high",
+          "evidence": "The abstract examines dendritic spine dynamics in mouse somatosensory cortex using super-resolution mapping, but does not mention SeeDB-Live or tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
         }
       ],
       "source_manifest": {
@@ -32927,6 +34833,48 @@
           "category": "incidental_mention",
           "confidence": "high",
           "evidence": "Mentions 'deep-bone infections' in pelvic soft-tissue injuries, not a tissue clearing method.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "The Proposed Bone Post-Arterial Type R Capillaries Resolve into Venous and Fatty Acid-Handling Endothelial Cells.",
+          "doi": "10.64898/2026.07.27.741009",
+          "journal": "bioRxiv",
+          "year": "2026",
+          "first_author": "Jain S",
+          "pmid": "42619693",
+          "status": "uncertain",
+          "category": "uncertain",
+          "confidence": "high",
+          "evidence": "The abstract describes single-cell transcriptomics and imaging of bone endothelial cell heterogeneity, but does not mention DeepBone or optical tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Aged microenvironment-triggered nanoreactors rejuvenate senescent LepR(+) cells to remodel aged bone marrow.",
+          "doi": "10.1016/j.mtbio.2026.103751",
+          "journal": "Mater Today Bio",
+          "year": "2026",
+          "first_author": "Li K",
+          "pmid": "42927243",
+          "status": "uncertain",
+          "category": "uncertain",
+          "confidence": "high",
+          "evidence": "The abstract details nanoreactor therapy to rejuvenate senescent LepR+ cells in aged bone marrow and makes no mention of DeepBone or tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Volumetric Cyclic Immunofluorescence for 3D Spatial Profiling of Immune Structures in Human FFPE Tissue.",
+          "doi": "10.64898/2026.05.17.725158",
+          "journal": "bioRxiv",
+          "year": "2026",
+          "first_author": "Wong AYH",
+          "pmid": "42239291",
+          "status": "uncertain",
+          "category": "uncertain",
+          "confidence": "high",
+          "evidence": "The paper introduces a volumetric cyclic immunofluorescence (v-CyCIF) platform for thick human FFPE specimens; DeepBone is not mentioned.",
           "cleared_tissues": [],
           "tissue_compatibilities": []
         }
