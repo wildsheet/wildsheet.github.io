@@ -33789,6 +33789,475 @@
       "source_manifest": {
         "type": "PubMed Recent Method Gap Check"
       }
+    },
+    {
+      "method_name": "See-Star",
+      "year_invented": "2024",
+      "chemical_class": "Hydrogel",
+      "refractive_index": "Unknown",
+      "sample_size_compatibility": "Unknown",
+      "tissue_compatibilities": [
+        "Echinoderm | nervous system",
+        "Mollusc | nervous system"
+      ],
+      "primary_citation": "Clarke DN, Formery L, Lowe CJ. See-Star: a versatile hydrogel-based protocol for clearing large, opaque and calcified marine invertebrates. Evodevo. 2024 Jun 25;15(1):8. doi: 10.1186/s13227-024-00228-0.",
+      "original_reference": {
+        "citation": "Evodevo. 2024 Jun 25;15(1):8. doi: 10.1186/s13227-024-00228-0.",
+        "title": "See-Star: a versatile hydrogel-based protocol for clearing large, opaque and calcified marine invertebrates.",
+        "authors": [
+          "Clarke DN",
+          "Formery L",
+          "Lowe CJ"
+        ],
+        "journal": "Evodevo",
+        "year": "2024",
+        "volume": "15",
+        "issue": "1",
+        "pages": "8",
+        "doi": "10.1186/s13227-024-00228-0",
+        "doi_status": "resolves"
+      },
+      "fluorescent_protein_compatibility": "Unknown",
+      "clearing_speed": "Unknown",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Unknown",
+      "toxicity_hazard": "Unknown",
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": "",
+      "real_world_application_papers": [],
+      "validation_candidates": [
+        {
+          "title": "Cellular uptake of PET nanoplastics in brittle stars: impairment of arm regeneration and behavioural traits.",
+          "doi": "10.1016/j.envpol.2026.128827",
+          "journal": "Environ Pollut",
+          "year": "2026",
+          "first_author": "Battistoni M",
+          "pmid": "42492610",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "This is an ecotoxicology study of nanoplastics in brittle stars (Ophiactis virens); 'See-Star' was matched incidentally based on the animal name and no tissue clearing method is reported.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Ultrafiltration and Fluid Excretion in Echinoids Involves the Axial Organ with Elimination via the Intestine.",
+          "doi": "10.3390/life15050767",
+          "journal": "Life (Basel)",
+          "year": "2025",
+          "first_author": "Smith LC",
+          "pmid": "40430194",
+          "status": "uncertain",
+          "category": "discussion",
+          "confidence": "high",
+          "evidence": "The authors hypothesize excretion mechanisms in sea urchins and propose future experiments using tissue clearance in juvenile echinoids, but perform no actual clearing application in this paper.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
+      }
+    },
+    {
+      "method_name": "HIF-Clear",
+      "year_invented": "2024",
+      "chemical_class": "Aqueous",
+      "refractive_index": "Unknown",
+      "sample_size_compatibility": "Unknown",
+      "tissue_compatibilities": [
+        "Mouse | brain"
+      ],
+      "primary_citation": "Lin YH, Wang LW, Chen YH, Chan YC, Hu SH, Wu SY, Chiang CS, Huang GJ, Yang SD, Chu SW, Wang KC, Lin CH, Huang PH, Cheng HJ, Chen BC, Chu LA. Revealing intact neuronal circuitry in centimeter-sized formalin-fixed paraffin-embedded brain. Elife. 2024 May 22;13:RP93212. doi: 10.7554/eLife.93212.",
+      "original_reference": {
+        "citation": "Elife. 2024 May 22;13:RP93212. doi: 10.7554/eLife.93212.",
+        "title": "Revealing intact neuronal circuitry in centimeter-sized formalin-fixed paraffin-embedded brain.",
+        "authors": [
+          "Lin YH",
+          "Wang LW",
+          "Chen YH",
+          "Chan YC",
+          "Hu SH",
+          "Wu SY",
+          "Chiang CS",
+          "Huang GJ",
+          "Yang SD",
+          "Chu SW",
+          "Wang KC",
+          "Lin CH",
+          "Huang PH",
+          "Cheng HJ",
+          "Chen BC",
+          "Chu LA"
+        ],
+        "journal": "Elife",
+        "year": "2024",
+        "volume": "13",
+        "issue": "Unknown",
+        "pages": "RP93212",
+        "doi": "10.7554/elife.93212",
+        "doi_status": "resolves"
+      },
+      "fluorescent_protein_compatibility": "Unknown",
+      "clearing_speed": "Unknown",
+      "morphology_impact": "Expansion",
+      "equipment_complexity": "Unknown",
+      "toxicity_hazard": "Unknown",
+      "live_sample_compatibility": "No",
+      "live_sample_compatibility_evidence": "Requires formalin-fixed paraffin-embedded (FFPE) or formalin-fixed tissue specimens.",
+      "real_world_application_papers": [],
+      "validation_candidates": [
+        {
+          "title": "A novel protein-preserving passive tissue clearing approach using sodium cholate and urea for whole-organ imaging.",
+          "doi": "10.1038/s12276-025-01550-w",
+          "journal": "Exp Mol Med",
+          "year": "2025",
+          "first_author": "Kim K",
+          "pmid": "41034528",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "The paper develops and characterizes a novel passive tissue-clearing method (OptiMuS-prime) using sodium cholate and urea, evaluating clearing and immunostaining performance across rodent and human organs.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
+      }
+    },
+    {
+      "method_name": "TRISCO",
+      "year_invented": "2024",
+      "chemical_class": "Aqueous",
+      "refractive_index": "Unknown",
+      "sample_size_compatibility": "Unknown",
+      "tissue_compatibilities": [
+        "Unknown | brain"
+      ],
+      "primary_citation": "Kanatani S, Kreutzmann JC, Li Y, West Z, Larsen LL, Nikou DV, Eidhof I, Walton A, Zhang S, Rodriguez-Kirby LR, Skytte JL, Salinas CG, Takamatsu K, Li X. Whole-brain spatial transcriptional analysis at cellular resolution. Science. 2024 Nov 22;386(6724):907-915. doi: 10.1126/science.adn9947.",
+      "original_reference": {
+        "citation": "Science. 2024 Nov 22;386(6724):907-915. doi: 10.1126/science.adn9947.",
+        "title": "Whole-brain spatial transcriptional analysis at cellular resolution.",
+        "authors": [
+          "Kanatani S",
+          "Kreutzmann JC",
+          "Li Y",
+          "West Z",
+          "Larsen LL",
+          "Nikou DV",
+          "Eidhof I",
+          "Walton A",
+          "Zhang S",
+          "Rodriguez-Kirby LR",
+          "Skytte JL",
+          "Salinas CG",
+          "Takamatsu K",
+          "Li X"
+        ],
+        "journal": "Science",
+        "year": "2024",
+        "volume": "386",
+        "issue": "6724",
+        "pages": "907-915",
+        "doi": "10.1126/science.adn9947",
+        "doi_status": "resolves"
+      },
+      "fluorescent_protein_compatibility": "Unknown",
+      "clearing_speed": "Unknown",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Unknown",
+      "toxicity_hazard": "Unknown",
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": "",
+      "real_world_application_papers": [],
+      "validation_candidates": [
+        {
+          "title": "Scalable spatial single-cell transcriptomics and translatomics in 3D thick tissue blocks.",
+          "doi": "10.1038/s41592-025-02867-0",
+          "journal": "bioRxiv",
+          "year": "2025",
+          "first_author": "Sui X",
+          "pmid": "39149316",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "The abstract focuses on the development of Deep-STARmap and Deep-RIBOmap spatial profiling methods in 3D thick tissue blocks; TRISCO is not mentioned in the abstract.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "The Human Cell Atlas from a cell census to a unified foundation model.",
+          "doi": "10.1038/s41586-024-08338-4",
+          "journal": "Nature",
+          "year": "2024",
+          "first_author": "Rood JE",
+          "pmid": "39566552",
+          "status": "uncertain",
+          "category": "review",
+          "confidence": "high",
+          "evidence": "This is a review and perspective paper detailing the Human Cell Atlas initiative and future foundation models of cell biology.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Deep-tissue transcriptomics and subcellular imaging at high spatial resolution.",
+          "doi": "10.1126/science.adq2084",
+          "journal": "Science",
+          "year": "2025",
+          "first_author": "Gandin V",
+          "pmid": "39977545",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "The paper introduces cycle hybridization chain reaction (cycleHCR) for multiplexed transcriptomic and protein imaging; TRISCO is not mentioned in the abstract.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Two distinct molecular faces of preeclampsia revealed by single-cell transcriptomics.",
+          "doi": "10.1016/j.medj.2023.07.005",
+          "journal": "Med",
+          "year": "2023",
+          "first_author": "Admati I",
+          "pmid": "37572658",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "This study uses single-cell and single-nuclei transcriptomics to examine early- and late-onset preeclampsia in human placenta without mentioning or applying TRISCO in the abstract.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Spatial dynamics of mammalian brain development and neuroinflammation by multimodal tri-omics mapping.",
+          "doi": "10.1038/s41586-025-09663-y",
+          "journal": "Res Sq",
+          "year": "2025",
+          "first_author": "Fan R",
+          "pmid": "39184075",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "The preprint reports DBiT ARP-seq and DBiT CTRP-seq spatial tri-omic technologies applied to brain development and neuroinflammation; TRISCO is not mentioned in the abstract.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Spatial dynamics of mammalian brain development and neuroinflammation by multimodal tri-omics mapping.",
+          "doi": "10.1101/2024.07.28.605493",
+          "journal": "bioRxiv",
+          "year": "2024",
+          "first_author": "Zhang D",
+          "pmid": "39091821",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "The preprint describes spatial tri-omics mapping technologies (DBiT ARP-seq and DBiT CTRP-seq) in brain development and neuroinflammation without mentioning TRISCO in the abstract.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Anoctamin-2-specific T cells link Epstein-Barr virus to multiple sclerosis.",
+          "doi": "10.1016/j.cell.2025.12.032",
+          "journal": "Cell",
+          "year": "2026",
+          "first_author": "Thomas OG",
+          "pmid": "41534529",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "The paper investigates the link between EBV infection, anoctamin-2 cross-reactive CD4+ T cells, and multiple sclerosis; TRISCO tissue clearing is not mentioned in the abstract.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "A telencephalon cell type atlas for goldfish reveals diversity in the evolution of spatial structure and cell types.",
+          "doi": "10.1126/sciadv.adh7693",
+          "journal": "Sci Adv",
+          "year": "2023",
+          "first_author": "Tibi M",
+          "pmid": "37910612",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "The authors perform single-cell RNA sequencing and spatial transcriptomics to map cell types in the goldfish telencephalon; TRISCO tissue clearing is not mentioned in the abstract.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
+      }
+    },
+    {
+      "method_name": "wildDISCO",
+      "year_invented": "2024",
+      "chemical_class": "Solvent",
+      "refractive_index": "Unknown",
+      "sample_size_compatibility": "Macro/Whole-Body (>2 cm)",
+      "tissue_compatibilities": [
+        "Mouse | whole body",
+        "Human | skull-meninges-brain axis",
+        "Mouse | skull-meninges-brain axis",
+        "Mouse | brain"
+      ],
+      "primary_citation": "Mai H, Luo J, Hoeher L, Al-Maskari R, Horvath I, Chen Y, Kofler F, et al. Whole-body cellular mapping in mouse using standard IgG antibodies. Nat Biotechnol. 2024;42(4):617-627.",
+      "original_reference": {
+        "citation": "Mai H, Luo J, Hoeher L, Al-Maskari R, Horvath I, Chen Y, Kofler F, et al. Whole-body cellular mapping in mouse using standard IgG antibodies. Nat Biotechnol. 2024;42(4):617-627.",
+        "title": "Whole-body cellular mapping in mouse using standard IgG antibodies.",
+        "authors": [
+          "Mai H",
+          "Luo J",
+          "Hoeher L",
+          "Al-Maskari R",
+          "Horvath I",
+          "Chen Y",
+          "Kofler F"
+        ],
+        "journal": "Nat Biotechnol",
+        "year": "2024",
+        "volume": "42",
+        "issue": "4",
+        "pages": "617-627",
+        "doi": "10.1038/s41587-023-01846-0",
+        "doi_status": "valid"
+      },
+      "fluorescent_protein_compatibility": "Unknown",
+      "clearing_speed": "Unknown",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Unknown",
+      "toxicity_hazard": "Unknown",
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": "",
+      "real_world_application_papers": [
+        {
+          "title": "Persistence of spike protein at the skull-meninges-brain axis may contribute to the neurological sequelae of COVID-19.",
+          "doi": "10.1016/j.chom.2024.11.007",
+          "journal": "Cell Host Microbe",
+          "year": "2024",
+          "first_author": "Rong Z",
+          "pmid": "39615487",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Tissue clearing and 3D imaging revealed persistent SARS-CoV-2 spike protein accumulation in the skull-meninges-brain axis of human COVID-19 patients and infected mice, driving persistent neuroinflammation.",
+          "cleared_tissues": [
+            "Human | skull-meninges-brain axis",
+            "Mouse | skull-meninges-brain axis"
+          ],
+          "tissue_compatibilities": [
+            "Human | skull-meninges-brain axis",
+            "Mouse | skull-meninges-brain axis"
+          ]
+        },
+        {
+          "title": "Fc-engineered large molecules targeting blood-brain barrier transferrin receptor and CD98hc have distinct central nervous system and peripheral biodistribution.",
+          "doi": "10.1038/s41467-025-57108-x",
+          "journal": "Nat Commun",
+          "year": "2025",
+          "first_author": "Khoury N",
+          "pmid": "39979268",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Whole-body clearing was used to characterize the systemic and central nervous system biodistribution and parenchymal penetration of blood-brain barrier-targeting transport vehicle antibodies in mice.",
+          "cleared_tissues": [
+            "Mouse | whole body",
+            "Mouse | brain"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | whole body",
+            "Mouse | brain"
+          ]
+        }
+      ],
+      "validation_candidates": [
+        {
+          "title": "Persistence of spike protein at the skull-meninges-brain axis may contribute to the neurological sequelae of COVID-19.",
+          "doi": "10.1016/j.chom.2024.11.007",
+          "journal": "Cell Host Microbe",
+          "year": "2024",
+          "first_author": "Rong Z",
+          "pmid": "39615487",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Tissue clearing and 3D imaging revealed persistent SARS-CoV-2 spike protein accumulation in the skull-meninges-brain axis of human COVID-19 patients and infected mice, driving persistent neuroinflammation.",
+          "cleared_tissues": [
+            "Human | skull-meninges-brain axis",
+            "Mouse | skull-meninges-brain axis"
+          ],
+          "tissue_compatibilities": [
+            "Human | skull-meninges-brain axis",
+            "Mouse | skull-meninges-brain axis"
+          ]
+        },
+        {
+          "title": "The Benchtop mesoSPIM: a next-generation open-source light-sheet microscope for large cleared samples.",
+          "doi": "10.1038/s41467-024-46770-2",
+          "journal": "bioRxiv",
+          "year": "2024",
+          "first_author": "Vladimirov N",
+          "pmid": "38168219",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "The paper focuses on the engineering and optical development of the Benchtop mesoSPIM microscope for imaging large cleared specimens rather than answering a biological research question with wildDISCO.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Integrated platform for multiscale molecular imaging and phenotyping of the human brain.",
+          "doi": "10.1126/science.adh9979",
+          "journal": "Science",
+          "year": "2024",
+          "first_author": "Park J",
+          "pmid": "38870291",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "Describes the development of the MEGAtome/mELAST/UNSLICE imaging and tissue-processing pipeline; wildDISCO is only referenced contextually.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Fc-engineered large molecules targeting blood-brain barrier transferrin receptor and CD98hc have distinct central nervous system and peripheral biodistribution.",
+          "doi": "10.1038/s41467-025-57108-x",
+          "journal": "Nat Commun",
+          "year": "2025",
+          "first_author": "Khoury N",
+          "pmid": "39979268",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Whole-body clearing was used to characterize the systemic and central nervous system biodistribution and parenchymal penetration of blood-brain barrier-targeting transport vehicle antibodies in mice.",
+          "cleared_tissues": [
+            "Mouse | whole body",
+            "Mouse | brain"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | whole body",
+            "Mouse | brain"
+          ]
+        },
+        {
+          "title": "Deep learning on tertiary lymphoid structures in hematoxylin-eosin predicts cancer prognosis and immunotherapy response.",
+          "doi": "10.1038/s41698-024-00579-w",
+          "journal": "NPJ Precis Oncol",
+          "year": "2024",
+          "first_author": "Chen Z",
+          "pmid": "38519580",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "Focuses on deep learning segmentation of tertiary lymphoid structures in standard 2D H&E and mIHC histology sections, with no experimental application of wildDISCO clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
+      }
     }
   ]
 }
