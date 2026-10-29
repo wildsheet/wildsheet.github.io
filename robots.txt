@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-# Search engines can crawl the public GitHub Pages site normally.
+Sitemap: https://wildsheet.github.io/sitemap.xml
