@@ -1622,7 +1622,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "3DISCO",
@@ -2771,7 +2773,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "iDISCO",
@@ -3897,7 +3901,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "iDISCO+",
@@ -4341,7 +4347,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "CLARITY",
@@ -5083,7 +5091,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "BABB (Murray's method)",
@@ -6395,7 +6405,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "SeeDB",
@@ -7288,7 +7300,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "No",
+      "live_sample_compatibility_evidence": "The abstract explicitly states that SeeDB clears fixed brain samples."
     },
     {
       "method_name": "DEEP-Clear",
@@ -8681,7 +8695,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "Glycerin/KOH)",
@@ -8721,7 +8737,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "Fructose/glycerol",
@@ -9063,7 +9081,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "CUBIC-perfusion",
@@ -9486,7 +9506,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "ClearSee",
@@ -10231,7 +10253,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "ClearT2",
@@ -10812,7 +10836,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "FlyClear",
@@ -11012,7 +11038,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "FRUIT",
@@ -11505,7 +11533,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "IMES",
@@ -11648,7 +11678,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "Scale",
@@ -12125,7 +12157,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "No",
+      "live_sample_compatibility_evidence": "The abstract explicitly states that Scale was used to image fixed brain tissue."
     },
     {
       "method_name": "SeeDB2",
@@ -12555,7 +12589,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "No",
+      "live_sample_compatibility_evidence": "The abstract explicitly states that SeeDB2 matches the refractive indices of fixed tissues."
     },
     {
       "method_name": "RTF",
@@ -12819,7 +12855,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "mPACT-A",
@@ -12941,7 +12979,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "PEA-CLARITY",
@@ -13261,7 +13301,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "SWITCH",
@@ -13753,7 +13795,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "2ECi",
@@ -14177,7 +14221,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "ECi",
@@ -14789,7 +14835,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "EyeDISCO",
@@ -15284,7 +15332,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "EyeCi",
@@ -15677,7 +15727,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "FDISCO",
@@ -16074,7 +16126,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "FluoClearBABB",
@@ -16340,7 +16394,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "PEGASOS",
@@ -16818,7 +16874,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "sDISCO",
@@ -17148,7 +17206,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "SHANEL",
@@ -17683,7 +17743,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "uDISCO",
@@ -18054,7 +18116,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "vDISCO",
@@ -18557,7 +18621,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "NaOH",
@@ -18597,7 +18663,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "Dibenzyl Ether",
@@ -18853,7 +18921,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "AdipoClear",
@@ -19343,7 +19413,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "X-CLARITY",
@@ -19537,7 +19609,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "dev199369.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "mPACT/psPACT/PACT-deCAL",
@@ -19793,7 +19867,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "fbioe-09-784626.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "Tissue-MAP",
@@ -20055,7 +20131,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "fbioe-09-784626.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "ScaleS",
@@ -20529,7 +20607,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "fbioe-09-784626.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "CUBIC-L/R",
@@ -20894,7 +20974,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "fbioe-09-784626.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "CUBIC-X",
@@ -21035,7 +21117,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "fbioe-09-784626.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "FOCM",
@@ -21401,7 +21485,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "fbioe-09-784626.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "BABB",
@@ -22842,7 +22928,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "fbioe-09-784626.pdf"
-      }
+      },
+      "live_sample_compatibility": "No",
+      "live_sample_compatibility_evidence": "The abstract explicitly states that the method allows imaging and optical sectioning of whole fixed mouse brains."
     },
     {
       "method_name": "Ce3D",
@@ -23862,7 +23950,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "fbioe-09-784626.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "MACS",
@@ -24073,7 +24163,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "fbioe-09-784626.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "LUCID",
@@ -24198,7 +24290,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "fbioe-09-784626.pdf"
-      }
+      },
+      "live_sample_compatibility": "No",
+      "live_sample_compatibility_evidence": "The abstract explicitly states that LUCID was applied as a clearing reagent to fixed brains."
     },
     {
       "method_name": "OPTIClear",
@@ -24439,7 +24533,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "fbioe-09-784626.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "SHIELD",
@@ -24822,7 +24918,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "fnana-15-752234.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "Expansion microscopy",
@@ -25043,7 +25141,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "fnana-15-752234.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "FACT",
@@ -25425,7 +25525,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "Journal of Anatomy - 2020 - Tian - Tissue clearing technique  Recent progress and biomedical applications.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "UbasM",
@@ -25593,7 +25695,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "Journal of Anatomy - 2020 - Tian - Tissue clearing technique  Recent progress and biomedical applications.pdf"
-      }
+      },
+      "live_sample_compatibility": "No",
+      "live_sample_compatibility_evidence": "The abstract explicitly states that UbasM rapidly renders fixed tissue samples highly transparent."
     },
     {
       "method_name": "ACT-PRESTO",
@@ -25758,7 +25862,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "Journal of Anatomy - 2020 - Tian - Tissue clearing technique  Recent progress and biomedical applications.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "PRE-CLARITY",
@@ -25841,7 +25947,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "Journal of Anatomy - 2020 - Tian - Tissue clearing technique  Recent progress and biomedical applications.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "Stochastic electrotransport",
@@ -26083,7 +26191,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "Journal of Anatomy - 2020 - Tian - Tissue clearing technique  Recent progress and biomedical applications.pdf"
-      }
+      },
+      "live_sample_compatibility": "No",
+      "live_sample_compatibility_evidence": "The abstract explicitly establishes that stochastic electrotransport processes fixed biological tissues."
     },
     {
       "method_name": "PACT/PACT-PARS",
@@ -26689,7 +26799,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "Journal of Anatomy - 2020 - Tian - Tissue clearing technique  Recent progress and biomedical applications.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "Bone CLARITY",
@@ -26905,7 +27017,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "Journal of Anatomy - 2020 - Tian - Tissue clearing technique  Recent progress and biomedical applications.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "BALANCE",
@@ -27584,7 +27698,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "msb.20209807.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "FUnGI",
@@ -28011,7 +28127,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "msb.20209807.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "simpleCLEAR",
@@ -28583,7 +28701,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "msb.20209807.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "a-uDISCO",
@@ -28779,7 +28899,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "VIEW - 2024 - Mai - Tissue clearing and its applications in human tissues  A review.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "Visikol™",
@@ -29007,7 +29129,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "42649_2024_Article_98.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "ScaleP",
@@ -29415,7 +29539,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "42649_2024_Article_98.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "TOMEI",
@@ -29874,7 +30000,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "42649_2024_Article_98.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "iTOMEI",
@@ -30482,7 +30610,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "42649_2024_Article_98.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "FLASH",
@@ -30525,7 +30655,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "Tissue_clearing_and_its_applications_in_human_tiss.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "FxClear",
@@ -30564,7 +30696,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "Tissue_clearing_and_its_applications_in_human_tiss.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "MYOCLEAR",
@@ -30610,7 +30744,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "Tissue_clearing_and_its_applications_in_human_tiss.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "SUT",
@@ -30651,7 +30787,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "Tissue_clearing_and_its_applications_in_human_tiss.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "FASTClear",
@@ -30886,7 +31024,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "Tissue_clearing_and_its_applications_in_human_tiss.pdf"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "EZ Clear",
@@ -30923,7 +31063,9 @@
       "validation_candidates": [],
       "source_manifest": {
         "type": "AI Gap Finder"
-      }
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
     },
     {
       "method_name": "FocusClear",
@@ -31665,7 +31807,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "msb.20209807.pdf"
-      }
+      },
+      "live_sample_compatibility": "No",
+      "live_sample_compatibility_evidence": "The abstract explicitly states the use of microwave-aided fixation prior to clearing."
     },
     {
       "method_name": "TDE",
@@ -32280,7 +32424,9 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "fbioe-09-784626.pdf"
-      }
+      },
+      "live_sample_compatibility": "No",
+      "live_sample_compatibility_evidence": "The abstract explicitly states that TDE enables high-resolution imaging deep inside fixed specimens."
     },
     {
       "method_name": "Spalteholz technique",
@@ -32393,6 +32539,1255 @@
       "source_manifest": {
         "type": "Review PDF Extract",
         "file": "msb.20209807.pdf"
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
+    },
+    {
+      "method_name": "aDISCO",
+      "year_invented": "2026",
+      "chemical_class": "Solvent",
+      "refractive_index": "Unknown",
+      "sample_size_compatibility": "Unknown",
+      "tissue_compatibilities": [
+        "Human | brain",
+        "Human | spinal cord",
+        "Human | peripheral nerve",
+        "Human | skin",
+        "Human | muscle",
+        "Human | heart",
+        "Human | kidney",
+        "Human | liver",
+        "Human | spleen",
+        "Human | colon",
+        "Human | lung"
+      ],
+      "primary_citation": "Reuss AM, Groos D, Cerisoli M, Nordberg L, Frick L, Voigt FF, Vladimirov N, Bethge P, Reimann R, Helmchen F. aDISCO: A clearing method to enable 3D microscopy of large archival paraffin-embedded human tissue blocks. Sci Adv. 2026;12(33):eaef9926.",
+      "original_reference": {
+        "citation": "Reuss AM, Groos D, Cerisoli M, Nordberg L, Frick L, Voigt FF, Vladimirov N, Bethge P, Reimann R, Helmchen F. aDISCO: A clearing method to enable 3D microscopy of large archival paraffin-embedded human tissue blocks. Sci Adv. 2026;12(33):eaef9926.",
+        "title": "aDISCO: A clearing method to enable 3D microscopy of large archival paraffin-embedded human tissue blocks.",
+        "authors": [
+          "Reuss AM",
+          "Groos D",
+          "Cerisoli M",
+          "Nordberg L",
+          "Frick L",
+          "Voigt FF",
+          "Vladimirov N",
+          "Bethge P",
+          "Reimann R",
+          "Helmchen F"
+        ],
+        "journal": "Sci Adv",
+        "year": "2026",
+        "volume": "12",
+        "issue": "33",
+        "pages": "eaef9926",
+        "doi": "10.1126/sciadv.aef9926",
+        "doi_status": "valid"
+      },
+      "fluorescent_protein_compatibility": "Unknown",
+      "clearing_speed": "Unknown",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Unknown",
+      "toxicity_hazard": "Unknown",
+      "real_world_application_papers": [],
+      "validation_candidates": [],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
+      },
+      "live_sample_compatibility": "No",
+      "live_sample_compatibility_evidence": "The abstract explicitly states that aDISCO was designed for clearing formalin-fixed paraffin-embedded tissue blocks."
+    },
+    {
+      "method_name": "SynClear",
+      "year_invented": "2026",
+      "chemical_class": "Unknown",
+      "refractive_index": "Unknown",
+      "sample_size_compatibility": "Unknown",
+      "tissue_compatibilities": [
+        "Mouse | brain",
+        "Mouse | peripheral organs",
+        "Human | cortex"
+      ],
+      "primary_citation": "Xiao X, Ma C, Wang Y, Zhu J, Chen J, Li S, Wang Y, Gong W. SynClear: A one-step synchronous clearing and labeling strategy for multiscale 3D brain mapping. Mater Today Bio. 2026;38:103261.",
+      "original_reference": {
+        "citation": "Xiao X, Ma C, Wang Y, Zhu J, Chen J, Li S, Wang Y, Gong W. SynClear: A one-step synchronous clearing and labeling strategy for multiscale 3D brain mapping. Mater Today Bio. 2026;38:103261.",
+        "title": "SynClear: A one-step synchronous clearing and labeling strategy for multiscale 3D brain mapping.",
+        "authors": [
+          "Xiao X",
+          "Ma C",
+          "Wang Y",
+          "Zhu J",
+          "Chen J",
+          "Li S",
+          "Wang Y",
+          "Gong W"
+        ],
+        "journal": "Mater Today Bio",
+        "year": "2026",
+        "volume": "38",
+        "issue": "Unknown",
+        "pages": "103261",
+        "doi": "10.1016/j.mtbio.2026.103261",
+        "doi_status": "valid"
+      },
+      "fluorescent_protein_compatibility": "High",
+      "clearing_speed": "Unknown",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Unknown",
+      "toxicity_hazard": "Unknown",
+      "real_world_application_papers": [],
+      "validation_candidates": [
+        {
+          "title": "SynClear: A one-step synchronous clearing and labeling strategy for multiscale 3D brain mapping.",
+          "doi": "10.1016/j.mtbio.2026.103261",
+          "journal": "Mater Today Bio",
+          "year": "2026",
+          "first_author": "Xiao X",
+          "pmid": "42220611",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "The paper introduces and characterizes SynClear, a novel one-step tissue clearing and labeling method, demonstrating its performance and applicability across mouse brain, tumor models, and human cortex.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Radical improvement of signs and symptoms in systemic lupus erythematosus when treated with hemodiafiltration with endogenous reinfusion dialysis.",
+          "doi": "10.1159/000381395",
+          "journal": "Case Rep Nephrol Dial",
+          "year": "2015",
+          "first_author": "Solano FG",
+          "pmid": "26034748",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "The study mentions Synclear 02, a dialytic membrane used in hemodiafiltration, which is unrelated to optical tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "New horizon in dialysis depuration: Characterization of a polysulfone membrane able to break the 'albumin wall'.",
+          "doi": "10.1177/0885328214565651",
+          "journal": "J Biomater Appl",
+          "year": "2015",
+          "first_author": "Cuoghi A",
+          "pmid": "25542733",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "The article evaluates Synclear 0.2, a polysulfone membrane for hemodiafiltration, which is unrelated to optical tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
+    },
+    {
+      "method_name": "SeeDB-Live",
+      "year_invented": "2026",
+      "chemical_class": "Aqueous",
+      "refractive_index": "Unknown",
+      "sample_size_compatibility": "Unknown",
+      "tissue_compatibilities": [
+        "Mouse | brain"
+      ],
+      "primary_citation": "Inagaki S, Nakagawa-Tamagawa N, Huynh NZ, Kambe Y, Yagasaki R, Manita S, Fujimoto S, Noda T, Mori M, Teranishi A, Takeshima H, Ishikawa K, Naitou Y. Isotonic and minimally invasive optical clearing media for live cell imaging ex vivo and in vivo. Nat Methods. 2026;23(4):839-853.",
+      "original_reference": {
+        "citation": "Inagaki S, Nakagawa-Tamagawa N, Huynh NZ, Kambe Y, Yagasaki R, Manita S, Fujimoto S, Noda T, Mori M, Teranishi A, Takeshima H, Ishikawa K, Naitou Y. Isotonic and minimally invasive optical clearing media for live cell imaging ex vivo and in vivo. Nat Methods. 2026;23(4):839-853.",
+        "title": "Isotonic and minimally invasive optical clearing media for live cell imaging ex vivo and in vivo.",
+        "authors": [
+          "Inagaki S",
+          "Nakagawa-Tamagawa N",
+          "Huynh NZ",
+          "Kambe Y",
+          "Yagasaki R",
+          "Manita S",
+          "Fujimoto S",
+          "Noda T",
+          "Mori M",
+          "Teranishi A",
+          "Takeshima H",
+          "Ishikawa K",
+          "Naitou Y"
+        ],
+        "journal": "Nat Methods",
+        "year": "2026",
+        "volume": "23",
+        "issue": "4",
+        "pages": "839-853",
+        "doi": "10.1038/s41592-026-03023-y",
+        "doi_status": "valid"
+      },
+      "fluorescent_protein_compatibility": "High",
+      "clearing_speed": "Unknown",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Unknown",
+      "toxicity_hazard": "Unknown",
+      "real_world_application_papers": [],
+      "validation_candidates": [
+        {
+          "title": "Isotonic and minimally invasive optical clearing media for live cell imaging ex vivo and in vivo.",
+          "doi": "10.1038/s41592-026-03023-y",
+          "journal": "Nat Methods",
+          "year": "2026",
+          "first_author": "Inagaki S",
+          "pmid": "41820664",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "The study focuses on developing and validating the SeeDB-Live clearing method for live-cell imaging rather than applying an established method to answer a specific biological research question.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
+      },
+      "live_sample_compatibility": "Yes",
+      "live_sample_compatibility_evidence": "The abstract explicitly demonstrates that SeeDB-Live is compatible with live cells and enables imaging of live tissues and mouse brains in vivo."
+    },
+    {
+      "method_name": "DeepBone",
+      "year_invented": "2026",
+      "chemical_class": "Unknown",
+      "refractive_index": "Unknown",
+      "sample_size_compatibility": "Unknown",
+      "tissue_compatibilities": [
+        "Human | bone",
+        "Mouse | bone"
+      ],
+      "primary_citation": "Chu NTL, Dregval O, Chang YW, Kriukov E, Tian X, Liu X, Trompet D, Zhang MS, Li L, Li Z, Ruiz EG, Pereira JB. Three-dimensional quantitative tissue clearing reveals differences in osteovascular niche of aged and young human mesenchymal stromal cells. Nat Biomed Eng. 2026.",
+      "original_reference": {
+        "citation": "Chu NTL, Dregval O, Chang YW, Kriukov E, Tian X, Liu X, Trompet D, Zhang MS, Li L, Li Z, Ruiz EG, Pereira JB. Three-dimensional quantitative tissue clearing reveals differences in osteovascular niche of aged and young human mesenchymal stromal cells. Nat Biomed Eng. 2026.",
+        "title": "Three-dimensional quantitative tissue clearing reveals differences in osteovascular niche of aged and young human mesenchymal stromal cells.",
+        "authors": [
+          "Chu NTL",
+          "Dregval O",
+          "Chang YW",
+          "Kriukov E",
+          "Tian X",
+          "Liu X",
+          "Trompet D",
+          "Zhang MS",
+          "Li L",
+          "Li Z",
+          "Ruiz EG",
+          "Pereira JB"
+        ],
+        "journal": "Nat Biomed Eng",
+        "year": "2026",
+        "volume": "Unknown",
+        "issue": "Unknown",
+        "pages": "Unknown",
+        "doi": "10.1038/s41551-026-01645-3",
+        "doi_status": "valid"
+      },
+      "fluorescent_protein_compatibility": "Unknown",
+      "clearing_speed": "Unknown",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Unknown",
+      "toxicity_hazard": "Unknown",
+      "real_world_application_papers": [
+        {
+          "title": "Identification of ephrin-A1-EphA2 signalling as a potential target for fracture prevention.",
+          "doi": "10.1038/s41467-026-69863-6",
+          "journal": "Nat Commun",
+          "year": "2026",
+          "first_author": "Movérare-Skrtic S",
+          "pmid": "41723149",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used 3D DeepBone clearing for spatial expression analysis to demonstrate that ephrin-A1 on endothelial cells interacts with EphA2 on osteoblasts at the bone surface to influence bone density.",
+          "cleared_tissues": [
+            "Mouse | bone"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | bone"
+          ]
+        }
+      ],
+      "validation_candidates": [
+        {
+          "title": "Three-dimensional quantitative tissue clearing reveals differences in osteovascular niche of aged and young human mesenchymal stromal cells.",
+          "doi": "10.1038/s41551-026-01645-3",
+          "journal": "Nat Biomed Eng",
+          "year": "2026",
+          "first_author": "Chu NTL",
+          "pmid": "41998164",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "presents and validates the DeepBone tissue-clearing protocol for human bone samples.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Identification of ephrin-A1-EphA2 signalling as a potential target for fracture prevention.",
+          "doi": "10.1038/s41467-026-69863-6",
+          "journal": "Nat Commun",
+          "year": "2026",
+          "first_author": "Movérare-Skrtic S",
+          "pmid": "41723149",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Used 3D DeepBone clearing for spatial expression analysis to demonstrate that ephrin-A1 on endothelial cells interacts with EphA2 on osteoblasts at the bone surface to influence bone density.",
+          "cleared_tissues": [
+            "Mouse | bone"
+          ],
+          "tissue_compatibilities": [
+            "Mouse | bone"
+          ]
+        },
+        {
+          "title": "A decade of vertebrate palaeontology research: global taxa distribution, gender dynamics and evolving methodologies.",
+          "doi": "10.1098/rsos.250263",
+          "journal": "R Soc Open Sci",
+          "year": "2025",
+          "first_author": "Wang H",
+          "pmid": "40370610",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "Refers to 'DeepBone' as a paleontology research publication database, not a tissue clearing technique.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Association between blood markers and the progression of osseointegration in percutaneous prostheses patients-A pilot study.",
+          "doi": "10.1002/jbm.b.35398",
+          "journal": "J Biomed Mater Res B Appl Biomater",
+          "year": "2024",
+          "first_author": "Miller A",
+          "pmid": "38456331",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "Mentions 'deep-bone infections' in clinical prostheses, not the DeepBone tissue clearing method.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Etiology and antimicrobial resistance patterns in chronic osteomyelitis of the tibia: an 11-year clinical experience.",
+          "doi": "10.1007/s00402-023-05095-3",
+          "journal": "Arch Orthop Trauma Surg",
+          "year": "2024",
+          "first_author": "Carbonell-Rosell C",
+          "pmid": "38133804",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "Mentions 'deep-bone cultures' in chronic osteomyelitis, not a tissue clearing method.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "A Multicenter Trial Demonstrating Presence or Absence of Bacterial Contamination at the Screw-Bone Interface Owing to Absence or Presence of Pedicle Screw Guard, Respectively, During Spinal Fusion.",
+          "doi": "10.1097/bsd.0000000000000976",
+          "journal": "Clin Spine Surg",
+          "year": "2020",
+          "first_author": "Agarwal A",
+          "pmid": "32168115",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "Mentions 'deep-bone infection' in pedicle screw surgery, not a tissue clearing method.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Simultaneous occurrence of a severe Morel-Lavallée lesion and gluteal muscle necrosis as a sequela of transcatheter angiographic embolization following pelvic fracture: a case report.",
+          "doi": "10.1186/s13256-015-0550-7",
+          "journal": "J Med Case Rep",
+          "year": "2015",
+          "first_author": "Shimizu T",
+          "pmid": "25890103",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "Mentions 'deep-bone infection' in a clinical case report, not a tissue clearing method.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Diagnosis and management of closed internal degloving injuries associated with pelvic and acetabular fractures: the Morel-Lavallée lesion.",
+          "doi": "10.1097/00005373-199706000-00010",
+          "journal": "J Trauma",
+          "year": "1997",
+          "first_author": "Hak DJ",
+          "pmid": "9210539",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "Mentions 'deep-bone infections' in pelvic soft-tissue injuries, not a tissue clearing method.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
+    },
+    {
+      "method_name": "Su-VIRO",
+      "year_invented": "2026",
+      "chemical_class": "Aqueous",
+      "refractive_index": "Unknown",
+      "sample_size_compatibility": "Unknown",
+      "tissue_compatibilities": [
+        "Arabidopsis | leaf",
+        "Rice | leaf"
+      ],
+      "primary_citation": "He M, Xu Y, Zhu M, Cao S, Chen P, Hong L. A versatile phenotyping platform combining three-photon microscopy, optimized tissue clearing, and deep-learning signal separation for full-depth multi-organelle phenotyping. Plant Commun. 2026;102080.",
+      "original_reference": {
+        "citation": "Plant Commun. 2026;102080. doi: 10.1016/j.xplc.2026.102080.",
+        "title": "A versatile phenotyping platform combining three-photon microscopy, optimized tissue clearing, and deep-learning signal separation for full-depth multi-organelle phenotyping.",
+        "authors": [
+          "He M",
+          "Xu Y",
+          "Zhu M",
+          "Cao S",
+          "Chen P",
+          "Hong L"
+        ],
+        "journal": "Plant Commun",
+        "year": "2026",
+        "volume": "Unknown",
+        "issue": "Unknown",
+        "pages": "102080",
+        "doi": "10.1016/j.xplc.2026.102080",
+        "doi_status": "Valid"
+      },
+      "fluorescent_protein_compatibility": "Unknown",
+      "clearing_speed": "Unknown",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Unknown",
+      "toxicity_hazard": "Unknown",
+      "real_world_application_papers": [],
+      "validation_candidates": [
+        {
+          "title": "A versatile phenotyping platform combining three-photon microscopy, optimized tissue clearing, and deep-learning signal separation for full-depth multi-organelle phenotyping.",
+          "doi": "10.1016/j.xplc.2026.102080",
+          "journal": "Plant Commun",
+          "year": "2026",
+          "first_author": "He M",
+          "pmid": "42625363",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "The study describes and evaluates Su-VIRO (sucrose vacuum-infused refractive-index optimization), a newly developed tissue clearing method integrated into an imaging platform, rather than applying an established clearing method to answer a primary biological question.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
+    },
+    {
+      "method_name": "MDISCO",
+      "year_invented": "2026",
+      "chemical_class": "Solvent",
+      "refractive_index": "Unknown",
+      "sample_size_compatibility": "Unknown",
+      "tissue_compatibilities": [
+        "Mouse | brain"
+      ],
+      "primary_citation": "Martinez M, Thornberry J, Ozawa A, Toll L. MDISCO: A High-Throughput Tissue-Clearing Protocol for Preservation of Endogenous Fluorescence in Whole Mouse Brains. Bio Protoc. 2026 Apr 5;16(7):e5649. doi: 10.21769/BioProtoc.5649.",
+      "original_reference": {
+        "citation": "Bio Protoc. 2026 Apr 5;16(7):e5649. doi: 10.21769/BioProtoc.5649.",
+        "title": "MDISCO: A High-Throughput Tissue-Clearing Protocol for Preservation of Endogenous Fluorescence in Whole Mouse Brains.",
+        "authors": [
+          "Martinez M",
+          "Thornberry J",
+          "Ozawa A",
+          "Toll L"
+        ],
+        "journal": "Bio Protoc",
+        "year": "2026",
+        "volume": "16",
+        "issue": "7",
+        "pages": "e5649",
+        "doi": "10.21769/bioprotoc.5649",
+        "doi_status": "Valid"
+      },
+      "fluorescent_protein_compatibility": "Unknown",
+      "clearing_speed": "Unknown",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Unknown",
+      "toxicity_hazard": "Unknown",
+      "real_world_application_papers": [],
+      "validation_candidates": [],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
+    },
+    {
+      "method_name": "PRIAMOS",
+      "year_invented": "2025",
+      "chemical_class": "Aqueous",
+      "refractive_index": "1.52",
+      "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
+      "tissue_compatibilities": [
+        "Mouse | brain",
+        "Mouse | kidney"
+      ],
+      "primary_citation": "Leischner U, Reifarth M, Brill MS, Schmitt F, Hoeppener S, Unnersjo Jess D, Brismar H. PRIAMOS: A technique for mixing embedding media for freely adjusting pH value and refractive index (RI) for optical clearing (OC) of whole tissue samples. J Microsc. 2025 Dec;300(3):302-314. doi: 10.1111/jmi.70022.",
+      "original_reference": {
+        "citation": "J Microsc. 2025 Dec;300(3):302-314. doi: 10.1111/jmi.70022.",
+        "title": "PRIAMOS: A technique for mixing embedding media for freely adjusting pH value and refractive index (RI) for optical clearing (OC) of whole tissue samples.",
+        "authors": [
+          "Leischner U",
+          "Reifarth M",
+          "Brill MS",
+          "Schmitt F",
+          "Hoeppener S",
+          "Unnersjo Jess D",
+          "Brismar H"
+        ],
+        "journal": "J Microsc",
+        "year": "2025",
+        "volume": "300",
+        "issue": "3",
+        "pages": "302-314",
+        "doi": "10.1111/jmi.70022",
+        "doi_status": "Valid"
+      },
+      "fluorescent_protein_compatibility": "Low (Quenched)",
+      "clearing_speed": "Fast (Hours to Days)",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Unknown",
+      "toxicity_hazard": "Unknown",
+      "real_world_application_papers": [],
+      "validation_candidates": [
+        {
+          "title": "PRIAMOS: A technique for mixing embedding media for freely adjusting pH value and refractive index (RI) for optical clearing (OC) of whole tissue samples.",
+          "doi": "10.1111/jmi.70022",
+          "journal": "J Microsc",
+          "year": "2025",
+          "first_author": "Leischner U",
+          "pmid": "40778535",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "This study develops and optimizes PRIAMOS, an optical tissue clearing procedure and embedding media mixing technique to adjust pH and refractive index.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Hypofractionated IMRT of the prostate bed after radical prostatectomy: acute toxicity in the PRIAMOS-1 trial.",
+          "doi": "10.1016/j.ijrobp.2014.07.015",
+          "journal": "Int J Radiat Oncol Biol Phys",
+          "year": "2014",
+          "first_author": "Katayama S",
+          "pmid": "25216858",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "PRIAMOS refers to a clinical trial evaluating hypofractionated radiation therapy for prostate cancer, completely unrelated to optical tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Hypofractionated helical intensity-modulated radiotherapy of the prostate bed after prostatectomy with or without the pelvic lymph nodes - the PRIAMOS trial.",
+          "doi": "10.1186/1471-2407-12-504",
+          "journal": "BMC Cancer",
+          "year": "2012",
+          "first_author": "Krause S",
+          "pmid": "23114055",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "PRIAMOS refers to a phase II clinical trial evaluating radiotherapy in prostate cancer, unrelated to tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "[Greater traffic safety for people with visual impairment--the BFM Düren PRIAMOS Project].",
+          "doi": "10.1055/s-2006-932616",
+          "journal": "Rehabilitation (Stuttg)",
+          "year": "2006",
+          "first_author": "Ax A",
+          "pmid": "16755440",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "PRIAMOS refers to a traffic safety project for visually impaired individuals, unrelated to optical tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
+    },
+    {
+      "method_name": "CLARI-O",
+      "year_invented": "2026",
+      "chemical_class": "Unknown",
+      "refractive_index": "Unknown",
+      "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
+      "tissue_compatibilities": [
+        "Human | cortical organoid",
+        "Mouse | brain"
+      ],
+      "primary_citation": "Beyene S, Thunemann M, Kharitonova EK, Campbell NB, Klorfeld-Auslender S. Seeing clearly with CLARI-O: a window into cellular architecture, interactions, and morphology of organoid models. bioRxiv. 2026 Mar 31. doi: 10.64898/2026.03.29.715075.",
+      "original_reference": {
+        "citation": "bioRxiv. 2026 Mar 31. doi: 10.64898/2026.03.29.715075.",
+        "title": "Seeing clearly with CLARI-O: a window into cellular architecture, interactions, and morphology of organoid models.",
+        "authors": [
+          "Beyene S",
+          "Thunemann M",
+          "Kharitonova EK",
+          "Campbell NB",
+          "Klorfeld-Auslender S"
+        ],
+        "journal": "bioRxiv",
+        "year": "2026",
+        "volume": "Unknown",
+        "issue": "Unknown",
+        "pages": "Unknown",
+        "doi": "10.64898/2026.03.29.715075",
+        "doi_status": "Valid"
+      },
+      "fluorescent_protein_compatibility": "Unknown",
+      "clearing_speed": "Unknown",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Unknown",
+      "toxicity_hazard": "Unknown",
+      "real_world_application_papers": [],
+      "validation_candidates": [
+        {
+          "title": "Seeing clearly with CLARI-O: a window into cellular architecture, interactions, and morphology of organoid models.",
+          "doi": "10.3389/fnins.2026.1874430",
+          "journal": "Front Neurosci",
+          "year": "2026",
+          "first_author": "Beyene S",
+          "pmid": "42582357",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "The study focuses on developing, optimizing, and establishing the CLARI-O tissue clearing framework for 3D visualization of organoids and xenotransplants.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Seeing clearly with CLARI-O: a window into cellular architecture, interactions, and morphology of organoid models.",
+          "doi": "10.64898/2026.03.29.715075",
+          "journal": "bioRxiv",
+          "year": "2026",
+          "first_author": "Beyene S",
+          "pmid": "41959503",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "Preprint describing the technical development and protocol optimization of CLARI-O for organoid tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
+    },
+    {
+      "method_name": "PT-CLEAR3D",
+      "year_invented": "2025",
+      "chemical_class": "Solvent",
+      "refractive_index": "Unknown",
+      "sample_size_compatibility": "Unknown",
+      "tissue_compatibilities": [
+        "Human | testis",
+        "Common marmoset | testis",
+        "Macaque | testis"
+      ],
+      "primary_citation": "Kibui PW, Weischer S. Optical tissue clearing and 3D imaging of intact primate testicular tissue: a novel technology development. PLoS One. 2025;20(12):e0327287. doi: 10.1371/journal.pone.0327287.",
+      "original_reference": {
+        "citation": "PLoS One. 2025;20(12):e0327287. doi: 10.1371/journal.pone.0327287.",
+        "title": "Optical tissue clearing and 3D imaging of intact primate testicular tissue: a novel technology development.",
+        "authors": [
+          "Kibui PW",
+          "Weischer S"
+        ],
+        "journal": "PLoS One",
+        "year": "2025",
+        "volume": "20",
+        "issue": "12",
+        "pages": "e0327287",
+        "doi": "10.1371/journal.pone.0327287",
+        "doi_status": "Valid"
+      },
+      "fluorescent_protein_compatibility": "Unknown",
+      "clearing_speed": "Unknown",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Unknown",
+      "toxicity_hazard": "Unknown",
+      "real_world_application_papers": [],
+      "validation_candidates": [
+        {
+          "title": "Optical tissue clearing and 3D imaging of intact primate testicular tissue: a novel technology development.",
+          "doi": "10.1371/journal.pone.0327287",
+          "journal": "PLoS One",
+          "year": "2025",
+          "first_author": "Kibui PW",
+          "pmid": "41359627",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "The study describes the technological development and methodological validation of PT-CLEAR3D, a tissue clearing toolbox for primate testicular tissue.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
+    },
+    {
+      "method_name": "OptiMuS-prime",
+      "year_invented": "2025",
+      "chemical_class": "Aqueous",
+      "refractive_index": "Unknown",
+      "sample_size_compatibility": "Organ-Scale (2 mm to 2 cm)",
+      "tissue_compatibilities": [
+        "Rodent | brain",
+        "Rodent | intestine",
+        "Rodent | lung",
+        "Rodent | kidney",
+        "Rodent | spleen",
+        "Rodent | heart",
+        "Human | tissue",
+        "Human | brain organoid"
+      ],
+      "primary_citation": "Kim K, Lee K, Kang T, Lee J, Lee W, Lee JY, Chang S. A novel protein-preserving passive tissue clearing approach using sodium cholate and urea for whole-organ imaging. Exp Mol Med. 2025 Oct;57(10):2292-2304. doi: 10.1038/s12276-025-01550-w.",
+      "original_reference": {
+        "citation": "Exp Mol Med. 2025 Oct;57(10):2292-2304. doi: 10.1038/s12276-025-01550-w.",
+        "title": "A novel protein-preserving passive tissue clearing approach using sodium cholate and urea for whole-organ imaging.",
+        "authors": [
+          "Kim K",
+          "Lee K",
+          "Kang T",
+          "Lee J",
+          "Lee W",
+          "Lee JY",
+          "Chang S"
+        ],
+        "journal": "Exp Mol Med",
+        "year": "2025",
+        "volume": "57",
+        "issue": "10",
+        "pages": "2292-2304",
+        "doi": "10.1038/s12276-025-01550-w",
+        "doi_status": "valid"
+      },
+      "fluorescent_protein_compatibility": "Unknown",
+      "clearing_speed": "Unknown",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Low (Standard Bench)",
+      "toxicity_hazard": "Unknown",
+      "real_world_application_papers": [],
+      "validation_candidates": [
+        {
+          "title": "A uniform tissue-clearing framework and mesoSPIM-ultra enable cm-scale single-neuron tracing.",
+          "doi": "10.64898/2026.06.29.734841",
+          "journal": "bioRxiv",
+          "year": "2026",
+          "first_author": "Pende M",
+          "pmid": "42427676",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "The paper focuses on defining the chemical and physical principles of dehydration-based tissue clearing and developing a new clearing pipeline and imaging platform rather than using an established method primarily to address a biological question.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
+    },
+    {
+      "method_name": "sciDISCO",
+      "year_invented": "2025",
+      "chemical_class": "Solvent",
+      "refractive_index": "Unknown",
+      "sample_size_compatibility": "Unknown",
+      "tissue_compatibilities": [
+        "Mouse | spinal cord"
+      ],
+      "primary_citation": "Buxton AW, Jalufka FL, Hruska ME, Kubaney JR, McCreedy DA. Rapid and efficient optical tissue clearing for volumetric imaging of the intact and injured spinal cord in mice. Front Neurosci. 2025;19:1601360.",
+      "original_reference": {
+        "citation": "Buxton AW, Jalufka FL, Hruska ME, Kubaney JR, McCreedy DA. Rapid and efficient optical tissue clearing for volumetric imaging of the intact and injured spinal cord in mice. Front Neurosci. 2025;19:1601360.",
+        "title": "Rapid and efficient optical tissue clearing for volumetric imaging of the intact and injured spinal cord in mice.",
+        "authors": [
+          "Buxton AW",
+          "Jalufka FL",
+          "Hruska ME",
+          "Kubaney JR",
+          "McCreedy DA"
+        ],
+        "journal": "Front Neurosci",
+        "year": "2025",
+        "volume": "19",
+        "issue": "Unknown",
+        "pages": "1601360",
+        "doi": "10.3389/fnins.2025.1601360",
+        "doi_status": "extracted"
+      },
+      "fluorescent_protein_compatibility": "Unknown",
+      "clearing_speed": "Unknown",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Unknown",
+      "toxicity_hazard": "Unknown",
+      "real_world_application_papers": [],
+      "validation_candidates": [
+        {
+          "title": "Rapid and efficient optical tissue clearing for volumetric imaging of the intact and injured spinal cord in mice.",
+          "doi": "10.3389/fnins.2025.1601360",
+          "journal": "Front Neurosci",
+          "year": "2025",
+          "first_author": "Buxton AW",
+          "pmid": "40584879",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "The study focuses on developing, evaluating, and optimizing sciDISCO, an organic solvent-based tissue clearing protocol tailored for imaging intact and injured spinal cords, rather than applying an established method to address a biological research question.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
+    },
+    {
+      "method_name": "3DEEP",
+      "year_invented": "2026",
+      "chemical_class": "Unknown",
+      "refractive_index": "Unknown",
+      "sample_size_compatibility": "Unknown",
+      "tissue_compatibilities": [
+        "Mouse | skin"
+      ],
+      "primary_citation": "Asami S, Yin C, Fan J, Garza LA, Kalhor R. Four-dimensional molecular mapping from a spatial snapshot reveals the dynamics of hair follicle organogenesis. Cell. 2026;189(18):5653-5672.e14.",
+      "original_reference": {
+        "citation": "Asami S, Yin C, Fan J, Garza LA, Kalhor R. Four-dimensional molecular mapping from a spatial snapshot reveals the dynamics of hair follicle organogenesis. Cell. 2026;189(18):5653-5672.e14.",
+        "title": "Four-dimensional molecular mapping from a spatial snapshot reveals the dynamics of hair follicle organogenesis.",
+        "authors": [
+          "Asami S",
+          "Yin C",
+          "Fan J",
+          "Garza LA",
+          "Kalhor R"
+        ],
+        "journal": "Cell",
+        "year": "2026",
+        "volume": "189",
+        "issue": "18",
+        "pages": "5653-5672.e14",
+        "doi": "10.1016/j.cell.2026.06.014",
+        "doi_status": "extracted"
+      },
+      "fluorescent_protein_compatibility": "Unknown",
+      "clearing_speed": "Unknown",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Unknown",
+      "toxicity_hazard": "Unknown",
+      "real_world_application_papers": [],
+      "validation_candidates": [
+        {
+          "title": "4D-atlas: a multi-species four-dimensional spatiotemporal transcriptomics database spanning development, regeneration, and disease.",
+          "doi": "10.1093/nar/gkag1039",
+          "journal": "Nucleic Acids Res",
+          "year": "2026",
+          "first_author": "Zhao H",
+          "pmid": "42922375",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "The abstract describes 4D-atlas, a multi-species spatiotemporal transcriptomics database, and does not perform tissue clearing or report a tissue clearing application.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Spatial Transcriptomics As Rasterized Image Tensors (STARIT) characterizes cell states with subcellular molecular heterogeneity.",
+          "doi": "10.1371/journal.pcbi.1014845",
+          "journal": "bioRxiv",
+          "year": "2026",
+          "first_author": "Velazquez D",
+          "pmid": "41497642",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "The abstract describes STARIT, a computational deep learning framework for spatial transcriptomics analysis, without involving tissue clearing techniques.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
+      },
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": ""
+    },
+    {
+      "method_name": "PHCS",
+      "year_invented": "2025",
+      "chemical_class": "Hydrogel",
+      "refractive_index": "Unknown",
+      "sample_size_compatibility": "Unknown",
+      "tissue_compatibilities": [
+        "Unknown | intestine"
+      ],
+      "primary_citation": "Ouyang Q, Qin R, Li Q, Huang P, Lin C, Xu Q, Quan W, Fang F, Zhu Y, Liao J, Wu K. A novel m-xylylene-diamine/glucose based-supramolecular eutectogels with tissue clearing for three dimensional histological imaging. Colloids Surf B Biointerfaces. 2025;245:114262. doi: 10.1016/j.colsurfb.2024.114262",
+      "original_reference": {
+        "citation": "Ouyang Q, Qin R, Li Q, Huang P, Lin C, Xu Q, Quan W, Fang F, Zhu Y, Liao J, Wu K. A novel m-xylylene-diamine/glucose based-supramolecular eutectogels with tissue clearing for three dimensional histological imaging. Colloids Surf B Biointerfaces. 2025;245:114262. doi: 10.1016/j.colsurfb.2024.114262",
+        "title": "A novel m-xylylene-diamine/glucose based-supramolecular eutectogels with tissue clearing for three dimensional histological imaging.",
+        "authors": [
+          "Ouyang Q",
+          "Qin R",
+          "Li Q",
+          "Huang P",
+          "Lin C",
+          "Xu Q",
+          "Quan W",
+          "Fang F",
+          "Zhu Y",
+          "Liao J",
+          "Wu K"
+        ],
+        "journal": "Colloids Surf B Biointerfaces",
+        "year": "2025",
+        "volume": "245",
+        "issue": "Unknown",
+        "pages": "114262",
+        "doi": "10.1016/j.colsurfb.2024.114262",
+        "doi_status": "Unknown"
+      },
+      "fluorescent_protein_compatibility": "Unknown",
+      "clearing_speed": "Unknown",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Unknown",
+      "toxicity_hazard": "Unknown",
+      "live_sample_compatibility": "Unknown",
+      "real_world_application_papers": [],
+      "validation_candidates": [
+        {
+          "title": "Ultrahigh Transparent and Toughness Copolymer Eutectogels via Phase Separation for Fast Tissue Clearing and 2D/3D Imaging.",
+          "doi": "10.1021/acs.biomac.5c00788",
+          "journal": "Biomacromolecules",
+          "year": "2025",
+          "first_author": "Ma H",
+          "pmid": "40836616",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "The study describes the development and performance characterization of a phase-separated eutectogel clearing method, focusing on transparency, mechanical strength, and imaging performance.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
+      },
+      "live_sample_compatibility_evidence": ""
+    },
+    {
+      "method_name": "VIVIT",
+      "year_invented": "2025",
+      "chemical_class": "Solvent",
+      "refractive_index": "Unknown",
+      "sample_size_compatibility": "Unknown",
+      "tissue_compatibilities": [
+        "Human | brain"
+      ],
+      "primary_citation": "Gao Y, Xin F, Wang T, Shao C, Hu Y, Chen Z, Wang Y, Xie F, Li T, Li S, Ren L. VIVIT: Resolving trans-scale volumetric biological architectures via ionic glassy tissue. Cell. 2025;188(21):6079-6095.e20. doi: 10.1016/j.cell.2025.07.023",
+      "original_reference": {
+        "citation": "Gao Y, Xin F, Wang T, Shao C, Hu Y, Chen Z, Wang Y, Xie F, Li T, Li S, Ren L. VIVIT: Resolving trans-scale volumetric biological architectures via ionic glassy tissue. Cell. 2025;188(21):6079-6095.e20. doi: 10.1016/j.cell.2025.07.023",
+        "title": "VIVIT: Resolving trans-scale volumetric biological architectures via ionic glassy tissue.",
+        "authors": [
+          "Gao Y",
+          "Xin F",
+          "Wang T",
+          "Shao C",
+          "Hu Y",
+          "Chen Z",
+          "Wang Y",
+          "Xie F",
+          "Li T",
+          "Li S",
+          "Ren L"
+        ],
+        "journal": "Cell",
+        "year": "2025",
+        "volume": "188",
+        "issue": "21",
+        "pages": "6079-6095.e20",
+        "doi": "10.1016/j.cell.2025.07.023",
+        "doi_status": "Unknown"
+      },
+      "fluorescent_protein_compatibility": "Unknown",
+      "clearing_speed": "Unknown",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Unknown",
+      "toxicity_hazard": "Unknown",
+      "live_sample_compatibility": "Unknown",
+      "real_world_application_papers": [],
+      "validation_candidates": [
+        {
+          "title": "High numerical aperture confocal volumetric mesoscope reveals mesoscale subcellular dynamics in vivo.",
+          "doi": "10.1038/s41587-026-03231-z",
+          "journal": "Nat Biotechnol",
+          "year": "2026",
+          "first_author": "Lu Z",
+          "pmid": "42458054",
+          "status": "uncertain",
+          "category": "incidental_mention",
+          "confidence": "high",
+          "evidence": "The abstract describes an in vivo mesoscale confocal imaging framework (RUSH3D-HR) for live mouse imaging and does not mention tissue clearing.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Accelerated immunostaining of thick biological tissues using bidirectional electric fields with reversible deformation.",
+          "doi": "10.1364/boe.613433",
+          "journal": "Biomed Opt Express",
+          "year": "2026",
+          "first_author": "Zhou Z",
+          "pmid": "42769683",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "The paper presents and evaluates ARDEI, an electric-field-assisted immunostaining methodology for thick tissue sections and cleared specimens, focusing on method validation.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "A uniform tissue-clearing framework and mesoSPIM-ultra enable cm-scale single-neuron tracing.",
+          "doi": "10.64898/2026.06.29.734841",
+          "journal": "bioRxiv",
+          "year": "2026",
+          "first_author": "Pende M",
+          "pmid": "42427676",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "The study develops a new tissue-clearing framework and light-sheet platform (mesoSPIM-ultra), focusing on establishing tissue clearing chemical principles and imaging technology.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
+      },
+      "live_sample_compatibility_evidence": ""
+    },
+    {
+      "method_name": "activeDISCO",
+      "year_invented": "2026",
+      "chemical_class": "Solvent",
+      "refractive_index": "Unknown",
+      "sample_size_compatibility": "Unknown",
+      "tissue_compatibilities": [
+        "Human | brain"
+      ],
+      "primary_citation": "Oakes-Klein J, Fuchssteiner C, Saghafi S, Brugger PC, Becker K, Bohm S, Abd El-Ghany K, Kasprian G, Dodt HU. activeDISCO enables large-scale exploration of human brain anatomy by light sheet microscopy. Commun Biol. 2026;9(1):809. doi: 10.1038/s42003-026-09935-x",
+      "original_reference": {
+        "citation": "Oakes-Klein J, Fuchssteiner C, Saghafi S, Brugger PC, Becker K, Bohm S, Abd El-Ghany K, Kasprian G, Dodt HU. activeDISCO enables large-scale exploration of human brain anatomy by light sheet microscopy. Commun Biol. 2026;9(1):809. doi: 10.1038/s42003-026-09935-x",
+        "title": "activeDISCO enables large-scale exploration of human brain anatomy by light sheet microscopy.",
+        "authors": [
+          "Oakes-Klein J",
+          "Fuchssteiner C",
+          "Saghafi S",
+          "Brugger PC",
+          "Becker K",
+          "Bohm S",
+          "Abd El-Ghany K",
+          "Kasprian G",
+          "Dodt HU"
+        ],
+        "journal": "Commun Biol",
+        "year": "2026",
+        "volume": "9",
+        "issue": "1",
+        "pages": "809",
+        "doi": "10.1038/s42003-026-09935-x",
+        "doi_status": "Unknown"
+      },
+      "fluorescent_protein_compatibility": "Unknown",
+      "clearing_speed": "Fast (Hours to Days)",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Unknown",
+      "toxicity_hazard": "Unknown",
+      "live_sample_compatibility": "Unknown",
+      "real_world_application_papers": [],
+      "validation_candidates": [
+        {
+          "title": "Ultrasound-Enhanced Chemical Tissue Clearing of Large Specimens for 3D Microscopy: A Rapid and Accessible Method Using Standard Laboratory Equipment.",
+          "doi": "10.3390/mps9040119",
+          "journal": "Methods Protoc",
+          "year": "2026",
+          "first_author": "Becker K",
+          "pmid": "42646514",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "The paper optimizes and validates activeDISCO clearing using ultrasound enhancement to accelerate refractive index matching in large tissue samples.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "activeDISCO enables large-scale exploration of human brain anatomy by light sheet microscopy.",
+          "doi": "10.1038/s42003-026-09935-x",
+          "journal": "Commun Biol",
+          "year": "2026",
+          "first_author": "Oakes-Klein J",
+          "pmid": "41957479",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "The study presents activeDISCO, a new active dehydration solvent clearing protocol developed and tested on intact human brain specimens.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        }
+      ],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
+      },
+      "live_sample_compatibility_evidence": ""
+    },
+    {
+      "method_name": "SOLID",
+      "year_invented": "2024",
+      "chemical_class": "Solvent",
+      "refractive_index": "Unknown",
+      "sample_size_compatibility": "Unknown",
+      "tissue_compatibilities": [
+        "Mouse | brain",
+        "Human | liver"
+      ],
+      "primary_citation": "Zhu J, Liu X, Liu Z, Deng Y, Xu J, Liu K, Zhang R, Meng X. SOLID: minimizing tissue distortion for brain-wide profiling of diverse architectures. Nat Commun. 2024;15(1):8303. doi: 10.1038/s41467-024-52560-7",
+      "original_reference": {
+        "citation": "Zhu J, Liu X, Liu Z, Deng Y, Xu J, Liu K, Zhang R, Meng X. SOLID: minimizing tissue distortion for brain-wide profiling of diverse architectures. Nat Commun. 2024;15(1):8303. doi: 10.1038/s41467-024-52560-7",
+        "title": "SOLID: minimizing tissue distortion for brain-wide profiling of diverse architectures.",
+        "authors": [
+          "Zhu J",
+          "Liu X",
+          "Liu Z",
+          "Deng Y",
+          "Xu J",
+          "Liu K",
+          "Zhang R",
+          "Meng X"
+        ],
+        "journal": "Nat Commun",
+        "year": "2024",
+        "volume": "15",
+        "issue": "1",
+        "pages": "8303",
+        "doi": "10.1038/s41467-024-52560-7",
+        "doi_status": "Valid"
+      },
+      "fluorescent_protein_compatibility": "Unknown",
+      "clearing_speed": "Unknown",
+      "morphology_impact": "Unknown",
+      "equipment_complexity": "Unknown",
+      "toxicity_hazard": "Unknown",
+      "live_sample_compatibility": "Unknown",
+      "live_sample_compatibility_evidence": "",
+      "real_world_application_papers": [
+        {
+          "title": "3D reconstruction of human liver tissue at cellular resolution.",
+          "doi": "10.1126/sciadv.adz2299",
+          "journal": "Sci Adv",
+          "year": "2026",
+          "first_author": "Fabyan WB",
+          "pmid": "41706846",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Tissue clearing and 3D imaging were applied to reconstruct human cirrhotic liver samples, identifying sinusoid zonal dysregulation, central vein regression, and biliary fragmentation characteristic of a pro-portalization phenotype.",
+          "cleared_tissues": [
+            "Human | liver"
+          ],
+          "tissue_compatibilities": [
+            "Human | liver"
+          ]
+        }
+      ],
+      "validation_candidates": [
+        {
+          "title": "Strongly absorbing molecules make tissue transparent: a new insight for understanding tissue optical clearing.",
+          "doi": "10.1038/s41377-024-01675-z",
+          "journal": "Light Sci Appl",
+          "year": "2025",
+          "first_author": "Yu T",
+          "pmid": "39741136",
+          "status": "uncertain",
+          "category": "discussion",
+          "confidence": "high",
+          "evidence": "This article is a commentary discussing recent findings on using strongly absorbing molecules to achieve optical transparency in live animals.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "Rapid 3D Immunolabeling and Light Sheet Microscopy for Quantitative Analysis of Intact Tissues.",
+          "doi": "10.34133/csbj.0121",
+          "journal": "Comput Struct Biotechnol J",
+          "year": "2026",
+          "first_author": "Chen J",
+          "pmid": "42179916",
+          "status": "uncertain",
+          "category": "experimental_test",
+          "confidence": "high",
+          "evidence": "The study develops and benchmarks a streamlined workflow integrating antigen retrieval, digestion, labeling, and clearing for intact tissue analysis rather than addressing a biological question.",
+          "cleared_tissues": [],
+          "tissue_compatibilities": []
+        },
+        {
+          "title": "3D reconstruction of human liver tissue at cellular resolution.",
+          "doi": "10.1126/sciadv.adz2299",
+          "journal": "Sci Adv",
+          "year": "2026",
+          "first_author": "Fabyan WB",
+          "pmid": "41706846",
+          "status": "uncertain",
+          "category": "application",
+          "confidence": "high",
+          "evidence": "Tissue clearing and 3D imaging were applied to reconstruct human cirrhotic liver samples, identifying sinusoid zonal dysregulation, central vein regression, and biliary fragmentation characteristic of a pro-portalization phenotype.",
+          "cleared_tissues": [
+            "Human | liver"
+          ],
+          "tissue_compatibilities": [
+            "Human | liver"
+          ]
+        }
+      ],
+      "source_manifest": {
+        "type": "PubMed Recent Method Gap Check"
       }
     }
   ]

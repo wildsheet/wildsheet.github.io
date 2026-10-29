@@ -260,6 +260,7 @@
             ['morphology-filter', 'Morphology', 'select'],
             ['toxicity-filter', 'Toxicity', 'select'],
             ['fluorescence-filter', 'Fluorescence', 'select'],
+            ['live-filter', 'Live sample compatibility', 'select'],
             ['equipment-filter', 'Equipment', 'select'],
             ['year-filter', 'Year', 'select'],
             ['validation-filter', 'Number of real world applications', 'number']
@@ -360,6 +361,7 @@
             const morphologies = new Set();
             const toxicities = new Set();
             const fluorescenceCompatibility = new Set();
+            const liveCompatibility = new Set();
             const equipmentComplexity = new Set();
 
             cachedMethodsdatabase.forEach(m => {
@@ -369,6 +371,7 @@
                 if (isMeaningfulValue(m.morphology_impact)) morphologies.add(String(m.morphology_impact).trim());
                 if (isMeaningfulValue(m.toxicity_hazard)) toxicities.add(String(m.toxicity_hazard).trim());
                 if (isMeaningfulValue(m.fluorescent_protein_compatibility)) fluorescenceCompatibility.add(String(m.fluorescent_protein_compatibility).trim());
+                if (['Yes', 'No'].includes(String(m.live_sample_compatibility || '').trim())) liveCompatibility.add(String(m.live_sample_compatibility).trim());
                 if (isMeaningfulValue(m.equipment_complexity)) equipmentComplexity.add(String(m.equipment_complexity).trim());
                 if (Array.isArray(m.tissue_compatibilities)) {
                     m.tissue_compatibilities.forEach(t => {
@@ -436,6 +439,13 @@
                             </select>
                         </div>
                         <div>
+                            <label style="${labelStyle}">Live Sample Compatibility</label>
+                            <select id="live-filter" style="${inputStyle} cursor: pointer;" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
+                                <option value="all">Show All Options</option>
+                                ${Array.from(liveCompatibility).sort().map(v => `<option value="${v}">${v}</option>`).join('')}
+                            </select>
+                        </div>
+                        <div>
                             <label style="${labelStyle}">Equipment Complexity</label>
                             <select id="equipment-filter" style="${inputStyle} cursor: pointer;" onfocus="this.style.borderColor='#22d3ee'" onblur="this.style.borderColor='#1e293b'">
                                 <option value="all">Show All Options</option>
@@ -465,6 +475,7 @@
             document.getElementById('morphology-filter').addEventListener('change', renderFiltereddatabase);
             document.getElementById('toxicity-filter').addEventListener('change', renderFiltereddatabase);
             document.getElementById('fluorescence-filter').addEventListener('change', renderFiltereddatabase);
+            document.getElementById('live-filter').addEventListener('change', renderFiltereddatabase);
             document.getElementById('equipment-filter').addEventListener('change', renderFiltereddatabase);
             document.getElementById('year-filter').addEventListener('change', renderFiltereddatabase);
             document.getElementById('validation-filter').addEventListener('input', renderFiltereddatabase);
@@ -484,6 +495,7 @@
             const selectedMorphology = getFilterValue('morphology-filter') || 'all';
             const selectedToxicity = getFilterValue('toxicity-filter') || 'all';
             const selectedFluorescence = getFilterValue('fluorescence-filter') || 'all';
+            const selectedLive = getFilterValue('live-filter') || 'all';
             const selectedEquipment = getFilterValue('equipment-filter') || 'all';
             const selectedYear = getFilterValue('year-filter') || 'all';
             const selectedValRaw = getFilterValue('validation-filter');
@@ -505,6 +517,7 @@
                 const matchesMorphology = selectedMorphology === 'all' || String(m.morphology_impact || '').trim() === selectedMorphology;
                 const matchesToxicity = selectedToxicity === 'all' || String(m.toxicity_hazard || '').trim() === selectedToxicity;
                 const matchesFluorescence = selectedFluorescence === 'all' || String(m.fluorescent_protein_compatibility || '').trim() === selectedFluorescence;
+                const matchesLive = selectedLive === 'all' || String(m.live_sample_compatibility || 'Unknown').trim() === selectedLive;
                 const matchesEquipment = selectedEquipment === 'all' || String(m.equipment_complexity || '').trim() === selectedEquipment;
                 const matchesYear = selectedYear === 'all' || String(m.year_invented || '').trim() === selectedYear;
 
@@ -514,10 +527,10 @@
                     matchesValidation = (valCount >= Number(selectedVal));
                 }
 
-                const textHaystack = `${m.method_name} ${m.year_invented} ${m.chemical_class} ${m.refractive_index} ${m.primary_citation} ${(m.tissue_compatibilities || []).join(' ')} ${m.clearing_speed} ${m.morphology_impact} ${m.toxicity_hazard} ${m.fluorescent_protein_compatibility} ${m.equipment_complexity}`.toLowerCase();
+                const textHaystack = `${m.method_name} ${m.year_invented} ${m.chemical_class} ${m.refractive_index} ${m.primary_citation} ${(m.tissue_compatibilities || []).join(' ')} ${m.clearing_speed} ${m.morphology_impact} ${m.toxicity_hazard} ${m.fluorescent_protein_compatibility} ${m.live_sample_compatibility} ${m.equipment_complexity}`.toLowerCase();
                 const matchesText = !query || textHaystack.includes(query);
 
-                return matchesTissue && matchesClass && matchesRI && matchesSpeed && matchesMorphology && matchesToxicity && matchesFluorescence && matchesEquipment && matchesYear && matchesValidation && matchesText;
+                return matchesTissue && matchesClass && matchesRI && matchesSpeed && matchesMorphology && matchesToxicity && matchesFluorescence && matchesLive && matchesEquipment && matchesYear && matchesValidation && matchesText;
             });
 
             if (isFocusModeActive && activeMethodId) {
@@ -559,6 +572,7 @@
                 document.getElementById('morphology-filter').addEventListener('change', renderFiltereddatabase);
                 document.getElementById('toxicity-filter').addEventListener('change', renderFiltereddatabase);
                 document.getElementById('fluorescence-filter').addEventListener('change', renderFiltereddatabase);
+                document.getElementById('live-filter').addEventListener('change', renderFiltereddatabase);
                 document.getElementById('equipment-filter').addEventListener('change', renderFiltereddatabase);
                 document.getElementById('year-filter').addEventListener('change', renderFiltereddatabase);
                 document.getElementById('validation-filter').addEventListener('input', renderFiltereddatabase);
@@ -629,6 +643,7 @@
                 ['Morphology Impact', method.morphology_impact],
                 ['Toxicity Hazard', method.toxicity_hazard],
                 ['Fluorescent Protein Compatibility', method.fluorescent_protein_compatibility],
+                ['Live Sample Compatibility', method.live_sample_compatibility || 'Unknown'],
                 ['Equipment Complexity', method.equipment_complexity],
                 ['Primary Citation', primaryCitationHtml(method)]
             ].filter(([, value]) => isMeaningfulValue(value));
